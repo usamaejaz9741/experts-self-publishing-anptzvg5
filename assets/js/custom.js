@@ -2,15 +2,6 @@ $(document).ready(function () {
   $(".nice-select").niceSelect();
 });
 
-document.addEventListener("click", function (event) {
-  var trigger = event.target.closest("[data-open-zendesk]");
-  if (!trigger) return;
-  event.preventDefault();
-  if (typeof zE !== "undefined") {
-    zE("webWidget", "open");
-  }
-});
-
 document.addEventListener("DOMContentLoaded", function () {
   const toggler = document.querySelector(".navbar-toggler");
   const collapseEl = document.querySelector("#navbarNavDropdown");

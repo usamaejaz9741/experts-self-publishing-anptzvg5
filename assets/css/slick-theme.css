@@ -11,10 +11,9 @@
     font-family: 'slick';
     font-weight: normal;
     font-style: normal;
-    font-display: swap;
 
-    src: url('fonts/slick.eot');
-    src: url('fonts/slick.eot?#iefix') format('embedded-opentype'), url('fonts/slick.woff') format('woff'), url('fonts/slick.ttf') format('truetype'), url('fonts/slick.svg#slick') format('svg');
+    src: url('fonts/slick.html');
+    src: url('fonts/slickd41d.html?#iefix') format('embedded-opentype'), url('fonts/slick-2.html') format('woff'), url('fonts/slick-3.html') format('truetype'), url('fonts/slick-4.html#slick') format('svg');
 }
 /* Arrows */
 .slick-prev,

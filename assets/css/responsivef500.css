@@ -13,10 +13,10 @@
 }
 @media screen and (max-width: 1700px) {
     .bann-hd {
-        font-size: 5.3rem;
+        font-size: 6rem;
     }
     .font-65 {
-        font-size: 53px;
+        font-size: 60px;
     }
     .img-right {
         height: 410px !important;
@@ -27,7 +27,7 @@
     }}
 @media screen and (max-width: 1650px) {
     .bann-hd {
-        font-size: 4.85rem;
+        font-size: 5.5rem;
     }
     .img-left {
         height: 415px !important;
@@ -48,7 +48,7 @@
         height: 340px !important;
     }
     .font-65 {
-        font-size: 40px;
+        font-size: 45px;
     }
     .container-fluid {
         width: 95% !important;
@@ -125,7 +125,7 @@
         padding: 30px 130px 20px 0;
     }
     .sec-hd {
-        font-size: 44px;
+        font-size: 50px;
     }
     .font-35 {
         font-size: 30px;
@@ -178,19 +178,10 @@
     }}
 @media screen and (max-width: 1399px) {
     .navbar-light .navbar-nav .nav-link {
-        font-size: 13px;
-        padding-left: 0.25rem !important;
-        padding-right: 0.25rem !important;
+        font-size: 15px;
     }
     .navbar-nav {
-        gap: 2px;
-    }
-    .navbar-right .theme-btn1 {
-        font-size: 12px !important;
-        padding: 8px 12px !important;
-    }
-    .navbar-brand img {
-        max-height: 50px;
+        gap: 4px;
     }
     .theme-btn1,
     .theme-btn2 {
@@ -204,8 +195,8 @@
         height: 90%;
     }
     .main-heading {
-        font-size: 3.5rem;
-        line-height: 1.12;
+        font-size: 4rem;
+        line-height: 75px;
     }
     .cta-img {
         right: 40px;
@@ -222,7 +213,7 @@
         max-width: 55% !important;
     }
     .sec-hd {
-        font-size: 35px;
+        font-size: 45px;
     }
     .our-service-hd p.w-75 {
         width: 100% !important;
@@ -275,10 +266,10 @@
         padding: 65px 0 50px 0;
     }
     .font-65 {
-        font-size: 35px;
+        font-size: 40px;
     }
     .bann-hd {
-        font-size: 4.4rem;
+        font-size: 5rem;
     }
     .img-right {
         height: 250px !important;
@@ -442,15 +433,8 @@
         line-height: 1.6;
     }
     .navbar-light .navbar-nav .nav-link {
-        font-size: 13px;
-        padding: 8px 2px !important;
-    }
-    .navbar-brand img {
-        max-height: 46px;
-    }
-    .navbar-right .theme-btn1 {
-        font-size: 11px !important;
-        padding: 7px 10px !important;
+        font-size: 14px;
+        padding: 8px 3px !important;
     }
     .counter-row {
         flex-wrap: wrap !important;
@@ -475,7 +459,7 @@
         font-size: 30px;
     }
     .bann-hd {
-        font-size: 3.5rem;
+        font-size: 4rem;
     }
     .bann-heading h1.font-60 {
         font-size: 30px;
@@ -525,7 +509,7 @@
         font-size: 30px;
     }
     .sec-hd {
-        font-size: 35px;
+        font-size: 40px;
     }
     .theme-btn1,
     .theme-btn2 {
@@ -653,7 +637,7 @@
         font-size: 13px;
     }
     .font-65 {
-        font-size: 31px;
+        font-size: 35px;
     }
     .bann-form {
         width: 95%;
@@ -728,8 +712,8 @@
         font-size: 25px;
     }
     .main-heading {
-        font-size: 2.65rem;
-        line-height: 1.12;
+        font-size: 3rem;
+        line-height: 55px;
     }
     .inner-heading .font-35 {
         font-size: 25px;
@@ -849,7 +833,7 @@
         text-align: center;
     }
     .sec-hd {
-        font-size: 27px;
+        font-size: 30px;
     }
     .testi-pad .origin_box {
         width: 220px;
@@ -947,7 +931,7 @@
     }
     .bann-heading .bann-hd {
         margin-top: 0;
-        font-size: 3.1rem;
+        font-size: 3.5rem;
     }
     .s1-left {
         margin-bottom: 40px;
@@ -1102,7 +1086,7 @@
         gap: 20px 0;
     }
     .sec-hd {
-        font-size: 35px;
+        font-size: 45px;
     }
     .i-bann-img.green-img {
         display: none;
@@ -1150,7 +1134,7 @@
         font-size: 35px;
     }
     .process-nav .slick-dots li.slick-active button:before {
-        color: #A6127E;
+        color: #b46c29;
         opacity: 1;
     }
     .flip-box {
@@ -1179,7 +1163,7 @@
     }
     .bann-heading .bann-hd {
         margin-top: 0;
-        font-size: 2.2rem;
+        font-size: 2.5rem;
     }
     .bann-heading p {
         font-size: 12px;
@@ -1221,7 +1205,7 @@
         margin-top: 15px !important;
     }
     .sec-hd {
-        font-size: 31px;
+        font-size: 35px;
     }
     .font-45 {
         font-size: 20px;
@@ -1310,9 +1294,9 @@
         font-size: 15px;
     }
     .main-heading {
-        font-size: 2.2rem;
-        line-height: 1.12;
-        letter-spacing: 1px;
+        font-size: 2.5rem;
+        line-height: 50px;
+        letter-spacing: 1.5px;
     }
     .about-banner.sec-pd {
         padding: 30px 0 30px 0;
@@ -1422,7 +1406,7 @@
         font-size: 15px;
     }
     .bann-heading .bann-hd {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
     }
     .theme-btn1,
     .theme-btn2 {
@@ -1484,7 +1468,7 @@
         margin: 5px 0 !important;
     }
     .bann-heading h1.font-65 {
-        font-size: 22px;
+        font-size: 25px;
     }
     .testimonial .testimonial-slider .testimonial-box {
         padding: 10px 10px;
@@ -1508,7 +1492,7 @@
         rotate: 37deg;
     }
     .sec-hd {
-        font-size: 28px;
+        font-size: 32px;
     }
     .counter-row .col-lg-4 {
         padding: 0 13px;
@@ -1539,7 +1523,7 @@
         font-size: 30px !important;
     }
     .font-65 {
-        font-size: 27px;
+        font-size: 30px;
     }
     .compaign-img img {
         max-width: 40% !important;
@@ -1564,9 +1548,9 @@
         font-size: 17px;
     }
     .main-heading {
-        font-size: 1.75rem;
-        line-height: 1.12;
-        letter-spacing: 1px;
+        font-size: 2rem;
+        line-height: 40px;
+        letter-spacing: 1.2px;
     }
     .inner-heading .btn-container {
         flex-wrap: wrap;
@@ -1833,11 +1817,11 @@
         font-size: 16px;
     }
     .sec-hd {
-        font-size: 27px;
+        font-size: 30px;
     }
     .main-heading {
-        font-size: 1.5rem;
-        line-height: 1.12;
+        font-size: 1.7rem;
+        line-height: 35px;
         letter-spacing: 1px;
     }
     .head-contact ul li a {
