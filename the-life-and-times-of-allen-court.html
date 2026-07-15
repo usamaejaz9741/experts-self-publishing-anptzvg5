@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="YOUR_GOOGLE_SITE_VERIFICATION" />
+    <title>Book Detail | Experts Self Publishing</title>
+    <meta name="description" content="Discover titles from Experts Self Publishing — expert editing, design, and distribution for independent authors.">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png">
+    <link rel="preload" as="image" href="assets/img/ubp-new/banner-bg.webp">
+    <link rel="preload" href="assets/font/montserrat/Montserrat-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="assets/css/style8e5e.css?v=21">
+
+<link rel="preload" href="assets/css/fontawesome-all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+</noscript>
+
+
+
+
+<link rel="preload" href="assets/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+</noscript>
+
+
+
+<link rel="preload" href="assets/css/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="assets/css/aos.css">
+</noscript>
+
+
+
+<link rel="stylesheet" href="assets/css/responsivef500.css?v=16">
+
+
+
+
+<link rel="preload" href="assets/css/nice-select.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+</noscript>
+
+
+
+
+<link rel="preload" href="assets/css/jquery-ui.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="assets/css/jquery-ui.css">
+</noscript>
+
+
+<link rel="preload" href="assets/css/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+<link rel="stylesheet" href="assets/css/jquery.fancybox.min.css">
+</noscript>
+
+<link rel="preload" href="assets/css/slick-theme.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+<link rel="stylesheet" href="assets/css/slick-theme.css">
+</noscript>
+
+<link rel="preload" href="assets/css/slick.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+<link rel="stylesheet" href="assets/css/slick.css">
+</noscript>
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/select2%404.1.0-rc.0/dist/css/select2.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2%404.1.0-rc.0/dist/css/select2.min.css">
+    </noscript>
+    <script defer src="assets/js/site-tracking.js"></script>
+
+    <script>
+        class SmartObserver {
+            constructor() {
+                this.init();
+            }
+
+            init() {
+                this.lazyImages = document.querySelectorAll("img[data-src]");
+                this.hiddenElements = document.querySelectorAll(".io-hidden");
+
+                this.createObserver();
+                this.observeElements();
+            }
+
+            createObserver() {
+                this.observer = new IntersectionObserver(
+                    (entries, observer) => {
+                        entries.forEach((entry) => {
+                            if (!entry.isIntersecting) return;
+
+                            const el = entry.target;
+
+                            // 🖼️ Lazy Image Load
+                            if (el.tagName === "IMG" && el.dataset.src) {
+                                this.loadImage(el);
+                            }
+
+                            // ✨ Reveal Animation (custom)
+                            if (el.classList.contains("io-hidden")) {
+                                el.classList.add("io-show");
+                                el.classList.remove("io-hidden");
+                            }
+
+                            observer.unobserve(el);
+
+                            // 🔁 AOS refresh (important)
+                            if (typeof AOS !== "undefined") {
+                                AOS.refreshHard(); // better than refresh()
+                            }
+                        });
+                    }, {
+                        root: null,
+                        rootMargin: "0px 0px -50px 0px",
+                        threshold: 0.1,
+                    }
+                );
+            }
+
+            observeElements() {
+                this.lazyImages.forEach((img) => this.observer.observe(img));
+                this.hiddenElements.forEach((el) => this.observer.observe(el));
+            }
+
+            loadImage(img) {
+                const temp = new Image();
+                temp.src = img.dataset.src;
+
+                temp.onload = () => {
+                    img.src = temp.src;
+                    img.classList.add("loaded");
+                    img.removeAttribute("data-src");
+                };
+            }
+        }
+
+        // 🚀 Init on DOM Ready
+        document.addEventListener("DOMContentLoaded", () => {
+            new SmartObserver();
+
+            // AOS init (safe)
+            if (typeof AOS !== "undefined") {
+                AOS.init({
+                    duration: 800,
+                    once: true,
+                    offset: 100,
+                });
+            }
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const elements = document.querySelectorAll(".reveal");
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("active");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.15
+            });
+
+            elements.forEach((el) => observer.observe(el));
+        });
+    </script>
+</head>
+
+<body>
+    <header class="header-above">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-6 col-6">
+                <div class="head-contact">
+                    <ul class="list-unstyled d-flex justify-content-start mb-0 gap-4">
+                        <li><a href="javascript:void(0);" class="text-white hvr-effect" data-open-zendesk>
+                                <img src="assets/img/ubp-new/msg-icon.webp"
+                                    class="img-fluid head-ct-icon effect" alt="massege" width="25" height="30">
+                                <span>Chat With Us</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-6">
+                <div class="head-contact">
+                    <ul class="list-unstyled d-flex justify-content-end mb-0 gap-4">
+                        <li><a href="tel:+18556055210" class="text-white hvr-effect">
+                                <img src="assets/img/ubp-new/call-icon.webp"
+                                    class="img-fluid head-ct-icon effect" alt="massege" width="25" height="30">
+                                <span>+1 (855) 605-5210</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img class="img-fluid" src="assets/img/ubp-new/logo.webp" loading="lazy" alt="Experts Self Publishing logo" />
+        </a>
+        <button class="navbar-toggler" type="button" aria-controls="navbarNavDropdown" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link " aria-current="page"
+                        href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown custom-dropdown">
+                    <a class="nav-link dropdown-toggle "
+                        href="javascript:void(0);" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Services <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="author-website.html">Author Website</a></li>
+                        <li><a class="dropdown-item" href="pr-and-publicity.html">PR & Publicity</a></li>
+                        <li><a class="dropdown-item" href="book-editing-proofreading.html">Editing &
+                                Proofreading</a></li>
+                        <li><a class="dropdown-item" href="book-cover-design.html">Book Cover Design</a></li>
+                        <li><a class="dropdown-item" href="ghostwriting.html">Ghostwriting</a></li>
+                        <li><a class="dropdown-item" href="book-illustration.html">Book Illustration</a></li>
+                        <li><a class="dropdown-item" href="book-video-trailers.html">Book Video Trailers</a>
+                        </li>
+                        <li><a class="dropdown-item" href="creative-writing.html">Creative Writing</a></li>
+                        <li><a class="dropdown-item" href="children-book-illustration.html">Children Book
+                                illustration</a></li>
+                        <li><a class="dropdown-item" href="screenplay-script-writing.html">Screenplay Script
+                                Writing</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link "
+                        href="book-publishing.html">Book Publishing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link "
+                        href="book-marketing.html">Book Marketing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link "
+                        href="pricing.html">Pricing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="about-us.html">Our Story</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link "
+                        href="contact-us.html">Contact Us</a>
+                </li>
+                <li class="nav-item dropdown custom-dropdown">
+                    <a class="nav-link dropdown-toggle "
+                        href="javascript:void(0);" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">Resources <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+                    </a>
+                    <ul class="dropdown-menu w-auto menu-2" aria-labelledby="navbarDropdownMenuLink">
+                        <li class="w-100"><a class="dropdown-item" href="published-books.html">Published
+                                Books</a></li>
+                        <li class="w-100"><a class="dropdown-item" href="customer-reviews.html">Customer
+                                Reviews</a></li>
+                        
+                        <li class="w-100"><a class="dropdown-item" href="faq.html">FAQs</a></li>
+                        <li class="w-100"><a class="dropdown-item" href="blogs.html">Blogs</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="navbar-right">
+            <div class="head-btn">
+                <a href="#exampleModalToggle"
+                    class="theme-btn1 btn-overlay d-inline-flex align-items-center gap-2 text-upper"
+                    data-bs-toggle="modal" data-bs-target="#exampleModal"><img
+                        src="assets/img/ubp-new/msg-icon.webp" alt="icon" width="30"
+                        height="23"><span>Get a Free Quote</span></a>
+            </div>
+        </div>
+
+    </div>
+</nav>
+
+        <section class="about-banner sec-pd">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-lg-8">
+                    <div class="inner-heading text-white text-center">
+                        <h1 class="sec-hd">THE LIFE AND TIMES OF ALLEN COURT</h1>
+                        <h3>MeShawn DeBerry</h3>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="service-detail sec-pd">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="book-img">
+                        <img src="assets/img/book-cover/allen-court-new.jpg" class="img-fluid" alt="img">
+
+
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="book-content-detail">
+                        <div class="row">
+                            <div class="col-lg-5">
+                                <h4>Book Details</h4>
+                                <!-- <p class="mb-0">Genre: Autobiography</p> -->
+                                <p class="mb-0">Language: English</p>
+                                <!-- <p>e-Book: 978-1965595824</p> -->
+                            </div>
+                            <div class="col-lg-5">
+                                <!-- <p class="mb-0">SubGenre: Holiday Fiction</p> -->
+                                <!-- <p class="mb-0">Pages: 77</p> -->
+                                <!-- <p>Paperback: 1965595839</p> -->
+                            </div>
+                             <div class="col-lg-12 my-4">
+                    <h4>About the Book</h4>
+                    <p>The Life and Times of Allen Court follows a young man whose academic exchange journey becomes a path of personal transformation. Traveling from North America to Scandinavia and Egypt, Allen encounters unfamiliar cultures, complex relationships, and unexpected challenges. As past beliefs meet new realities, he gains deeper self-awareness and clarity about his purpose. This coming-of-age story explores growth, identity, and the courage required to pursue one’s goals.</p>
+                    <h4>About the Author</h4>
+                    <p>MeShawn DeBerry is an emerging novelist with a passion for exploring the profound personal transformations ignited by travel and cross-cultural encounters. A natural storyteller, DeBerry channels a creative spirit and hard-won resilience into writing, dedicated to the craft of capturing authentic human experiences. Their work delves into the nuanced relationships and inner growth that arise when characters are placed far outside their comfort zones.</p>
+                    <!-- <img src="assets/img/amazon-logo.png" class="img-fluid w-25 mt-3" alt=""> -->
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+               
+            </div>
+        </div>
+    </section>
+
+    <section class="feedback-sec sec-pd">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+        <div class="review-sec">
+            <div class="review-div mb-5">
+                <span class="color-green">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </span>
+                <p class="my-2">This was a very interesting story that took me on a journey with Allen Court in Finland. Allen Court was a great character and he interacted really well with others. I really wished the story was longer and we really got to see his interaction with the young lady when he travels to another country. Solid writing and a good story.</p>
+                <p><strong> – Thiq Caramel</strong></p>
+            </div>
+            <div class="review-div mb-5">
+                <span class="color-green">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </span>
+                <p class="my-2">The story itself is good. Solid storyline written in enough of a sporadic sense it's believable to imagine you're in the character's head. I think Allen's personal back story could have been developed a little more, and it would've made him easier to understand. I did feel like he was interesting and level headed. He was decided and calculating even with his spontaneous decisions. I enjoyed the book but it is in severe need of proofreading and a little editing because there are some errors in that area. The tempo seemed to change once he got to Egypt and I would've liked the book to flow similarly throughout. It almost felt like two different authors wrote this book. If the author is interested I'd volunteer to proofread and edit it for him. </p>
+                <p><strong>– Anila </strong></p>
+            </div>
+            <div class="review-div mb-5">
+                <span class="color-green">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </span>
+                <p class="my-2">An interesting coming of age journey with strong themes of growth and cultural discovery. Allen’s travels and inner struggles are relatable, and the story carries a thoughtful message about purpose and self-awareness. At times the pacing feels uneven, but the experiences and personal development make it a meaningful read overall. </p>
+                <p><strong>– Rachel Martin</strong></p>
+            </div>
+           
+        </div>
+    </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonial-sec sec-pd">
+    <div class="container">
+        <div class="row justify-content-center align-items-center" >
+            <div class="testi-heading text-center mb-5"  data-aos="zoom-out" data-aos-duration="600" data-aos-easing="ease-out">
+                <div class="font-35 let-space theme-font color-green fw-600">Trusted Publishers For Over 8 Years</div>
+                <h2 class="sec-hd color">Real Author Voices Experiencing Real Impact</h2>
+                <p class="w-80 mx-auto mb-0" >Writers want honesty, direction, and a team
+                    that treats their work with genuine care. As a top online book publishing house, you stay close to
+                    every step of the process, from early drafts to full book publishing. These reviews come from real
+                    authors who trusted us when their stories needed the right hands.</p>
+            </div>
+
+            <div class="col-lg-5">
+                <div class="book-slide">
+                    <div class="testi-pad">
+                        <img class="lazy lazy-loaded-image img-fluid "
+                            src="assets/img/skeleton2.webp" loading="lazy"
+                            data-lazy="assets/img/ubp-new/client-image-1.webp" alt="Experts Self Publishing"
+                            width="526" height="528" />
+
+                        <!-- <img src="assets/img/bann-book-1.webp" class="img-fluid book-img" alt="book"
+                                data-aos="flip-right"
+                                data-aos-easing="ease-out-cubic"
+                                data-aos-duration="2000">
+    
+                            <div class="origin_box"
+                                data-aos="flip-left"
+                                data-aos-easing="ease-out-cubic"
+                                data-aos-duration="3000">
+                                <a href="assets/img/bann-web.png" data-fancybox="gallery"><img src="assets/img/bann-web.png"
+                                        class="img-fluid" alt="img"></a>
+                            </div> -->
+                    </div>
+
+                    <div class="testi-pad">
+                            <img class="lazy lazy-loaded-image img-fluid "
+                            src="assets/img/skeleton2.webp" loading="lazy"
+                            data-lazy="assets/img/ubp-new/client-image-2.webp" alt="Experts Self Publishing"
+                            width="526" height="528" />
+                    </div>
+
+                    <div class="testi-pad">
+                            <img class="lazy lazy-loaded-image img-fluid "
+                            src="assets/img/skeleton2.webp" loading="lazy"
+                            data-lazy="assets/img/ubp-new/client-image-3.webp" alt="Experts Self Publishing"
+                            width="526" height="528" />
+                    </div>
+
+                    <div class="testi-pad">
+                            <img class="lazy lazy-loaded-image img-fluid "
+                            src="assets/img/skeleton2.webp" loading="lazy"
+                            data-lazy="assets/img/ubp-new/client-image-4.webp" alt="Experts Self Publishing"
+                            width="526" height="528" />
+                    </div>
+
+                    <div class="testi-pad">
+                            <img class="lazy lazy-loaded-image img-fluid "
+                            src="assets/img/skeleton2.webp" loading="lazy"
+                            data-lazy="assets/img/ubp-new/client-image-5.webp" alt="Experts Self Publishing"
+                            width="526" height="528" />
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="testimonial">
+                    <div class="testimonial-slider">
+                        <div class="testimonial-box p-3">
+                            <div class="row testi-head justify-content-between">
+                                <div class="col-lg-6 col-6">
+                                    <div class="profile-d">
+                                        <h4 class="theme-font color-green mb-0">Julian Hutchinson</h4>
+                                        <p class="color fw-600 mb-0">US</p>
+                                        <!--<img src="assets/img/trust-pilot.png" alt="trustpilot" loading="lazy">-->
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 col-6">
+                                    <div class="name-circle profile-img">
+                                        <span class="name-1">JH</span>
+                                        <!-- <img src="assets/img/client-pro.png" class="img-fluid" alt="img"> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testi-para my-4">
+                                <strong>My experience is two-fold</strong>
+                                <p>My experience is two-fold, from bad to extremely good. Two earlier reps first
+                                    published my book without consulting me.
+                                    It was full of errors. It all changed when Jeffrey Collins, Author Success Manager,
+                                    took charge of my account.
+                                    He is a master of his trade, and Experts Self Publishing successfully
+                                    republished my book. I have self-published
+                                    eight other books with various companies, but Experts Self Publishing gets the gold.</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-box p-3">
+                            <div class="row testi-head justify-content-between">
+                                <div class="col-lg-6 col-6">
+                                    <div class="profile-d">
+                                        <h4 class="theme-font color-green mb-0">Yennifer</h4>
+                                        <p class="color fw-600 mb-0">US</p>
+                                        <!--<img src="assets/img/trust-pilot.png" alt="trustpilot" loading="lazy">-->
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 col-6">
+                                    <div class="name-circle profile-img">
+                                        <span class="name-1">Y</span>
+                                        <!-- <img src="assets/img/client-pro.png" class="img-fluid" alt="img"> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testi-para my-4">
+                                <strong>Outstanding Support and Expertise in Publishing</strong>
+                                <p>I couldn’t be any happier with my publishing experience with Experts Self Publishing!
+                                    From the moment I started working with them,
+                                    I felt like my story truly mattered. Their attention to detail and commitment to
+                                    perfection was evident in every step of the process,
+                                    from refining my content to expertly publishing on multiple platforms. Aron and his
+                                    team took the time to understand my vision,
+                                    and the results were beyond my expectations. Choosing them was the best decision I
+                                    could’ve made for my book!</p>
+                                <p>If you’re looking for a publishing partner that’s professional, reliable, and
+                                    genuinely invested in your success,
+                                    I wholeheartedly recommend Experts Self Publishing. You won’t be disappointed!</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-box p-3">
+                            <div class="row testi-head justify-content-between">
+                                <div class="col-lg-6 col-6">
+                                    <div class="profile-d">
+                                        <h4 class="theme-font color-green mb-0">Mikki Royce</h4>
+                                        <p class="color fw-600 mb-0">US</p>
+                                        <!--<img src="assets/img/trust-pilot.png" alt="trustpilot" loading="lazy">-->
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 col-6">
+                                    <div class="name-circle profile-img">
+                                        <span class="name-1">MR</span>
+                                        <!-- <img src="assets/img/client-pro.png" class="img-fluid" alt="img"> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testi-para my-4">
+                                <strong>First Class All the Way</strong>
+                                <p>First, Experts Self Publishing has the very best book cover design prices that I could
+                                    find.
+                                    2nd, they are very caring and attentive. My first conversation was with Aron Parker,
+                                    Chief
+                                    Publishing Officer, who was lovely. Later, I was dealing with Sr. Consultant, Jordan
+                                    Marshall,
+                                    who was just as nice as he could be, listening to me, making suggestions, and
+                                    faithfully reporting
+                                    what I wanted to the artist.The end result was a seriously beautiful book cover that
+                                    conveys the
+                                    spirit of the book and the meaning of the contents. Great experience!</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-box p-3">
+                            <div class="row testi-head justify-content-between">
+                                <div class="col-lg-6 col-6">
+                                    <div class="profile-d">
+                                        <h4 class="theme-font color-green mb-0">Yogi BELOVANANDA</h4>
+                                        <p class="color fw-600 mb-0">CA</p>
+                                        <!--<img src="assets/img/trust-pilot.png" loading="lazy" alt="trustpilot">-->
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 col-6">
+                                    <div class="profile-img">
+                                        <!-- <span class="name-1">YB</span> -->
+                                        <img src="assets/img/name.png" height="73" width="73" class="img-fluid" alt="img"
+                                            loading="lazy">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testi-para my-4">
+                                <strong>A 80 year old first time publisher!</strong>
+                                <p>I'm an 80 year old, first time publisher, Investigating all the claims of book
+                                    publishers, including self publishing led me
+                                    to Experts Self Publishing.</p>
+                                <p>When I mentioned that I was hosting my book through the Non-Profit foundation, Global
+                                    Prefab Systems Foundation, they were quick
+                                    to advise that there was an additional $100 discount for Non-Profit organizations.
+                                </p>
+                                <p>That individual was Mike Amiri. What started out as a professional business
+                                    relationship, has evolved into a personal friendship,
+                                    that I now feel deeply connected to Mike.</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-box p-3">
+                            <div class="row testi-head justify-content-between">
+                                <div class="col-lg-6 col-6">
+                                    <div class="profile-d">
+                                        <h4 class="theme-font color-green mb-0">Jared Allred</h4>
+                                        <p class="color fw-600 mb-0">US</p>
+                                        <!--<img src="assets/img/trust-pilot.png" alt="trustpilot" loading="lazy">-->
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 col-6">
+                                    <div class="name-circle profile-img">
+                                        <span class="name-1">JA</span>
+                                        <!-- <img src="assets/img/client-pro.png" class="img-fluid" alt="img"> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testi-para my-4">
+                                <strong>Editing and publishing the book "Hideaways--within and outside my polygamist
+                                    family"</strong>
+                                <p>I especially liked the Experts Self Publishing team I worked with. They have been helpful,
+                                    knowledgeable, patient, and resilient.
+                                    The book was very complex and challenging to edit and publish. Areas of suggested
+                                    improvement are professional
+                                    editing, communications (mutual understanding, timely, and consistent). I am well
+                                    pleased with the completed project.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+    <footer class="">
+    <div class="container-fluid">
+        <div class="row align-items-start">
+
+            <div class="col-lg-4 col-md-12">
+                <div class="foot-box text-white">
+                    <a href="index.html"><img src="assets/img/ubp-new/footer-logo.webp"
+                            class="img-fluid foot-logo" alt="img" loading="lazy"></a>
+                    <p class="py-2 font">For 8+ years, we have been the quiet force behind unforgettable stories. We
+                        don't just publish books; we partner with visionaries, transforming bold ideas into legacies
+                        that endure. Let us build yours.</p>
+                    <div class="d-flex align-items-center gap-3">
+                        <h4 class="color mb-0 font-28">Follow Us:</h4>
+                        <div class="head-right d-flex align-items-center gap-3 justify-content-end">
+                            <ul class="list-unstyled d-flex align-items-center gap-2 mb-0">
+                                <li><a href="https://www.facebook.com/ExpertsSelfPublishingOfficial/" target="_blank"><i
+                                            class="fa-brands fa-facebook-f"></i></a></li>
+                                <li><a href="https://www.instagram.com/expertsselfpublishingofficial/" target="_blank"><i
+                                            class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href="https://www.youtube.com/@ExpertsSelfPublishing" target="_blank"><i
+                                            class="fa-brands fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-4 col-sm-4 ">
+                <div class="foot-box text-white">
+                    <h3 class="color">What We Offer</h3>
+                    <div class="foot-line"></div>
+                    <div class="foot-list d-flex mt-3">
+                        <ul class="list-unstyled">
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="book-publishing.html">Book Publishing</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="book-marketing.html">Book Marketing</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="author-website.html" class="">Author Website</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="creative-writing.html" class="">Creative Writing</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="book-illustration.html" class="">Book illustration</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="book-video-trailers.html" class="">Book Video Trailers</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="book-cover-design.html" class="">Book Cover Design</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="ghostwriting.html" class="">Ghostwriting</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="book-writing.html" class="">Book Writing</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="pr-and-publicity.html" class="">PR & Publicity</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-4 col-sm-4 ">
+                <div class="foot-box text-white">
+                    <h3 class="color">Others</h3>
+                    <div class="foot-line"></div>
+                    <div class="foot-list d-flex mt-3">
+                        <ul class="list-unstyled">
+
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="free-book-marketing-guide.html" class="">Free Book Marketing
+                                    Guide</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="free-book-publishing-guide.html" class="">Free Book Publishing
+                                    Guide</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="blogs.html" class="">Blogs</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="pricing.html" class="">Pricing</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="about-us.html" class="">Our Story</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="contact-us.html" class="">Contact Us</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-4 ">
+                <div class="foot-box text-white">
+                    <h3 class="color">Information</h3>
+                    <div class="foot-list info-detail">
+                        <ul class="list-unstyled">
+                            <li class="my-4 info-li">
+                                <a href="tel:+18556055210" class="d-flex gap-2">
+                                    <!-- <span class="info-icon"><i class="fa-solid fa-phone" aria-hidden="true"></i></span> -->
+                                    <span class="info-icon w-25"><img
+                                            src="assets/img/ubp-new/theme-phone.webp"
+                                            class="img-fluid" alt="location" width="21" height="21"
+                                            loading="lazy"></span>
+                                    <span class="w-75">
+                                        <small>Call us now </small>
+                                        <span class="foot-number d-block w-100">+1 (855) 605-5210</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="my-4 info-li">
+                                <a href="mailto:info@expertsselfpublishing.com" class="d-flex gap-2">
+                                    <!-- <span class="info-icon"><i class="fa-solid fa-envelope" aria-hidden="true"></i></span> -->
+                                    <span class="info-icon w-25"><img
+                                            src="assets/img/ubp-new/foot-envelope.webp"
+                                            class="img-fluid" alt="location" width="21" height="22"
+                                            loading="lazy"></span>
+                                    <span class="w-75">
+                                        <small>Email us on: </small>
+                                        <span class="foot-number d-block w-100">info@expertsselfpublishing.com</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="my-4 info-li">
+                                <a href="javascript:void(0);" class="d-flex gap-2">
+                                    <!-- <span class="info-icon"><i class="fa-solid fa-house"></i></span> -->
+                                    <span class="info-icon w-25"><img
+                                            src="assets/img/ubp-new/location-icon.webp"
+                                            class="img-fluid" alt="location" width="21" height="28"
+                                            loading="lazy"></span>
+                                    <span class="w-75">
+                                        <!-- <small>Email us on: </small> -->
+                                        <span class="foot-number d-block w-100">3223 West 6th Street STE 101 Los
+                                            Angeles, <br> CA 90020 United States.</span>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="payment-box mt-3 p-2">
+                    <img src="assets/img/ubp-new/pymnt-5.webp" class="img-fluid" alt="payment"
+                        width="316" height="68" loading="lazy">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container-fluid last-contain">
+        <div class="row">
+            <div class="col-lg-7 col-md-8">
+                <p class=" mb-0 para-color">Copyright © 2026 Experts Self Publishing - All Rights Reserved | Powered By
+                    Iota Digital, LLC</p>
+            </div>
+            <div class="col-lg-5 col-md-4">
+                <ul class="list-unstyled d-flex align-items-center gap-3 m-0 justify-content-end">
+                    <li><a href="privacy-policy.html" class="">Privacy Policy</a></li>
+                    <li><a href="terms-condition.html" class="">Terms And Conditions</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img src="assets/img/pop-logo.png" class="img-fluid" alt="Experts Self Publishing logo" loading="lazy">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row align-items-center justify-content-around">
+                    <div class="col-lg-7">
+                        <div class="form-wrap">
+                            <div class="form-heading">
+                                <h3 class="color font-40 let-space fw-600">Start Building Your Author Success Story
+                                    Today!</h3>
+                                <p>Speak with our senior publishing consultant for a free tailored proposal</p>
+                            </div>
+                            <form action="/inquiry-submit" id="modal-form" method="POST">
+                                <input type="hidden" name="_token" value="awxIAFp3sLU9ALw6iz3WlIXSKpyn9f7ba0ryrYCz" autocomplete="off">                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <!-- <label for="full-name">Enter Your Full Name</label> -->
+                                        <div class="form-group">
+                                            <input type="text" id="full-name" name="full_name"
+                                                placeholder="Full Name" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <!-- <label for="email">Your email</label> -->
+                                        <div class="form-group">
+                                            <input type="text" id="email" name="email" placeholder="Email"
+                                                class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <!-- <label for="phone">Your phone</label> -->
+                                        <div class="form-group">
+                                            <input type="text" id="phone" name="phone"
+                                                placeholder="(999) 999 9999" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <!-- <label for="message">Type your message</label> -->
+                                        <div class="form-group">
+                                            <textarea rows="4" id="message" name="message" placeholder="Book Detail" class="form-control"></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="btn-container mt-4">
+                                        <button class="theme-btn1 text-upper border-0 btn-overlay">Book Now</button>
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="pop-img">
+                            <img src="assets/img/badge-discount.png" class="discount-img img-fluid"
+                                alt="50% Discount">
+                            <img src="assets/img/popup-image.png" class="img-fluid pop-std" alt="img"
+                                loading="lazy">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- <img src="assets/img/pop-circle.png" class="img-fluid pop-circle" alt="img"> -->
+        </div>
+    </div>
+</div>
+    <script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/slick.js"></script>
+<script>
+    // accordion
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panelfaq = this.nextElementSibling;
+            if (panelfaq.style.maxHeight) {
+                panelfaq.style.maxHeight = null;
+            } else {
+                panelfaq.style.maxHeight = panelfaq.scrollHeight + "px";
+            }
+        });
+    }
+    // accordion
+
+    $(document).ready(function() {
+        function initializeSlick(slider) {
+            if (!slider.hasClass('slick-initialized')) {
+                slider.slick({
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    autoplay: true
+                });
+            } else {
+                slider.slick('refresh');
+            }
+        }
+
+        // Pehla tab ka slider initialize karein
+        initializeSlick($('#tab1 .portfolio-slider'));
+
+        $('button[data-bs-toggle="tab"]').on('shown.bs.tab', function(e) {
+            let target = $(e.target).attr("data-bs-target");
+            let slider = $(target).find('.portfolio-slider');
+
+            // Ensure proper visibility and reinitialize
+            $(target).css({
+                'height': 'auto',
+                'visibility': 'visible'
+            });
+
+            setTimeout(function() {
+                initializeSlick(slider);
+            }, 100);
+        });
+    });
+</script>
+<script>
+    $(".portfolio-slider").slick({
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 0,
+        speed: 13000,
+        arrows: false,
+        dots: false,
+        pauseOnHover: false,
+        cssEase: "linear",
+        responsive: [{
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 5,
+                },
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 4,
+                },
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 3,
+                },
+            },
+            {
+                breakpoint: 400,
+                settings: {
+                    slidesToShow: 3,
+                },
+            },
+        ],
+    });
+
+    document.querySelectorAll('.flip-box').forEach(box => {
+  box.addEventListener('click', () => {
+    box.classList.toggle('active');
+  });
+});
+
+
+$(".blog-slider").slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  arrows: true,
+  dots: false,
+  autoplaySpeed: 2000,
+  responsive: [
+    {
+      breakpoint: 1025,   // 1024px se neeche
+      settings: {
+        slidesToShow: 2,
+      }
+    },
+    {
+      breakpoint: 992,   // 992px se neeche
+      settings: {
+        slidesToShow: 2,
+      }
+    },
+    {
+      breakpoint: 768,   // 768px se neeche
+      settings: {
+        slidesToShow: 1,
+        arrows: false,
+        dots: true,
+      }
+    },
+    {
+      breakpoint: 576,   // extra small devices
+      settings: {
+        slidesToShow: 1,
+        arrows: false,
+        dots: true,
+      }
+    }
+  ]
+});
+</script>
+<script src="assets/js/aos.js" defer></script>
+<script src="assets/js/custom.js" defer></script>
+<script src="assets/js/nice-select.min.js" defer></script>
+<script src="assets/js/bootstrap.min.js" defer></script>
+<script src="assets/js/jquery.fancybox.min.js" defer></script>
+<!--<script src="assets/js/fontowesome.js" crossorigin="anonymous" defer></script>-->
+
+<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>-->
+
+<script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    const tooltipList = [...tooltipTriggerList].map(el => new bootstrap.Tooltip(el));
+</script>
+
+
+<!-- Include SweetAlert -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2%4011" defer></script>
+<script src="assets/js/custom-form.js" defer></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/select2%404.1.0-rc.0/dist/js/select2.min.js"></script>
+    
+    <script>
+        $('.book-slide').slick({
+            lazyLoad: 'ondemand',
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: false,
+            asNavFor: '.testimonial-slider'
+        });
+        $('.testimonial-slider').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            asNavFor: '.book-slide',
+            dots: false,
+            arrows: false,
+            autoplaySpeed: 2000,
+            speed: 1300,
+            autoplay: true,
+            //   centerMode: true,
+            focusOnSelect: true
+        });
+    </script>
+
+
+    
+
+
+</body>
+
+
+</html>

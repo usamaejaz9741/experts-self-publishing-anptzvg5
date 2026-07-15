@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="YOUR_GOOGLE_SITE_VERIFICATION" />
+    <title>Author Website Must-Haves That Convert Visitors</title>
+    <meta name="description" content="Learn the essential author website must haves to sell books on author website. Pages,
+    funnels, and a clear checklist that turns visitors into buyers.">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon/favicon-16x16.png">
+    <link rel="preload" as="image" href="../assets/img/ubp-new/banner-bg.webp">
+    <link rel="preload" href="../assets/font/montserrat/Montserrat-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../assets/css/style8e5e.css?v=21">
+
+<link rel="preload" href="../assets/css/fontawesome-all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="../assets/css/fontawesome-all.min.css">
+</noscript>
+
+
+
+
+<link rel="preload" href="../assets/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+</noscript>
+
+
+
+<link rel="preload" href="../assets/css/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="../assets/css/aos.css">
+</noscript>
+
+
+
+<link rel="stylesheet" href="../assets/css/responsivef500.css?v=16">
+
+
+
+
+<link rel="preload" href="../assets/css/nice-select.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="../assets/css/nice-select.css">
+</noscript>
+
+
+
+
+<link rel="preload" href="../assets/css/jquery-ui.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="../assets/css/jquery-ui.css">
+</noscript>
+
+
+<link rel="preload" href="../assets/css/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+<link rel="stylesheet" href="../assets/css/jquery.fancybox.min.css">
+</noscript>
+
+<link rel="preload" href="../assets/css/slick-theme.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+<link rel="stylesheet" href="../assets/css/slick-theme.css">
+</noscript>
+
+<link rel="preload" href="../assets/css/slick.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+<link rel="stylesheet" href="../assets/css/slick.css">
+</noscript>
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/select2%404.1.0-rc.0/dist/css/select2.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2%404.1.0-rc.0/dist/css/select2.min.css">
+    </noscript>
+    <script defer src="../assets/js/site-tracking.js"></script>
+
+    <script>
+        class SmartObserver {
+            constructor() {
+                this.init();
+            }
+
+            init() {
+                this.lazyImages = document.querySelectorAll("img[data-src]");
+                this.hiddenElements = document.querySelectorAll(".io-hidden");
+
+                this.createObserver();
+                this.observeElements();
+            }
+
+            createObserver() {
+                this.observer = new IntersectionObserver(
+                    (entries, observer) => {
+                        entries.forEach((entry) => {
+                            if (!entry.isIntersecting) return;
+
+                            const el = entry.target;
+
+                            // 🖼️ Lazy Image Load
+                            if (el.tagName === "IMG" && el.dataset.src) {
+                                this.loadImage(el);
+                            }
+
+                            // ✨ Reveal Animation (custom)
+                            if (el.classList.contains("io-hidden")) {
+                                el.classList.add("io-show");
+                                el.classList.remove("io-hidden");
+                            }
+
+                            observer.unobserve(el);
+
+                            // 🔁 AOS refresh (important)
+                            if (typeof AOS !== "undefined") {
+                                AOS.refreshHard(); // better than refresh()
+                            }
+                        });
+                    }, {
+                        root: null,
+                        rootMargin: "0px 0px -50px 0px",
+                        threshold: 0.1,
+                    }
+                );
+            }
+
+            observeElements() {
+                this.lazyImages.forEach((img) => this.observer.observe(img));
+                this.hiddenElements.forEach((el) => this.observer.observe(el));
+            }
+
+            loadImage(img) {
+                const temp = new Image();
+                temp.src = img.dataset.src;
+
+                temp.onload = () => {
+                    img.src = temp.src;
+                    img.classList.add("loaded");
+                    img.removeAttribute("data-src");
+                };
+            }
+        }
+
+        // 🚀 Init on DOM Ready
+        document.addEventListener("DOMContentLoaded", () => {
+            new SmartObserver();
+
+            // AOS init (safe)
+            if (typeof AOS !== "undefined") {
+                AOS.init({
+                    duration: 800,
+                    once: true,
+                    offset: 100,
+                });
+            }
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const elements = document.querySelectorAll(".reveal");
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("active");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.15
+            });
+
+            elements.forEach((el) => observer.observe(el));
+        });
+    </script>
+</head>
+
+<body>
+    <header class="header-above">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-6 col-6">
+                <div class="head-contact">
+                    <ul class="list-unstyled d-flex justify-content-start mb-0 gap-4">
+                        <li><a href="javascript:void(0);" class="text-white hvr-effect" data-open-zendesk>
+                                <img src="../assets/img/ubp-new/msg-icon.webp"
+                                    class="img-fluid head-ct-icon effect" alt="massege" width="25" height="30">
+                                <span>Chat With Us</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-6">
+                <div class="head-contact">
+                    <ul class="list-unstyled d-flex justify-content-end mb-0 gap-4">
+                        <li><a href="tel:+18556055210" class="text-white hvr-effect">
+                                <img src="../assets/img/ubp-new/call-icon.webp"
+                                    class="img-fluid head-ct-icon effect" alt="massege" width="25" height="30">
+                                <span>+1 (855) 605-5210</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+        <a class="navbar-brand" href="../index.html">
+            <img class="img-fluid" src="../assets/img/ubp-new/logo.webp" loading="lazy" alt="Experts Self Publishing logo" />
+        </a>
+        <button class="navbar-toggler" type="button" aria-controls="navbarNavDropdown" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link " aria-current="page"
+                        href="../index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown custom-dropdown">
+                    <a class="nav-link dropdown-toggle "
+                        href="javascript:void(0);" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Services <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="../author-website.html">Author Website</a></li>
+                        <li><a class="dropdown-item" href="../pr-and-publicity.html">PR & Publicity</a></li>
+                        <li><a class="dropdown-item" href="../book-editing-proofreading.html">Editing &
+                                Proofreading</a></li>
+                        <li><a class="dropdown-item" href="../book-cover-design.html">Book Cover Design</a></li>
+                        <li><a class="dropdown-item" href="../ghostwriting.html">Ghostwriting</a></li>
+                        <li><a class="dropdown-item" href="../book-illustration.html">Book Illustration</a></li>
+                        <li><a class="dropdown-item" href="../book-video-trailers.html">Book Video Trailers</a>
+                        </li>
+                        <li><a class="dropdown-item" href="../creative-writing.html">Creative Writing</a></li>
+                        <li><a class="dropdown-item" href="../children-book-illustration.html">Children Book
+                                illustration</a></li>
+                        <li><a class="dropdown-item" href="../screenplay-script-writing.html">Screenplay Script
+                                Writing</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link "
+                        href="../book-publishing.html">Book Publishing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link "
+                        href="../book-marketing.html">Book Marketing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link "
+                        href="../pricing.html">Pricing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="../about-us.html">Our Story</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link "
+                        href="../contact-us.html">Contact Us</a>
+                </li>
+                <li class="nav-item dropdown custom-dropdown">
+                    <a class="nav-link dropdown-toggle "
+                        href="javascript:void(0);" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">Resources <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+                    </a>
+                    <ul class="dropdown-menu w-auto menu-2" aria-labelledby="navbarDropdownMenuLink">
+                        <li class="w-100"><a class="dropdown-item" href="../published-books.html">Published
+                                Books</a></li>
+                        <li class="w-100"><a class="dropdown-item" href="../customer-reviews.html">Customer
+                                Reviews</a></li>
+                        
+                        <li class="w-100"><a class="dropdown-item" href="../faq.html">FAQs</a></li>
+                        <li class="w-100"><a class="dropdown-item" href="../blogs.html">Blogs</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="navbar-right">
+            <div class="head-btn">
+                <a href="#exampleModalToggle"
+                    class="theme-btn1 btn-overlay d-inline-flex align-items-center gap-2 text-upper"
+                    data-bs-toggle="modal" data-bs-target="#exampleModal"><img
+                        src="../assets/img/ubp-new/msg-icon.webp" alt="icon" width="30"
+                        height="23"><span>Get a Free Quote</span></a>
+            </div>
+        </div>
+
+    </div>
+</nav>
+
+        <section class="about-banner sec-pd">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-lg-10">
+                    <div class="inner-heading text-white text-center">
+                        <h1 class="">YOUR AUTHOR WEBSITE IS A TOOL, NOT A TROPHY: MUST-HAVE PAGES THAT CONVERT BROWSERS
+                            TO BUYERS</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="blog-detail-sec sec-pd">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-10">
+                    <div class="blog-link">
+                        <h4 class="color-green mb-3">Content</h4>
+                        <h5 class="mb-3"><a href="#link-1">THE MINDSET SHIFT: FROM SHOWROOM TO SALES FLOOR</a></h5>
+                        <h5 class="mb-3"><a href="#link-2">BEYOND PAGES: THE FUNCTIONAL FEATURES YOU CAN’T IGNORE</a></h5>
+                        <h5 class="mb-3"><a href="#link-3">YOUR BLOG: THE #1 TOOL FOR ORGANIC REACH & TRUST</a></h5>
+                        <h5 class="mb-3"><a href="#link-4">THE FINAL INGREDIENT: FROM UNDERSTANDING TO EXECUTION</a></h5>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-9 col-md-12">
+                    <div class="blog-detail">
+
+                        <p>You spent days, maybe even weeks, building your author website, picking the perfect theme,
+                            finding gorgeous photos, and writing a beautiful bio that captures your voice and
+                            accomplishments, and it looks professional and amazing by any standard.</p>
+
+                        <p>You sit back, you wait, and you wait some more, but only a trickle of visitors comes, maybe they
+                            read your blog post or browse your about page, and then they leave without signing up for your
+                            email list or buying a single book, leaving you with nothing but silence and confusion. Your
+                            beautiful website feels like a digital tombstone, a monument to your work that nobody engages
+                            with, and it is pretty, but it is absolutely powerless because you built a trophy instead of a
+                            tool.</p>
+
+                        <p>A trophy sits on a shelf and looks impressive, but a tool does something. Its job is to build,
+                            fix, or create, and your author website's job is not to look pretty, its job is to sell books
+                            and build a lifelong reader community. Every single page should have a purpose that leads
+                            directly to that goal, and if your site is not doing that, you are not alone, but you can fix it
+                            starting today by understanding the <em>author website must haves</em> that work.</p>
+
+
+
+
+
+
+                        <h3 class="color mt-2" id="link-1">THE MINDSET SHIFT: FROM SHOWROOM TO SALES FLOOR</h3>
+
+                        <p>First, let us change how you see your website, because you need to stop thinking of it as your
+                            online business card and start thinking of it as your twenty-four hour salesperson and community
+                            hub that never sleeps and never takes a day off.</p>
+
+                        <p>A trophy website says look at me and my accomplishments, but a tool website says welcome, here is
+                            how I can solve your problem or entertain you, and here is how we can connect and build a
+                            relationship that lasts beyond this single visit.</p>
+                        <p>This shift changes everything because it means every single page, every design choice you make,
+                            and even if the words you write are tested against one simple question, does this content help
+                            in building trust and lead to a sale or a signup? If the answer is no, all the efforts are just
+                            useless work, so let us clear it out today and help you build what sells.</p>
+
+
+
+                        <h3 class="color">THE 5 NON-NEGOTIABLE AUTHOR WEBSITE MUST HAVES</h3>
+                        <p>These are the core pages that form the engine of your book-selling machine, because the
+                            <em>author website must haves</em> are not about having the fanciest animation or the most
+                            creative design, they are about having pages structured for clarity and action that guide
+                            visitors toward becoming loyal readers.</p>
+                        <p>Every successful author website includes these essential components, and without them, you are
+                            simply leaving money on the table and readers in the dark about what to do next on your site.
+                        </p>
+
+                        <h4 class="color">THE STRATEGIC HOMEPAGE: YOUR 5-SECOND PITCH</h4>
+                        <p>Your homepage is your front door. Visitors decide in seconds if they will stay or leave.</p>
+                        <ul>
+                            <li class="mb-3"><strong>The Hero Statement: </strong> At the very top, in big, clear type:
+                                Who you are, who you write for, and what they will get. Example: “I write thrilling
+                                mysteries for readers who love puzzles that keep them guessing until the last page.”</li>
+                            <li class="mb-3"><strong>The Visual Hook: </strong> A professional, engaging author photo and
+                                clear, compelling imagery of your book covers.</li>
+                            <li class="mb-3"><strong>The Clear Paths: </strong> Immediately give visitors two simple
+                                buttons: “Browse My Books” (links to your Books page) and “Join My Reader Club” (links to
+                                your email signup). No confusion. Just two clear choices.</li>
+                        </ul>
+
+                        <h4 class="color">THE BOOKS PAGE: YOUR MAIN SALES FLOOR</h4>
+                        <p>This is the most important page. You need to understand <em>how to sell books on author
+                                website</em>. Don’t just list them. Merchandise them.</p>
+                        <ul>
+                            <li class="mb-3"><strong>For Each Book: </strong> Use a large, high-quality cover image. Write
+                                a gripping, benefit-driven blurb. Include glowing editorial reviews from reputable sources
+                                (not just friend reviews).</li>
+                            <li class="mb-3"><strong>The “Buy Now” Funnel: </strong> Provide clear, prominent purchase
+                                links to ALL major retailers (Amazon, Barnes & Noble, Apple, etc.). Never make a visitor
+                                search for where to buy. This is the core of your author website checklist for conversions.
+                            </li>
+                        </ul>
+
+                        <h4 class="color">THE LANDING PAGE FOR YOUR EMAIL MAGNET</h4>
+                        <p>Your email list is your most valuable asset. To grow it, you need a dedicated landing page for
+                            authors.</p>
+                        <ul>
+                            <li class="mb-3"><strong>What is it?</strong> A standalone page with one goal: get an email
+                                address. You promote this page’s link in your social media bios, in the back of your books,
+                                and in guest posts.</li>
+                            <li class="mb-3"><strong>What do you offer? </strong> A compelling “lead magnet.” This is a
+                                free, valuable content exchange for emails. Think it as a bonus chapter, or a short prequel
+                                to your story. It also works as a character being explored or a sophisticated reading list.
+                            </li>
+                            <li class="mb-3"><strong>The Page Must-Haves: </strong> Make sure there is always a compelling
+                                headline that gets instant attention. “Grab Your Free Inside Story Insights.” This demands
+                                attention right away! With a simple email form, you can make the page useful and
+                                interesting, <em>converting readers to email subscribers</em>.</li>
+                        </ul>
+
+                        <h4 class="color">THE “ABOUT THE AUTHOR” PAGE THAT BUILDS CONNECTION</h4>
+                        <p>People buy from authors they know, like, and trust. Your bio page builds that.</p>
+                        <ul>
+                            <li class="mb-3"><strong>Tell a Story, Not a Resume.</strong> Don’t just list awards. Why do
+                                you write? What connects you to your readers? Share a relatable personal detail.</li>
+                            <li class="mb-3"><strong>Professional Photos:</strong> Include a high-quality, friendly
+                                headshot and an “author at work” candid.</li>
+                            <li class="mb-3"><strong>Build Credibility:</strong> Briefly include relevant awards, nice
+                                press mentions, or endorsements.</li>
+                            <li class="mb-3"><strong>The Call to Action (CTA):</strong> End with an invitation. “Loved
+                                learning about my journey? Start reading it here…” with a link to your Books page.</li>
+
+                        </ul>
+
+                        <h4 class="color">THE CONTACT/APPEARANCE PAGE: OPENING PROFESSIONAL DOORS</h4>
+                        <p>Make it easy for opportunities to find you.</p>
+                        <ul>
+                            <li class="mb-2"><strong>A Clean Contact Form: </strong>Use a simple form (Name, Email, Message) to prevent
+                                spam.</li>
+                            <li class="mb-2"><strong>For Media & Event Planners: </strong> Have a clear section titled “For Media &
+                                Speaking Inquiries.” Offer a direct email or link to a press kit. This small touch makes you
+                                look professional and approachable, feeding the long-term engine.</li>
+
+                        </ul>
+
+
+                        <h4 class="color" id="link-2">BEYOND PAGES: THE FUNCTIONAL FEATURES YOU CAN’T IGNORE</h4>
+                        <p>Pages are your website's structure, the rooms of your house, but a house needs wiring, plumbing,
+                            and good lighting to be livable, and these functional features are the invisible systems that
+                            make your site fast, easy to use, and effective at its main job, to sell books on your author
+                            website.</p>
+                        <p>Ignoring this is like building a beautiful bookstore with no cash register and a door that is
+                            hard to open, so let us fix that right now.</p>
+
+                        <h4 class="color">YOUR DIGITAL ROAD SIGNS: CLEAR, STICKY NAVIGATION</h4>
+                        <p>Think of your menu as a map. If it's confusing, visitors get lost and leave.</p>
+                        <ul>
+                            <li class="mb-2"><strong>Simple Labels: </strong>Use clear, common words: Home, Books, About, Blog, Contact.
+                                Never use clever or vague labels that make people guess.</li>
+                            <li class="mb-2"><strong>Sticky is Key:</strong> A “sticky” menu stays at the top of the screen as visitors
+                                scroll. This means your “Books” page (your main storefront) is always one click away, no
+                                matter where they are on your site. It’s a simple trick that dramatically improves <em>how
+                                    to sell books on author website</em> by removing friction.</li>
+                        </ul>
+
+                        <h4 class="color">SPEED & MOBILE-FRIENDLINESS: THE NON-NEGOTIABLE FOUNDATION</h4>
+                        <p>This is not just a nice-to-have. It’s a deal-breaker.</p>
+                        <ul>
+                            <li class="mb-2"><strong>The Need for Speed: </strong> If your site takes more than 3 seconds to load, over
+                                half of your visitors will leave before they even see it. Compress your images, use a fast
+                                hosting provider, and keep your design clean. A fast site is a professional site.</li>
+                            <li class="mb-2"><strong>Design for Thumbs (Mobile-First):</strong> Over 60% of web traffic is on phones.
+                                Your site must look and work perfectly on a small screen. Buttons must be easy to tap. Text
+                                must be easy to read without zooming. This is the absolute cornerstone of the <em>best
+                                    author website design for 2026</em>. If your site is broken on mobile, you are actively
+                                turning away buyers.</li>
+                        </ul>
+
+                        <h4 class="color">THE ALWAYS-ON INVITATION: STRATEGIC EMAIL SIGNUP FORMS</h4>
+                        <p>Do you know that your email list is a direct way to reach your readers? Make sure never to hide
+                            it!</p>
+                        <ul>
+                            <li class="mb-2"><strong>Use Integrated Forms:</strong> You must use a simple yet clean signup form in
+                                multiple high-traffic spots. Such as the footer of the site, in the sidebar of the blogs,
+                                and as a small banner at the top of the site. The more visible, the better chance to
+                                convert!</li>
+                            <li class="mb-2"><strong>Hit on Psychology:</strong> When you use a constant, low-pressure invitation,
+                                readers tend to convert. They become permanent email subscribers. This is human psychology!
+                                This turns casual browsers into a potential lifelong fan who would love a notification from
+                                you.</li>
+                        </ul>
+
+                        <h3 class="color" id="link-3">YOUR BLOG: THE #1 TOOL FOR ORGANIC REACH & TRUST</h3>
+                        <p>Forget thinking of your blog as a public diary, because that is a missed opportunity, and your
+                            blog is actually your most powerful engine for converting readers to email subscribers and
+                            becoming a trusted voice in your genre.</p>
+                        <p>Stop writing for yourself and start writing for your ideal reader's interests and problems,
+                            because a fantasy author can blog about world-building myths while a business author can share
+                            productivity hacks, and this builds real topical authority and gives people a reason to return.
+                        </p>
+                        <p>Every post is a chance to gently guide a reader toward your books, which is the core of <em>how
+                                to sell books on author website</em>, so never let a post just end, finish with a natural
+                            soft invitation like “If you crave sharp authentic dialogue, you will love my thriller where the
+                            interrogations crackle with tension” and link directly to your sales page, turning passive
+                            content into an active part of your sales funnel.</p>
+
+                        <h3 class="color">YOUR AUTHOR WEBSITE QUESTIONS, ANSWERED</h3>
+                        <p>Many authors have the same questions when building their websites, and getting clear answers
+                            helps you make better decisions and avoid common pitfalls that waste time and money. Let us
+                            address the most frequently asked questions about author websites so you can move forward with
+                            confidence.</p>
+
+                        <h4 class="color">I USE AN AMAZON AUTHOR CENTRAL PAGE. DO I STILL NEED MY OWN SITE?</h4>
+                        <p>Yes, absolutely you do, because Amazon owns your Author Central page while you control your own
+                            website, and it is the difference between renting an apartment and owning your own home. Your
+                            site is your asset, your hub for your entire audience across all retailers, and the only place
+                            you can freely build an email list without interference from any platform.</p>
+
+                        <h4 class="color">HOW OFTEN SHOULD I UPDATE MY WEBSITE?</h4>
+                        <p>Update your blog regularly, aiming for one to two times per month with quality posts, and update
+                            your Books and About pages with every new book launch or major award, because a static site
+                            feels abandoned while a growing site feels alive and engaging. Fresh content also helps with
+                            search engine visibility and gives visitors a reason to return.</p>
+
+                        <h4 class="color">WHAT’S THE #1 MISTAKE YOU SEE ON AUTHOR WEBSITES?</h4>
+                        <p>The mystery meat navigation is the biggest mistake, using clever or vague menu labels like My
+                            Worlds or Odyssey instead of simple clear ones like Books or Blog, because you should never make
+                            a visitor guess what is behind a link. Clarity always beats cleverness when you want to <em>sell
+                                books on your author website</em>.</p>
+
+                        <h3 class="color" id="link-4">THE FINAL INGREDIENT: FROM UNDERSTANDING TO EXECUTION</h3>
+                        <p>Look at what you have now, because you started with a beautiful website that felt like a silent
+                            empty room, and now you have a blueprint for a dynamic purpose-built tool that works for you
+                            while you sleep.</p>
+                        <p>You understand the core <em>author website must haves</em>, and you see your site not as a static
+                            display but as a living system designed to connect, engage, and sell, which is the knowledge
+                            that separates hobbyists from professional authors.</p>
+                        <p>It is a difference between hoping for sales and building a system that generates them, but
+                            knowing what to build and actually building it are two different challenges that require time,
+                            technical skill, and a marketer's eye for conversion.</p>
+                        <h4 class="color">THE FINAL STEP: BRINGING YOUR HIGH-CONVERTING WEBSITE TO LIFE</h4>
+                        <p>This is the moment to consider your next move, because you have the strategy and you have the
+                            checklist, and the final step is flawless execution that makes everything work together
+                            seamlessly. Imagine handing this blueprint to a team that builds this engine for you, precisely
+                            and professionally, a partner that does not just make a pretty trophy but constructs a
+                            high-performing tool customized to your specific books and goals.</p>
+                        <p>A team that integrates every element, from the email magnet <em>landing page for authors</em> to
+                            the seamless buy links, into a cohesive reader-focused experience that works for you while you
+                            sleep, because you have done the hard work of learning what matters and now you can partner with
+                            those who can build it.</p>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="">
+    <div class="container-fluid">
+        <div class="row align-items-start">
+
+            <div class="col-lg-4 col-md-12">
+                <div class="foot-box text-white">
+                    <a href="../index.html"><img src="../assets/img/ubp-new/footer-logo.webp"
+                            class="img-fluid foot-logo" alt="img" loading="lazy"></a>
+                    <p class="py-2 font">For 8+ years, we have been the quiet force behind unforgettable stories. We
+                        don't just publish books; we partner with visionaries, transforming bold ideas into legacies
+                        that endure. Let us build yours.</p>
+                    <div class="d-flex align-items-center gap-3">
+                        <h4 class="color mb-0 font-28">Follow Us:</h4>
+                        <div class="head-right d-flex align-items-center gap-3 justify-content-end">
+                            <ul class="list-unstyled d-flex align-items-center gap-2 mb-0">
+                                <li><a href="https://www.facebook.com/ExpertsSelfPublishingOfficial/" target="_blank"><i
+                                            class="fa-brands fa-facebook-f"></i></a></li>
+                                <li><a href="https://www.instagram.com/expertsselfpublishingofficial/" target="_blank"><i
+                                            class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href="https://www.youtube.com/@ExpertsSelfPublishing" target="_blank"><i
+                                            class="fa-brands fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-4 col-sm-4 ">
+                <div class="foot-box text-white">
+                    <h3 class="color">What We Offer</h3>
+                    <div class="foot-line"></div>
+                    <div class="foot-list d-flex mt-3">
+                        <ul class="list-unstyled">
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../book-publishing.html">Book Publishing</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../book-marketing.html">Book Marketing</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../author-website.html" class="">Author Website</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../creative-writing.html" class="">Creative Writing</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../book-illustration.html" class="">Book illustration</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../book-video-trailers.html" class="">Book Video Trailers</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../book-cover-design.html" class="">Book Cover Design</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../ghostwriting.html" class="">Ghostwriting</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../book-writing.html" class="">Book Writing</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../pr-and-publicity.html" class="">PR & Publicity</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-4 col-sm-4 ">
+                <div class="foot-box text-white">
+                    <h3 class="color">Others</h3>
+                    <div class="foot-line"></div>
+                    <div class="foot-list d-flex mt-3">
+                        <ul class="list-unstyled">
+
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../free-book-marketing-guide.html" class="">Free Book Marketing
+                                    Guide</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../free-book-publishing-guide.html" class="">Free Book Publishing
+                                    Guide</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../blogs.html" class="">Blogs</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../pricing.html" class="">Pricing</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../about-us.html" class="">Our Story</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../contact-us.html" class="">Contact Us</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-4 ">
+                <div class="foot-box text-white">
+                    <h3 class="color">Information</h3>
+                    <div class="foot-list info-detail">
+                        <ul class="list-unstyled">
+                            <li class="my-4 info-li">
+                                <a href="tel:+18556055210" class="d-flex gap-2">
+                                    <!-- <span class="info-icon"><i class="fa-solid fa-phone" aria-hidden="true"></i></span> -->
+                                    <span class="info-icon w-25"><img
+                                            src="../assets/img/ubp-new/theme-phone.webp"
+                                            class="img-fluid" alt="location" width="21" height="21"
+                                            loading="lazy"></span>
+                                    <span class="w-75">
+                                        <small>Call us now </small>
+                                        <span class="foot-number d-block w-100">+1 (855) 605-5210</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="my-4 info-li">
+                                <a href="mailto:info@expertsselfpublishing.com" class="d-flex gap-2">
+                                    <!-- <span class="info-icon"><i class="fa-solid fa-envelope" aria-hidden="true"></i></span> -->
+                                    <span class="info-icon w-25"><img
+                                            src="../assets/img/ubp-new/foot-envelope.webp"
+                                            class="img-fluid" alt="location" width="21" height="22"
+                                            loading="lazy"></span>
+                                    <span class="w-75">
+                                        <small>Email us on: </small>
+                                        <span class="foot-number d-block w-100">info@expertsselfpublishing.com</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="my-4 info-li">
+                                <a href="javascript:void(0);" class="d-flex gap-2">
+                                    <!-- <span class="info-icon"><i class="fa-solid fa-house"></i></span> -->
+                                    <span class="info-icon w-25"><img
+                                            src="../assets/img/ubp-new/location-icon.webp"
+                                            class="img-fluid" alt="location" width="21" height="28"
+                                            loading="lazy"></span>
+                                    <span class="w-75">
+                                        <!-- <small>Email us on: </small> -->
+                                        <span class="foot-number d-block w-100">3223 West 6th Street STE 101 Los
+                                            Angeles, <br> CA 90020 United States.</span>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="payment-box mt-3 p-2">
+                    <img src="../assets/img/ubp-new/pymnt-5.webp" class="img-fluid" alt="payment"
+                        width="316" height="68" loading="lazy">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container-fluid last-contain">
+        <div class="row">
+            <div class="col-lg-7 col-md-8">
+                <p class=" mb-0 para-color">Copyright © 2026 Experts Self Publishing - All Rights Reserved | Powered By
+                    Iota Digital, LLC</p>
+            </div>
+            <div class="col-lg-5 col-md-4">
+                <ul class="list-unstyled d-flex align-items-center gap-3 m-0 justify-content-end">
+                    <li><a href="../privacy-policy.html" class="">Privacy Policy</a></li>
+                    <li><a href="../terms-condition.html" class="">Terms And Conditions</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img src="../assets/img/pop-logo.png" class="img-fluid" alt="Experts Self Publishing logo" loading="lazy">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row align-items-center justify-content-around">
+                    <div class="col-lg-7">
+                        <div class="form-wrap">
+                            <div class="form-heading">
+                                <h3 class="color font-40 let-space fw-600">Start Building Your Author Success Story
+                                    Today!</h3>
+                                <p>Speak with our senior publishing consultant for a free tailored proposal</p>
+                            </div>
+                            <form action="/inquiry-submit" id="modal-form" method="POST">
+                                <input type="hidden" name="_token" value="awxIAFp3sLU9ALw6iz3WlIXSKpyn9f7ba0ryrYCz" autocomplete="off">                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <!-- <label for="full-name">Enter Your Full Name</label> -->
+                                        <div class="form-group">
+                                            <input type="text" id="full-name" name="full_name"
+                                                placeholder="Full Name" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <!-- <label for="email">Your email</label> -->
+                                        <div class="form-group">
+                                            <input type="text" id="email" name="email" placeholder="Email"
+                                                class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <!-- <label for="phone">Your phone</label> -->
+                                        <div class="form-group">
+                                            <input type="text" id="phone" name="phone"
+                                                placeholder="(999) 999 9999" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <!-- <label for="message">Type your message</label> -->
+                                        <div class="form-group">
+                                            <textarea rows="4" id="message" name="message" placeholder="Book Detail" class="form-control"></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="btn-container mt-4">
+                                        <button class="theme-btn1 text-upper border-0 btn-overlay">Book Now</button>
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="pop-img">
+                            <img src="../assets/img/badge-discount.png" class="discount-img img-fluid"
+                                alt="50% Discount">
+                            <img src="../assets/img/popup-image.png" class="img-fluid pop-std" alt="img"
+                                loading="lazy">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- <img src="assets/img/pop-circle.png" class="img-fluid pop-circle" alt="img"> -->
+        </div>
+    </div>
+</div>
+    <script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/slick.js"></script>
+<script>
+    // accordion
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panelfaq = this.nextElementSibling;
+            if (panelfaq.style.maxHeight) {
+                panelfaq.style.maxHeight = null;
+            } else {
+                panelfaq.style.maxHeight = panelfaq.scrollHeight + "px";
+            }
+        });
+    }
+    // accordion
+
+    $(document).ready(function() {
+        function initializeSlick(slider) {
+            if (!slider.hasClass('slick-initialized')) {
+                slider.slick({
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    autoplay: true
+                });
+            } else {
+                slider.slick('refresh');
+            }
+        }
+
+        // Pehla tab ka slider initialize karein
+        initializeSlick($('#tab1 .portfolio-slider'));
+
+        $('button[data-bs-toggle="tab"]').on('shown.bs.tab', function(e) {
+            let target = $(e.target).attr("data-bs-target");
+            let slider = $(target).find('.portfolio-slider');
+
+            // Ensure proper visibility and reinitialize
+            $(target).css({
+                'height': 'auto',
+                'visibility': 'visible'
+            });
+
+            setTimeout(function() {
+                initializeSlick(slider);
+            }, 100);
+        });
+    });
+</script>
+<script>
+    $(".portfolio-slider").slick({
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 0,
+        speed: 13000,
+        arrows: false,
+        dots: false,
+        pauseOnHover: false,
+        cssEase: "linear",
+        responsive: [{
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 5,
+                },
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 4,
+                },
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 3,
+                },
+            },
+            {
+                breakpoint: 400,
+                settings: {
+                    slidesToShow: 3,
+                },
+            },
+        ],
+    });
+
+    document.querySelectorAll('.flip-box').forEach(box => {
+  box.addEventListener('click', () => {
+    box.classList.toggle('active');
+  });
+});
+
+
+$(".blog-slider").slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  arrows: true,
+  dots: false,
+  autoplaySpeed: 2000,
+  responsive: [
+    {
+      breakpoint: 1025,   // 1024px se neeche
+      settings: {
+        slidesToShow: 2,
+      }
+    },
+    {
+      breakpoint: 992,   // 992px se neeche
+      settings: {
+        slidesToShow: 2,
+      }
+    },
+    {
+      breakpoint: 768,   // 768px se neeche
+      settings: {
+        slidesToShow: 1,
+        arrows: false,
+        dots: true,
+      }
+    },
+    {
+      breakpoint: 576,   // extra small devices
+      settings: {
+        slidesToShow: 1,
+        arrows: false,
+        dots: true,
+      }
+    }
+  ]
+});
+</script>
+<script src="../assets/js/aos.js" defer></script>
+<script src="../assets/js/custom.js" defer></script>
+<script src="../assets/js/nice-select.min.js" defer></script>
+<script src="../assets/js/bootstrap.min.js" defer></script>
+<script src="../assets/js/jquery.fancybox.min.js" defer></script>
+<!--<script src="../assets/js/fontowesome.js" crossorigin="anonymous" defer></script>-->
+
+<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>-->
+
+<script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    const tooltipList = [...tooltipTriggerList].map(el => new bootstrap.Tooltip(el));
+</script>
+
+
+<!-- Include SweetAlert -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2%4011" defer></script>
+<script src="../assets/js/custom-form.js" defer></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/select2%404.1.0-rc.0/dist/js/select2.min.js"></script>
+    
+    <script>
+        $('.book-slide').slick({
+            lazyLoad: 'ondemand',
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: false,
+            asNavFor: '.testimonial-slider'
+        });
+        $('.testimonial-slider').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            asNavFor: '.book-slide',
+            dots: false,
+            arrows: false,
+            autoplaySpeed: 2000,
+            speed: 1300,
+            autoplay: true,
+            //   centerMode: true,
+            focusOnSelect: true
+        });
+    </script>
+
+
+    
+
+
+</body>
+
+
+</html>

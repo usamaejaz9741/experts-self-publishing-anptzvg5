@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="YOUR_GOOGLE_SITE_VERIFICATION" />
+    <title>How to use AI ethically for Writing, Editing, and Ideation</title>
+    <meta name="description" content="Learn how to use AI ethically for drafting, editing, and ideation. Practical tips, tools, and best practices for modern authors.">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon/favicon-16x16.png">
+    <link rel="preload" as="image" href="../assets/img/ubp-new/banner-bg.webp">
+    <link rel="preload" href="../assets/font/montserrat/Montserrat-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../assets/css/style8e5e.css?v=21">
+
+<link rel="preload" href="../assets/css/fontawesome-all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="../assets/css/fontawesome-all.min.css">
+</noscript>
+
+
+
+
+<link rel="preload" href="../assets/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+</noscript>
+
+
+
+<link rel="preload" href="../assets/css/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="../assets/css/aos.css">
+</noscript>
+
+
+
+<link rel="stylesheet" href="../assets/css/responsivef500.css?v=16">
+
+
+
+
+<link rel="preload" href="../assets/css/nice-select.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="../assets/css/nice-select.css">
+</noscript>
+
+
+
+
+<link rel="preload" href="../assets/css/jquery-ui.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="../assets/css/jquery-ui.css">
+</noscript>
+
+
+<link rel="preload" href="../assets/css/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+<link rel="stylesheet" href="../assets/css/jquery.fancybox.min.css">
+</noscript>
+
+<link rel="preload" href="../assets/css/slick-theme.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+<link rel="stylesheet" href="../assets/css/slick-theme.css">
+</noscript>
+
+<link rel="preload" href="../assets/css/slick.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+<link rel="stylesheet" href="../assets/css/slick.css">
+</noscript>
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/select2%404.1.0-rc.0/dist/css/select2.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2%404.1.0-rc.0/dist/css/select2.min.css">
+    </noscript>
+    <script defer src="../assets/js/site-tracking.js"></script>
+
+    <script>
+        class SmartObserver {
+            constructor() {
+                this.init();
+            }
+
+            init() {
+                this.lazyImages = document.querySelectorAll("img[data-src]");
+                this.hiddenElements = document.querySelectorAll(".io-hidden");
+
+                this.createObserver();
+                this.observeElements();
+            }
+
+            createObserver() {
+                this.observer = new IntersectionObserver(
+                    (entries, observer) => {
+                        entries.forEach((entry) => {
+                            if (!entry.isIntersecting) return;
+
+                            const el = entry.target;
+
+                            // 🖼️ Lazy Image Load
+                            if (el.tagName === "IMG" && el.dataset.src) {
+                                this.loadImage(el);
+                            }
+
+                            // ✨ Reveal Animation (custom)
+                            if (el.classList.contains("io-hidden")) {
+                                el.classList.add("io-show");
+                                el.classList.remove("io-hidden");
+                            }
+
+                            observer.unobserve(el);
+
+                            // 🔁 AOS refresh (important)
+                            if (typeof AOS !== "undefined") {
+                                AOS.refreshHard(); // better than refresh()
+                            }
+                        });
+                    }, {
+                        root: null,
+                        rootMargin: "0px 0px -50px 0px",
+                        threshold: 0.1,
+                    }
+                );
+            }
+
+            observeElements() {
+                this.lazyImages.forEach((img) => this.observer.observe(img));
+                this.hiddenElements.forEach((el) => this.observer.observe(el));
+            }
+
+            loadImage(img) {
+                const temp = new Image();
+                temp.src = img.dataset.src;
+
+                temp.onload = () => {
+                    img.src = temp.src;
+                    img.classList.add("loaded");
+                    img.removeAttribute("data-src");
+                };
+            }
+        }
+
+        // 🚀 Init on DOM Ready
+        document.addEventListener("DOMContentLoaded", () => {
+            new SmartObserver();
+
+            // AOS init (safe)
+            if (typeof AOS !== "undefined") {
+                AOS.init({
+                    duration: 800,
+                    once: true,
+                    offset: 100,
+                });
+            }
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const elements = document.querySelectorAll(".reveal");
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("active");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.15
+            });
+
+            elements.forEach((el) => observer.observe(el));
+        });
+    </script>
+</head>
+
+<body>
+    <header class="header-above">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-6 col-6">
+                <div class="head-contact">
+                    <ul class="list-unstyled d-flex justify-content-start mb-0 gap-4">
+                        <li><a href="javascript:void(0);" class="text-white hvr-effect" data-open-zendesk>
+                                <img src="../assets/img/ubp-new/msg-icon.webp"
+                                    class="img-fluid head-ct-icon effect" alt="massege" width="25" height="30">
+                                <span>Chat With Us</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-6">
+                <div class="head-contact">
+                    <ul class="list-unstyled d-flex justify-content-end mb-0 gap-4">
+                        <li><a href="tel:+18556055210" class="text-white hvr-effect">
+                                <img src="../assets/img/ubp-new/call-icon.webp"
+                                    class="img-fluid head-ct-icon effect" alt="massege" width="25" height="30">
+                                <span>+1 (855) 605-5210</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+        <a class="navbar-brand" href="../index.html">
+            <img class="img-fluid" src="../assets/img/ubp-new/logo.webp" loading="lazy" alt="Experts Self Publishing logo" />
+        </a>
+        <button class="navbar-toggler" type="button" aria-controls="navbarNavDropdown" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link " aria-current="page"
+                        href="../index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown custom-dropdown">
+                    <a class="nav-link dropdown-toggle "
+                        href="javascript:void(0);" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Services <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="../author-website.html">Author Website</a></li>
+                        <li><a class="dropdown-item" href="../pr-and-publicity.html">PR & Publicity</a></li>
+                        <li><a class="dropdown-item" href="../book-editing-proofreading.html">Editing &
+                                Proofreading</a></li>
+                        <li><a class="dropdown-item" href="../book-cover-design.html">Book Cover Design</a></li>
+                        <li><a class="dropdown-item" href="../ghostwriting.html">Ghostwriting</a></li>
+                        <li><a class="dropdown-item" href="../book-illustration.html">Book Illustration</a></li>
+                        <li><a class="dropdown-item" href="../book-video-trailers.html">Book Video Trailers</a>
+                        </li>
+                        <li><a class="dropdown-item" href="../creative-writing.html">Creative Writing</a></li>
+                        <li><a class="dropdown-item" href="../children-book-illustration.html">Children Book
+                                illustration</a></li>
+                        <li><a class="dropdown-item" href="../screenplay-script-writing.html">Screenplay Script
+                                Writing</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link "
+                        href="../book-publishing.html">Book Publishing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link "
+                        href="../book-marketing.html">Book Marketing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link "
+                        href="../pricing.html">Pricing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="../about-us.html">Our Story</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link "
+                        href="../contact-us.html">Contact Us</a>
+                </li>
+                <li class="nav-item dropdown custom-dropdown">
+                    <a class="nav-link dropdown-toggle "
+                        href="javascript:void(0);" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">Resources <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+                    </a>
+                    <ul class="dropdown-menu w-auto menu-2" aria-labelledby="navbarDropdownMenuLink">
+                        <li class="w-100"><a class="dropdown-item" href="../published-books.html">Published
+                                Books</a></li>
+                        <li class="w-100"><a class="dropdown-item" href="../customer-reviews.html">Customer
+                                Reviews</a></li>
+                        
+                        <li class="w-100"><a class="dropdown-item" href="../faq.html">FAQs</a></li>
+                        <li class="w-100"><a class="dropdown-item" href="../blogs.html">Blogs</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="navbar-right">
+            <div class="head-btn">
+                <a href="#exampleModalToggle"
+                    class="theme-btn1 btn-overlay d-inline-flex align-items-center gap-2 text-upper"
+                    data-bs-toggle="modal" data-bs-target="#exampleModal"><img
+                        src="../assets/img/ubp-new/msg-icon.webp" alt="icon" width="30"
+                        height="23"><span>Get a Free Quote</span></a>
+            </div>
+        </div>
+
+    </div>
+</nav>
+
+    
+<section class="about-banner sec-pd">
+    <div class="container">
+        <div class="row align-items-center justify-content-center">
+            <div class="col-lg-8">
+                <div class="inner-heading text-white text-center">
+                    <h1 class="">How To Use Ai Ethically For Drafting, Editing, And Ideation (Best Practices)</h1>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="blog-detail-sec sec-pd">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-10">
+                <div class="blog-link">
+                    <h4 class="color-green mb-3">Content</h4>
+                    <h5 class="mb-3"><a href="#link-1">Why Ethical Ai Use For Authors Is Necessary?</a></h5>
+                    <h5 class="mb-3"><a href="#link-2">How To Use Ai Ethically For Drafting</a></h5>
+                    <h5 class="mb-3"><a href="#link-3">Practical Drafting Strategies</a></h5>
+                    <h5 class="mb-3"><a href="#link-4">The Role Of Book Editing Services In Your Process</a></h5>
+                    <h5 class="mb-3"><a href="#link-5">Understanding Proofreading Vs Editing</a></h5>
+                    <h5 class="mb-3"><a href="#link-6">How To Follow Ai Best Practices For Writers</a></h5>
+
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-9 col-md-12">
+                <div class="blog-detail">
+                    <p>Technology moves fast. Writing moves slower. The two sometimes feel like opposites. But they are meeting now in interesting ways. Artificial intelligence has now become an indispensable part of writer's workspace. It offers help with drafting. It assists with editing, generating ideas on demand.</p>
+                    <p>Many writers feel excited about these tools. Many feel nervous too. The excitement comes from possibility. Imagine never facing a blank page again. Imagine fixing sentences instantly. Imagine endless ideas flowing your way.</p>
+                    <p>The nervousness comes from fear. Fear of losing your voice. Fear of sounding robotic. Fear of depending on machines. These feelings are normal. They are also worth exploring.</p>
+                    <p>The truth sits somewhere in the middle. AI is not a miracle. It is not a disaster either. It is a tool. Like any tool, it depends on the user. You can wield it poorly or well. You can let it lead or you can lead it. The choice belongs to you.</p>
+                    <p>Today we will discuss how to use AI ethically in your writing process. We will cover drafting, editing, and ideation. We will provide clear guidelines. We will help you maintain your authentic voice. Let us begin this important conversation.</p>
+
+                    <h3 class="color">The Rise Of Ai In Creative Writing</h3>
+                    <p>Artificial intelligence has grown rapidly. Programs can now generate text that sounds human. They can complete sentences. They can suggest improvements. They can brainstorm concepts in seconds.</p>
+                    <p>Writers across the world are experimenting. Some embrace these tools fully. Some reject them entirely. Most fall somewhere in between. They want the benefits without the costs. They want help without replacement.</p>
+                    <p>The publishing industry is watching closely. Editors notice changes in submissions. Agents discuss the implications. Readers wonder about authenticity. These conversations will continue for years. They will shape the future of writing.</p>
+
+                    <h3 class="color" id="link-1">Why Ethical Ai Use For Authors Is Necessary?</h3>
+                    
+                    <p>Ethics matter because writing matters. Words carry meaning. Stories shape culture. Books influence lives. When machines enter this space, questions arise.</p>
+                    <p>Who owns the words? Who takes credit? Who is responsible for mistakes? These questions have real answers. They affect real people. They affect your reputation as an author.</p>
+                    <p>Thinking about ethics now protects you later. It builds trust with readers. It maintains your integrity. It ensures your work remains yours. These are not small concerns. They are foundational to your career.</p>
+
+                    <h3 class="color" id="link-2">How To Use Ai Ethically For Drafting</h3>
+                    
+                    <p>Drafting is where stories begin. It is the raw material stage. It is messy and imperfect. Many writers struggle here. They face blank pages and empty screens. They doubt themselves before they start.</p>
+                    <p>AI can help with this struggle. It can generate starting points. It can overcome writer's block. It can provide structure when you feel lost. But you must approach this carefully. You must maintain your role as the author.</p>
+
+                
+                    <h4 class="color">STARTING WITH YOUR IDEAS</h4>
+                    <p>The best way to use AI ethically in drafting is to start with yourself. You provide the core ideas. You provide the characters. You provide the emotional truth. AI simply helps you express these things.</p>
+                    <p>Write your rough thoughts first. Get them down however they come. Then use AI to expand or clarify. Ask it for alternative phrasings. Ask it to develop a scene further. Keep your vision at the center. Let AI serve that vision.</p>
+                    <h4 class="color">MAINTAINING YOUR VOICE</h4>
+                    <p>Voice is what makes you unique. It is your sentence rhythm. It is your word choices. It is your perspective on the world. Readers connect with voice. They return for voice. They trust voice above all else.</p>
+                    <p>AI tends toward average writing. It pulls from common patterns. It avoids risks. It plays it safe. If you let AI write too much, your voice fades. Your work becomes generic. Your readers notice this.</p>
+                    <p>Use AI for suggestions only. Rewrite everything in your own words. Make each sentence sound like you. This takes more time. But it preserves what matters most.</p>
+                   
+
+                    <h3 class="color" id="link-3">Practical Drafting Strategies</h3>
+                    <p>For AI best practices for writers, here are specific ways to draft with its assistance. These methods keep you in control. They respect your creative authority. They produce better work.</p>
+                    
+                    <h4 class="color">BRAINSTORMING WITH PROMPTS</h4>
+                    <p>Stuck on what happens next? Ask AI for possibilities. Give it your characters and situation. Request ten different directions. Read through them quickly.</p>
+                    <p>Most ideas will be useless. That is fine. One idea might spark something. That something becomes yours. You take it and run. You make it fit your story. You make it authentic.</p>
+                   
+                    <h4 class="color">OVERCOMING BLOCKS</h4>
+                    <p>Writer's block feels terrible. You sit and stare. Nothing comes. Hours pass. Frustration grows. AI can break this cycle.</p>
+                    <p>Ask it to write a terrible version of your next scene. Read it and laugh. Then write your own version. The block often breaks because you started moving. The quality of AI output does not matter. The movement matters.</p>
+
+                    <h3 class="color" id="link-4">The Role Of Book Editing Services In Your Process</h3>
+                    <p>Editing is different from drafting. It requires distance. It requires objectivity. It requires skills not every writer possesses. This is where professional help becomes valuable.</p>
+                    <p>Book editing services offer expertise you cannot get from AI. They provide human judgment. They understand audience expectations. They catch what machines miss. They respect your voice while improving your work.</p>
+                    
+                    <h4 class="color">HUMAN EYES VS. MACHINE EYES</h4>
+                    <p>AI editing tools catch basic errors. They fix spelling and grammar. They suggest clearer sentences. These are useful functions. They save time and effort.   </p>
+                    <p>But AI cannot feel your story. It does not know if a character feels real. It cannot sense pacing problems. It misses emotional beats. It suggests changes that weaken your voice.</p>
+                    <p>Professional editors do the opposite. They read with empathy. They feel what readers will feel. They protect your strengths. They identify weaknesses with care. This human element cannot be replaced.</p>
+                    <h4 class="color">WHEN TO USE BOTH</h4>
+                    <p>Editing requires honesty. You must see your work clearly. You must admit what needs improvement. This is hard for every writer. We love our own words. We resist cutting them.</p>
+                    <p>AI can help with distance. It shows you alternatives. It highlights patterns you miss. It suggests clarity you overlook. But editing also has traps. AI can lead you wrong. It can flatten your style.</p>
+                    <h4 class="color">GRAMMAR AND POLISH</h4>
+                    <p>Basic editing is safe for AI. Use it to catch typos. Use it to fix punctuation. Use it to spot repeated words. These tasks are mechanical. They do not require judgment. They simply require rules.</p>
+                    <p>Run your manuscript through these tools. Accept most corrections. But read each change first. Sometimes AI flags things that are fine. Trust your ear. Trust your knowledge. Override the machine when needed.</p>
+                    <h4 class="color">STYLE AND FLOW</h4>
+                    <p>Deeper editing is riskier. AI makes style suggestions based on averages. It prefers simple sentences. It removes interesting quirks. It smooths out personality. This makes writing boring.</p>
+                    <p>When AI suggests style changes, be careful. Ask yourself if the change helps. Does it make your meaning clearer? Does it remove confusion? If yes, consider it. If it just sounds different, ignore it. Your style matters more than AI preferences.</p>
+
+                    <h3 class="color"  id="link-5">Understanding Proofreading Vs Editing</h3>
+                    <p>Many writers confuse these terms. They think editing and proofreading are the same. They are not. The difference matters for your process. Understanding proofreading vs editing helps you use AI correctly.</p>
+
+                    <h4 class="color">WHAT PROOFREADING COVERS</h4>
+                    <p>Proofreading happens last. It looks for small mistakes. Spelling errors. Missing commas. Wrong words. Typos that slipped through. Proofreading polishes the surface.</p>
+                    <p>AI excels at proofreading. It catches these errors quickly. It never gets tired. It checks every word consistently. Use AI for this stage without worry. The stakes are low. The benefits are real.</p>
+                    <h4 class="color">WHAT EDITING REQUIRES</h4>
+                    <p>Editing goes deeper. It looks at structure. It examines character arcs. It checks pacing. It evaluates dialogue. Editing shapes the story itself. This requires understanding. This requires taste. This requires human judgment.</p>
+                    <p>Understanding proofreading vs editing helps you choose tools wisely. Use AI for proofreading. Use humans for editing. Use both for different purposes. Your book benefits from this clarity.</p>
+                    <h3 class="color"  id="link-6">How To Follow Ai Best Practices For Writers</h3>
+                    <p>Every tool works better with guidelines. AI is no different. Developing AI best practices for writers protects your work. It ensures consistent quality. It prevents common mistakes.</p>
+                    <h4 class="color">SET CLEAR RULES FOR YOURSELF</h4>
+                    <p>Decide ahead what AI will do. Will it help with first drafts? Will it suggest revisions? Will it brainstorm ideas? Write these rules down. Share them with trusted readers. Hold yourself accountable.</p>
+                    <p>Clear rules prevent drifting. They stop you from relying too much. They keep AI in its proper place. They protect your identity as an author.</p>
+                    <h4 class="color">REVIEW EVERYTHING CAREFULLY</h4>
+                    <p>Never publish AI output without reading it. Never assume the machine is right. Read every word aloud. Check for accuracy. Check for voice. Check for truth.</p>
+                    <p>Mistakes slip into AI writing constantly. Facts get wrong. Tone shifts oddly. Sentences sound strange. You are responsible for fixing these. You are the author. The buck stops with you.</p>
+                    <h3 class="color">Embracing Ethical Ai Use For Authors</h3>
+                    <p>Ethics are not just rules. They are a mindset. They reflect your values. They show readers who you are. Practicing ethical AI use for authors builds trust over time.</p>
+
+                    <h4 class="color">TRANSPARENCY WITH READERS</h4>
+                    <p>Consider telling readers about your process. Some authors share their AI use openly. Others keep it private. Neither approach is wrong. But honesty feels right for many.</p>
+                    <p>If AI helped with your book, consider a note. Explain how you used it. Reassure readers about your voice. This transparency builds connection. It shows confidence in your work.</p>
+                    <h4 class="color">RESPECTING OTHER WRITERS</h4>
+                    <p>AI learns from existing writing. It trains on work by others. This raises complex questions. Some writers feel their work is stolen. Others see it as fair use. The debate continues.</p>
+                    <p>Respect these concerns. Do not use AI to copy other authors. Do not generate work in someone else's style. Create your own original art. Let AI assist, not imitate. This respects the community you belong to.</p>
+                    <h3 class="color">Practical Applications For Your Process</h3>
+                    <p>Theory helps. Practice matters more. Here are concrete ways to apply these ideas. Use them in your daily writing. Adapt them to your specific needs.</p>
+                    <h4 class="color">DRAFTING WITH INTEGRITY</h4>
+                    <p>Start each session with your own words. Write without AI for fifteen minutes. Get your mind flowing. Capture your natural voice. Then bring in AI for support.</p>
+                    <p>Ask specific questions. What would happen if? How could I describe this? Give me three options for this line. Choose what works. Rewrite everything in your voice.</p>
+                    <h4 class="color">EDITING WITH DISCERNMENT</h4>
+                    <p>Run your draft through AI tools. Accept basic corrections. Review style suggestions slowly. Keep what serves your meaning. Reject what flattens your voice. Send the result to human editors.</p>
+                    <p>Listen to their feedback carefully. Compare it to AI suggestions. Notice where they agree. Notice where they differ. Learn from both. Improve your next draft.</p>
+                    <h4 class="color">IDEATION WITH CURIOSITY</h4>
+                    <p>Use AI to generate ideas freely. Ask for fifty concepts. Ask for wild possibilities. Ask for combinations you never considered. Let the machine be creative.</p>
+                    <p>Then walk away. Let ideas settle. Return with fresh eyes. Choose what inspires you. Develop it in your own way. Make it yours completely.</p>
+                    <h3 class="color">Common Pitfalls To Avoid While Using Ai In Writing</h3>
+                    <p>Writers make mistakes with AI. These mistakes hurt their work. They damage their reputation. They slow their growth. Learn what to avoid.</p>
+                    <h4 class="color">OVER RELIANCE ON AI</h4>
+                    <p>Some writers let AI do too much. They generate whole chapters. They accept all suggestions. They stop thinking for themselves. Their work becomes hollow. Readers sense this emptiness.</p>
+                    <p>Stay engaged with your writing. Make active choices. Question everything. Your mind is your greatest tool. Do not surrender it to a machine and make sure to use AI ethically and sensibly.</p>
+                    <h4 class="color">IGNORING YOUR VOICE</h4>
+                    <p>Voice takes years to develop. It is your greatest asset. AI cannot replicate it. AI does not understand it. AI often erases it without knowing.</p>
+                    <p>Guard your voice fiercely. Read your work aloud. Ask if it sounds like you. If not, rewrite until it does. Your readers want you, not a machine.</p>
+                    <h3 class="color">The Future Of Writing With Ai</h3>
+                    <p>Nobody knows exactly what comes next. Technology will keep advancing. Tools will become more powerful. Writers will adapt and evolve. The future holds both challenges and opportunities.</p>
+                    <h4 class="color">STAYING INFORMED</h4>
+                    <p>Keep learning about AI developments. Read articles from trusted sources. Talk to other writers about their experiences. Attend workshops and webinars. Stay curious and open.</p>
+                    <p>Knowledge protects you. It helps you make good choices. It prevents surprises. It keeps you ahead of changes.</p>
+                    <h4 class="color">HOLDING YOUR VALUES</h4>
+                    <p>Technology changes fast. Values change slowly. Hold onto what matters. Authenticity matters. Voice matters. Connection with readers matters. These truths remain constant.</p>
+                    <p>Let AI handle the mechanical parts. Keep the human parts for yourself. Your heart belongs in your writing. Do not delegate that to anyone or anything.</p>
+                    <h3 class="color">Writing With Integrity In An Ai Driven World</h3>
+                    <p>The writing world is shifting. AI tools are here to stay. They offer real help with drafting, editing, and ideation. They save time and overcome blocks. They generate possibilities you might miss alone.</p>
+                    <p>But tools are just tools. They do not replace you. They do not write your story. They do not feel your emotions. They do not connect with readers. Only you can do these things.</p>
+                    <p>Learning how to use AI ethically protects your career. It maintains your reputation. It preserves your unique voice. It ensures your work remains authentically yours.</p>
+                    <p>Learn to stay original, intentional, and transparent. Use AI to support your craft, not replace it. Balance efficiency with authenticity in every stage.</p>
+                    <p>When used wisely, AI strengthens your writing journey. And your readers will feel that honesty clearly! Remember, the future belongs to writers who adapt without losing themselves. Be one of those writers. Use tools wisely. Create boldly. Share your unique vision with the world.</p>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+    <footer class="">
+    <div class="container-fluid">
+        <div class="row align-items-start">
+
+            <div class="col-lg-4 col-md-12">
+                <div class="foot-box text-white">
+                    <a href="../index.html"><img src="../assets/img/ubp-new/footer-logo.webp"
+                            class="img-fluid foot-logo" alt="img" loading="lazy"></a>
+                    <p class="py-2 font">For 8+ years, we have been the quiet force behind unforgettable stories. We
+                        don't just publish books; we partner with visionaries, transforming bold ideas into legacies
+                        that endure. Let us build yours.</p>
+                    <div class="d-flex align-items-center gap-3">
+                        <h4 class="color mb-0 font-28">Follow Us:</h4>
+                        <div class="head-right d-flex align-items-center gap-3 justify-content-end">
+                            <ul class="list-unstyled d-flex align-items-center gap-2 mb-0">
+                                <li><a href="https://www.facebook.com/ExpertsSelfPublishingOfficial/" target="_blank"><i
+                                            class="fa-brands fa-facebook-f"></i></a></li>
+                                <li><a href="https://www.instagram.com/expertsselfpublishingofficial/" target="_blank"><i
+                                            class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href="https://www.youtube.com/@ExpertsSelfPublishing" target="_blank"><i
+                                            class="fa-brands fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-4 col-sm-4 ">
+                <div class="foot-box text-white">
+                    <h3 class="color">What We Offer</h3>
+                    <div class="foot-line"></div>
+                    <div class="foot-list d-flex mt-3">
+                        <ul class="list-unstyled">
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../book-publishing.html">Book Publishing</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../book-marketing.html">Book Marketing</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../author-website.html" class="">Author Website</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../creative-writing.html" class="">Creative Writing</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../book-illustration.html" class="">Book illustration</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../book-video-trailers.html" class="">Book Video Trailers</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../book-cover-design.html" class="">Book Cover Design</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../ghostwriting.html" class="">Ghostwriting</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../book-writing.html" class="">Book Writing</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../pr-and-publicity.html" class="">PR & Publicity</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-4 col-sm-4 ">
+                <div class="foot-box text-white">
+                    <h3 class="color">Others</h3>
+                    <div class="foot-line"></div>
+                    <div class="foot-list d-flex mt-3">
+                        <ul class="list-unstyled">
+
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../free-book-marketing-guide.html" class="">Free Book Marketing
+                                    Guide</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../free-book-publishing-guide.html" class="">Free Book Publishing
+                                    Guide</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../blogs.html" class="">Blogs</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../pricing.html" class="">Pricing</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../about-us.html" class="">Our Story</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../contact-us.html" class="">Contact Us</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-4 ">
+                <div class="foot-box text-white">
+                    <h3 class="color">Information</h3>
+                    <div class="foot-list info-detail">
+                        <ul class="list-unstyled">
+                            <li class="my-4 info-li">
+                                <a href="tel:+18556055210" class="d-flex gap-2">
+                                    <!-- <span class="info-icon"><i class="fa-solid fa-phone" aria-hidden="true"></i></span> -->
+                                    <span class="info-icon w-25"><img
+                                            src="../assets/img/ubp-new/theme-phone.webp"
+                                            class="img-fluid" alt="location" width="21" height="21"
+                                            loading="lazy"></span>
+                                    <span class="w-75">
+                                        <small>Call us now </small>
+                                        <span class="foot-number d-block w-100">+1 (855) 605-5210</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="my-4 info-li">
+                                <a href="mailto:info@expertsselfpublishing.com" class="d-flex gap-2">
+                                    <!-- <span class="info-icon"><i class="fa-solid fa-envelope" aria-hidden="true"></i></span> -->
+                                    <span class="info-icon w-25"><img
+                                            src="../assets/img/ubp-new/foot-envelope.webp"
+                                            class="img-fluid" alt="location" width="21" height="22"
+                                            loading="lazy"></span>
+                                    <span class="w-75">
+                                        <small>Email us on: </small>
+                                        <span class="foot-number d-block w-100">info@expertsselfpublishing.com</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="my-4 info-li">
+                                <a href="javascript:void(0);" class="d-flex gap-2">
+                                    <!-- <span class="info-icon"><i class="fa-solid fa-house"></i></span> -->
+                                    <span class="info-icon w-25"><img
+                                            src="../assets/img/ubp-new/location-icon.webp"
+                                            class="img-fluid" alt="location" width="21" height="28"
+                                            loading="lazy"></span>
+                                    <span class="w-75">
+                                        <!-- <small>Email us on: </small> -->
+                                        <span class="foot-number d-block w-100">3223 West 6th Street STE 101 Los
+                                            Angeles, <br> CA 90020 United States.</span>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="payment-box mt-3 p-2">
+                    <img src="../assets/img/ubp-new/pymnt-5.webp" class="img-fluid" alt="payment"
+                        width="316" height="68" loading="lazy">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container-fluid last-contain">
+        <div class="row">
+            <div class="col-lg-7 col-md-8">
+                <p class=" mb-0 para-color">Copyright © 2026 Experts Self Publishing - All Rights Reserved | Powered By
+                    Iota Digital, LLC</p>
+            </div>
+            <div class="col-lg-5 col-md-4">
+                <ul class="list-unstyled d-flex align-items-center gap-3 m-0 justify-content-end">
+                    <li><a href="../privacy-policy.html" class="">Privacy Policy</a></li>
+                    <li><a href="../terms-condition.html" class="">Terms And Conditions</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img src="../assets/img/pop-logo.png" class="img-fluid" alt="Experts Self Publishing logo" loading="lazy">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row align-items-center justify-content-around">
+                    <div class="col-lg-7">
+                        <div class="form-wrap">
+                            <div class="form-heading">
+                                <h3 class="color font-40 let-space fw-600">Start Building Your Author Success Story
+                                    Today!</h3>
+                                <p>Speak with our senior publishing consultant for a free tailored proposal</p>
+                            </div>
+                            <form action="/inquiry-submit" id="modal-form" method="POST">
+                                <input type="hidden" name="_token" value="awxIAFp3sLU9ALw6iz3WlIXSKpyn9f7ba0ryrYCz" autocomplete="off">                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <!-- <label for="full-name">Enter Your Full Name</label> -->
+                                        <div class="form-group">
+                                            <input type="text" id="full-name" name="full_name"
+                                                placeholder="Full Name" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <!-- <label for="email">Your email</label> -->
+                                        <div class="form-group">
+                                            <input type="text" id="email" name="email" placeholder="Email"
+                                                class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <!-- <label for="phone">Your phone</label> -->
+                                        <div class="form-group">
+                                            <input type="text" id="phone" name="phone"
+                                                placeholder="(999) 999 9999" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <!-- <label for="message">Type your message</label> -->
+                                        <div class="form-group">
+                                            <textarea rows="4" id="message" name="message" placeholder="Book Detail" class="form-control"></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="btn-container mt-4">
+                                        <button class="theme-btn1 text-upper border-0 btn-overlay">Book Now</button>
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="pop-img">
+                            <img src="../assets/img/badge-discount.png" class="discount-img img-fluid"
+                                alt="50% Discount">
+                            <img src="../assets/img/popup-image.png" class="img-fluid pop-std" alt="img"
+                                loading="lazy">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- <img src="assets/img/pop-circle.png" class="img-fluid pop-circle" alt="img"> -->
+        </div>
+    </div>
+</div>
+    <script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/slick.js"></script>
+<script>
+    // accordion
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panelfaq = this.nextElementSibling;
+            if (panelfaq.style.maxHeight) {
+                panelfaq.style.maxHeight = null;
+            } else {
+                panelfaq.style.maxHeight = panelfaq.scrollHeight + "px";
+            }
+        });
+    }
+    // accordion
+
+    $(document).ready(function() {
+        function initializeSlick(slider) {
+            if (!slider.hasClass('slick-initialized')) {
+                slider.slick({
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    autoplay: true
+                });
+            } else {
+                slider.slick('refresh');
+            }
+        }
+
+        // Pehla tab ka slider initialize karein
+        initializeSlick($('#tab1 .portfolio-slider'));
+
+        $('button[data-bs-toggle="tab"]').on('shown.bs.tab', function(e) {
+            let target = $(e.target).attr("data-bs-target");
+            let slider = $(target).find('.portfolio-slider');
+
+            // Ensure proper visibility and reinitialize
+            $(target).css({
+                'height': 'auto',
+                'visibility': 'visible'
+            });
+
+            setTimeout(function() {
+                initializeSlick(slider);
+            }, 100);
+        });
+    });
+</script>
+<script>
+    $(".portfolio-slider").slick({
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 0,
+        speed: 13000,
+        arrows: false,
+        dots: false,
+        pauseOnHover: false,
+        cssEase: "linear",
+        responsive: [{
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 5,
+                },
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 4,
+                },
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 3,
+                },
+            },
+            {
+                breakpoint: 400,
+                settings: {
+                    slidesToShow: 3,
+                },
+            },
+        ],
+    });
+
+    document.querySelectorAll('.flip-box').forEach(box => {
+  box.addEventListener('click', () => {
+    box.classList.toggle('active');
+  });
+});
+
+
+$(".blog-slider").slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  arrows: true,
+  dots: false,
+  autoplaySpeed: 2000,
+  responsive: [
+    {
+      breakpoint: 1025,   // 1024px se neeche
+      settings: {
+        slidesToShow: 2,
+      }
+    },
+    {
+      breakpoint: 992,   // 992px se neeche
+      settings: {
+        slidesToShow: 2,
+      }
+    },
+    {
+      breakpoint: 768,   // 768px se neeche
+      settings: {
+        slidesToShow: 1,
+        arrows: false,
+        dots: true,
+      }
+    },
+    {
+      breakpoint: 576,   // extra small devices
+      settings: {
+        slidesToShow: 1,
+        arrows: false,
+        dots: true,
+      }
+    }
+  ]
+});
+</script>
+<script src="../assets/js/aos.js" defer></script>
+<script src="../assets/js/custom.js" defer></script>
+<script src="../assets/js/nice-select.min.js" defer></script>
+<script src="../assets/js/bootstrap.min.js" defer></script>
+<script src="../assets/js/jquery.fancybox.min.js" defer></script>
+<!--<script src="../assets/js/fontowesome.js" crossorigin="anonymous" defer></script>-->
+
+<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>-->
+
+<script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    const tooltipList = [...tooltipTriggerList].map(el => new bootstrap.Tooltip(el));
+</script>
+
+
+<!-- Include SweetAlert -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2%4011" defer></script>
+<script src="../assets/js/custom-form.js" defer></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/select2%404.1.0-rc.0/dist/js/select2.min.js"></script>
+    
+    <script>
+        $('.book-slide').slick({
+            lazyLoad: 'ondemand',
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: false,
+            asNavFor: '.testimonial-slider'
+        });
+        $('.testimonial-slider').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            asNavFor: '.book-slide',
+            dots: false,
+            arrows: false,
+            autoplaySpeed: 2000,
+            speed: 1300,
+            autoplay: true,
+            //   centerMode: true,
+            focusOnSelect: true
+        });
+    </script>
+
+
+    
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="YOUR_GOOGLE_SITE_VERIFICATION" />
+    <title>4 legal myths for authors you must know before publishing | Experts Self Publishing</title>
+    <meta name="description" content="Discover the truth behind legal myths for authors. Learn what protects your book, rights,
+    and publishing decisions before release.">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon/favicon-16x16.png">
+    <link rel="preload" as="image" href="../assets/img/ubp-new/banner-bg.webp">
+    <link rel="preload" href="../assets/font/montserrat/Montserrat-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../assets/css/style8e5e.css?v=21">
+
+<link rel="preload" href="../assets/css/fontawesome-all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="../assets/css/fontawesome-all.min.css">
+</noscript>
+
+
+
+
+<link rel="preload" href="../assets/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+</noscript>
+
+
+
+<link rel="preload" href="../assets/css/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="../assets/css/aos.css">
+</noscript>
+
+
+
+<link rel="stylesheet" href="../assets/css/responsivef500.css?v=16">
+
+
+
+
+<link rel="preload" href="../assets/css/nice-select.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="../assets/css/nice-select.css">
+</noscript>
+
+
+
+
+<link rel="preload" href="../assets/css/jquery-ui.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="../assets/css/jquery-ui.css">
+</noscript>
+
+
+<link rel="preload" href="../assets/css/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+<link rel="stylesheet" href="../assets/css/jquery.fancybox.min.css">
+</noscript>
+
+<link rel="preload" href="../assets/css/slick-theme.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+<link rel="stylesheet" href="../assets/css/slick-theme.css">
+</noscript>
+
+<link rel="preload" href="../assets/css/slick.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+<link rel="stylesheet" href="../assets/css/slick.css">
+</noscript>
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/select2%404.1.0-rc.0/dist/css/select2.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2%404.1.0-rc.0/dist/css/select2.min.css">
+    </noscript>
+    <script defer src="../assets/js/site-tracking.js"></script>
+
+    <script>
+        class SmartObserver {
+            constructor() {
+                this.init();
+            }
+
+            init() {
+                this.lazyImages = document.querySelectorAll("img[data-src]");
+                this.hiddenElements = document.querySelectorAll(".io-hidden");
+
+                this.createObserver();
+                this.observeElements();
+            }
+
+            createObserver() {
+                this.observer = new IntersectionObserver(
+                    (entries, observer) => {
+                        entries.forEach((entry) => {
+                            if (!entry.isIntersecting) return;
+
+                            const el = entry.target;
+
+                            // 🖼️ Lazy Image Load
+                            if (el.tagName === "IMG" && el.dataset.src) {
+                                this.loadImage(el);
+                            }
+
+                            // ✨ Reveal Animation (custom)
+                            if (el.classList.contains("io-hidden")) {
+                                el.classList.add("io-show");
+                                el.classList.remove("io-hidden");
+                            }
+
+                            observer.unobserve(el);
+
+                            // 🔁 AOS refresh (important)
+                            if (typeof AOS !== "undefined") {
+                                AOS.refreshHard(); // better than refresh()
+                            }
+                        });
+                    }, {
+                        root: null,
+                        rootMargin: "0px 0px -50px 0px",
+                        threshold: 0.1,
+                    }
+                );
+            }
+
+            observeElements() {
+                this.lazyImages.forEach((img) => this.observer.observe(img));
+                this.hiddenElements.forEach((el) => this.observer.observe(el));
+            }
+
+            loadImage(img) {
+                const temp = new Image();
+                temp.src = img.dataset.src;
+
+                temp.onload = () => {
+                    img.src = temp.src;
+                    img.classList.add("loaded");
+                    img.removeAttribute("data-src");
+                };
+            }
+        }
+
+        // 🚀 Init on DOM Ready
+        document.addEventListener("DOMContentLoaded", () => {
+            new SmartObserver();
+
+            // AOS init (safe)
+            if (typeof AOS !== "undefined") {
+                AOS.init({
+                    duration: 800,
+                    once: true,
+                    offset: 100,
+                });
+            }
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const elements = document.querySelectorAll(".reveal");
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("active");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.15
+            });
+
+            elements.forEach((el) => observer.observe(el));
+        });
+    </script>
+</head>
+
+<body>
+    <header class="header-above">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-6 col-6">
+                <div class="head-contact">
+                    <ul class="list-unstyled d-flex justify-content-start mb-0 gap-4">
+                        <li><a href="javascript:void(0);" class="text-white hvr-effect" data-open-zendesk>
+                                <img src="../assets/img/ubp-new/msg-icon.webp"
+                                    class="img-fluid head-ct-icon effect" alt="massege" width="25" height="30">
+                                <span>Chat With Us</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-6">
+                <div class="head-contact">
+                    <ul class="list-unstyled d-flex justify-content-end mb-0 gap-4">
+                        <li><a href="tel:+18556055210" class="text-white hvr-effect">
+                                <img src="../assets/img/ubp-new/call-icon.webp"
+                                    class="img-fluid head-ct-icon effect" alt="massege" width="25" height="30">
+                                <span>+1 (855) 605-5210</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+        <a class="navbar-brand" href="../index.html">
+            <img class="img-fluid" src="../assets/img/ubp-new/logo.webp" loading="lazy" alt="Experts Self Publishing logo" />
+        </a>
+        <button class="navbar-toggler" type="button" aria-controls="navbarNavDropdown" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link " aria-current="page"
+                        href="../index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown custom-dropdown">
+                    <a class="nav-link dropdown-toggle "
+                        href="javascript:void(0);" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Services <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="../author-website.html">Author Website</a></li>
+                        <li><a class="dropdown-item" href="../pr-and-publicity.html">PR & Publicity</a></li>
+                        <li><a class="dropdown-item" href="../book-editing-proofreading.html">Editing &
+                                Proofreading</a></li>
+                        <li><a class="dropdown-item" href="../book-cover-design.html">Book Cover Design</a></li>
+                        <li><a class="dropdown-item" href="../ghostwriting.html">Ghostwriting</a></li>
+                        <li><a class="dropdown-item" href="../book-illustration.html">Book Illustration</a></li>
+                        <li><a class="dropdown-item" href="../book-video-trailers.html">Book Video Trailers</a>
+                        </li>
+                        <li><a class="dropdown-item" href="../creative-writing.html">Creative Writing</a></li>
+                        <li><a class="dropdown-item" href="../children-book-illustration.html">Children Book
+                                illustration</a></li>
+                        <li><a class="dropdown-item" href="../screenplay-script-writing.html">Screenplay Script
+                                Writing</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link "
+                        href="../book-publishing.html">Book Publishing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link "
+                        href="../book-marketing.html">Book Marketing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link "
+                        href="../pricing.html">Pricing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="../about-us.html">Our Story</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link "
+                        href="../contact-us.html">Contact Us</a>
+                </li>
+                <li class="nav-item dropdown custom-dropdown">
+                    <a class="nav-link dropdown-toggle "
+                        href="javascript:void(0);" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">Resources <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+                    </a>
+                    <ul class="dropdown-menu w-auto menu-2" aria-labelledby="navbarDropdownMenuLink">
+                        <li class="w-100"><a class="dropdown-item" href="../published-books.html">Published
+                                Books</a></li>
+                        <li class="w-100"><a class="dropdown-item" href="../customer-reviews.html">Customer
+                                Reviews</a></li>
+                        
+                        <li class="w-100"><a class="dropdown-item" href="../faq.html">FAQs</a></li>
+                        <li class="w-100"><a class="dropdown-item" href="../blogs.html">Blogs</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="navbar-right">
+            <div class="head-btn">
+                <a href="#exampleModalToggle"
+                    class="theme-btn1 btn-overlay d-inline-flex align-items-center gap-2 text-upper"
+                    data-bs-toggle="modal" data-bs-target="#exampleModal"><img
+                        src="../assets/img/ubp-new/msg-icon.webp" alt="icon" width="30"
+                        height="23"><span>Get a Free Quote</span></a>
+            </div>
+        </div>
+
+    </div>
+</nav>
+
+        <section class="about-banner sec-pd">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-lg-8">
+                    <div class="inner-heading text-white text-center">
+                        <h1 class="">Before You Publish: The 4 Legal Myths Every Author Believes (And The Truth That
+                            Protects You)</h1>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="blog-detail-sec sec-pd">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-10">
+                    <div class="blog-link">
+                        <h4 class="color-green mb-3">Content</h4>
+                        <h5 class="mb-3"><a href="#link-1">WHY LEGAL MYTHS PERSIST IN THE WRITING COMMUNITY</a></h5>
+                        <h5 class="mb-3"><a href="#link-2">FOUR COMMON LEGAL MYTHS FOR AUTHORS</a></h5>
+                        <h5 class="mb-3"><a href="#link-3">UNDERSTANDING PUBLISHING LEGAL REQUIREMENTS</a></h5>
+                        <h5 class="mb-3"><a href="#link-4">THE IMPORTANCE OF COPYRIGHT REGISTRATION FOR WRITERS</a></h5>
+                        <h5 class="mb-3"><a href="#link-5">NAVIGATING FICTION LIBEL RISKS</a></h5>
+                        <h5 class="mb-3"><a href="#link-6">DEMYSTIFYING PUBLISHING CONTRACT TERMS</a></h5>
+                        <h5 class="mb-3"><a href="#link-7">HOW TO PROTECT YOURSELF FROM LEGAL MYTHS</a></h5>
+                        <h5 class="mb-3"><a href="#link-8">UNDERSTAND LEGAL MYTHS FOR AUTHORS THAT PROTECTS YOU</a></h5>
+
+
+                    </div>
+
+                </div>
+                <div class="col-lg-9 col-md-12">
+                    <div class="blog-detail">
+                        <p>You have poured your heart into writing your book, spending countless hours crafting characters
+                            and shaping plotlines, and now you stand at the threshold of sharing your creation with the
+                            world. The excitement is thrilling, but a nagging worry whispers about legal pitfalls waiting
+                            beyond your writing desk.</p>
+                        <p>You have heard stories about authors getting sued, contracts that trap writers in unfair deals,
+                            and copyright disasters that destroy careers. The truth is that much of the information
+                            circulating online is either incomplete or completely wrong, and these misconceptions can lead
+                            authors to make decisions that put them at unnecessary risk.</p>
+                        <p>Today we are going to dismantle four of the most common legal myths for authors, replacing each
+                            one with the truth that will protect you and your book as you prepare for publication.</p>
+
+
+                        <h3 class="color" id="link-1">WHY LEGAL MYTHS PERSIST IN THE WRITING COMMUNITY</h3>
+                        <p>Writing is often a solitary pursuit, with authors spending long hours alone with their
+                            manuscripts, which means that much of the information they receive comes from online forums and
+                            conversations with other writers who are equally uncertain about legal matters. This creates an
+                            environment where misinformation spreads easily, because writers share what they have heard
+                            without verifying the facts, and the result is a collection of beliefs that feel true because
+                            everyone seems to agree on them. The publishing industry has also changed dramatically with the
+                            rise of self-publishing, making it possible for anyone to release a book without the guidance of
+                            a traditional publisher's legal department. Without that professional safety net, authors are
+                            left to navigate unfamiliar territory on their own, often defaulting to whatever advice seems
+                            most common rather than seeking out the truth from reliable sources.</p>
+                        <p>The emotional stakes of publishing legal requirements also contribute to the persistence of legal
+                            myths, because authors are naturally protective of their work and afraid of losing control over
+                            something they have created with so much love and effort. This fear makes them susceptible to
+                            advice that promises safety, even when that advice is not actually accurate, and it makes them
+                            resistant to information that challenges their comfortable beliefs. Understanding why these
+                            myths persist is the first step toward letting go of them and embracing the truth that will
+                            actually protect your book and your career.</p>
+
+                        <h4 class="color" id="link-2">FOUR COMMON LEGAL MYTHS FOR AUTHORS</h4>
+                        <p>The world of publishing is filled with well-intentioned but inaccurate advice, and these pieces
+                            of misinformation often take on a life of their own, spreading from author to author until they
+                            become accepted as universal truth. The four myths we are about to explore are among the most
+                            common and most damaging, because they lead authors to make decisions that either waste their
+                            time and money or leave them exposed to real legal risks they never anticipated. By
+                            understanding these legal myths for authors, you can protect yourself from their influence and
+                            approach your publishing journey with confidence and clarity.</p>
+                        <h4 class="color">MYTH ONE: I NEED TO REGISTER MY COPYRIGHT BEFORE SHARING MY WORK</h4>
+                        <p>One of the most persistent and paralyzing beliefs among new authors is that they must register
+                            their copyright with the government before they can safely share their manuscript with anyone,
+                            whether that means beta readers, critique partners, or potential publishers.</p>
+                        <p>This fear of theft leads many writers to hide their work away, refusing to let anyone see it
+                            until they have completed the official registration process, and this secrecy often prevents
+                            them from getting the valuable feedback they desperately need to improve their writing. The fear
+                            is understandable, because your book is your creative baby and the thought of someone stealing
+                            it feels like a violation, but the belief itself is based on a fundamental misunderstanding of
+                            how copyright registration for writers work.</p>
+                        <h5 class="color">THE TRUTH ABOUT AUTOMATIC COPYRIGHT PROTECTION</h5>
+                        <p>The truth is that copyright protection exists from the moment you create your work, the instant
+                            your words are fixed in a tangible form, whether that is a handwritten notebook, a typed
+                            document, or a saved file on your computer.</p>
+                        <p>You do not need to register your copyright with the U.S. Copyright Office to have legal ownership
+                            of your work, because copyright is automatic in most countries under the Berne Convention, which
+                            grants creators protection without any formal registration requirements. Registration offers
+                            additional benefits, such as the ability to sue for statutory damages and attorney's fees in
+                            infringement cases, but it is not required to prove ownership or to share your work safely with
+                            trusted readers.</p>
+                        <h5 class="color">PRACTICAL STEPS FOR SHARING YOUR WORK SAFELY</h5>
+                        <p>You can protect yourself when sharing your work without registering, simply by using common sense
+                            precautions like sharing only with people you trust, keeping records of who has received copies,
+                            and including copyright notices on your manuscript pages.</p>
+                        <p>The risk of someone stealing your unpublished manuscript is actually quite low, because the
+                            publishing world is built on relationships and reputation, and most people who read unpublished
+                            work are genuinely interested in helping rather than harming. Allowing fear of theft to prevent
+                            you from seeking feedback is far more damaging to your book than any realistic risk of
+                            infringement.</p>
+                        <h4 class="color">MYTH TWO: CHANGING NAMES PROTECTS ME FROM LIBEL LAWSUITS</h4>
+                        <p>Many fiction writers believe that they can safely write about real people as long as they change
+                            the names, assuming that this simple alteration provides complete protection from defamation
+                            claims and libel lawsuits. This belief is widespread and deeply entrenched, but it is also
+                            dangerously inaccurate, because libel law is concerned with identification, not simply with
+                            names, and if readers can reasonably identify the person you are writing about, you can still be
+                            sued.</p>
+                        <p>Changing a name may be a helpful step, but it is not a magic shield that makes you immune from
+                            legal consequences, and relying on this myth can put you in serious jeopardy.</p>
+                        <h5 class="color">HOW IDENTIFICATION WORKS IN LIBEL LAW</h5>
+                        <p>The legal standard for defamation requires that the person being written about be identifiable,
+                            and courts have consistently held that identification can occur through a combination of
+                            details, such as physical description, occupation, location, and personal history, even when the
+                            actual name is not used.</p>
+                        <p>If you write about a redheaded accountant named Susan who lives in Boston and has a troubled
+                            marriage, and there is a real redheaded accountant named Mary who lives in Boston and has a
+                            troubled marriage, Mary could potentially sue you even though you changed her name to Susan. The
+                            more specific and unique your details, the greater the risk that someone will recognize
+                            themselves and take legal action. This is serious fiction libel risks.</p>
+                        <h5 class="color">PRACTICAL STEPS TO PROTECT YOURSELF</h5>
+                        <p>This does not mean you cannot write fiction inspired by real people, because authors have been
+                            doing this for centuries, but it does mean you need to be thoughtful and careful about how you
+                            approach the material.</p>
+                        <p>Consider changing more than just names, alter physical descriptions, modify occupations, change
+                            locations, and combine traits from multiple people so that no single individual is clearly
+                            identifiable. If you are writing about public figures or particularly sensitive topics, it may
+                            be worth consulting with a publishing attorney who can help you assess your specific risk and
+                            suggest appropriate precautions.</p>
+                        <h4 class="color">MYTH THREE: A HANDSHAKE AGREEMENT IS GOOD ENOUGH FOR COLLABORATIONS</h4>
+                        <p>When authors work together on a project, whether as co-writers, with an editor, or with a cover
+                            designer, they often rely on verbal agreements and handshake deals because they trust each other
+                            and do not want to seem suspicious or difficult by asking for a written contract.</p>
+                        <p>This is a natural human impulse, because no one enjoys starting a creative collaboration with
+                            legal paperwork, but it is also a decision that can lead to devastating consequences if the
+                            relationship sours or misunderstandings arise later. The excitement of starting a new project
+                            often overshadows practical considerations, but those practical considerations can become
+                            enormous problems if they are not addressed early.</p>
+                        <h5 class="color">WHY WRITTEN CONTRACTS PROTECT EVERYONE</h5>
+                        <p>Written contracts are not about distrust, they are about clarity, and they protect everyone
+                            involved by spelling out exactly what each party expects and what will happen if things do not
+                            go as planned. A good contract covers ownership of the work, division of royalties,
+                            responsibilities of each party, timelines for completion, and procedures for resolving
+                            disagreements, all of which prevent the kind of confusion that can destroy relationships and
+                            derail projects. There is a chance of publishing contract terms breach.</p>
+                        <p>When everything is clearly documented, there is no room for misunderstanding, no opportunity for
+                            memory to fade, and no possibility of one party feeling cheated because they thought the
+                            agreement was different.</p>
+                        <h5 class="color">MAKING THE CONTRACT CONVERSATION EASIER</h5>
+                        <p>The conversation about a written contract may feel awkward initially, but it is far less awkward
+                            than the conversation that will happen if a dispute arises and you have no documentation to
+                            support your position.</p>
+                        <p>Frame the contract as a mutual protection measure, something that benefits everyone involved
+                            rather than a sign of distrust, and most collaborators will appreciate the professionalism and
+                            clarity you are bringing to the relationship. Taking the time to formalize your agreements is
+                            one of the smartest things you can do as an author.</p>
+
+                        <h3 class="color">MYTH FOUR: FAIR USE ALLOWS ME TO USE ANY MATERIAL WITHOUT PERMISSION</h3>
+                        <p>The concept of fair use is one of the most misunderstood areas of copyright law, and many authors
+                            believe it gives them the freedom to quote song lyrics, use trademarked characters, or
+                            incorporate copyrighted material into their work without seeking permission.</p>
+                        <p>This belief is particularly common among writers who want to reference popular culture in their
+                            books, because they assume that fair use is a broad exception that covers almost any creative
+                            use of existing material. The reality is much more limited, and relying on fair use without
+                            understanding its constraints can lead to expensive lawsuits and the need to remove content from
+                            published books.</p>
+                        <h4 class="color">WHY FAIR USE IS A DEFENSE, NOT A RIGHT</h4>
+                        <p>Fair use is a legal defense, not a right, which means you only know whether your use qualifies
+                            after you have been sued and a court has made a decision, and the process of getting to that
+                            decision is long, stressful, and extremely expensive.</p>
+                        <p>Courts consider four factors when evaluating fair use claims, including the purpose of the use,
+                            the nature of the original work, the amount used, and the effect on the market for the original
+                            work, and each case is decided on its own specific facts. This means that what qualifies as fair
+                            use in one situation may not qualify in another, and there are no hard and fast rules that
+                            guarantee protection.</p>
+
+                        <h5 class="color">SAFER ALTERNATIVES TO RELYING ON FAIR USE</h5>
+                        <p>If you want to use copyrighted material in your book, the safest approach is always to seek
+                            permission from the rights holder, even if you believe your use qualifies as fair use. The
+                            permission process can take time and may involve fees, but it provides certainty and legal
+                            protection that fair use simply cannot offer.</p>
+                        <p>When permission is not possible or practical, consider alternatives like creating your own
+                            original material, referencing works without quoting them directly, or using works that are
+                            clearly in the public domain and free for anyone to use.</p>
+                        <h3 class="color" id="link-3">UNDERSTANDING PUBLISHING LEGAL REQUIREMENTS</h3>
+                        <p>Beyond the specific myths we have already discussed, authors must also be aware of the actual
+                            legal obligations that come with publishing a book, because meeting these publishing legal
+                            requirements is essential for protecting your rights and ensuring your book can be distributed
+                            properly. </p>
+                        <p>These requirements include everything from obtaining the correct ISBNs for your book to
+                            registering your copyright before publication to ensure you have the maximum legal protection
+                            available. The good news is that these requirements are relatively straightforward and
+                            manageable once you understand what they are, and they are far less intimidating than the myths
+                            that often surround them.</p>
+
+
+                        <h4 class="color">ISBNS AND WHY THEY MATTER</h4>
+                        <p>One of the most important legal requirements for self-published authors is obtaining your own
+                            ISBNs, because this unique identifier is necessary for selling your book through most retailers
+                            and for distinguishing your book from all others in the marketplace.</p>
+                        <p>Many self-publishing platforms offer free ISBNs, but these typically identify the platform as the
+                            publisher rather than you, which can limit your control over your work and your ability to
+                            distribute it elsewhere. Purchasing your own ISBNs gives you greater flexibility and ensures
+                            that you are listed as the publisher of record for your work.</p>
+
+                        <h4 class="color">COPYRIGHT REGISTRATION AS A LEGAL REQUIREMENT</h4>
+                        <p>Another important legal requirement involves copyright registration, which, while not mandatory,
+                            provides significant benefits that make it well worth the time and cost involved. Registering
+                            your copyright before publication, or within three months of publication, allows you to sue for
+                            statutory damages and attorney's fees in infringement cases, which are remedies that are not
+                            available if you wait to register until after infringement has occurred.</p>
+
+                        <p>Registration is a relatively simple process that can be completed online, and it provides
+                            powerful protection for your creative work.</p>
+
+                        <h3 class="color" id="link-4">THE IMPORTANCE OF COPYRIGHT REGISTRATION FOR WRITERS</h3>
+                        <p>Many authors misunderstand what copyright registration actually does, viewing it as an
+                            unnecessary expense or a bureaucratic hassle that does not really matter for their particular
+                            situation, but the reality is that copyright registration for writers offers genuine protection
+                            that every serious author should take advantage of before publishing their work.</p>
+                        <p>The process is straightforward and affordable, and the benefits it provides far outweigh the
+                            modest investment of time and money required to complete it. When you register your copyright,
+                            you create a public record of your ownership, which deters potential infringers and makes it
+                            much easier to enforce your rights if someone does use your work without permission.</p>
+                        <p>The most important benefit of timely copyright registration is the ability to recover statutory
+                            damages and attorney's fees in a lawsuit, because these remedies are not available if you
+                            register after infringement has already occurred. Statutory damages can be substantial, ranging
+                            from hundreds to thousands of dollars per work infringed, and they allow you to recover
+                            compensation without having to prove actual financial losses, which can be difficult in many
+                            cases.</p>
+                        <p>Having the ability to recover attorney's fees also makes it financially feasible to pursue
+                            legitimate infringement claims, because you will not be forced to pay your own legal costs even
+                            if you win.</p>
+                        <p>Beyond the legal benefits, copyright registration also provides peace of mind, because knowing
+                            that your work is fully protected allows you to share it more freely and focus on promoting your
+                            book rather than worrying about theft.</p>
+                        <p>The registration process is accessible to all authors, with fees starting at around forty-five
+                            dollars for online registration, and the protection lasts for the entire life of the author plus
+                            seventy years. Taking this simple step before publication is one of the smartest things you can
+                            do to protect your creative investment.</p>
+                        <h3 class="color" id="link-5">NAVIGATING FICTION LIBEL RISKS</h3>
+                        <p>Writing fiction does not automatically protect you from defamation claims, and authors who assume
+                            otherwise are putting themselves at unnecessary risk of expensive and stressful litigation.
+                            Understanding fiction libel risks is essential for any writer whose work draws on real people,
+                            real events, or real places, because the line between protected fiction and actionable
+                            defamation is not always as clear as you might hope.</p>
+                        <p>The key to managing this risk lies in understanding what constitutes defamation and taking
+                            thoughtful steps to avoid crossing that line in your writing.</p>
+                        <p>The legal standard for defamation requires that a statement be false, that it be published to a
+                            third party, and that it harms the reputation of the person it concerns, and if all three
+                            elements are present, a lawsuit is possible regardless of whether the work is labeled as
+                            fiction.</p>
+                        <p>Courts have found that fiction can be defamatory if readers reasonably identify the person being
+                            written about and believe the harmful statements to be true, even when the author did not intend
+                            to cause harm. This means that simply claiming your book is a work of fiction does not provide
+                            absolute protection if the details in your story are sufficiently specific and damaging.</p>
+
+                        <h4 class="color">PRACTICAL STEPS TO PROTECT YOURSELF</h4>
+                        <p>The safest approach is to avoid writing about real people in ways that could be harmful,
+                            especially if you are dealing with controversial or negative material that could damage
+                            someone's reputation. If you are inspired by real people, consider combining traits from
+                            multiple individuals, changing physical descriptions and other identifying details, and setting
+                            your story in a different time or place than the real events. </p>
+                        <p>When in doubt, consult with an attorney who specializes in publishing law, because the cost of
+                            legal advice is minimal compared to the cost of defending a defamation lawsuit.</p>
+                        <h4 class="color" id="link-6">DEMYSTIFYING PUBLISHING CONTRACT TERMS</h4>
+                        <p>For authors pursuing traditional publishing, contracts are an inevitable part of the process, and
+                            understanding publishing contract terms is essential for protecting your rights and ensuring you
+                            are getting a fair deal. Publishing contracts are notoriously complex and filled with legal
+                            jargon that can be intimidating for authors who are not accustomed to reading legal documents,
+                            but taking the time to understand the key terms will help you make informed decisions and avoid
+                            unpleasant surprises later. The good news is that most publishers use relatively standard
+                            contracts, and the key terms that matter most are the same across most agreements.</p>
+
+
+
+                        <h4 class="color">UNDERSTANDING RIGHTS AND ROYALTIES</h4>
+                        <p>The most important terms to understand are those that define the rights you are granting to the
+                            publisher, because these determine what the publisher can do with your work and what rights you
+                            retain for yourself.</p>
+                        <p>Publishing contracts typically cover print rights, electronic rights, audio rights, translation
+                            rights, and film rights, and each of these can be granted exclusively or non-exclusively, with
+                            different royalty rates and terms for each type of use. You should carefully consider which
+                            rights you are comfortable granting and whether the terms offered fairly compensate you for the
+                            value of those rights.</p>
+
+
+                        <h4 class="color">KEY CLAUSES THAT AFFECT YOUR CAREER</h4>
+                        <p>Other important contract terms include royalty rates, which determine how much you will be paid
+                            from book sales, and the length of the contract, which affects how long the publisher controls
+                            your work.</p>
+                        <p>You should also pay attention to terms related to rights reversion, which allow you to get your
+                            rights back if the publisher stops selling your book, and to terms related to option clauses,
+                            which may give the publisher the right to see your next book before anyone else. If you are
+                            uncertain about any terms in your contract, consider consulting with a literary attorney who can
+                            help you understand your rights and negotiate more favorable terms.</p>
+
+                        <h3 class="color" id="link-7">HOW TO PROTECT YOURSELF FROM LEGAL MYTHS</h3>
+                        <p>The best defense against legal myths is education, because once you understand how copyright,
+                            defamation, contracts, and fair use actually work, you are far less likely to be misled by
+                            inaccurate information circulating in writing communities.</p>
+                        <p>Taking the time to learn the basics of publishing law will serve you throughout your entire
+                            career, because it will help you make better decisions, avoid unnecessary risks, and recognize
+                            when you need professional legal advice. Publishing law is not nearly as complicated as it
+                            seems, and the fundamentals can be learned by any author who is willing to invest a little time
+                            in their own education.</p>
+
+                        <h4 class="color">BUILDING YOUR PROFESSIONAL NETWORK</h4>
+                        <p>In addition to educating yourself, it is also wise to build a network of professionals you can
+                            turn to when legal questions arise, including attorneys who specialize in publishing law,
+                            editors who understand the legal aspects of their work, and experienced authors who have
+                            navigated these issues before.</p>
+                        <p>These professionals can provide guidance when you encounter situations that are beyond your
+                            knowledge, and they can help you avoid costly mistakes that could have been prevented with a
+                            little expert advice. Many publishing attorneys offer initial consultations at no charge, making
+                            it easy to get basic information without a significant financial commitment.</p>
+                        <p>Finally, trust your instincts when something feels off, because if a piece of advice seems too
+                            good to be true, or if it contradicts what you have heard from reputable legal sources, there is
+                            probably a good reason. Publishing law exists to protect creators and to ensure fair dealing
+                            between authors and publishers, and while the specifics can be complex, the underlying
+                            principles are based on common sense and fairness. By staying informed and seeking help when you
+                            need it, you can publish your book with confidence, knowing that you have protected your rights
+                            and your creative work from the legal myths that could have derailed your success.</p>
+
+                        <h3 class="color" id="link-8">UNDERSTAND LEGAL MYTHS FOR AUTHORS THAT PROTECTS YOU</h3>
+                        <p>The journey from finished manuscript to published book is filled with excitement, anticipation,
+                            and no small amount of anxiety, because you are about to share something deeply personal with
+                            the world and you want everything to go smoothly.</p>
+                        <p>The legal aspects of publishing can feel overwhelming, especially when you are not sure which
+                            advice to trust and which warnings to ignore, but the truth is that most legal issues are
+                            manageable once you understand them clearly. The key is to replace fear with knowledge, to
+                            question the myths that circulate in writing communities, and to seek accurate information from
+                            reliable sources.</p>
+                        <p>We have explored four common legal myths for authors, including the belief that you must register
+                            copyright before sharing, the assumption that changing names protects you from libel, the trust
+                            in handshake agreements over written contracts, and the misconception that fair use gives you
+                            unlimited freedom to use any material.</p>
+                        <p>We have also discussed publishing legal requirements that every author should understand, the
+                            importance of copyright registration for writers for maximum protection, the reality of fiction
+                            libel risks in your work, and the key publishing contract terms that affect your rights and
+                            compensation.</p>
+                        <p>Your readers are waiting for your book, and they deserve to experience the story you have poured
+                            your heart into creating, and you deserve to share it without fear of legal pitfalls or
+                            misinformation. Go forward with the knowledge that you have protected your rights, that you
+                            understand the legal landscape, and that you are ready to publish your book with the confidence
+                            that comes from being well informed. The world needs your story, and now you have the tools to
+                            share it safely and successfully.</p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="">
+    <div class="container-fluid">
+        <div class="row align-items-start">
+
+            <div class="col-lg-4 col-md-12">
+                <div class="foot-box text-white">
+                    <a href="../index.html"><img src="../assets/img/ubp-new/footer-logo.webp"
+                            class="img-fluid foot-logo" alt="img" loading="lazy"></a>
+                    <p class="py-2 font">For 8+ years, we have been the quiet force behind unforgettable stories. We
+                        don't just publish books; we partner with visionaries, transforming bold ideas into legacies
+                        that endure. Let us build yours.</p>
+                    <div class="d-flex align-items-center gap-3">
+                        <h4 class="color mb-0 font-28">Follow Us:</h4>
+                        <div class="head-right d-flex align-items-center gap-3 justify-content-end">
+                            <ul class="list-unstyled d-flex align-items-center gap-2 mb-0">
+                                <li><a href="https://www.facebook.com/ExpertsSelfPublishingOfficial/" target="_blank"><i
+                                            class="fa-brands fa-facebook-f"></i></a></li>
+                                <li><a href="https://www.instagram.com/expertsselfpublishingofficial/" target="_blank"><i
+                                            class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href="https://www.youtube.com/@ExpertsSelfPublishing" target="_blank"><i
+                                            class="fa-brands fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-4 col-sm-4 ">
+                <div class="foot-box text-white">
+                    <h3 class="color">What We Offer</h3>
+                    <div class="foot-line"></div>
+                    <div class="foot-list d-flex mt-3">
+                        <ul class="list-unstyled">
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../book-publishing.html">Book Publishing</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../book-marketing.html">Book Marketing</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../author-website.html" class="">Author Website</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../creative-writing.html" class="">Creative Writing</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../book-illustration.html" class="">Book illustration</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../book-video-trailers.html" class="">Book Video Trailers</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../book-cover-design.html" class="">Book Cover Design</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../ghostwriting.html" class="">Ghostwriting</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../book-writing.html" class="">Book Writing</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../pr-and-publicity.html" class="">PR & Publicity</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-4 col-sm-4 ">
+                <div class="foot-box text-white">
+                    <h3 class="color">Others</h3>
+                    <div class="foot-line"></div>
+                    <div class="foot-list d-flex mt-3">
+                        <ul class="list-unstyled">
+
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../free-book-marketing-guide.html" class="">Free Book Marketing
+                                    Guide</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../free-book-publishing-guide.html" class="">Free Book Publishing
+                                    Guide</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../blogs.html" class="">Blogs</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../pricing.html" class="">Pricing</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../about-us.html" class="">Our Story</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../contact-us.html" class="">Contact Us</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-4 ">
+                <div class="foot-box text-white">
+                    <h3 class="color">Information</h3>
+                    <div class="foot-list info-detail">
+                        <ul class="list-unstyled">
+                            <li class="my-4 info-li">
+                                <a href="tel:+18556055210" class="d-flex gap-2">
+                                    <!-- <span class="info-icon"><i class="fa-solid fa-phone" aria-hidden="true"></i></span> -->
+                                    <span class="info-icon w-25"><img
+                                            src="../assets/img/ubp-new/theme-phone.webp"
+                                            class="img-fluid" alt="location" width="21" height="21"
+                                            loading="lazy"></span>
+                                    <span class="w-75">
+                                        <small>Call us now </small>
+                                        <span class="foot-number d-block w-100">+1 (855) 605-5210</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="my-4 info-li">
+                                <a href="mailto:info@expertsselfpublishing.com" class="d-flex gap-2">
+                                    <!-- <span class="info-icon"><i class="fa-solid fa-envelope" aria-hidden="true"></i></span> -->
+                                    <span class="info-icon w-25"><img
+                                            src="../assets/img/ubp-new/foot-envelope.webp"
+                                            class="img-fluid" alt="location" width="21" height="22"
+                                            loading="lazy"></span>
+                                    <span class="w-75">
+                                        <small>Email us on: </small>
+                                        <span class="foot-number d-block w-100">info@expertsselfpublishing.com</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="my-4 info-li">
+                                <a href="javascript:void(0);" class="d-flex gap-2">
+                                    <!-- <span class="info-icon"><i class="fa-solid fa-house"></i></span> -->
+                                    <span class="info-icon w-25"><img
+                                            src="../assets/img/ubp-new/location-icon.webp"
+                                            class="img-fluid" alt="location" width="21" height="28"
+                                            loading="lazy"></span>
+                                    <span class="w-75">
+                                        <!-- <small>Email us on: </small> -->
+                                        <span class="foot-number d-block w-100">3223 West 6th Street STE 101 Los
+                                            Angeles, <br> CA 90020 United States.</span>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="payment-box mt-3 p-2">
+                    <img src="../assets/img/ubp-new/pymnt-5.webp" class="img-fluid" alt="payment"
+                        width="316" height="68" loading="lazy">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container-fluid last-contain">
+        <div class="row">
+            <div class="col-lg-7 col-md-8">
+                <p class=" mb-0 para-color">Copyright © 2026 Experts Self Publishing - All Rights Reserved | Powered By
+                    Iota Digital, LLC</p>
+            </div>
+            <div class="col-lg-5 col-md-4">
+                <ul class="list-unstyled d-flex align-items-center gap-3 m-0 justify-content-end">
+                    <li><a href="../privacy-policy.html" class="">Privacy Policy</a></li>
+                    <li><a href="../terms-condition.html" class="">Terms And Conditions</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img src="../assets/img/pop-logo.png" class="img-fluid" alt="Experts Self Publishing logo" loading="lazy">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row align-items-center justify-content-around">
+                    <div class="col-lg-7">
+                        <div class="form-wrap">
+                            <div class="form-heading">
+                                <h3 class="color font-40 let-space fw-600">Start Building Your Author Success Story
+                                    Today!</h3>
+                                <p>Speak with our senior publishing consultant for a free tailored proposal</p>
+                            </div>
+                            <form action="/inquiry-submit" id="modal-form" method="POST">
+                                <input type="hidden" name="_token" value="awxIAFp3sLU9ALw6iz3WlIXSKpyn9f7ba0ryrYCz" autocomplete="off">                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <!-- <label for="full-name">Enter Your Full Name</label> -->
+                                        <div class="form-group">
+                                            <input type="text" id="full-name" name="full_name"
+                                                placeholder="Full Name" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <!-- <label for="email">Your email</label> -->
+                                        <div class="form-group">
+                                            <input type="text" id="email" name="email" placeholder="Email"
+                                                class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <!-- <label for="phone">Your phone</label> -->
+                                        <div class="form-group">
+                                            <input type="text" id="phone" name="phone"
+                                                placeholder="(999) 999 9999" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <!-- <label for="message">Type your message</label> -->
+                                        <div class="form-group">
+                                            <textarea rows="4" id="message" name="message" placeholder="Book Detail" class="form-control"></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="btn-container mt-4">
+                                        <button class="theme-btn1 text-upper border-0 btn-overlay">Book Now</button>
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="pop-img">
+                            <img src="../assets/img/badge-discount.png" class="discount-img img-fluid"
+                                alt="50% Discount">
+                            <img src="../assets/img/popup-image.png" class="img-fluid pop-std" alt="img"
+                                loading="lazy">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- <img src="assets/img/pop-circle.png" class="img-fluid pop-circle" alt="img"> -->
+        </div>
+    </div>
+</div>
+    <script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/slick.js"></script>
+<script>
+    // accordion
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panelfaq = this.nextElementSibling;
+            if (panelfaq.style.maxHeight) {
+                panelfaq.style.maxHeight = null;
+            } else {
+                panelfaq.style.maxHeight = panelfaq.scrollHeight + "px";
+            }
+        });
+    }
+    // accordion
+
+    $(document).ready(function() {
+        function initializeSlick(slider) {
+            if (!slider.hasClass('slick-initialized')) {
+                slider.slick({
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    autoplay: true
+                });
+            } else {
+                slider.slick('refresh');
+            }
+        }
+
+        // Pehla tab ka slider initialize karein
+        initializeSlick($('#tab1 .portfolio-slider'));
+
+        $('button[data-bs-toggle="tab"]').on('shown.bs.tab', function(e) {
+            let target = $(e.target).attr("data-bs-target");
+            let slider = $(target).find('.portfolio-slider');
+
+            // Ensure proper visibility and reinitialize
+            $(target).css({
+                'height': 'auto',
+                'visibility': 'visible'
+            });
+
+            setTimeout(function() {
+                initializeSlick(slider);
+            }, 100);
+        });
+    });
+</script>
+<script>
+    $(".portfolio-slider").slick({
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 0,
+        speed: 13000,
+        arrows: false,
+        dots: false,
+        pauseOnHover: false,
+        cssEase: "linear",
+        responsive: [{
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 5,
+                },
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 4,
+                },
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 3,
+                },
+            },
+            {
+                breakpoint: 400,
+                settings: {
+                    slidesToShow: 3,
+                },
+            },
+        ],
+    });
+
+    document.querySelectorAll('.flip-box').forEach(box => {
+  box.addEventListener('click', () => {
+    box.classList.toggle('active');
+  });
+});
+
+
+$(".blog-slider").slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  arrows: true,
+  dots: false,
+  autoplaySpeed: 2000,
+  responsive: [
+    {
+      breakpoint: 1025,   // 1024px se neeche
+      settings: {
+        slidesToShow: 2,
+      }
+    },
+    {
+      breakpoint: 992,   // 992px se neeche
+      settings: {
+        slidesToShow: 2,
+      }
+    },
+    {
+      breakpoint: 768,   // 768px se neeche
+      settings: {
+        slidesToShow: 1,
+        arrows: false,
+        dots: true,
+      }
+    },
+    {
+      breakpoint: 576,   // extra small devices
+      settings: {
+        slidesToShow: 1,
+        arrows: false,
+        dots: true,
+      }
+    }
+  ]
+});
+</script>
+<script src="../assets/js/aos.js" defer></script>
+<script src="../assets/js/custom.js" defer></script>
+<script src="../assets/js/nice-select.min.js" defer></script>
+<script src="../assets/js/bootstrap.min.js" defer></script>
+<script src="../assets/js/jquery.fancybox.min.js" defer></script>
+<!--<script src="../assets/js/fontowesome.js" crossorigin="anonymous" defer></script>-->
+
+<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>-->
+
+<script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    const tooltipList = [...tooltipTriggerList].map(el => new bootstrap.Tooltip(el));
+</script>
+
+
+<!-- Include SweetAlert -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2%4011" defer></script>
+<script src="../assets/js/custom-form.js" defer></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/select2%404.1.0-rc.0/dist/js/select2.min.js"></script>
+    
+    <script>
+        $('.book-slide').slick({
+            lazyLoad: 'ondemand',
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: false,
+            asNavFor: '.testimonial-slider'
+        });
+        $('.testimonial-slider').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            asNavFor: '.book-slide',
+            dots: false,
+            arrows: false,
+            autoplaySpeed: 2000,
+            speed: 1300,
+            autoplay: true,
+            //   centerMode: true,
+            focusOnSelect: true
+        });
+    </script>
+
+
+    
+
+
+</body>
+
+
+</html>

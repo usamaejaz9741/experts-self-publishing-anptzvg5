@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="YOUR_GOOGLE_SITE_VERIFICATION" />
+    <title>Guide to working with editors and designers without conflict | Experts Self Publishing</title>
+    <meta name="description" content="Learn working with editors and designers the right way. Build strong collaborations, avoid conflict, and create better books together.">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon/favicon-16x16.png">
+    <link rel="preload" as="image" href="../assets/img/ubp-new/banner-bg.webp">
+    <link rel="preload" href="../assets/font/montserrat/Montserrat-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../assets/css/style8e5e.css?v=21">
+
+<link rel="preload" href="../assets/css/fontawesome-all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="../assets/css/fontawesome-all.min.css">
+</noscript>
+
+
+
+
+<link rel="preload" href="../assets/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+</noscript>
+
+
+
+<link rel="preload" href="../assets/css/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="../assets/css/aos.css">
+</noscript>
+
+
+
+<link rel="stylesheet" href="../assets/css/responsivef500.css?v=16">
+
+
+
+
+<link rel="preload" href="../assets/css/nice-select.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="../assets/css/nice-select.css">
+</noscript>
+
+
+
+
+<link rel="preload" href="../assets/css/jquery-ui.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="../assets/css/jquery-ui.css">
+</noscript>
+
+
+<link rel="preload" href="../assets/css/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+<link rel="stylesheet" href="../assets/css/jquery.fancybox.min.css">
+</noscript>
+
+<link rel="preload" href="../assets/css/slick-theme.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+<link rel="stylesheet" href="../assets/css/slick-theme.css">
+</noscript>
+
+<link rel="preload" href="../assets/css/slick.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+<link rel="stylesheet" href="../assets/css/slick.css">
+</noscript>
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/select2%404.1.0-rc.0/dist/css/select2.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2%404.1.0-rc.0/dist/css/select2.min.css">
+    </noscript>
+    <script defer src="../assets/js/site-tracking.js"></script>
+
+    <script>
+        class SmartObserver {
+            constructor() {
+                this.init();
+            }
+
+            init() {
+                this.lazyImages = document.querySelectorAll("img[data-src]");
+                this.hiddenElements = document.querySelectorAll(".io-hidden");
+
+                this.createObserver();
+                this.observeElements();
+            }
+
+            createObserver() {
+                this.observer = new IntersectionObserver(
+                    (entries, observer) => {
+                        entries.forEach((entry) => {
+                            if (!entry.isIntersecting) return;
+
+                            const el = entry.target;
+
+                            // 🖼️ Lazy Image Load
+                            if (el.tagName === "IMG" && el.dataset.src) {
+                                this.loadImage(el);
+                            }
+
+                            // ✨ Reveal Animation (custom)
+                            if (el.classList.contains("io-hidden")) {
+                                el.classList.add("io-show");
+                                el.classList.remove("io-hidden");
+                            }
+
+                            observer.unobserve(el);
+
+                            // 🔁 AOS refresh (important)
+                            if (typeof AOS !== "undefined") {
+                                AOS.refreshHard(); // better than refresh()
+                            }
+                        });
+                    }, {
+                        root: null,
+                        rootMargin: "0px 0px -50px 0px",
+                        threshold: 0.1,
+                    }
+                );
+            }
+
+            observeElements() {
+                this.lazyImages.forEach((img) => this.observer.observe(img));
+                this.hiddenElements.forEach((el) => this.observer.observe(el));
+            }
+
+            loadImage(img) {
+                const temp = new Image();
+                temp.src = img.dataset.src;
+
+                temp.onload = () => {
+                    img.src = temp.src;
+                    img.classList.add("loaded");
+                    img.removeAttribute("data-src");
+                };
+            }
+        }
+
+        // 🚀 Init on DOM Ready
+        document.addEventListener("DOMContentLoaded", () => {
+            new SmartObserver();
+
+            // AOS init (safe)
+            if (typeof AOS !== "undefined") {
+                AOS.init({
+                    duration: 800,
+                    once: true,
+                    offset: 100,
+                });
+            }
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const elements = document.querySelectorAll(".reveal");
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("active");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.15
+            });
+
+            elements.forEach((el) => observer.observe(el));
+        });
+    </script>
+</head>
+
+<body>
+    <header class="header-above">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-6 col-6">
+                <div class="head-contact">
+                    <ul class="list-unstyled d-flex justify-content-start mb-0 gap-4">
+                        <li><a href="javascript:void(0);" class="text-white hvr-effect" data-open-zendesk>
+                                <img src="../assets/img/ubp-new/msg-icon.webp"
+                                    class="img-fluid head-ct-icon effect" alt="massege" width="25" height="30">
+                                <span>Chat With Us</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-6">
+                <div class="head-contact">
+                    <ul class="list-unstyled d-flex justify-content-end mb-0 gap-4">
+                        <li><a href="tel:+18556055210" class="text-white hvr-effect">
+                                <img src="../assets/img/ubp-new/call-icon.webp"
+                                    class="img-fluid head-ct-icon effect" alt="massege" width="25" height="30">
+                                <span>+1 (855) 605-5210</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+        <a class="navbar-brand" href="../index.html">
+            <img class="img-fluid" src="../assets/img/ubp-new/logo.webp" loading="lazy" alt="Experts Self Publishing logo" />
+        </a>
+        <button class="navbar-toggler" type="button" aria-controls="navbarNavDropdown" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link " aria-current="page"
+                        href="../index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown custom-dropdown">
+                    <a class="nav-link dropdown-toggle "
+                        href="javascript:void(0);" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Services <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="../author-website.html">Author Website</a></li>
+                        <li><a class="dropdown-item" href="../pr-and-publicity.html">PR & Publicity</a></li>
+                        <li><a class="dropdown-item" href="../book-editing-proofreading.html">Editing &
+                                Proofreading</a></li>
+                        <li><a class="dropdown-item" href="../book-cover-design.html">Book Cover Design</a></li>
+                        <li><a class="dropdown-item" href="../ghostwriting.html">Ghostwriting</a></li>
+                        <li><a class="dropdown-item" href="../book-illustration.html">Book Illustration</a></li>
+                        <li><a class="dropdown-item" href="../book-video-trailers.html">Book Video Trailers</a>
+                        </li>
+                        <li><a class="dropdown-item" href="../creative-writing.html">Creative Writing</a></li>
+                        <li><a class="dropdown-item" href="../children-book-illustration.html">Children Book
+                                illustration</a></li>
+                        <li><a class="dropdown-item" href="../screenplay-script-writing.html">Screenplay Script
+                                Writing</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link "
+                        href="../book-publishing.html">Book Publishing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link "
+                        href="../book-marketing.html">Book Marketing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link "
+                        href="../pricing.html">Pricing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="../about-us.html">Our Story</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link "
+                        href="../contact-us.html">Contact Us</a>
+                </li>
+                <li class="nav-item dropdown custom-dropdown">
+                    <a class="nav-link dropdown-toggle "
+                        href="javascript:void(0);" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">Resources <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+                    </a>
+                    <ul class="dropdown-menu w-auto menu-2" aria-labelledby="navbarDropdownMenuLink">
+                        <li class="w-100"><a class="dropdown-item" href="../published-books.html">Published
+                                Books</a></li>
+                        <li class="w-100"><a class="dropdown-item" href="../customer-reviews.html">Customer
+                                Reviews</a></li>
+                        
+                        <li class="w-100"><a class="dropdown-item" href="../faq.html">FAQs</a></li>
+                        <li class="w-100"><a class="dropdown-item" href="../blogs.html">Blogs</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="navbar-right">
+            <div class="head-btn">
+                <a href="#exampleModalToggle"
+                    class="theme-btn1 btn-overlay d-inline-flex align-items-center gap-2 text-upper"
+                    data-bs-toggle="modal" data-bs-target="#exampleModal"><img
+                        src="../assets/img/ubp-new/msg-icon.webp" alt="icon" width="30"
+                        height="23"><span>Get a Free Quote</span></a>
+            </div>
+        </div>
+
+    </div>
+</nav>
+
+        <section class="about-banner sec-pd">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-lg-8">
+                    <div class="inner-heading text-white text-center">
+                        <h1 class="">Collaborating Without Conflict: How To Work Successfully with Editors, Designers, and Co-Authors</h1>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="blog-detail-sec sec-pd">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-10">
+                    <div class="blog-link">
+                        <h4 class="color-green mb-3">Content</h4>
+                        <h5 class="mb-3"><a href="#link-1">WHY COLLABORATION FEELS SO CHALLENGING FOR AUTHORS</a></h5>
+                        <h5 class="mb-3"><a href="#link-2">THE FEAR OF LOSING CREATIVE CONTROL</a></h5>
+                        <h5 class="mb-3"><a href="#link-3">THE VULNERABILITY OF SHARING UNFINISHED WORK</a></h5>
+                        <h5 class="mb-3"><a href="#link-4">CHOOSING THE RIGHT PARTNERS</a></h5>
+                        <h5 class="mb-3"><a href="#link-5">DEFINING ROLES AND RESPONSIBILITIES</a></h5>
+                        <h5 class="mb-3"><a href="#link-6">EDITOR AUTHOR RELATIONSHIP TIPS FOR SUCCESS</a></h5>
+                        <h5 class="mb-3"><a href="#link-7">TRUSTING DESIGNER CREATIVE VISION</a></h5>
+                        <h5 class="mb-3"><a href="#link-8">RECEIVING CRITICISM ON YOUR WRITING WITH GRACE</a></h5>
+
+
+                    </div>
+
+                </div>
+                <div class="col-lg-9 col-md-12">
+                    <div class="blog-detail">
+                        <p>Writing is often portrayed as a solitary act, a lone author hunched over a keyboard in a quiet room, lost in their imagination and bringing entire worlds to life through nothing but words on a page.</p>
+                        <p>The journey from manuscript to published book, however, involves editors who shape and refine your prose, designers who create covers and interiors that capture your book's essence, and sometimes co-authors who share the creative load and bring their own unique perspectives to the project.</p>
+                        <p>This transition from working alone to working with others is one of the most significant shifts an author will ever make, and it brings with it a whole new set of challenges that have nothing to do with plot or character development.</p>
+                        <p>Today we will explore the essential principles for working with editors and designers successfully, building productive partnerships that make your book better and make the creative process more enjoyable for everyone involved.</p>
+
+
+                        <h3 class="color" id="link-1">WHY COLLABORATION FEELS SO CHALLENGING FOR AUTHORS</h3>
+                        <p>The writing life is inherently solitary, and most authors develop their craft in isolation, spending countless hours alone with their thoughts and their manuscripts, learning to trust their own judgment and to rely on their own creative instincts.</p>
+                        <p>This independence is a strength, because it allows authors to develop a unique voice and vision that sets their work apart, but it can also become a weakness when it is time to step out of that isolation and work collaboratively with others. The skills that make you a good writer, like self-reliance, attention to detail, and the ability to work for long hours without external validation, are not necessarily the same skills that make you a good collaborator, and the transition requires conscious effort and a willingness to grow.</p>
+                        <p>There is also a deep emotional component to creative work that makes collaboration particularly fraught, because your writing is not just a product you have created but an expression of who you are and what you believe. When an editor suggests cutting a scene you love, it can feel like a personal rejection, not just a professional recommendation, and when a designer proposes a cover that looks nothing like what you imagined, it can feel like they do not understand your book at all.</p>
+                        <p>These emotional reactions are natural and understandable, but they can also lead to defensive behavior that undermines the collaborative process and prevents you from receiving the valuable feedback that could make your book so much stronger.</p>
+
+                        <h3 class="color" id="link-2">THE FEAR OF LOSING CREATIVE CONTROL</h3>
+                        <p>One of the most common fears authors experiences when entering into creative collaborations is the fear of losing creative control, the worry that if they let other people have too much influence over their work, it will no longer feel like their own.</p>
+                        <p>This fear is particularly acute for authors who have spent years developing their voice and their vision, because they have worked hard to create something unique and they are terrified of seeing it watered down or distorted by well-meaning collaborators.</p>
+                        <p>The best collaborators do not try to impose their own vision on your work, they try to understand what you are trying to achieve and help you achieve it more effectively, whether that means strengthening your characters, clarifying your plot, or creating a cover that truly captures your book's essence.</p>
+                        <h3 class="color" id="link-3">THE VULNERABILITY OF SHARING UNFINISHED WORK</h3>
+                        <p>Sharing your work with others is always vulnerable, but it is especially difficult when you are sharing unfinished work that still needs significant development, because you are exposing your creative process in all its messy, imperfect glory.</p>
+                        <p>You know the book is not ready, you know there are problems, and showing those problems to another person can feel like admitting failure or incompetence, even when you know intellectually that this is simply how the creative process works.</p>
+                        <p>The irony is that the best time to bring in professional collaborators is often when you feel most stuck and uncertain, because that is when their expertise can provide the most value and help you break through walls you could not have breached on your own.</p>
+                        <h5 class="color">WORKING WITH EDITORS AND DESIGNERS EFFECTIVELY</h5>
+                        <p>The relationships you build with editors and designers are among the most important professional relationships you will ever have, because these individuals play such a significant role in shaping how your work is perceived by readers and whether it achieves its full potential.</p>
+                        <p>Understanding how to work with editors and designers effectively is not just about avoiding conflict, it is about creating partnerships that produce the best possible work and make the entire creative process more enjoyable and fulfilling. The strategies that follow are designed to help you build trust, communicate clearly, and navigate the inevitable challenges that arise when creative professionals work together.</p>
+                        <h3 class="color" id="link-4">CHOOSING THE RIGHT PARTNERS</h3>
+                        <p>The foundation of any successful collaboration is choosing the right partners, because you can have all the communication skills in the world but if you are working with someone who is not a good fit for your project or your personality, the relationship will always be a struggle.</p>
+                        <p>Taking the time to vet potential editors and designers carefully is essential, and it means going beyond just looking at their credentials and sample work to really understand how they approach their craft and how they interact with their clients. </p>
+                        <p>Ask for references, have conversations about their process and their philosophy, and trust your gut instincts about whether you feel comfortable and understood.</p>
+                        <h4 class="color">THE IMPORTANCE OF GENRE EXPERTISE</h4>
+                        <p>The importance of genre expertise cannot be overstated, because an editor who specializes in romance novels will have very different expectations and insights than one who works primarily with literary fiction or science fiction.</p>
+                        <p>Designers also develop specific skills and aesthetics that may align better with some genres than others and working with someone who understands the conventions and expectations of your particular category will save you time and frustration.</p>
+                        <p>When interviewing potential collaborators, ask specifically about their experience with books like yours and request examples of similar projects they have worked on.</p>
+                        <h4 class="color">SETTING CLEAR EXPECTATIONS FROM THE START</h4>
+                        <p>One of the most common sources of conflict in creative collaborations is misaligned expectations, when one party assumes something that the other party does not, and the misunderstanding only becomes clear when it is too late to fix without significant effort or expense.</p>
+                        <p>This is why it is so important to have detailed conversations at the beginning of any collaboration, covering everything from timelines and budgets to communication preferences and decision-making processes.</p>
+                        <p>Put these agreements in writing, even if you do not formalize them in a contract, because having a shared document that everyone can reference helps prevent the misunderstandings that so often lead to frustration and resentment.</p>
+                        <h4 class="color" id="link-5">DEFINING ROLES AND RESPONSIBILITIES</h4>
+                        <p>Clearly define who is responsible for what is particularly important when working with multiple collaborators, because overlapping responsibilities can lead to confusion and tasks falling through the cracks.</p>
+                        <p>An editor might assume you are handling certain revisions while you assume they are, and a designer might not realize they need to coordinate with your editor on specific formatting issues. Create a detailed project plan that assigns specific tasks to specific people, with deadlines and deliverables clearly spelled out, and review this plan regularly as the project progresses.</p>
+                        <h4 class="color">BUILDING STRONG EDITOR RELATIONSHIPS</h4>
+                        <p>The relationship between an author and an editor is one of the most intimate and important partnerships in the publishing process, because the editor works directly with your words and your story, helping you to see what you cannot see and to achieve what you cannot achieve alone.</p>
+                        <p>Building a strong relationship with your editor takes time, effort, and a willingness to be vulnerable, but the rewards are immeasurable in terms of both the quality of your work and the satisfaction you derive from the creative process. The following strategies will help you develop productive and rewarding editor relationships.</p>
+                        <h3 class="color" id="link-6">EDITOR AUTHOR RELATIONSHIP TIPS FOR SUCCESS</h3>
+                        <p>Strong editor author relationship tips begin with approaching the relationship as a partnership rather than a hierarchy, because you and your editor are working toward the same goal, creating the best possible version of your book, and you both bring valuable expertise to the table.</p>
+                        <p>Your editor brings professional training and experience, an understanding of the market, and the objectivity that comes from not being emotionally invested in your words, while you bring intimate knowledge of your characters and world, your unique voice, and the big-picture vision for the project.</p>
+                        <p>Respecting what each of you brings to the partnership and communicating that respect openly creates a foundation of trust that will carry you through even the most challenging revisions.</p>
+                        <h4 class="color">RECEIVING EDITORIAL FEEDBACK GRACEFULLY</h4>
+                        <p>Receiving feedback is one of the hardest parts of the author-editor relationship, because it is so easy to take editorial suggestions as personal criticisms rather than professional observations aimed at improving your work.</p>
+                        <p>When you receive editorial feedback, take a moment to breathe and process before responding, because your initial emotional reaction is rarely the one you want to act upon. Ask clarifying questions when you do not understand a suggestion, and remember that you are the final decision maker, you can accept or reject any suggestion, but you should always consider it seriously before deciding.</p>
+
+                        <h4 class="color">GIVING FEEDBACK TO YOUR EDITOR</h4>
+                        <p>In editor author relationship tips, remember, the relationship is not one-way, and you also need to provide feedback to your editor about what is working and what is not, because they cannot read your mind and they need your input to adjust their approach when necessary.</p>
+                        <p>When you disagree with a suggestion, explain your reasoning clearly and professionally, offering specific examples and alternatives rather than simply rejecting the suggestion outright. This keeps the conversation productive and focused on finding solutions that serve the book rather than on winning an argument.</p>
+                        <h3 class="color" id="link-7">TRUSTING DESIGNER CREATIVE VISION</h3>
+                        <p>Designers approach your book from an entirely different perspective than you do, because they are thinking visually and aesthetically, considering how your book will be perceived in the marketplace and how design choices communicate genre and tone to potential readers. Learning to trust designer creative vision is essential for a successful collaboration, because the designer's expertise lies precisely in the areas where your own expertise is weakest.</p>
+                        <p>The most successful author-designer relationships are those where the author provides clear guidance about the book's content and tone, then steps back and allows the designer to work their magic, trusting that they will produce something beautiful and effective.</p>
+
+                        <h4 class="color">COMMUNICATING YOUR VISION TO DESIGNERS</h4>
+                        <p>While trusting the designer's creative vision is important, you also need to communicate your own vision clearly, because the designer cannot work with what they do not know. Provide examples of covers you love, explain what you think your book looks like in your head, and describe the mood and feeling you want the cover to evoke. The more specific and concrete your guidance, the better equipped the designer will be to create something that truly represents your book.</p>
+                        
+                        <h3 class="color">NAVIGATING CO-AUTHOR RELATIONSHIPS</h3>
+                        <p>Co-authoring a book presents unique challenges and opportunities that are different from working with editors or designers, because you are not just collaborating, you are co-creating, sharing equal creative ownership of the work itself.</p>
+                        <p>Trusting designer creative vision makes the relationship stronger. The intensity of this partnership, combined with the vulnerability of sharing the creative process so intimately, makes co-author relationships particularly susceptible to conflict and misunderstanding.</p>
+                        <p>However, when co-author relationships work well, they can be extraordinarily rewarding, producing work that is richer and more complex than either author could have created alone.</p>
+
+
+                        <h3 class="color">HOW TO AVOID CONFLICT WITH CO AUTHORS</h3>
+                        <p>Learning how to avoid conflict with co authors starts with choosing the right partner, because the foundation of any successful co-author relationship is mutual respect and compatible working styles.</p>
+                        <p>Before you commit to a co-author project, try working together on smaller pieces to test your compatibility, and have honest conversations about your writing habits, your communication preferences, and your expectations for the project.</p>
+                        <p>When conflicts do arise, address them early and directly, because small resentments that are ignored tend to grow into larger problems that can destroy both the project and the relationship.</p>
+
+                        <h4 class="color">DIVIDING WORK AND RESPONSIBILITIES</h4>
+                        <p>Clearly dividing work and responsibilities is one of the most important steps in preventing co-author conflict, because ambiguity about who is responsible for what can lead to missed deadlines, duplicated effort, and resentment.</p>
+                        <p>Define who is writing which chapters, who is handling research, who is managing submissions, and who is communicating with editors and publishers. Document these agreements and review them regularly to ensure they remain accurate and fair as the project evolves.</p>
+                        
+                        <h4 class="color">MANAGING CREATIVE DIFFERENCES</h4>
+                        <p>In how to avoid conflict with co authors, you need to address creative differences. These inevitable in any co-author relationship, because you and your partner will not always agree on character decisions, plot direction, or style choices. When disagreements arise, approach them as problems to be solved together rather than battles to be won, and be willing to compromise when your partner feels strongly about something.</p>
+                        <p>If you cannot resolve a disagreement on your own, consider bringing in a neutral third party, such as an editor, to help you find a solution that works for both of you and for the book.</p>
+
+                        <h3 class="color">RECEIVING CRITICISM ON YOUR WRITING</h3>
+
+                        <p>Criticism is an essential part of the creative process, and learning to receive it gracefully is one of the most important skills any writer can develop, because the ability to accept and incorporate feedback is what separates good writers from great ones.</p>
+                        <p>Receiving criticism on your writing is never easy, because your work is so personal and so deeply connected to your sense of self, but it becomes easier with practice and with the right mindset. The strategies that follow will help you approach feedback with openness and curiosity rather than defensiveness and fear.</p>
+                     
+                        <h3 class="color" id="link-8">RECEIVING CRITICISM ON YOUR WRITING WITH GRACE</h3>
+                        <p>Receiving criticism on your writing with grace means approaching feedback as an opportunity to learn and grow rather than as a personal attack or a judgment of your worth as a writer. When you receive criticism, take a moment to breathe and acknowledge your emotional reaction, then read the feedback again with your analytical mind engaged, looking for the useful insights hidden within the critique.</p>
+                        <p>Separate the feedback itself from the delivery, because even clumsily delivered criticism can contain valuable truth, and try to find at least one actionable insight in every piece of feedback you receive.</p>
+                        
+
+                        <h4 class="color">SEPARATING YOURSELF FROM YOUR WORK</h4>
+                        <p>One of the most important psychological shifts you can make as a writer is learning to separate your identity from your work, because your work is something you create, it is not who you are, and criticism of your work is not a personal attack on you. When you can view your manuscript as a project that you are working on rather than as a reflection of your worth, it becomes much easier to accept feedback and make changes without feeling defensive or hurt. This separation is not about caring less about your work, it is about caring about it in a healthier way that allows you to receive the help you need to make it better.</p>
+                        
+                        <h4 class="color">RESOLVING CONFLICTS WHEN THEY ARISE</h4>
+                        <p>Despite your best efforts to prevent them, conflicts will sometimes arise in creative collaborations, because people are human and they have different perspectives, different communication styles, and different emotional reactions to the stresses of creative work.</p>
+                        <p>The key is not to avoid conflict entirely, because that is impossible, but to address it constructively when it does occur, finding solutions that strengthen both the project and the relationships involved. The strategies below will help you navigate conflict with professionalism and grace.</p>
+
+
+
+                        <h4 class="color">ADDRESSING ISSUES EARLY</h4>
+                        <p>One of the most common mistakes authors make when conflicts arise is ignoring them, hoping they will resolve themselves or that they are not significant enough to warrant discussion, and this avoidance usually makes the problem worse.</p>
+                        <p>Small frustrations that are not addressed tend to grow into larger resentments that poison the relationship and make resolution much more difficult when it finally becomes unavoidable.</p>
+                        <p>If something is bothering you, speak up early, calmly, and professionally, before the frustration has had time to build and before the relationship has been damaged.</p>
+
+
+                        <h4 class="color">FINDING COMMON GROUND</h4>
+                        <p>When conflicts do occur, focus on finding common ground, reminding yourself and your collaborator of your shared goals and your mutual respect for one another.</p>
+                        <p>You both want the book to succeed, you both want the relationship to work, and you both want to produce work that you can be proud of. So, frame your conversations around these shared objectives rather than your areas of disagreement.</p>
+                        <p>This reframing helps to de-escalate tension and focuses the conversation on problem-solving rather than blame.</p>
+
+                        <h3 class="color">BUILDING CONFLICT FREE CREATIVE PARTNERSHIPS</h3>
+                        <p>Learning how to collaborate effectively with editors, designers, and co-authors is one of the most important skills any author can develop, because the quality of your professional relationships directly affects the quality of your work and the satisfaction you derive from the creative process. </p>
+                        <p>By choosing the right partners, setting clear expectations, communicating openly and respectfully, and approaching feedback with curiosity rather than defensiveness, you can build productive partnerships that make your book better and make the creative process more enjoyable for everyone involved.</p>
+                        <p>We have explored the essential principles for working with editors and designers successfully, and we have examined editor author relationship tips for building trust, strategies to avoid conflict with co authors through clear communication, the importance of learning to trust designer creative vision, and techniques for receiving criticism on your writing with grace. Your book deserves the best possible team, and you deserve the peace that comes from productive, respectful collaboration.</p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="">
+    <div class="container-fluid">
+        <div class="row align-items-start">
+
+            <div class="col-lg-4 col-md-12">
+                <div class="foot-box text-white">
+                    <a href="../index.html"><img src="../assets/img/ubp-new/footer-logo.webp"
+                            class="img-fluid foot-logo" alt="img" loading="lazy"></a>
+                    <p class="py-2 font">For 8+ years, we have been the quiet force behind unforgettable stories. We
+                        don't just publish books; we partner with visionaries, transforming bold ideas into legacies
+                        that endure. Let us build yours.</p>
+                    <div class="d-flex align-items-center gap-3">
+                        <h4 class="color mb-0 font-28">Follow Us:</h4>
+                        <div class="head-right d-flex align-items-center gap-3 justify-content-end">
+                            <ul class="list-unstyled d-flex align-items-center gap-2 mb-0">
+                                <li><a href="https://www.facebook.com/ExpertsSelfPublishingOfficial/" target="_blank"><i
+                                            class="fa-brands fa-facebook-f"></i></a></li>
+                                <li><a href="https://www.instagram.com/expertsselfpublishingofficial/" target="_blank"><i
+                                            class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href="https://www.youtube.com/@ExpertsSelfPublishing" target="_blank"><i
+                                            class="fa-brands fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-4 col-sm-4 ">
+                <div class="foot-box text-white">
+                    <h3 class="color">What We Offer</h3>
+                    <div class="foot-line"></div>
+                    <div class="foot-list d-flex mt-3">
+                        <ul class="list-unstyled">
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../book-publishing.html">Book Publishing</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../book-marketing.html">Book Marketing</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../author-website.html" class="">Author Website</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../creative-writing.html" class="">Creative Writing</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../book-illustration.html" class="">Book illustration</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../book-video-trailers.html" class="">Book Video Trailers</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../book-cover-design.html" class="">Book Cover Design</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../ghostwriting.html" class="">Ghostwriting</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../book-writing.html" class="">Book Writing</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../pr-and-publicity.html" class="">PR & Publicity</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-4 col-sm-4 ">
+                <div class="foot-box text-white">
+                    <h3 class="color">Others</h3>
+                    <div class="foot-line"></div>
+                    <div class="foot-list d-flex mt-3">
+                        <ul class="list-unstyled">
+
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../free-book-marketing-guide.html" class="">Free Book Marketing
+                                    Guide</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../free-book-publishing-guide.html" class="">Free Book Publishing
+                                    Guide</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../blogs.html" class="">Blogs</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../pricing.html" class="">Pricing</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../about-us.html" class="">Our Story</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../contact-us.html" class="">Contact Us</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-4 ">
+                <div class="foot-box text-white">
+                    <h3 class="color">Information</h3>
+                    <div class="foot-list info-detail">
+                        <ul class="list-unstyled">
+                            <li class="my-4 info-li">
+                                <a href="tel:+18556055210" class="d-flex gap-2">
+                                    <!-- <span class="info-icon"><i class="fa-solid fa-phone" aria-hidden="true"></i></span> -->
+                                    <span class="info-icon w-25"><img
+                                            src="../assets/img/ubp-new/theme-phone.webp"
+                                            class="img-fluid" alt="location" width="21" height="21"
+                                            loading="lazy"></span>
+                                    <span class="w-75">
+                                        <small>Call us now </small>
+                                        <span class="foot-number d-block w-100">+1 (855) 605-5210</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="my-4 info-li">
+                                <a href="mailto:info@expertsselfpublishing.com" class="d-flex gap-2">
+                                    <!-- <span class="info-icon"><i class="fa-solid fa-envelope" aria-hidden="true"></i></span> -->
+                                    <span class="info-icon w-25"><img
+                                            src="../assets/img/ubp-new/foot-envelope.webp"
+                                            class="img-fluid" alt="location" width="21" height="22"
+                                            loading="lazy"></span>
+                                    <span class="w-75">
+                                        <small>Email us on: </small>
+                                        <span class="foot-number d-block w-100">info@expertsselfpublishing.com</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="my-4 info-li">
+                                <a href="javascript:void(0);" class="d-flex gap-2">
+                                    <!-- <span class="info-icon"><i class="fa-solid fa-house"></i></span> -->
+                                    <span class="info-icon w-25"><img
+                                            src="../assets/img/ubp-new/location-icon.webp"
+                                            class="img-fluid" alt="location" width="21" height="28"
+                                            loading="lazy"></span>
+                                    <span class="w-75">
+                                        <!-- <small>Email us on: </small> -->
+                                        <span class="foot-number d-block w-100">3223 West 6th Street STE 101 Los
+                                            Angeles, <br> CA 90020 United States.</span>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="payment-box mt-3 p-2">
+                    <img src="../assets/img/ubp-new/pymnt-5.webp" class="img-fluid" alt="payment"
+                        width="316" height="68" loading="lazy">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container-fluid last-contain">
+        <div class="row">
+            <div class="col-lg-7 col-md-8">
+                <p class=" mb-0 para-color">Copyright © 2026 Experts Self Publishing - All Rights Reserved | Powered By
+                    Iota Digital, LLC</p>
+            </div>
+            <div class="col-lg-5 col-md-4">
+                <ul class="list-unstyled d-flex align-items-center gap-3 m-0 justify-content-end">
+                    <li><a href="../privacy-policy.html" class="">Privacy Policy</a></li>
+                    <li><a href="../terms-condition.html" class="">Terms And Conditions</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img src="../assets/img/pop-logo.png" class="img-fluid" alt="Experts Self Publishing logo" loading="lazy">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row align-items-center justify-content-around">
+                    <div class="col-lg-7">
+                        <div class="form-wrap">
+                            <div class="form-heading">
+                                <h3 class="color font-40 let-space fw-600">Start Building Your Author Success Story
+                                    Today!</h3>
+                                <p>Speak with our senior publishing consultant for a free tailored proposal</p>
+                            </div>
+                            <form action="/inquiry-submit" id="modal-form" method="POST">
+                                <input type="hidden" name="_token" value="awxIAFp3sLU9ALw6iz3WlIXSKpyn9f7ba0ryrYCz" autocomplete="off">                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <!-- <label for="full-name">Enter Your Full Name</label> -->
+                                        <div class="form-group">
+                                            <input type="text" id="full-name" name="full_name"
+                                                placeholder="Full Name" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <!-- <label for="email">Your email</label> -->
+                                        <div class="form-group">
+                                            <input type="text" id="email" name="email" placeholder="Email"
+                                                class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <!-- <label for="phone">Your phone</label> -->
+                                        <div class="form-group">
+                                            <input type="text" id="phone" name="phone"
+                                                placeholder="(999) 999 9999" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <!-- <label for="message">Type your message</label> -->
+                                        <div class="form-group">
+                                            <textarea rows="4" id="message" name="message" placeholder="Book Detail" class="form-control"></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="btn-container mt-4">
+                                        <button class="theme-btn1 text-upper border-0 btn-overlay">Book Now</button>
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="pop-img">
+                            <img src="../assets/img/badge-discount.png" class="discount-img img-fluid"
+                                alt="50% Discount">
+                            <img src="../assets/img/popup-image.png" class="img-fluid pop-std" alt="img"
+                                loading="lazy">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- <img src="assets/img/pop-circle.png" class="img-fluid pop-circle" alt="img"> -->
+        </div>
+    </div>
+</div>
+    <script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/slick.js"></script>
+<script>
+    // accordion
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panelfaq = this.nextElementSibling;
+            if (panelfaq.style.maxHeight) {
+                panelfaq.style.maxHeight = null;
+            } else {
+                panelfaq.style.maxHeight = panelfaq.scrollHeight + "px";
+            }
+        });
+    }
+    // accordion
+
+    $(document).ready(function() {
+        function initializeSlick(slider) {
+            if (!slider.hasClass('slick-initialized')) {
+                slider.slick({
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    autoplay: true
+                });
+            } else {
+                slider.slick('refresh');
+            }
+        }
+
+        // Pehla tab ka slider initialize karein
+        initializeSlick($('#tab1 .portfolio-slider'));
+
+        $('button[data-bs-toggle="tab"]').on('shown.bs.tab', function(e) {
+            let target = $(e.target).attr("data-bs-target");
+            let slider = $(target).find('.portfolio-slider');
+
+            // Ensure proper visibility and reinitialize
+            $(target).css({
+                'height': 'auto',
+                'visibility': 'visible'
+            });
+
+            setTimeout(function() {
+                initializeSlick(slider);
+            }, 100);
+        });
+    });
+</script>
+<script>
+    $(".portfolio-slider").slick({
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 0,
+        speed: 13000,
+        arrows: false,
+        dots: false,
+        pauseOnHover: false,
+        cssEase: "linear",
+        responsive: [{
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 5,
+                },
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 4,
+                },
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 3,
+                },
+            },
+            {
+                breakpoint: 400,
+                settings: {
+                    slidesToShow: 3,
+                },
+            },
+        ],
+    });
+
+    document.querySelectorAll('.flip-box').forEach(box => {
+  box.addEventListener('click', () => {
+    box.classList.toggle('active');
+  });
+});
+
+
+$(".blog-slider").slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  arrows: true,
+  dots: false,
+  autoplaySpeed: 2000,
+  responsive: [
+    {
+      breakpoint: 1025,   // 1024px se neeche
+      settings: {
+        slidesToShow: 2,
+      }
+    },
+    {
+      breakpoint: 992,   // 992px se neeche
+      settings: {
+        slidesToShow: 2,
+      }
+    },
+    {
+      breakpoint: 768,   // 768px se neeche
+      settings: {
+        slidesToShow: 1,
+        arrows: false,
+        dots: true,
+      }
+    },
+    {
+      breakpoint: 576,   // extra small devices
+      settings: {
+        slidesToShow: 1,
+        arrows: false,
+        dots: true,
+      }
+    }
+  ]
+});
+</script>
+<script src="../assets/js/aos.js" defer></script>
+<script src="../assets/js/custom.js" defer></script>
+<script src="../assets/js/nice-select.min.js" defer></script>
+<script src="../assets/js/bootstrap.min.js" defer></script>
+<script src="../assets/js/jquery.fancybox.min.js" defer></script>
+<!--<script src="../assets/js/fontowesome.js" crossorigin="anonymous" defer></script>-->
+
+<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>-->
+
+<script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    const tooltipList = [...tooltipTriggerList].map(el => new bootstrap.Tooltip(el));
+</script>
+
+
+<!-- Include SweetAlert -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2%4011" defer></script>
+<script src="../assets/js/custom-form.js" defer></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/select2%404.1.0-rc.0/dist/js/select2.min.js"></script>
+    
+    <script>
+        $('.book-slide').slick({
+            lazyLoad: 'ondemand',
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: false,
+            asNavFor: '.testimonial-slider'
+        });
+        $('.testimonial-slider').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            asNavFor: '.book-slide',
+            dots: false,
+            arrows: false,
+            autoplaySpeed: 2000,
+            speed: 1300,
+            autoplay: true,
+            //   centerMode: true,
+            focusOnSelect: true
+        });
+    </script>
+
+
+    
+
+
+</body>
+
+
+</html>

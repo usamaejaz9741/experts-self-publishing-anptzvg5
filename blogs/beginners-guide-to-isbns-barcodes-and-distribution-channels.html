@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="YOUR_GOOGLE_SITE_VERIFICATION" />
+    <title>Writer’s Block Is a Myth: Build a Writing Habit in 30 Days</title>
+    <meta name="description" content="Learn how to overcome writer’s block by building a simple, unstoppable writing habit in 30 days. Write with clarity, consistency, and confidence.">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon/favicon-16x16.png">
+    <link rel="preload" as="image" href="../assets/img/ubp-new/banner-bg.webp">
+    <link rel="preload" href="../assets/font/montserrat/Montserrat-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../assets/css/style8e5e.css?v=21">
+
+<link rel="preload" href="../assets/css/fontawesome-all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="../assets/css/fontawesome-all.min.css">
+</noscript>
+
+
+
+
+<link rel="preload" href="../assets/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+</noscript>
+
+
+
+<link rel="preload" href="../assets/css/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="../assets/css/aos.css">
+</noscript>
+
+
+
+<link rel="stylesheet" href="../assets/css/responsivef500.css?v=16">
+
+
+
+
+<link rel="preload" href="../assets/css/nice-select.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="../assets/css/nice-select.css">
+</noscript>
+
+
+
+
+<link rel="preload" href="../assets/css/jquery-ui.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="../assets/css/jquery-ui.css">
+</noscript>
+
+
+<link rel="preload" href="../assets/css/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+<link rel="stylesheet" href="../assets/css/jquery.fancybox.min.css">
+</noscript>
+
+<link rel="preload" href="../assets/css/slick-theme.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+<link rel="stylesheet" href="../assets/css/slick-theme.css">
+</noscript>
+
+<link rel="preload" href="../assets/css/slick.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+<link rel="stylesheet" href="../assets/css/slick.css">
+</noscript>
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/select2%404.1.0-rc.0/dist/css/select2.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2%404.1.0-rc.0/dist/css/select2.min.css">
+    </noscript>
+    <script defer src="../assets/js/site-tracking.js"></script>
+
+    <script>
+        class SmartObserver {
+            constructor() {
+                this.init();
+            }
+
+            init() {
+                this.lazyImages = document.querySelectorAll("img[data-src]");
+                this.hiddenElements = document.querySelectorAll(".io-hidden");
+
+                this.createObserver();
+                this.observeElements();
+            }
+
+            createObserver() {
+                this.observer = new IntersectionObserver(
+                    (entries, observer) => {
+                        entries.forEach((entry) => {
+                            if (!entry.isIntersecting) return;
+
+                            const el = entry.target;
+
+                            // 🖼️ Lazy Image Load
+                            if (el.tagName === "IMG" && el.dataset.src) {
+                                this.loadImage(el);
+                            }
+
+                            // ✨ Reveal Animation (custom)
+                            if (el.classList.contains("io-hidden")) {
+                                el.classList.add("io-show");
+                                el.classList.remove("io-hidden");
+                            }
+
+                            observer.unobserve(el);
+
+                            // 🔁 AOS refresh (important)
+                            if (typeof AOS !== "undefined") {
+                                AOS.refreshHard(); // better than refresh()
+                            }
+                        });
+                    }, {
+                        root: null,
+                        rootMargin: "0px 0px -50px 0px",
+                        threshold: 0.1,
+                    }
+                );
+            }
+
+            observeElements() {
+                this.lazyImages.forEach((img) => this.observer.observe(img));
+                this.hiddenElements.forEach((el) => this.observer.observe(el));
+            }
+
+            loadImage(img) {
+                const temp = new Image();
+                temp.src = img.dataset.src;
+
+                temp.onload = () => {
+                    img.src = temp.src;
+                    img.classList.add("loaded");
+                    img.removeAttribute("data-src");
+                };
+            }
+        }
+
+        // 🚀 Init on DOM Ready
+        document.addEventListener("DOMContentLoaded", () => {
+            new SmartObserver();
+
+            // AOS init (safe)
+            if (typeof AOS !== "undefined") {
+                AOS.init({
+                    duration: 800,
+                    once: true,
+                    offset: 100,
+                });
+            }
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const elements = document.querySelectorAll(".reveal");
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("active");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.15
+            });
+
+            elements.forEach((el) => observer.observe(el));
+        });
+    </script>
+</head>
+
+<body>
+    <header class="header-above">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-6 col-6">
+                <div class="head-contact">
+                    <ul class="list-unstyled d-flex justify-content-start mb-0 gap-4">
+                        <li><a href="javascript:void(0);" class="text-white hvr-effect" data-open-zendesk>
+                                <img src="../assets/img/ubp-new/msg-icon.webp"
+                                    class="img-fluid head-ct-icon effect" alt="massege" width="25" height="30">
+                                <span>Chat With Us</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-6">
+                <div class="head-contact">
+                    <ul class="list-unstyled d-flex justify-content-end mb-0 gap-4">
+                        <li><a href="tel:+18556055210" class="text-white hvr-effect">
+                                <img src="../assets/img/ubp-new/call-icon.webp"
+                                    class="img-fluid head-ct-icon effect" alt="massege" width="25" height="30">
+                                <span>+1 (855) 605-5210</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+        <a class="navbar-brand" href="../index.html">
+            <img class="img-fluid" src="../assets/img/ubp-new/logo.webp" loading="lazy" alt="Experts Self Publishing logo" />
+        </a>
+        <button class="navbar-toggler" type="button" aria-controls="navbarNavDropdown" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link " aria-current="page"
+                        href="../index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown custom-dropdown">
+                    <a class="nav-link dropdown-toggle "
+                        href="javascript:void(0);" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Services <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="../author-website.html">Author Website</a></li>
+                        <li><a class="dropdown-item" href="../pr-and-publicity.html">PR & Publicity</a></li>
+                        <li><a class="dropdown-item" href="../book-editing-proofreading.html">Editing &
+                                Proofreading</a></li>
+                        <li><a class="dropdown-item" href="../book-cover-design.html">Book Cover Design</a></li>
+                        <li><a class="dropdown-item" href="../ghostwriting.html">Ghostwriting</a></li>
+                        <li><a class="dropdown-item" href="../book-illustration.html">Book Illustration</a></li>
+                        <li><a class="dropdown-item" href="../book-video-trailers.html">Book Video Trailers</a>
+                        </li>
+                        <li><a class="dropdown-item" href="../creative-writing.html">Creative Writing</a></li>
+                        <li><a class="dropdown-item" href="../children-book-illustration.html">Children Book
+                                illustration</a></li>
+                        <li><a class="dropdown-item" href="../screenplay-script-writing.html">Screenplay Script
+                                Writing</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link "
+                        href="../book-publishing.html">Book Publishing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link "
+                        href="../book-marketing.html">Book Marketing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link "
+                        href="../pricing.html">Pricing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="../about-us.html">Our Story</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link "
+                        href="../contact-us.html">Contact Us</a>
+                </li>
+                <li class="nav-item dropdown custom-dropdown">
+                    <a class="nav-link dropdown-toggle "
+                        href="javascript:void(0);" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">Resources <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+                    </a>
+                    <ul class="dropdown-menu w-auto menu-2" aria-labelledby="navbarDropdownMenuLink">
+                        <li class="w-100"><a class="dropdown-item" href="../published-books.html">Published
+                                Books</a></li>
+                        <li class="w-100"><a class="dropdown-item" href="../customer-reviews.html">Customer
+                                Reviews</a></li>
+                        
+                        <li class="w-100"><a class="dropdown-item" href="../faq.html">FAQs</a></li>
+                        <li class="w-100"><a class="dropdown-item" href="../blogs.html">Blogs</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="navbar-right">
+            <div class="head-btn">
+                <a href="#exampleModalToggle"
+                    class="theme-btn1 btn-overlay d-inline-flex align-items-center gap-2 text-upper"
+                    data-bs-toggle="modal" data-bs-target="#exampleModal"><img
+                        src="../assets/img/ubp-new/msg-icon.webp" alt="icon" width="30"
+                        height="23"><span>Get a Free Quote</span></a>
+            </div>
+        </div>
+
+    </div>
+</nav>
+
+        <section class="about-banner sec-pd">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-lg-10">
+                    <div class="inner-heading text-white text-center">
+                        <h1 class="">Beginner’s Guide To Isbns, Barcodes, And Distribution Channels</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="blog-detail-sec sec-pd">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-10">
+                    <div class="blog-link">
+                        <h4 class="color-green mb-3">Content</h4>
+                        <h5 class="mb-3"><a href="#link-1">What Is An Isbn And Why Is It Important For Authors?</a></h5>
+                        <h5 class="mb-3"><a href="#link-2">Book Distribution Channels List: Where Books Are Actually Sold</a>
+                        </h5>
+                        <h5 class="mb-3"><a href="#link-3">Isbn For Self Publishers: What It Really Means</a></h5>
+                        <h5 class="mb-3"><a href="#link-4">How To Get An Isbn Number As A Beginner</a></h5>
+                        <h5 class="mb-3"><a href="#link-5">Do I Need A Barcode For My Book?</a></h5>
+                        <h5 class="mb-3"><a href="#link-6">Should You Use Amazon’s Free Isbn Or Buy Your Own?</a></h5>
+
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-9 col-md-12">
+                    <div class="blog-detail">
+
+                        <p>Publishing your first book seem so exciting right? Then all of a sudden, a reality hits. </p>
+
+                        <p>Suddenly you are staring at terms no one explained to you properly. ISBNs. Barcodes. Distribution
+                            platforms. Free options. Paid options. Conflicting advice everywhere. You look at one blog that
+                            says buy everything. Another says Amazon handles it all. Some people say on YouTube ISBNs are a
+                            totally scam. </p>
+
+                        <p>As you know. Most confusion comes from skipping the fundamentals. If you’re self-publishing,
+                            understanding ISBN for self publishers is not optional. It’s one of those behind-the-scenes
+                            decisions that quietly controls where your book can go further, who controls it, and how
+                            professional it looks to the outside world. </p>
+
+                        <p>This guide is for beginners who want straight and clear answers. No big words. No pressure. Just
+                            pretty and simple explanations, honest pros and cons, and everything explained to you in a way
+                            that makes completely sense. </p>
+
+                        <p>Let’s start from the beginning.</p>
+
+
+
+
+
+                        <h4 class="color mt-2" id="link-1">What Is An Isbn And Why Is It Important For Authors?</h4>
+
+                        <p>An ISBN is a <em><strong>unique identification number</strong></em> given to a book. Let’s just
+                            think of it as your book’s official ID in the publishing world.</p>
+
+                        <p>ISBN stands for <em><strong>International Standard Book Number.</strong></em> It’s a 13-digit
+                            number used by bookstores, libraries, distributors, wholesalers, and retailers to identify a
+                            specific book and its format.</p>
+
+                        <p>Here’s what many first-time authors don’t realize it. An ISBN doesn’t just identify the book. It
+                            also identifies who really published it.</p>
+
+                        <p>That really matters.</p>
+                        <p>When a bookstore orders a book, they don’t just see the title and author. They see the publisher
+                            attached to the ISBN. The same goes for libraries, distributors, and global databases.</p>
+
+                        <p><strong>Each version of your book requires its own ISBN:</strong></p>
+
+                        <ul>
+                            <li class="mb-2">Paperback needs one</li>
+                            <li class="mb-2">Hardcover needs one</li>
+                            <li class="mb-2">eBook needs one</li>
+                            <li class="mb-2">Audiobook needs one</li>
+                        </ul>
+                        <p>The format change results in a new ISBN even if the content is the same.</p>
+                        <p>Your book becomes invisible to the majority of the book industry if it does not have an ISBN. You
+                            can still sell online in limited cases, but bookstores and libraries rely on ISBN data to
+                            function.</p>
+                        <p>That’s why understanding ISBNs is important and it can save you from the frustation that comes
+                            later.</p>
+
+                        <h4 class="color" id="link-3">Isbn For Self Publishers: What It Really Means</h4>
+                        <p>When you self-publish, you become the publisher. Whether you planned to or not, that’s the role
+                            you are stepping into.</p>
+                        <p>An ISBN for self publishers determines who is listed as the official publisher of record. That
+                            single detail affects your book’s flexibility, credibility, and long-term options.</p>
+                        <p><strong>If you own your ISBN:</strong></p>
+                        <ul>
+                            <li class="mb-2">Your name or imprint is listed as the publisher</li>
+                            <li class="mb-2">You control where the book is distributed</li>
+                            <li class="mb-2">You can switch platforms without rebranding your book</li>
+                            <li class="mb-2">Bookstores and libraries see you as an independent publisher</li>
+
+                        </ul>
+                        <p><strong>If you use a free ISBN from a platform:</strong></p>
+                        <ul>
+                            <li class="mb-2">That platform is listed as the publisher</li>
+                            <li class="mb-2">Your book may be tied to that platform</li>
+                            <li class="mb-2">Moving the book later can be complicated</li>
+                            <li class="mb-2">Some retailers are hesitant to stock it</li>
+                        </ul>
+                        <p>This is not about ego. It’s about control.</p>
+                        <p>Many writers do not consider this until they wish to increase their readership. At that point,
+                            switching ISBNs may result in the loss of reviews, broken links, or a restart of listings.</p>
+                        <p>As your publishing goals expand, you will have greater freedom if you start with the correct ISBN
+                            arrangement.</p>
+
+                        <h4 class="color" id="link-4">How To Get An Isbn Number As A Beginner</h4>
+                        <p>How to get an ISBN number is one of the most often asked questions by the new authors, and with
+                            the good reason. For the first time, this procedure feels quite formal and stressful.</p>
+                        <p>Here’s the simple version.</p>
+                        <p>Where you get your ISBN depends on your country. In the United States, ISBNs are purchased
+                            through Bowker. In some countries, ISBNs are issued by government agencies and may even be free.
+                        </p>
+                        <p><strong>The basic steps are:</strong></p>
+                        <ol>
+                            <li class="mb-2">Decide how many formats you’re publishing</li>
+                            <li class="mb-2">Purchase or obtain the required number of ISBNs</li>
+                            <li class="mb-2">Register your book details accurately</li>
+                        </ol>
+                        <p><strong>When you register an ISBN, you’ll enter information like:</strong></p>
+
+                        <ul>
+                            <li class="mb-2">Book title and subtitle</li>
+                            <li class="mb-2">Author name</li>
+                            <li class="mb-2">Publisher name or imprint</li>
+                            <li class="mb-2">Format and publication date</li>
+                        </ul>
+                        <p>This data feeds into global book databases. Accuracy is important here because mistakes can lead
+                            to confusion with sellers and libraries.</p>
+                        <p>A useful hint that most beginners neglect: purchasing ISBNs in bulk is less expensive if you
+                            intend to publish multiple books. Single ISBNs are expensive. Bundles reduce the cost per book.
+                        </p>
+                        <p>Once you understand how to get an ISBN number, the process becomes routine. It’s unfamiliar, not
+                            difficult.</p>
+
+                        <h4 class="color" id="link-5">Do I Need A Barcode For My Book?</h4>
+                        <p>It’s a question that is most asked, especially by those who are printing their books for the
+                            first-time.</p>
+                        <p>If I already have an ISBN for my book, do I still need a barcode?</p>
+                        <p>For printed books, yes. In almost every case.</p>
+                        <p>A barcode is simply a scannable version of your ISBN. It’s printed on the back cover so retailers
+                            can scan it at checkout. Without a barcode, physical bookstores can’t sell your book
+                            efficiently.</p>
+                        <p>If you’re publishing ebooks only, you do not need a barcode. Digital platforms use ISBNs
+                            internally without scanning.</p>
+                        <p>If you provide an ISBN, the majority of print-on-demand businesses will create a barcode for you.
+                            You might have to make one yourself if you are printing on your own.</p>
+                        <p><strong>So, the rule is simple:</strong></p>
+
+                        <ul>
+                            <li class="mb-2">Print book for sale → barcode required</li>
+                            <li class="mb-2">Ebook only → no barcode needed</li>
+                        </ul>
+                        <p>Answering do I need a barcode for my book becomes straightforward once you understand how books
+                            are sold.</p>
+
+                        <h4 class="color">Free Vs Paid Isbn: What’s The Actual Difference?</h4>
+                        <p>One of the most discussed topics in self-publishing is this one, which is often explained in a
+                            confusing way. The argument between free and paid ISBNs has nothing to do with the standard of
+                            the books or which choice appears more polished. In the end, it comes down to control,
+                            ownership, and your desired level of freedom.</p>
+                        <p>Usually, publishing platforms provide free ISBNs. They help you publish your book more quickly,
+                            are easy to use and do not cost anything up front. This seems like the simplest and safest
+                            choice for a lot of first-time writers, especially if they have limited budget or want to
+                            publish as soon as possible.</p>
+                        <p>Although they are more expensive, paid ISBNs offer you control. You are recognized as the
+                            publisher when you get your own ISBN. You now have greater control over where your book can be
+                            sold and how it develops over time.</p>
+
+                        <p><strong>Free ISBNs typically mean:</strong></p>
+
+                        <ul>
+                            <li class="mb-2">The platform is listed as the publisher, not you</li>
+                            <li class="mb-2">Your book may be tied to that platform</li>
+                            <li class="mb-2">Selling your book through other distributors later can be limited</li>
+                            <li class="mb-2">Moving your book elsewhere may require starting over Paid ISBNs typically mean:
+                            </li>
+                            <li class="mb-2">You are listed as the publisher</li>
+                            <li class="mb-2">You can sell your book on multiple platforms</li>
+                            <li class="mb-2">You can change distributors without redoing your setup</li>
+                            <li class="mb-2">Bookstores and libraries are more open to stocking your book</li>
+                        </ul>
+                        <p>Neither option is automatically wrong. The real mistake is choosing without knowing what each
+                            option means for your future. </p>
+                        <p>A free ISBN can be acceptable for authors who just plan on selling one book on one platform.
+                            However, authors often wish they had owned their ISBN from the beginning if they wanted wide
+                            distribution, access to bookstores, or long-term freedom.</p>
+
+                        <h4 class="color" id="link-6">Should You Use Amazon’s Free Isbn Or Buy Your Own?</h4>
+                        <p>This is where ideas turn into real choices. Because it is quick, easy, and removes more steps
+                            from the publication process, Amazon's free ISBN appears appealing. It seems like the simplest
+                            method for many new authors to get a book published without any delays or extra costs. For some
+                            authors, it truly is the right choice.</p>
+                        <p>But it does come with limits, and those limits usually show up later, not at the start.</p>
+                        <p><strong>When you use Amazon’s free ISBN:</strong></p>
+
+                        <ul>
+                            <li class="mb-2">Amazon is listed as the publisher, not you</li>
+                            <li class="mb-2">Your paperback is connected only to Amazon</li>
+                            <li class="mb-2">Selling the same book through other distributors later becomes harder</li>
+                            <li class="mb-2">Moving to bookstores or libraries may require extra changes</li>
+
+                        </ul>
+                        <p><strong>If your plan is:</strong></p>
+                        <ul>
+                            <li class="mb-2">Publishing one book</li>
+                            <li class="mb-2">Selling only on Amazon</li>
+                            <li class="mb-2">Keeping setup quick and simple</li>
+                        </ul>
+                        <p class="mb-3">Then Amazon’s free ISBN can work well and save time.</p>
+                        <p><strong>If your plan is:</strong></p>
+                        <ul>
+                            <li class="mb-2">Building your name as an author</li>
+                            <li class="mb-2">Selling your book in bookstores and libraries</li>
+                            <li class="mb-2">Using more than one distribution platform</li>
+                        </ul>
+                        <p>Buying your own ISBN is usually the smarter long-term move. Many authors only understand this
+                            after their book is already live. By then, switching ISBNs can mean updating listings, losing
+                            momentum, and starting over in important places. </p>
+                        <p>That’s why this decision is best made before you upload your book, not after.</p>
+
+                        <h5 class="color">EXTRA CLARITY FOR BEGINNERS</h5>
+                        <p>This choice affects how much control you have over your book later. It also affects where your
+                            book can be sold and how easy it is to grow beyond one platform. Thinking about this early save
+                            time, money, and frustration in the future.</p>
+
+                        <h4 class="color" id="link-2">Book Distribution Channels List: Where Books Are Actually Sold</h4>
+                        <p>Distribution isn’t one thing. It’s a system of paths your book can travel.</p>
+                        <p><strong>A realistic book distribution channels list includes:</strong></p>
+                        <ul>
+                            <li class="mb-2">Online retailers like Amazon and Barnes & Noble</li>
+                            <li class="mb-2">Independent bookstores</li>
+                            <li class="mb-2">Chain bookstores</li>
+                            <li class="mb-2">Libraries and academic institutions</li>
+                            <li class="mb-2">International retailers</li>
+                            <li class="mb-2">Direct-to-reader sales</li>
+                        </ul>
+
+                        <p>Each channel has different requirements. Some rely heavily on ISBN data. Others prefer certain
+                            distributors.</p>
+                        <p>Amazon dominates online sales, but bookstores and libraries usually order through wholesalers.
+                            That’s why understanding distribution early prevents dead ends.</p>
+
+                        <p>Your ISBN choice affects which channels are open to you. It’s all connected.</p>
+                        <p>A strong book distribution channels list strategy is about reach, not just convenience.</p>
+
+                        <h4 class="color">Ingram Spark Vs Amazon Distribution: Which Is Better?</h4>
+                        <p>The comparison between Ingram Spark vs Amazon distribution comes up for almost every serious
+                            self-publisher.</p>
+
+                        <p><strong>Amazon distribution is:</strong></p>
+                        <ul>
+                            <li class="mb-2">Easy to use</li>
+                            <li class="mb-2">Fast to launch</li>
+                            <li class="mb-2">Strong for online sales</li>
+                            <li class="mb-2">Limited outside Amazon’s ecosystem</li>
+                        </ul>
+                        <p><strong>Ingram Spark distribution is:</strong></p>
+                        <ul>
+                            <li class="mb-2">Accepted by bookstores and libraries</li>
+                            <li class="mb-2">Internationally recognized</li>
+                            <li class="mb-2">More complex to set up</li>
+                            <li class="mb-2">Better for wide distribution</li>
+                        </ul>
+                        <p>Many experienced authors use both.</p>
+                        <p>Amazon handles direct online sales. Ingram Spark handles bookstores and libraries. This setup requires owning your ISBN, but it offers the best of both worlds.</p>
+                        <p>When choosing between Ingram Spark vs Amazon distribution, the question isn’t which is better. It’s which fits your goals.</p>
+
+                        <h4 class="color">Start Smart And Save Yourself Later</h4>
+                        <p>Distribution routes, barcodes, and ISBNs are boring subjects, yet they have an important effect on the success of your book. They quietly affect your publication fate in ways that most beginners first fail to see. </p>
+                        <p>Most early mistakes don’t come from bad writing. They happen when decisions are rushed and the system isn’t fully understood.</p>
+                        <p>When you understand how ISBNs work, you give yourself more freedom. When you understand distribution, you keep more doors open instead of closing them too soon. There’s no single right setup for every author, but there is a setup that fits your goals, budget, and plans.</p>
+                        <p>Taking the time to understand ISBN for self publishers gives you clarity, confidence, and control. It helps you avoid regret later and make smarter choices from day one. </p>
+                        <p>At Experts Self Publishing, we help authors make these decisions with purpose, not guesswork, because a strong foundation doesn’t support just one book. It supports everything you create after it.</p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="">
+    <div class="container-fluid">
+        <div class="row align-items-start">
+
+            <div class="col-lg-4 col-md-12">
+                <div class="foot-box text-white">
+                    <a href="../index.html"><img src="../assets/img/ubp-new/footer-logo.webp"
+                            class="img-fluid foot-logo" alt="img" loading="lazy"></a>
+                    <p class="py-2 font">For 8+ years, we have been the quiet force behind unforgettable stories. We
+                        don't just publish books; we partner with visionaries, transforming bold ideas into legacies
+                        that endure. Let us build yours.</p>
+                    <div class="d-flex align-items-center gap-3">
+                        <h4 class="color mb-0 font-28">Follow Us:</h4>
+                        <div class="head-right d-flex align-items-center gap-3 justify-content-end">
+                            <ul class="list-unstyled d-flex align-items-center gap-2 mb-0">
+                                <li><a href="https://www.facebook.com/ExpertsSelfPublishingOfficial/" target="_blank"><i
+                                            class="fa-brands fa-facebook-f"></i></a></li>
+                                <li><a href="https://www.instagram.com/expertsselfpublishingofficial/" target="_blank"><i
+                                            class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href="https://www.youtube.com/@ExpertsSelfPublishing" target="_blank"><i
+                                            class="fa-brands fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-4 col-sm-4 ">
+                <div class="foot-box text-white">
+                    <h3 class="color">What We Offer</h3>
+                    <div class="foot-line"></div>
+                    <div class="foot-list d-flex mt-3">
+                        <ul class="list-unstyled">
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../book-publishing.html">Book Publishing</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../book-marketing.html">Book Marketing</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../author-website.html" class="">Author Website</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../creative-writing.html" class="">Creative Writing</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../book-illustration.html" class="">Book illustration</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../book-video-trailers.html" class="">Book Video Trailers</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../book-cover-design.html" class="">Book Cover Design</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../ghostwriting.html" class="">Ghostwriting</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../book-writing.html" class="">Book Writing</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../pr-and-publicity.html" class="">PR & Publicity</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-4 col-sm-4 ">
+                <div class="foot-box text-white">
+                    <h3 class="color">Others</h3>
+                    <div class="foot-line"></div>
+                    <div class="foot-list d-flex mt-3">
+                        <ul class="list-unstyled">
+
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../free-book-marketing-guide.html" class="">Free Book Marketing
+                                    Guide</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../free-book-publishing-guide.html" class="">Free Book Publishing
+                                    Guide</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../blogs.html" class="">Blogs</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../pricing.html" class="">Pricing</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../about-us.html" class="">Our Story</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../contact-us.html" class="">Contact Us</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-4 ">
+                <div class="foot-box text-white">
+                    <h3 class="color">Information</h3>
+                    <div class="foot-list info-detail">
+                        <ul class="list-unstyled">
+                            <li class="my-4 info-li">
+                                <a href="tel:+18556055210" class="d-flex gap-2">
+                                    <!-- <span class="info-icon"><i class="fa-solid fa-phone" aria-hidden="true"></i></span> -->
+                                    <span class="info-icon w-25"><img
+                                            src="../assets/img/ubp-new/theme-phone.webp"
+                                            class="img-fluid" alt="location" width="21" height="21"
+                                            loading="lazy"></span>
+                                    <span class="w-75">
+                                        <small>Call us now </small>
+                                        <span class="foot-number d-block w-100">+1 (855) 605-5210</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="my-4 info-li">
+                                <a href="mailto:info@expertsselfpublishing.com" class="d-flex gap-2">
+                                    <!-- <span class="info-icon"><i class="fa-solid fa-envelope" aria-hidden="true"></i></span> -->
+                                    <span class="info-icon w-25"><img
+                                            src="../assets/img/ubp-new/foot-envelope.webp"
+                                            class="img-fluid" alt="location" width="21" height="22"
+                                            loading="lazy"></span>
+                                    <span class="w-75">
+                                        <small>Email us on: </small>
+                                        <span class="foot-number d-block w-100">info@expertsselfpublishing.com</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="my-4 info-li">
+                                <a href="javascript:void(0);" class="d-flex gap-2">
+                                    <!-- <span class="info-icon"><i class="fa-solid fa-house"></i></span> -->
+                                    <span class="info-icon w-25"><img
+                                            src="../assets/img/ubp-new/location-icon.webp"
+                                            class="img-fluid" alt="location" width="21" height="28"
+                                            loading="lazy"></span>
+                                    <span class="w-75">
+                                        <!-- <small>Email us on: </small> -->
+                                        <span class="foot-number d-block w-100">3223 West 6th Street STE 101 Los
+                                            Angeles, <br> CA 90020 United States.</span>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="payment-box mt-3 p-2">
+                    <img src="../assets/img/ubp-new/pymnt-5.webp" class="img-fluid" alt="payment"
+                        width="316" height="68" loading="lazy">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container-fluid last-contain">
+        <div class="row">
+            <div class="col-lg-7 col-md-8">
+                <p class=" mb-0 para-color">Copyright © 2026 Experts Self Publishing - All Rights Reserved | Powered By
+                    Iota Digital, LLC</p>
+            </div>
+            <div class="col-lg-5 col-md-4">
+                <ul class="list-unstyled d-flex align-items-center gap-3 m-0 justify-content-end">
+                    <li><a href="../privacy-policy.html" class="">Privacy Policy</a></li>
+                    <li><a href="../terms-condition.html" class="">Terms And Conditions</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img src="../assets/img/pop-logo.png" class="img-fluid" alt="Experts Self Publishing logo" loading="lazy">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row align-items-center justify-content-around">
+                    <div class="col-lg-7">
+                        <div class="form-wrap">
+                            <div class="form-heading">
+                                <h3 class="color font-40 let-space fw-600">Start Building Your Author Success Story
+                                    Today!</h3>
+                                <p>Speak with our senior publishing consultant for a free tailored proposal</p>
+                            </div>
+                            <form action="/inquiry-submit" id="modal-form" method="POST">
+                                <input type="hidden" name="_token" value="awxIAFp3sLU9ALw6iz3WlIXSKpyn9f7ba0ryrYCz" autocomplete="off">                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <!-- <label for="full-name">Enter Your Full Name</label> -->
+                                        <div class="form-group">
+                                            <input type="text" id="full-name" name="full_name"
+                                                placeholder="Full Name" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <!-- <label for="email">Your email</label> -->
+                                        <div class="form-group">
+                                            <input type="text" id="email" name="email" placeholder="Email"
+                                                class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <!-- <label for="phone">Your phone</label> -->
+                                        <div class="form-group">
+                                            <input type="text" id="phone" name="phone"
+                                                placeholder="(999) 999 9999" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <!-- <label for="message">Type your message</label> -->
+                                        <div class="form-group">
+                                            <textarea rows="4" id="message" name="message" placeholder="Book Detail" class="form-control"></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="btn-container mt-4">
+                                        <button class="theme-btn1 text-upper border-0 btn-overlay">Book Now</button>
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="pop-img">
+                            <img src="../assets/img/badge-discount.png" class="discount-img img-fluid"
+                                alt="50% Discount">
+                            <img src="../assets/img/popup-image.png" class="img-fluid pop-std" alt="img"
+                                loading="lazy">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- <img src="assets/img/pop-circle.png" class="img-fluid pop-circle" alt="img"> -->
+        </div>
+    </div>
+</div>
+    <script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/slick.js"></script>
+<script>
+    // accordion
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panelfaq = this.nextElementSibling;
+            if (panelfaq.style.maxHeight) {
+                panelfaq.style.maxHeight = null;
+            } else {
+                panelfaq.style.maxHeight = panelfaq.scrollHeight + "px";
+            }
+        });
+    }
+    // accordion
+
+    $(document).ready(function() {
+        function initializeSlick(slider) {
+            if (!slider.hasClass('slick-initialized')) {
+                slider.slick({
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    autoplay: true
+                });
+            } else {
+                slider.slick('refresh');
+            }
+        }
+
+        // Pehla tab ka slider initialize karein
+        initializeSlick($('#tab1 .portfolio-slider'));
+
+        $('button[data-bs-toggle="tab"]').on('shown.bs.tab', function(e) {
+            let target = $(e.target).attr("data-bs-target");
+            let slider = $(target).find('.portfolio-slider');
+
+            // Ensure proper visibility and reinitialize
+            $(target).css({
+                'height': 'auto',
+                'visibility': 'visible'
+            });
+
+            setTimeout(function() {
+                initializeSlick(slider);
+            }, 100);
+        });
+    });
+</script>
+<script>
+    $(".portfolio-slider").slick({
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 0,
+        speed: 13000,
+        arrows: false,
+        dots: false,
+        pauseOnHover: false,
+        cssEase: "linear",
+        responsive: [{
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 5,
+                },
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 4,
+                },
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 3,
+                },
+            },
+            {
+                breakpoint: 400,
+                settings: {
+                    slidesToShow: 3,
+                },
+            },
+        ],
+    });
+
+    document.querySelectorAll('.flip-box').forEach(box => {
+  box.addEventListener('click', () => {
+    box.classList.toggle('active');
+  });
+});
+
+
+$(".blog-slider").slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  arrows: true,
+  dots: false,
+  autoplaySpeed: 2000,
+  responsive: [
+    {
+      breakpoint: 1025,   // 1024px se neeche
+      settings: {
+        slidesToShow: 2,
+      }
+    },
+    {
+      breakpoint: 992,   // 992px se neeche
+      settings: {
+        slidesToShow: 2,
+      }
+    },
+    {
+      breakpoint: 768,   // 768px se neeche
+      settings: {
+        slidesToShow: 1,
+        arrows: false,
+        dots: true,
+      }
+    },
+    {
+      breakpoint: 576,   // extra small devices
+      settings: {
+        slidesToShow: 1,
+        arrows: false,
+        dots: true,
+      }
+    }
+  ]
+});
+</script>
+<script src="../assets/js/aos.js" defer></script>
+<script src="../assets/js/custom.js" defer></script>
+<script src="../assets/js/nice-select.min.js" defer></script>
+<script src="../assets/js/bootstrap.min.js" defer></script>
+<script src="../assets/js/jquery.fancybox.min.js" defer></script>
+<!--<script src="../assets/js/fontowesome.js" crossorigin="anonymous" defer></script>-->
+
+<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>-->
+
+<script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    const tooltipList = [...tooltipTriggerList].map(el => new bootstrap.Tooltip(el));
+</script>
+
+
+<!-- Include SweetAlert -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2%4011" defer></script>
+<script src="../assets/js/custom-form.js" defer></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/select2%404.1.0-rc.0/dist/js/select2.min.js"></script>
+    
+    <script>
+        $('.book-slide').slick({
+            lazyLoad: 'ondemand',
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: false,
+            asNavFor: '.testimonial-slider'
+        });
+        $('.testimonial-slider').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            asNavFor: '.book-slide',
+            dots: false,
+            arrows: false,
+            autoplaySpeed: 2000,
+            speed: 1300,
+            autoplay: true,
+            //   centerMode: true,
+            focusOnSelect: true
+        });
+    </script>
+
+
+    
+
+
+</body>
+
+
+</html>

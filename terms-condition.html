@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="YOUR_GOOGLE_SITE_VERIFICATION" />
+    <title>Terms &amp; Conditions | Experts Self Publishing</title>
+    <meta name="description" content="Review the terms and conditions for using Experts Self Publishing services and website.">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png">
+    <link rel="preload" as="image" href="assets/img/ubp-new/banner-bg.webp">
+    <link rel="preload" href="assets/font/montserrat/Montserrat-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="assets/css/style8e5e.css?v=21">
+
+<link rel="preload" href="assets/css/fontawesome-all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+</noscript>
+
+
+
+
+<link rel="preload" href="assets/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+</noscript>
+
+
+
+<link rel="preload" href="assets/css/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="assets/css/aos.css">
+</noscript>
+
+
+
+<link rel="stylesheet" href="assets/css/responsivef500.css?v=16">
+
+
+
+
+<link rel="preload" href="assets/css/nice-select.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+</noscript>
+
+
+
+
+<link rel="preload" href="assets/css/jquery-ui.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="assets/css/jquery-ui.css">
+</noscript>
+
+
+<link rel="preload" href="assets/css/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+<link rel="stylesheet" href="assets/css/jquery.fancybox.min.css">
+</noscript>
+
+<link rel="preload" href="assets/css/slick-theme.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+<link rel="stylesheet" href="assets/css/slick-theme.css">
+</noscript>
+
+<link rel="preload" href="assets/css/slick.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+<link rel="stylesheet" href="assets/css/slick.css">
+</noscript>
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/select2%404.1.0-rc.0/dist/css/select2.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2%404.1.0-rc.0/dist/css/select2.min.css">
+    </noscript>
+    <script defer src="assets/js/site-tracking.js"></script>
+
+    <script>
+        class SmartObserver {
+            constructor() {
+                this.init();
+            }
+
+            init() {
+                this.lazyImages = document.querySelectorAll("img[data-src]");
+                this.hiddenElements = document.querySelectorAll(".io-hidden");
+
+                this.createObserver();
+                this.observeElements();
+            }
+
+            createObserver() {
+                this.observer = new IntersectionObserver(
+                    (entries, observer) => {
+                        entries.forEach((entry) => {
+                            if (!entry.isIntersecting) return;
+
+                            const el = entry.target;
+
+                            // 🖼️ Lazy Image Load
+                            if (el.tagName === "IMG" && el.dataset.src) {
+                                this.loadImage(el);
+                            }
+
+                            // ✨ Reveal Animation (custom)
+                            if (el.classList.contains("io-hidden")) {
+                                el.classList.add("io-show");
+                                el.classList.remove("io-hidden");
+                            }
+
+                            observer.unobserve(el);
+
+                            // 🔁 AOS refresh (important)
+                            if (typeof AOS !== "undefined") {
+                                AOS.refreshHard(); // better than refresh()
+                            }
+                        });
+                    }, {
+                        root: null,
+                        rootMargin: "0px 0px -50px 0px",
+                        threshold: 0.1,
+                    }
+                );
+            }
+
+            observeElements() {
+                this.lazyImages.forEach((img) => this.observer.observe(img));
+                this.hiddenElements.forEach((el) => this.observer.observe(el));
+            }
+
+            loadImage(img) {
+                const temp = new Image();
+                temp.src = img.dataset.src;
+
+                temp.onload = () => {
+                    img.src = temp.src;
+                    img.classList.add("loaded");
+                    img.removeAttribute("data-src");
+                };
+            }
+        }
+
+        // 🚀 Init on DOM Ready
+        document.addEventListener("DOMContentLoaded", () => {
+            new SmartObserver();
+
+            // AOS init (safe)
+            if (typeof AOS !== "undefined") {
+                AOS.init({
+                    duration: 800,
+                    once: true,
+                    offset: 100,
+                });
+            }
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const elements = document.querySelectorAll(".reveal");
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("active");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.15
+            });
+
+            elements.forEach((el) => observer.observe(el));
+        });
+    </script>
+</head>
+
+<body>
+    <header class="header-above">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-6 col-6">
+                <div class="head-contact">
+                    <ul class="list-unstyled d-flex justify-content-start mb-0 gap-4">
+                        <li><a href="javascript:void(0);" class="text-white hvr-effect" data-open-zendesk>
+                                <img src="assets/img/ubp-new/msg-icon.webp"
+                                    class="img-fluid head-ct-icon effect" alt="massege" width="25" height="30">
+                                <span>Chat With Us</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-6">
+                <div class="head-contact">
+                    <ul class="list-unstyled d-flex justify-content-end mb-0 gap-4">
+                        <li><a href="tel:+18556055210" class="text-white hvr-effect">
+                                <img src="assets/img/ubp-new/call-icon.webp"
+                                    class="img-fluid head-ct-icon effect" alt="massege" width="25" height="30">
+                                <span>+1 (855) 605-5210</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img class="img-fluid" src="assets/img/ubp-new/logo.webp" loading="lazy" alt="Experts Self Publishing logo" />
+        </a>
+        <button class="navbar-toggler" type="button" aria-controls="navbarNavDropdown" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link " aria-current="page"
+                        href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown custom-dropdown">
+                    <a class="nav-link dropdown-toggle "
+                        href="javascript:void(0);" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Services <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="author-website.html">Author Website</a></li>
+                        <li><a class="dropdown-item" href="pr-and-publicity.html">PR & Publicity</a></li>
+                        <li><a class="dropdown-item" href="book-editing-proofreading.html">Editing &
+                                Proofreading</a></li>
+                        <li><a class="dropdown-item" href="book-cover-design.html">Book Cover Design</a></li>
+                        <li><a class="dropdown-item" href="ghostwriting.html">Ghostwriting</a></li>
+                        <li><a class="dropdown-item" href="book-illustration.html">Book Illustration</a></li>
+                        <li><a class="dropdown-item" href="book-video-trailers.html">Book Video Trailers</a>
+                        </li>
+                        <li><a class="dropdown-item" href="creative-writing.html">Creative Writing</a></li>
+                        <li><a class="dropdown-item" href="children-book-illustration.html">Children Book
+                                illustration</a></li>
+                        <li><a class="dropdown-item" href="screenplay-script-writing.html">Screenplay Script
+                                Writing</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link "
+                        href="book-publishing.html">Book Publishing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link "
+                        href="book-marketing.html">Book Marketing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link "
+                        href="pricing.html">Pricing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="about-us.html">Our Story</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link "
+                        href="contact-us.html">Contact Us</a>
+                </li>
+                <li class="nav-item dropdown custom-dropdown">
+                    <a class="nav-link dropdown-toggle "
+                        href="javascript:void(0);" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">Resources <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+                    </a>
+                    <ul class="dropdown-menu w-auto menu-2" aria-labelledby="navbarDropdownMenuLink">
+                        <li class="w-100"><a class="dropdown-item" href="published-books.html">Published
+                                Books</a></li>
+                        <li class="w-100"><a class="dropdown-item" href="customer-reviews.html">Customer
+                                Reviews</a></li>
+                        
+                        <li class="w-100"><a class="dropdown-item" href="faq.html">FAQs</a></li>
+                        <li class="w-100"><a class="dropdown-item" href="blogs.html">Blogs</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="navbar-right">
+            <div class="head-btn">
+                <a href="#exampleModalToggle"
+                    class="theme-btn1 btn-overlay d-inline-flex align-items-center gap-2 text-upper"
+                    data-bs-toggle="modal" data-bs-target="#exampleModal"><img
+                        src="assets/img/ubp-new/msg-icon.webp" alt="icon" width="30"
+                        height="23"><span>Get a Free Quote</span></a>
+            </div>
+        </div>
+
+    </div>
+</nav>
+
+        <section class="about-banner sec-pd">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-lg-6">
+                    <div class="inner-heading text-white text-center">
+                        <h1 class="sec-hd">Terms and Conditions</h1>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="privacy-policy mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="policies">
+                        <div class="policy-list">
+                            <h5>TERMS &amp; CONDITIONS</h5>
+                            <p class="py-2"> By using this website, you agree to be bound by these Terms and Conditions.
+                                Experts Self Publishing reserves the right to change the Terms and Conditions at any
+                                time, for any reason. </p>
+                        </div>
+                        <div class="policy-list">
+                            <h5>2.1 WEBSITE USAGE TERMS AND CONDITIONS</h5>
+                            <p class="py-2"> Experts Self Publishing grants you a non-transferable, non-exclusive license
+                                to use the website and the content of any emails you receive from Experts Self Publishing
+                                in accordance with these Terms and Conditions. The content and information contained in
+                                the website and emails is protected by copyright and other rights belonging to Experts Self Publishing. You may not copy, reproduce, modify, or create derivative works from
+                                any information provided in connection with the website or emails you receive from
+                                Experts Self Publishing, except in accordance with these Terms and Conditions. </p>
+                            <p class="py-2"> You may not use the website or the content of any emails to compete with
+                                Experts Self Publishing or in any manner objectionable to Experts Self Publishing or
+                                detrimental to Experts Self Publishing (this includes “spamming”; use contrary to
+                                established “netiquette”; use in breach of anyone’s rights; use for any illegal purpose;
+                                accessing, posting, transmitting, downloading or communicating any objectionable,
+                                unlawful, threatening, defamatory, slanderous, scandalous, offensive, obscene,
+                                inflammatory, pornographic, profane, false or dangerous material; or use for hacking or
+                                otherwise compromising any linked computer system). </p>
+                        </div>
+                        <div class="policy-list terms-conditions">
+                            <h5>2.2 YOUR OBLIGATIONS AND CONDUCT</h5>
+                            <p class="py-2"> In consideration of Your use of the Website, you agree to: </p>
+                            <ul class="py-2">
+                                <li> I. provide accurate, current, and complete information about You as may be prompted
+                                    by a registration form on the Website (the “Registration Data”); </li>
+                                <li> II. maintain and promptly update the Registration Data, and any information You
+                                    provide to Experts Self Publishing, to keep it accurate, current and complete; and
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="policy-list terms-conditions">
+                            <h5>2.3 YOUR RESPONSBILITIES</h5>
+                            <p class="py-2"> You are entirely responsible for all Content that You upload, post or
+                                otherwise transmit via the Website. You agree not to upload, post or otherwise transmit
+                                via the Website Content that: </p>
+                            <ul class="py-2">
+                                <li> I. is inaccurate, harmful, obscene, pornographic, defamatory, racist, violent,
+                                    offensive, harassing, or otherwise objectionable to Experts Self Publishing or other
+                                    users of the Website; </li>
+                                <li> II. includes unauthorized disclosure of personal information; </li>
+                                <li> III. violates or infringes anyone’s intellectual property rights; or </li>
+                                <li> IV. contains software viruses or any other computer code, files or programs
+                                    designed to interrupt, destroy or limit the functionality of any computer software
+                                    or hardware or telecommunications equipment. Experts Self Publishing reserves the
+                                    right to edit or remove Content that violates these Terms or that contains
+                                    third-party commercial advertisements. </li>
+                            </ul>
+                        </div>
+                        <div class="policy-list terms-conditions">
+                            <h5>2.4 AGREEMENT</h5>
+                            <p class="py-2">You agree that You will not use the Website to:</p>
+                            <ul class="py-2">
+                                <li>I. transmit spam, bulk or unsolicited communications;</li>
+                                <li> II. pretend to be Experts Self Publishing or someone else, or spoof Web Express or
+                                    someone else’s identity; </li>
+                                <li> III. forge headers or otherwise manipulate identifiers (including URLs) in order to
+                                    disguise the origin of any Content transmitted through the Services; </li>
+                                <li> IV. misrepresent your affiliation with a person or entity; </li>
+                                <li> V. disrupt the normal flow of dialogue or otherwise act in a manner that negatively
+                                    affects other users’ ability to use the Website; </li>
+                                <li> VI. engage in activities that would violate any fiduciary relationship, any
+                                    applicable local, state, national or international law, or any regulations having
+                                    the force of law, including but not limited to attempting to compromise the security
+                                    of any networked account or site, operating an illegal lottery or gambling
+                                    operation, stalking, or making threats of harm; or </li>
+                                <li> VII. collect or store personal data about other users unless specifically
+                                    authorized by such users. </li>
+                            </ul>
+                        </div>
+                        <div class="policy-list terms-conditions">
+                            <h5>2.5 STANDARD SERVICES TERMS</h5>
+                            <p class="py-2"> Experts Self Publishing will use its reasonable endeavours to complete the
+                                services within the timeframe (if any) agreed by the parties in any corresponding SOW.
+                            </p>
+                            <p class="py-2"> Experts Self Publishing will have no liability for any delays or failure
+                                where such delays or failure is the direct or indirect result of any act or omission of
+                                the Customer or a breach by the Customer of this agreement. </p>
+                            <p class="py-2"> If the Client does not respond to any communication from the Company,
+                                whether by email, phone, or other agreed-upon communication channels, for a continuous
+                                period of thirty (30) days, the Client's project will be deemed inactive. As a result,
+                                the Company reserves the right to deactivate the Client’s account and remove all
+                                resources assigned to such project. </p>
+                            <p class="py-2"> To reactivate the account and reinstate the project, the Client will be
+                                required to pay a reactivation fee, which the Company shall determine at its sole
+                                discretion. The Company shall not be liable for any loss or damage arising from the
+                                removal of project resources due to client inactivity. </p>
+                        </div>
+                        <div class="policy-list terms-conditions">
+                            <h5>2.6 INTELLECTUAL PROPERTY RIGHTS</h5>
+                            <p class="py-2"> Customer shall own all right, title and interest in and to the
+                                Deliverables. The rights, title and interest in and to the Deliverables shall be granted
+                                to the Customer only upon receipt of full payment by the Consultant. To the extent that
+                                the Deliverables incorporates Consultant pre-existing intellectual property (“Consultant
+                                Pre-existing IP”), and such Consultant Pre-Existing IP are necessarily required for the
+                                proper functioning of the Deliverables Consultant grants to Customer a perpetual,
+                                non-exclusive, worldwide, transferable, royalty-free license to use such Consultant
+                                Pre-Existing IP solely along with the Deliverables. </p>
+                        </div>
+                        <div class="policy-list terms-conditions">
+                            <h5>2.7 WARRANTIES</h5>
+                            <p class="py-2"> Except as expressly stated in this Agreement, the parties disclaim all
+                                warranties of any kind, implied, statutory, or in any communication between them,
+                                including without limitation, the implied warranties of merchantability,
+                                non-infringement, title, and fitness for a particular purpose. </p>
+                        </div>
+                        <div class="policy-list terms-conditions">
+                            <h5>2.8 Refund Policy</h5>
+                            <ul class="refund-list ps-4">
+                                <li class="page_speed_924742127">
+                                    <p class="py-2"> On any occasion, any funds deposited will not be liable for a
+                                        refund if the initial project and work (after delivery) are approved, or a
+                                        change is asked for Experts Self Publishing to cancel or end your Contract for a
+                                        reason other than your breach or non-execution All refund requests will be as
+                                        per the following arrangement: </p>
+                                </li>
+                                <li class="page_speed_924742127">
+                                    <p class="py-2">You make a solicitation when the underlying ideas for a project are
+                                        provided. However, once you approve or ask for changes in the initial drafts,
+                                        the refund offer will be void and a refund request will not be entertained.</p>
+                                </li>
+                                <li class="page_speed_924742127">
+                                    <p class="py-2">Once the project has entered in revision phase, the refund offer
+                                        will be void and a request for a refund will not be entertained.</p>
+                                </li>
+                                <li class="page_speed_924742127">
+                                    <p class="py-2">On the off chance that a demand for a refund is made before the
+                                        delivery of the initial task, then you would qualify for a full refund (less the
+                                        10% administration and preparing charge).</p>
+                                </li>
+                                <li class="page_speed_924742127">
+                                    <p class="py-2">If the refund request is made within 48 hours, you will only be
+                                        eligible for a 66% refund (less 10% administration and preparing expenses).</p>
+                                </li>
+                                <li class="page_speed_924742127">
+                                    <p class="py-2">If the refund request is made within 48-96 hours after the initial
+                                        task delivery, you will only be eligible for a 33% refund (less 10% service
+                                        &amp; processing fee).</p>
+                                </li>
+                                <li class="page_speed_924742127">
+                                    <p class="py-2">No refund request will be entertained after 96 hours of the initial
+                                        task delivery. However, we believe in 100% customer satisfaction so you are
+                                        requested to reach out to us so we can address your concerns.</p>
+                                </li>
+                                <li class="page_speed_924742127">
+                                    <p class="py-2">No request for a refund will be entertained after inaction by the
+                                        customer after 7 working days. If you wish to restart the order, you will be
+                                        charged a certain fee contingent upon your venture.</p>
+                                </li>
+                                <li class="page_speed_924742127">
+                                    <p class="py-2">No request for a refund will be entertained if the customer goes
+                                        unresponsive at any point in time for 5 working days.</p>
+                                </li>
+                                <li class="page_speed_924742127">
+                                    <p class="py-2">All refund requests should be made to the support department.
+                                        expertsselfpublishing.com reserves the right to approve/reject any and all refund
+                                        requests based on an individual case-to-case premise.</p>
+                                </li>
+                                <li class="page_speed_924742127">
+                                    <p class="py-2">No refund will be entertained after the final files have been
+                                        delivered.</p>
+                                </li>
+                                <li class="page_speed_924742127">
+                                    <p class="py-2">For Discounted Deals or Bundles, no refund will be entertained once
+                                        the initial drafts have been revised or the inner pages have been created with
+                                        the client's approval. All requests for refunds must be communicated to the
+                                        support department. expertsselfpublishing.com, in light of the infringement of
+                                        your user agreement, reserves all authority to affirm/object to your
+                                        solicitation on an individual case-to-case premise.</p>
+                                </li>
+                                <li class="page_speed_924742127">
+                                    <p class="py-2">For Experts Self Publishing/Custom bundles, a refund will be applied
+                                        just the same as on the single packages.</p>
+                                </li>
+                                <li class="page_speed_924742127">
+                                    <p class="py-2">For instance, in the event that you request Service A and Service B
+                                        and approve Service A, you are eligible for the refund of Service B at the time
+                                        of the initial task only.</p>
+                                </li>
+                                <li class="page_speed_924742127">
+                                    <p class="py-2">A refund request should have a legitimate reason which must be
+                                        qualified against the outline brief and client input for revisions. Unless a
+                                        task has not been completed as per the brief, a refund will not be approved
+                                        however discount won’t be given and further revisions will be provided until you
+                                        are satisfied.</p>
+                                </li>
+                                <li class="page_speed_924742127">
+                                    <p class="py-2">It is also to be noted that, under any circumstances, both parties
+                                        (Experts Self Publishing &amp; Client) agree not to attack/criticize each other
+                                        and any of its employees, associate/s, or partner/s publicly (on public forums,
+                                        blogs, social networks, etc.) at any given time during or after the contract
+                                        period. Similarly, both parties agree not to talk on forums, blogs, community
+                                        groups, or any social media in a way that brings a bad name to either party or
+                                        any of its employees, associates, or partners. In case of breach, the breaching
+                                        party would have to pay a reasonable compensation decided by the non-breaching
+                                        party as damages.</p>
+                                </li>
+                                <li class="page_speed_924742127">
+                                    <p class="py-2">Money Back Guarantee depends on that the request is set in
+                                        accordance with some basic honesty. Where a client has placed design orders with
+                                        more than one agency for the same job, with the intention of claiming a refund,
+                                        Experts Self Publishing does not consider this to be good faith. In such
+                                        instances, we reserve the right to decline a refund request. All design jobs
+                                        require client input before finishing the design which is why it is requested
+                                        that the customer is active throughout the process and gives feedback in order
+                                        to get the required results.</p>
+                                </li>
+                                <li class="page_speed_924742127">
+                                    <p class="py-2">A 100% unique work guarantee qualifies you for every task.</p>
+                                </li>
+                                <li class="page_speed_924742127">
+                                    <p class="py-2">Any likeness to a current outline will be just a fortuitous event
+                                        and Experts Self Publishing won’t acknowledge any responsibility or claim of any
+                                        compensation in such a case. It is the client’s responsibility to get their
+                                        artwork copyrighted.</p>
+                                </li>
+                                <li class="page_speed_924742127">
+                                    <p class="py-2">No refund request will be entertained if the client has signed up
+                                        for a discounted offer</p>
+                                </li>
+                                <li class="page_speed_924742127">
+                                    <p class="py-2">No refund request will be offered in case of a client change of mind
+                                    </p>
+                                </li>
+                                <li class="page_speed_924742127">
+                                    <p class="py-2">client can only request a refund within 30 business days, Refund
+                                        requests won't be entertained after this time period.</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="policy-list terms-conditions">
+                            <h5>Terms and Conditions: Payment Completion Policy</h5>
+                        </div>
+                        <div class="policy-list terms-conditions">
+                            <h5>Full Payment Requirement</h5>
+                            <ul class="refund-list ps-4">
+                                <li class="page_speed_2128943402">
+                                    <p class="py-0">All balances must be paid in full before the completion of any
+                                        publishing contract, as per company policy. </p>
+                                </li>
+                                <li class="page_speed_2128943402">
+                                    <p class="py-0">Payments ensure the seamless allocation of resources and adherence
+                                        to agreed-upon project timelines.</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="policy-list terms-conditions">
+                            <h5>Initial Deposit and Payment Milestones</h5>
+                            <ul class="refund-list ps-4">
+                                <li class="page_speed_2128943402">
+                                    <p class="py-0">A non-refundable initial deposit is required at the time of signing
+                                        the contract to initiate the project </p>
+                                </li>
+                                <li class="page_speed_2128943402">
+                                    <p class="py-0">Any subsequent payments must follow the timeline agreed upon during
+                                        the contract negotiation.</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="policy-list terms-conditions">
+                            <h5>Pending Payments Before Final Deliverables</h5>
+                            <ul class="refund-list ps-4">
+                                <li class="page_speed_2128943402">
+                                    <p class="py-0">Final project deliverables (e.g., book cover design, formatted
+                                        manuscript, ISBN registration) will not be released until all outstanding
+                                        payments are cleared. </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="policy-list terms-conditions">
+                            <h5>Delays Due to Non-Payment</h5>
+                            <ul class="refund-list ps-4">
+                                <li class="page_speed_2128943402">
+                                    <p class="py-0">Projects delayed due to non-payment beyond 7 business days may be
+                                        marked as inactive. </p>
+                                </li>
+                                <li class="page_speed_2128943402">
+                                    <p class="py-0">Reactivation of the project requires a reinstatement fee in addition
+                                        to the pending payment. </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="policy-list terms-conditions">
+                            <h5>Additional Services or Changes</h5>
+                            <ul class="refund-list ps-4">
+                                <li class="page_speed_2128943402">
+                                    <p class="py-0">Any requests for additional services or revisions beyond the
+                                        original scope of work may result in extra charges, which must be settled
+                                        upfront before the new work commences. </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="policy-list terms-conditions">
+                            <h5>Policy on Contract Termination Due to Non-Payment</h5>
+                            <ul class="refund-list ps-4">
+                                <li class="page_speed_2128943402">
+                                    <p class="py-0">If payments are not completed within the agreed timeline, the
+                                        contract may be terminated without any obligation to deliver the remaining work.
+                                    </p>
+                                </li>
+                                <li class="page_speed_2128943402">
+                                    <p class="py-0">The client will forfeit all payments made prior to termination as
+                                        compensation for resources already allocated. </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="policy-list terms-conditions">
+                            <h5>Payment and Dispute Resolution</h5>
+                            <ul class="refund-list ps-4">
+                                <li class="page_speed_2128943402">
+                                    <p class="py-0">Any disputes regarding payment or deliverables must be raised
+                                        promptly. </p>
+                                </li>
+                                <li class="page_speed_2128943402">
+                                    <p class="py-0">Failure to resolve payment disputes within 14 days of notification
+                                        may result in legal action or collections. </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="policy-list terms-conditions">
+                            <h5>Payment and Dispute Resolution</h5>
+                            <ul class="refund-list ps-4">
+                                <li class="page_speed_2128943402">
+                                    <p class="py-0">Any disputes regarding payment or deliverables must be raised
+                                        promptly. </p>
+                                </li>
+                                <li class="page_speed_2128943402">
+                                    <p class="py-0">Failure to resolve payment disputes within 14 days of notification
+                                        may result in legal action or collections. </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="policy-list terms-conditions">
+                            <h5>Situations Covered Under the Policy</h5>
+                            <ul class="refund-list ps-4">
+                                <li class="page_speed_2128943402">
+                                    <p class="py-0">If a client fails to submit a final payment after the completion of
+                                        the book design or manuscript editing. </p>
+                                </li>
+                                <li class="page_speed_2128943402">
+                                    <p class="py-0">If the client requests the release of assets (e.g., ISBN, final
+                                        print files) while payments remain outstanding. </p>
+                                </li>
+                                <li class="page_speed_2128943402">
+                                    <p class="py-0">If the client delays payment for ongoing services, impacting project
+                                        deadlines. </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="policy-list terms-conditions">
+                            <h5>Refund Policy and Exceptions</h5>
+                            <ul class="refund-list ps-4">
+                                <li class="page_speed_2128943402">
+                                    <p class="py-0">Refunds are not applicable for services already rendered, such as
+                                        editing, designing, or marketing consultation. </p>
+                                </li>
+                                <li class="page_speed_2128943402">
+                                    <p class="py-0">Any refunds for unutilized services will be processed at the
+                                        company’s discretion, minus administrative fees. </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="policy-list terms-conditions">
+                            <h5>Acknowledgment of Responsibility</h5>
+                            <ul class="refund-list ps-4">
+                                <li class="page_speed_2128943402">
+                                    <p class="py-0">By signing the contract, the client agrees to the terms of payment
+                                        and understands that failure to comply may delay or void the project
+                                        deliverables. </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="policy-list terms-conditions">
+                            <h5>How To Claim Your Refund</h5>
+                            <p class="py-2">To ensure that your refund request is processed effectively and approved,
+                                please make sure that you meet the following requirements.</p>
+                            <p class="py-2">1. Specify your concern and claim your refund through any of the following
+                                three modes:-</p>
+                            <ul>
+                                <li>Toll-free # <a href="tel:+18556055210" class="text-dark">
+                                +1 8556055212 </a></li>
+                                <li><a href="#" data-open-zendesk class="text-dark">Live Chat.</a> </li>
+                                <li><a href="mailto:info@expertsselfpublishing.com" class="text-dark">Email: info@expertsselfpublishing.com</a></li>
+                            </ul>
+                            <p class="py-2">We will try to resolve your query and concern in light of our revision
+                                policy immediately or else will email you a refund request approval from our refund
+                                department.</p>
+                            <p class="py-2">After the refund, the rights to your word would be transferred to Experts Self Publishing and you would not legally be allowed to display any version of the
+                                design sent by the company.</p>
+                            <p class="py-2">1. Since the work rights would now be transferred to Experts Self Publishing,
+                                you concur that you will have no right (immediate or circuitous) to use any reaction or
+                                other substance, work item, or media, nor will you have any ownership interest for or to
+                                the same.</p>
+                            <p class="py-2">2. Working in a joint effort with the Government Copyright Experts Self Publishing would share Copyright Acquisition data for the refunded outlines that would
+                                confine the re-utilization of the designs as original designs in the future.</p>
+                            <p class="py-2">If you have any questions or concerns about our Refund Policy, please get in
+                                touch with us by clicking here (info@expertsselfpublishing.com).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="">
+    <div class="container-fluid">
+        <div class="row align-items-start">
+
+            <div class="col-lg-4 col-md-12">
+                <div class="foot-box text-white">
+                    <a href="index.html"><img src="assets/img/ubp-new/footer-logo.webp"
+                            class="img-fluid foot-logo" alt="img" loading="lazy"></a>
+                    <p class="py-2 font">For 8+ years, we have been the quiet force behind unforgettable stories. We
+                        don't just publish books; we partner with visionaries, transforming bold ideas into legacies
+                        that endure. Let us build yours.</p>
+                    <div class="d-flex align-items-center gap-3">
+                        <h4 class="color mb-0 font-28">Follow Us:</h4>
+                        <div class="head-right d-flex align-items-center gap-3 justify-content-end">
+                            <ul class="list-unstyled d-flex align-items-center gap-2 mb-0">
+                                <li><a href="https://www.facebook.com/ExpertsSelfPublishingOfficial/" target="_blank"><i
+                                            class="fa-brands fa-facebook-f"></i></a></li>
+                                <li><a href="https://www.instagram.com/expertsselfpublishingofficial/" target="_blank"><i
+                                            class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href="https://www.youtube.com/@ExpertsSelfPublishing" target="_blank"><i
+                                            class="fa-brands fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-4 col-sm-4 ">
+                <div class="foot-box text-white">
+                    <h3 class="color">What We Offer</h3>
+                    <div class="foot-line"></div>
+                    <div class="foot-list d-flex mt-3">
+                        <ul class="list-unstyled">
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="book-publishing.html">Book Publishing</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="book-marketing.html">Book Marketing</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="author-website.html" class="">Author Website</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="creative-writing.html" class="">Creative Writing</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="book-illustration.html" class="">Book illustration</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="book-video-trailers.html" class="">Book Video Trailers</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="book-cover-design.html" class="">Book Cover Design</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="ghostwriting.html" class="">Ghostwriting</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="book-writing.html" class="">Book Writing</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="pr-and-publicity.html" class="">PR & Publicity</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-4 col-sm-4 ">
+                <div class="foot-box text-white">
+                    <h3 class="color">Others</h3>
+                    <div class="foot-line"></div>
+                    <div class="foot-list d-flex mt-3">
+                        <ul class="list-unstyled">
+
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="free-book-marketing-guide.html" class="">Free Book Marketing
+                                    Guide</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="free-book-publishing-guide.html" class="">Free Book Publishing
+                                    Guide</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="blogs.html" class="">Blogs</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="pricing.html" class="">Pricing</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="about-us.html" class="">Our Story</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="contact-us.html" class="">Contact Us</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-4 ">
+                <div class="foot-box text-white">
+                    <h3 class="color">Information</h3>
+                    <div class="foot-list info-detail">
+                        <ul class="list-unstyled">
+                            <li class="my-4 info-li">
+                                <a href="tel:+18556055210" class="d-flex gap-2">
+                                    <!-- <span class="info-icon"><i class="fa-solid fa-phone" aria-hidden="true"></i></span> -->
+                                    <span class="info-icon w-25"><img
+                                            src="assets/img/ubp-new/theme-phone.webp"
+                                            class="img-fluid" alt="location" width="21" height="21"
+                                            loading="lazy"></span>
+                                    <span class="w-75">
+                                        <small>Call us now </small>
+                                        <span class="foot-number d-block w-100">+1 (855) 605-5210</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="my-4 info-li">
+                                <a href="mailto:info@expertsselfpublishing.com" class="d-flex gap-2">
+                                    <!-- <span class="info-icon"><i class="fa-solid fa-envelope" aria-hidden="true"></i></span> -->
+                                    <span class="info-icon w-25"><img
+                                            src="assets/img/ubp-new/foot-envelope.webp"
+                                            class="img-fluid" alt="location" width="21" height="22"
+                                            loading="lazy"></span>
+                                    <span class="w-75">
+                                        <small>Email us on: </small>
+                                        <span class="foot-number d-block w-100">info@expertsselfpublishing.com</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="my-4 info-li">
+                                <a href="javascript:void(0);" class="d-flex gap-2">
+                                    <!-- <span class="info-icon"><i class="fa-solid fa-house"></i></span> -->
+                                    <span class="info-icon w-25"><img
+                                            src="assets/img/ubp-new/location-icon.webp"
+                                            class="img-fluid" alt="location" width="21" height="28"
+                                            loading="lazy"></span>
+                                    <span class="w-75">
+                                        <!-- <small>Email us on: </small> -->
+                                        <span class="foot-number d-block w-100">3223 West 6th Street STE 101 Los
+                                            Angeles, <br> CA 90020 United States.</span>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="payment-box mt-3 p-2">
+                    <img src="assets/img/ubp-new/pymnt-5.webp" class="img-fluid" alt="payment"
+                        width="316" height="68" loading="lazy">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container-fluid last-contain">
+        <div class="row">
+            <div class="col-lg-7 col-md-8">
+                <p class=" mb-0 para-color">Copyright © 2026 Experts Self Publishing - All Rights Reserved | Powered By
+                    Iota Digital, LLC</p>
+            </div>
+            <div class="col-lg-5 col-md-4">
+                <ul class="list-unstyled d-flex align-items-center gap-3 m-0 justify-content-end">
+                    <li><a href="privacy-policy.html" class="">Privacy Policy</a></li>
+                    <li><a href="terms-condition.html" class="">Terms And Conditions</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img src="assets/img/pop-logo.png" class="img-fluid" alt="Experts Self Publishing logo" loading="lazy">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row align-items-center justify-content-around">
+                    <div class="col-lg-7">
+                        <div class="form-wrap">
+                            <div class="form-heading">
+                                <h3 class="color font-40 let-space fw-600">Start Building Your Author Success Story
+                                    Today!</h3>
+                                <p>Speak with our senior publishing consultant for a free tailored proposal</p>
+                            </div>
+                            <form action="/inquiry-submit" id="modal-form" method="POST">
+                                <input type="hidden" name="_token" value="awxIAFp3sLU9ALw6iz3WlIXSKpyn9f7ba0ryrYCz" autocomplete="off">                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <!-- <label for="full-name">Enter Your Full Name</label> -->
+                                        <div class="form-group">
+                                            <input type="text" id="full-name" name="full_name"
+                                                placeholder="Full Name" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <!-- <label for="email">Your email</label> -->
+                                        <div class="form-group">
+                                            <input type="text" id="email" name="email" placeholder="Email"
+                                                class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <!-- <label for="phone">Your phone</label> -->
+                                        <div class="form-group">
+                                            <input type="text" id="phone" name="phone"
+                                                placeholder="(999) 999 9999" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <!-- <label for="message">Type your message</label> -->
+                                        <div class="form-group">
+                                            <textarea rows="4" id="message" name="message" placeholder="Book Detail" class="form-control"></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="btn-container mt-4">
+                                        <button class="theme-btn1 text-upper border-0 btn-overlay">Book Now</button>
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="pop-img">
+                            <img src="assets/img/badge-discount.png" class="discount-img img-fluid"
+                                alt="50% Discount">
+                            <img src="assets/img/popup-image.png" class="img-fluid pop-std" alt="img"
+                                loading="lazy">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- <img src="assets/img/pop-circle.png" class="img-fluid pop-circle" alt="img"> -->
+        </div>
+    </div>
+</div>
+    <script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/slick.js"></script>
+<script>
+    // accordion
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panelfaq = this.nextElementSibling;
+            if (panelfaq.style.maxHeight) {
+                panelfaq.style.maxHeight = null;
+            } else {
+                panelfaq.style.maxHeight = panelfaq.scrollHeight + "px";
+            }
+        });
+    }
+    // accordion
+
+    $(document).ready(function() {
+        function initializeSlick(slider) {
+            if (!slider.hasClass('slick-initialized')) {
+                slider.slick({
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    autoplay: true
+                });
+            } else {
+                slider.slick('refresh');
+            }
+        }
+
+        // Pehla tab ka slider initialize karein
+        initializeSlick($('#tab1 .portfolio-slider'));
+
+        $('button[data-bs-toggle="tab"]').on('shown.bs.tab', function(e) {
+            let target = $(e.target).attr("data-bs-target");
+            let slider = $(target).find('.portfolio-slider');
+
+            // Ensure proper visibility and reinitialize
+            $(target).css({
+                'height': 'auto',
+                'visibility': 'visible'
+            });
+
+            setTimeout(function() {
+                initializeSlick(slider);
+            }, 100);
+        });
+    });
+</script>
+<script>
+    $(".portfolio-slider").slick({
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 0,
+        speed: 13000,
+        arrows: false,
+        dots: false,
+        pauseOnHover: false,
+        cssEase: "linear",
+        responsive: [{
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 5,
+                },
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 4,
+                },
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 3,
+                },
+            },
+            {
+                breakpoint: 400,
+                settings: {
+                    slidesToShow: 3,
+                },
+            },
+        ],
+    });
+
+    document.querySelectorAll('.flip-box').forEach(box => {
+  box.addEventListener('click', () => {
+    box.classList.toggle('active');
+  });
+});
+
+
+$(".blog-slider").slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  arrows: true,
+  dots: false,
+  autoplaySpeed: 2000,
+  responsive: [
+    {
+      breakpoint: 1025,   // 1024px se neeche
+      settings: {
+        slidesToShow: 2,
+      }
+    },
+    {
+      breakpoint: 992,   // 992px se neeche
+      settings: {
+        slidesToShow: 2,
+      }
+    },
+    {
+      breakpoint: 768,   // 768px se neeche
+      settings: {
+        slidesToShow: 1,
+        arrows: false,
+        dots: true,
+      }
+    },
+    {
+      breakpoint: 576,   // extra small devices
+      settings: {
+        slidesToShow: 1,
+        arrows: false,
+        dots: true,
+      }
+    }
+  ]
+});
+</script>
+<script src="assets/js/aos.js" defer></script>
+<script src="assets/js/custom.js" defer></script>
+<script src="assets/js/nice-select.min.js" defer></script>
+<script src="assets/js/bootstrap.min.js" defer></script>
+<script src="assets/js/jquery.fancybox.min.js" defer></script>
+<!--<script src="assets/js/fontowesome.js" crossorigin="anonymous" defer></script>-->
+
+<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>-->
+
+<script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    const tooltipList = [...tooltipTriggerList].map(el => new bootstrap.Tooltip(el));
+</script>
+
+
+<!-- Include SweetAlert -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2%4011" defer></script>
+<script src="assets/js/custom-form.js" defer></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/select2%404.1.0-rc.0/dist/js/select2.min.js"></script>
+    
+    <script>
+        $('.book-slide').slick({
+            lazyLoad: 'ondemand',
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: false,
+            asNavFor: '.testimonial-slider'
+        });
+        $('.testimonial-slider').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            asNavFor: '.book-slide',
+            dots: false,
+            arrows: false,
+            autoplaySpeed: 2000,
+            speed: 1300,
+            autoplay: true,
+            //   centerMode: true,
+            focusOnSelect: true
+        });
+    </script>
+
+
+    
+
+
+</body>
+
+
+</html>

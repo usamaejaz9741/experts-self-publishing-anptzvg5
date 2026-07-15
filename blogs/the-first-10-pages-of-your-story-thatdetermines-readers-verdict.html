@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="YOUR_GOOGLE_SITE_VERIFICATION" />
+    <title>The First 10 Pages of a Book Determining Readers Response</title>
+    <meta name="description" content="Discover how the opening pages of a book influence a readers choice. Learn essential book opening tips for authors to captivate your audience immediately.">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon/favicon-16x16.png">
+    <link rel="preload" as="image" href="../assets/img/ubp-new/banner-bg.webp">
+    <link rel="preload" href="../assets/font/montserrat/Montserrat-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../assets/css/style8e5e.css?v=21">
+
+<link rel="preload" href="../assets/css/fontawesome-all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="../assets/css/fontawesome-all.min.css">
+</noscript>
+
+
+
+
+<link rel="preload" href="../assets/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+</noscript>
+
+
+
+<link rel="preload" href="../assets/css/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="../assets/css/aos.css">
+</noscript>
+
+
+
+<link rel="stylesheet" href="../assets/css/responsivef500.css?v=16">
+
+
+
+
+<link rel="preload" href="../assets/css/nice-select.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="../assets/css/nice-select.css">
+</noscript>
+
+
+
+
+<link rel="preload" href="../assets/css/jquery-ui.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="../assets/css/jquery-ui.css">
+</noscript>
+
+
+<link rel="preload" href="../assets/css/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+<link rel="stylesheet" href="../assets/css/jquery.fancybox.min.css">
+</noscript>
+
+<link rel="preload" href="../assets/css/slick-theme.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+<link rel="stylesheet" href="../assets/css/slick-theme.css">
+</noscript>
+
+<link rel="preload" href="../assets/css/slick.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+<link rel="stylesheet" href="../assets/css/slick.css">
+</noscript>
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/select2%404.1.0-rc.0/dist/css/select2.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2%404.1.0-rc.0/dist/css/select2.min.css">
+    </noscript>
+    <script defer src="../assets/js/site-tracking.js"></script>
+
+    <script>
+        class SmartObserver {
+            constructor() {
+                this.init();
+            }
+
+            init() {
+                this.lazyImages = document.querySelectorAll("img[data-src]");
+                this.hiddenElements = document.querySelectorAll(".io-hidden");
+
+                this.createObserver();
+                this.observeElements();
+            }
+
+            createObserver() {
+                this.observer = new IntersectionObserver(
+                    (entries, observer) => {
+                        entries.forEach((entry) => {
+                            if (!entry.isIntersecting) return;
+
+                            const el = entry.target;
+
+                            // 🖼️ Lazy Image Load
+                            if (el.tagName === "IMG" && el.dataset.src) {
+                                this.loadImage(el);
+                            }
+
+                            // ✨ Reveal Animation (custom)
+                            if (el.classList.contains("io-hidden")) {
+                                el.classList.add("io-show");
+                                el.classList.remove("io-hidden");
+                            }
+
+                            observer.unobserve(el);
+
+                            // 🔁 AOS refresh (important)
+                            if (typeof AOS !== "undefined") {
+                                AOS.refreshHard(); // better than refresh()
+                            }
+                        });
+                    }, {
+                        root: null,
+                        rootMargin: "0px 0px -50px 0px",
+                        threshold: 0.1,
+                    }
+                );
+            }
+
+            observeElements() {
+                this.lazyImages.forEach((img) => this.observer.observe(img));
+                this.hiddenElements.forEach((el) => this.observer.observe(el));
+            }
+
+            loadImage(img) {
+                const temp = new Image();
+                temp.src = img.dataset.src;
+
+                temp.onload = () => {
+                    img.src = temp.src;
+                    img.classList.add("loaded");
+                    img.removeAttribute("data-src");
+                };
+            }
+        }
+
+        // 🚀 Init on DOM Ready
+        document.addEventListener("DOMContentLoaded", () => {
+            new SmartObserver();
+
+            // AOS init (safe)
+            if (typeof AOS !== "undefined") {
+                AOS.init({
+                    duration: 800,
+                    once: true,
+                    offset: 100,
+                });
+            }
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const elements = document.querySelectorAll(".reveal");
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("active");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.15
+            });
+
+            elements.forEach((el) => observer.observe(el));
+        });
+    </script>
+</head>
+
+<body>
+    <header class="header-above">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-6 col-6">
+                <div class="head-contact">
+                    <ul class="list-unstyled d-flex justify-content-start mb-0 gap-4">
+                        <li><a href="javascript:void(0);" class="text-white hvr-effect" data-open-zendesk>
+                                <img src="../assets/img/ubp-new/msg-icon.webp"
+                                    class="img-fluid head-ct-icon effect" alt="massege" width="25" height="30">
+                                <span>Chat With Us</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-6">
+                <div class="head-contact">
+                    <ul class="list-unstyled d-flex justify-content-end mb-0 gap-4">
+                        <li><a href="tel:+18556055210" class="text-white hvr-effect">
+                                <img src="../assets/img/ubp-new/call-icon.webp"
+                                    class="img-fluid head-ct-icon effect" alt="massege" width="25" height="30">
+                                <span>+1 (855) 605-5210</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+        <a class="navbar-brand" href="../index.html">
+            <img class="img-fluid" src="../assets/img/ubp-new/logo.webp" loading="lazy" alt="Experts Self Publishing logo" />
+        </a>
+        <button class="navbar-toggler" type="button" aria-controls="navbarNavDropdown" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link " aria-current="page"
+                        href="../index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown custom-dropdown">
+                    <a class="nav-link dropdown-toggle "
+                        href="javascript:void(0);" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Services <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="../author-website.html">Author Website</a></li>
+                        <li><a class="dropdown-item" href="../pr-and-publicity.html">PR & Publicity</a></li>
+                        <li><a class="dropdown-item" href="../book-editing-proofreading.html">Editing &
+                                Proofreading</a></li>
+                        <li><a class="dropdown-item" href="../book-cover-design.html">Book Cover Design</a></li>
+                        <li><a class="dropdown-item" href="../ghostwriting.html">Ghostwriting</a></li>
+                        <li><a class="dropdown-item" href="../book-illustration.html">Book Illustration</a></li>
+                        <li><a class="dropdown-item" href="../book-video-trailers.html">Book Video Trailers</a>
+                        </li>
+                        <li><a class="dropdown-item" href="../creative-writing.html">Creative Writing</a></li>
+                        <li><a class="dropdown-item" href="../children-book-illustration.html">Children Book
+                                illustration</a></li>
+                        <li><a class="dropdown-item" href="../screenplay-script-writing.html">Screenplay Script
+                                Writing</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link "
+                        href="../book-publishing.html">Book Publishing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link "
+                        href="../book-marketing.html">Book Marketing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link "
+                        href="../pricing.html">Pricing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="../about-us.html">Our Story</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link "
+                        href="../contact-us.html">Contact Us</a>
+                </li>
+                <li class="nav-item dropdown custom-dropdown">
+                    <a class="nav-link dropdown-toggle "
+                        href="javascript:void(0);" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">Resources <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+                    </a>
+                    <ul class="dropdown-menu w-auto menu-2" aria-labelledby="navbarDropdownMenuLink">
+                        <li class="w-100"><a class="dropdown-item" href="../published-books.html">Published
+                                Books</a></li>
+                        <li class="w-100"><a class="dropdown-item" href="../customer-reviews.html">Customer
+                                Reviews</a></li>
+                        
+                        <li class="w-100"><a class="dropdown-item" href="../faq.html">FAQs</a></li>
+                        <li class="w-100"><a class="dropdown-item" href="../blogs.html">Blogs</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="navbar-right">
+            <div class="head-btn">
+                <a href="#exampleModalToggle"
+                    class="theme-btn1 btn-overlay d-inline-flex align-items-center gap-2 text-upper"
+                    data-bs-toggle="modal" data-bs-target="#exampleModal"><img
+                        src="../assets/img/ubp-new/msg-icon.webp" alt="icon" width="30"
+                        height="23"><span>Get a Free Quote</span></a>
+            </div>
+        </div>
+
+    </div>
+</nav>
+
+    <section class="about-banner sec-pd">
+    <div class="container">
+        <div class="row align-items-center justify-content-center">
+            <div class="col-lg-9">
+                <div class="inner-heading text-white text-center">
+                    <h1 class="">The First 10 Pages Of Your Story That Determines Reader's Verdict</h1>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="blog-detail-sec sec-pd">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-10">
+                <div class="blog-link">
+                    <h4 class="color-green mb-3">Content</h4>
+                    <h5 class="mb-3"><a href="#link-7">Author Promotion Tips – The Moment Of Decision</a></h5>
+                    <h5 class="mb-3"><a href="#link-1">Pages Of A Book – How To Ensure Strong Opening?</a></h5>
+                    <h5 class="mb-3"><a href="#link-2">Practical Book Opening Tips For Authors</a></h5>
+                    <h5 class="mb-3"><a href="#link-3">How To Test Your Opening – The Ultimate Author Promotion Tips</a></h5>
+                    <h5 class="mb-3"><a href="#link-4">The Role Of Pacing In Your Opening Pages</a></h5>
+                    <h5 class="mb-3"><a href="#link-5">Using Author Promotion Tips To Share Your Work</a></h5>
+                    <h5 class="mb-3"><a href="#link-6">The Art To Hook Readers In The First Chapter</a></h5>
+
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-9 col-md-12">
+                <div class="blog-detail">
+                    <p class="mb-3">Every author dreams of readers falling in love with their story. But, the reality of publishing is far less romantic. Readers are busy people with limited time. They make quick judgments based on small samples. Those judgments determine whether a book succeeds or fails.</p>
+                    <p class="mb-3">The sample they use is the opening of your book.</p>
+                    <p class="mb-3">When a reader picks up a new title, they do not start at page one hundred. They do not skip to the climax. They begin at the beginning. They read the first few paragraphs. They scan the first chapter. They decide within minutes whether to continue or to walk away.</p>
+                    <p class="mb-3">This decision rests entirely on the quality of your opening. The first few pages of a book carry the weight of the entire narrative. If they fail to engage, the story remains unread. If they succeed, the reader embarks on the journey you created.</p>
+                    <p class="mb-3">Today, let’s explore the power of first few pages and how to write them while engaging the readers. We will discuss the psychology of readers, provide strategies for hooking attention fast, examine common mistakes, and find out how to avoid them. Let us begin this important discussion.</p>
+                   
+
+
+                    <h4 class="color">Understanding The Reader's Mindset</h4>
+                    <p class="mb-3">Readers approach a new book with hope and skepticism. They want to find something good. They also know many books will disappoint them. This mixed mindset creates a narrow window of opportunity.</p>
+                    <p class="mb-3">You have perhaps ten pages to prove yourself. That is not a large space. It is roughly three thousand words. In that space, you must establish character, setting, tone, and conflict. You must make the reader care. You must make them curious. You must make them forget they are holding a book. Remember, you need to hook the readers in the first chapter!</p>
+                    <p class="mb-3">This is a tall order. Professional authors spend weeks on these pages. They revise them endlessly. They test them on readers. They understand that the opening is not just part of the book. The opening is the gateway to everything that follows.</p>
+
+
+                    <h4 class="color" id="link-7">Author Promotion Tips – The Moment Of Decision</h4>
+
+                    <!-- <img src="assets/img/blog-img.png" class="img-fluid" alt="img"> -->
+                    <p class="mb-3">Think about your own reading habits. You walk into a bookstore or browse online. A cover catches your eye. You read the description. You feel interested. Now you open the book.</p>
+                    <p>You read the first line. You read the first paragraph. You read the first page. Somewhere in that process, you make a decision. This decision happens fast. It happens almost unconsciously. But it is absolutely final.</p>
+                    <p>If the writing feels weak, you put the book down. If the character seems boring, you move on. If the voice annoys you, you choose something else. The book never gets a second chance. The first impression is the only impression that matters.</p>
+
+
+                    <h4 class="color" id="link-1">Pages Of A Book – How To Ensure Strong Opening?</h4>
+
+                    <p class="mb-3">What exactly makes an opening work? There is no single formula. Different stories require different approaches. But strong openings share common elements. They perform specific functions for the reader.</p>
+                    <p class="mb-3">A strong opening introduces a character worth following. It establishes a world worth exploring. It hints at conflicts worth resolving. It sets a tone worth experiencing. It does all of this without feeling rushed or forced.</p>
+                    <p class="mb-3">The best openings feel effortless. They draw the reader in without the reader noticing. The reader simply finds themselves turning pages. They realize later that they are hooked. They do not see the mechanisms working behind the scenes.</p>
+
+                    <h5 class="color">Character First</h5>
+
+                    <p class="mb-3">Readers connect with people, not plots. They remember characters long after they forget what happened. Your opening must introduce someone interesting. This person does not need to be perfect. They do not need to be heroic. They need to be human.</p>
+
+                    <p class="mb-3">Show this person wanting something. Show them facing an obstacle. Show them making choices. Let the reader observe them in action. Action reveals character better than description ever can.</p>
+
+
+                    <h5 class="color">Conflict Immediately</h5>
+
+                    
+                    <p class="mb-2">Peace is boring. Harmony puts readers to sleep. Your opening needs friction. It needs tension. It needs something slightly wrong.</p>
+                    <p class="mb-2">The conflict does not need to be massive. A small problem works fine for now. The reader just needs to sense that things are not quite right. They need to wonder what happens next. That wonder is what makes them turn the page.</p>
+
+                    <h4 class="color" id="link-2">Practical Book Opening Tips For Authors</h4>
+
+                    
+                    <p class="mb-2">Let us move from theory to practice. Here are specific techniques you can apply to your own work. These book opening tips for authors come from studying successful novels. They work across genres and styles.</p>
+
+                    <h5 class="color" >Start Late, Leave Early</h5>
+                    <p class="mb-2">Many writers start their stories too early. They show the character waking up. They show them eating breakfast. They show them going to work. None of this matters.</p>
+                    <p class="mb-2">Start at the moment something changes. Start when the phone rings with bad news. Start when the stranger appears at the door. Start when the character makes a risky decision. Cut everything before that moment.</p>
+
+                    <h5 class="color">Establish Voice On Page One</h5>
+                    <p class="mb-2">Voice is your secret weapon. It is the personality behind the words. It is what makes your writing unique. Readers crave distinctive voices. They want to feel a presence behind the prose.</p>
+
+                    <p class="mb-2">Your voice should be clear from the very first sentence. Whether funny or serious, poetic or plain, let it shine. A strong voice can carry a reader through almost anything. A weak voice loses them immediately.</p>
+
+                    <h5 class="color">Create Questions, Not Confusion</h5>
+                    <p class="mb-2">Good openings raise questions. They make the reader curious. They create mystery. But they do not confuse the reader completely. There is a balance to strike. You need to hook the readers in the first chapter.</p>
+                    <p class="mb-2">Raise one or two intriguing questions. Why is this character running? What is in that letter? Who is watching from across the street? Let the reader wonder. Then provide answers slowly as the story unfolds.</p>
+
+                    <h4 class="color" >Common Mistakes Writers Make</h4>
+                    <p class="mb-2">Even experienced authors fall into traps. These mistakes kill reader interest quickly. Learn to recognize them in your own work. These book opening tips for authors include warnings about what to avoid.</p>
+                    
+                    <h5 class="color">The Information Dump Problem</h5>
+                    
+                    <p class="mb-3">New writers often fear the reader will not understand. So they explain everything at once. They dump background information in the first few pages. They describe the world's history. They explain the magic system. They list character traits.</p>
+                    <p class="mb-3">This stops the story cold. The reader is not engaged. They are being lectured. They do not care about your world yet. They care about the character. Trust your reader to be smart. They will pick up details as they go.</p>
+                    
+                    <h5 class="color">The Dream Sequence Warning</h5>
+                    <p class="mb-2">Dream openings are tempting. They seem dramatic and exciting. But they often backfire. The reader invests emotion in a scene. Then the character wakes up. None of it was real. The reader feels tricked.</p>
+                    <p class="mb-2">There are exceptions to this rule. Some books use dreams effectively. But generally, it is safer to stay in reality. Let the real stakes begin on page one.</p>
+                    
+                    <h5 class="color" >The Description Overload</h5>
+                    <p class="mb-2">Beautiful description has its place. But too much description slows things down. Readers want movement. They want action. They want to see things happen.</p>
+                    <p class="mb-2">Limit description to what matters. Choose details that reveal character or mood. A messy room tells us something about the person who lives there. A storm outside reflects inner turmoil. Make every detail earn its place.</p>
+
+                    
+
+                    <h4 class="color" id="link-3">How To Test Your Opening – The Ultimate Author Promotion Tips</h4>
+                    <p class="mb-2">You think your opening is good. But you are too close to see clearly. You need outside perspective. Here are methods to test whether your first pages of a book actually work.</p>
+
+                    <h5 class="color" >The Read Aloud Test</h5>
+
+                   
+                    <p class="mb-3">Read your opening aloud. Read it to yourself or to someone else. Listen to how it sounds. Do the sentences flow? Do you stumble anywhere? Does the dialogue sound natural?</p>
+                    <p class="mb-3">If you get bored reading it, your reader will be bored too. If something sounds wrong, fix it. Your ears catch problems your eyes miss. This test is simple but powerful.</p>
+
+                    <h5 class="color">The Reader Feedback Method</h5>
+                    
+                    <p class="mb-3">Give your opening to trusted readers. Ask them specific questions. Did you want to keep reading? Who did you think the main character was? What did you think would happen next?</p>
+                    <p class="mb-3">Their answers reveal whether your opening works. If they guess wrong about important things, revise. If they feel no curiosity, revise. Listen without getting defensive. Use their feedback to make your work stronger.</p>
+                    
+                    
+                    <h4 class="color" id="link-4">The Role Of Pacing In Your Opening Pages</h4>
+
+                    <p class="mb-3">Pacing determines how fast or slow your story feels. The opening pages of a book need specific pacing. They cannot drag. They cannot rush too fast either. Finding the right speed matters greatly.</p>
+                    <p>Think of starting a car. You do not floor the gas pedal immediately. You accelerate smoothly. Your story needs that same smooth acceleration. Start with enough speed to create momentum. Then build gradually toward greater intensity.</p>
+                    
+                    <h5 class="color">Sentence Rhythm Matters</h5>
+                    <p class="mb-3">Short sentences create speed. Long sentences create reflection. Mix them together for best results. A page of nothing but short sentences feels choppy. A page of nothing but long sentences feels heavy.</p>
+                    <p class="mb-3">Vary your sentence length. Match the rhythm to the mood. Action scenes need shorter sentences. Quiet moments can handle longer ones. Your reader feels these rhythms even if they do not notice them.</p>
+                    
+                    <h5 class="color">Scene Length Considerations</h5>
+                    <p class="mb-3">Opening scenes should be relatively short. They should accomplish one thing and move on. Long opening scenes feel overwhelming. The reader gets lost before they find their footing.</p>
+                    <p class="mb-3">Keep your first scene tight. Introduce the character. Hint at the conflict. End with a reason to continue. Then move to the next scene. This creates forward momentum from the start.</p>
+
+                    <h5 class="color">Connecting Emotionally With Readers</h5>
+                    <p class="mb-3">Facts inform the mind. Emotions move the heart. Readers keep reading because they feel something. Your opening must create an emotional connection.</p>
+                    <p class="mb-3">This connection can take many forms. Sympathy for a struggling character. Anger at an injustice. Hope for a better outcome. Worry about what might happen. Even a small emotion beats no emotion at all.</p>
+                    
+                    <h5 class="color">Building Empathy Fast</h5>
+                    <p class="mb-3">You do not have hundreds of pages to build empathy. You have a few pages at most. You must create connection quickly. Show the character in a vulnerable moment. Show them facing something familiar. Show them being human.</p>
+                    <p class="mb-3">When readers see themselves in a character, they connect. When they recognize a feeling or experience, they invest. This investment keeps them reading long after they should have gone to sleep.</p>
+
+                    <h4 class="color" id="link-5">Using Author Promotion Tips To Share Your Work</h4>
+                    <p class="mb-3">Writing the opening is only half the battle. You must also get people to read it. Smart book opening tips for authors help you reach potential readers. These strategies put your work in front of the right eyes.</p>
+
+                    <h5 class="color">Offer Free Samples</h5>
+                    <p class="mb-3">Your opening chapters are your best marketing tool. Offer them for free on your website. Share them on book platforms. Let people taste your writing before they buy.</p>
+                    <p class="mb-3">A strong sample converts browsers into buyers. Readers who love the first few pages will purchase the rest. They will also tell their friends. Free samples cost you nothing but pay significant dividends.</p>
+
+                    <h5 class="color">Share Teasers On Social Media</h5>
+                    <p class="mb-3">Post short excerpts from your opening online. Share a compelling paragraph. Share a line of dialogue. Share a moment of tension. Make people curious about what happens next.</p>
+                    <p class="mb-3">Engage with readers who respond. Answer their questions. Thank them for their interest. Build relationships that turn casual readers into loyal fans. These author promotion tips work best when combined with genuine connection.</p>
+
+                    <h5 class="color">Building Long Term Reader Loyalty</h5>
+                    <p class="mb-3">A strong opening does more than sell one book. It builds a foundation for your career. Readers who love the beginning will seek out your other titles. They become fans who support you for years.</p>
+                    <p class="mb-3">Fans leave reviews. Fans recommend books to friends. Fans buy new releases on day one. Fans wait patiently for sequels. This loyalty begins with those first pages. It begins with the promise you make at the start.</p>
+
+                    <h5 class="color">Delivering On Your Promise</h5>
+                    <p>The opening makes promises to the reader. It promises a certain kind of story. It promises emotional engagement. It promises satisfaction. The rest of the book must keep those promises.</p>
+                    <p class="mb-3">If the middle drags, readers lose interest. If the ending disappoints, readers feel betrayed. Consistency matters throughout the entire narrative. But it all starts with the opening. The opening sets expectations for everything that follows.</p>
+                    
+                    <h4 class="color" id="link-6">The Art To Hook Readers In The First Chapter</h4>
+                    <p class="mb-3">Writing strong openings takes practice. It takes revision. It takes honest feedback. But the effort pays off. Readers notice quality. They reward it with their attention and their loyalty.</p>
+                    <p class="mb-3">The first pages of a book are your only chance to make a first impression. Make that impression count. Polish every sentence. Test every paragraph. Revise until the opening shines.</p>
+                    
+                    <h5 class="color">Trust Your Voice</h5>
+
+                    <p class="mb-3">You have something unique to offer. No one else tells stories exactly like you do. Trust that voice. Let it be heard from the very first line. Readers crave authenticity. They want to connect with a real human behind the words.</p>
+                    <p class="mb-3">Writing rules are guides, not chains. Use these tips as tools. Adapt them to serve your vision. Find your own way to hook readers and hold them. Your unique perspective is your greatest strength.</p>
+
+                    <h4 class="color">What These Ten Pages Must Deliver</h4>
+                    <p>The journey of a thousand pages begins with a single word. That word becomes a sentence. That sentence becomes a paragraph. Before long, you have written ten pages. Those ten pages hold extraordinary power. They determine whether readers continue or walk away.</p>
+                    <p>We have explored character and conflict. We have discussed pacing and voice. We have examined testing methods and promotional strategies. All of these elements matter. But they all serve one purpose. They ensure the first pages of a book do their job.</p>
+                    <p>Return to your manuscript now. Look at your opening with fresh eyes. Be honest about what works and what does not. Be brave enough to cut what falls short. Be bold enough to rewrite completely.</p>
+                    <p>Your readers are waiting. They want to love your story. Give them every reason to do so from the very first line. The verdict rests in your hands. Make it a positive one!</p>
+                </div>
+            </div>
+
+           
+        </div>
+    </div>
+</div>
+
+    <footer class="">
+    <div class="container-fluid">
+        <div class="row align-items-start">
+
+            <div class="col-lg-4 col-md-12">
+                <div class="foot-box text-white">
+                    <a href="../index.html"><img src="../assets/img/ubp-new/footer-logo.webp"
+                            class="img-fluid foot-logo" alt="img" loading="lazy"></a>
+                    <p class="py-2 font">For 8+ years, we have been the quiet force behind unforgettable stories. We
+                        don't just publish books; we partner with visionaries, transforming bold ideas into legacies
+                        that endure. Let us build yours.</p>
+                    <div class="d-flex align-items-center gap-3">
+                        <h4 class="color mb-0 font-28">Follow Us:</h4>
+                        <div class="head-right d-flex align-items-center gap-3 justify-content-end">
+                            <ul class="list-unstyled d-flex align-items-center gap-2 mb-0">
+                                <li><a href="https://www.facebook.com/ExpertsSelfPublishingOfficial/" target="_blank"><i
+                                            class="fa-brands fa-facebook-f"></i></a></li>
+                                <li><a href="https://www.instagram.com/expertsselfpublishingofficial/" target="_blank"><i
+                                            class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href="https://www.youtube.com/@ExpertsSelfPublishing" target="_blank"><i
+                                            class="fa-brands fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-4 col-sm-4 ">
+                <div class="foot-box text-white">
+                    <h3 class="color">What We Offer</h3>
+                    <div class="foot-line"></div>
+                    <div class="foot-list d-flex mt-3">
+                        <ul class="list-unstyled">
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../book-publishing.html">Book Publishing</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../book-marketing.html">Book Marketing</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../author-website.html" class="">Author Website</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../creative-writing.html" class="">Creative Writing</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../book-illustration.html" class="">Book illustration</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../book-video-trailers.html" class="">Book Video Trailers</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../book-cover-design.html" class="">Book Cover Design</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../ghostwriting.html" class="">Ghostwriting</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../book-writing.html" class="">Book Writing</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../pr-and-publicity.html" class="">PR & Publicity</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-4 col-sm-4 ">
+                <div class="foot-box text-white">
+                    <h3 class="color">Others</h3>
+                    <div class="foot-line"></div>
+                    <div class="foot-list d-flex mt-3">
+                        <ul class="list-unstyled">
+
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../free-book-marketing-guide.html" class="">Free Book Marketing
+                                    Guide</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../free-book-publishing-guide.html" class="">Free Book Publishing
+                                    Guide</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../blogs.html" class="">Blogs</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../pricing.html" class="">Pricing</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../about-us.html" class="">Our Story</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../contact-us.html" class="">Contact Us</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-4 ">
+                <div class="foot-box text-white">
+                    <h3 class="color">Information</h3>
+                    <div class="foot-list info-detail">
+                        <ul class="list-unstyled">
+                            <li class="my-4 info-li">
+                                <a href="tel:+18556055210" class="d-flex gap-2">
+                                    <!-- <span class="info-icon"><i class="fa-solid fa-phone" aria-hidden="true"></i></span> -->
+                                    <span class="info-icon w-25"><img
+                                            src="../assets/img/ubp-new/theme-phone.webp"
+                                            class="img-fluid" alt="location" width="21" height="21"
+                                            loading="lazy"></span>
+                                    <span class="w-75">
+                                        <small>Call us now </small>
+                                        <span class="foot-number d-block w-100">+1 (855) 605-5210</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="my-4 info-li">
+                                <a href="mailto:info@expertsselfpublishing.com" class="d-flex gap-2">
+                                    <!-- <span class="info-icon"><i class="fa-solid fa-envelope" aria-hidden="true"></i></span> -->
+                                    <span class="info-icon w-25"><img
+                                            src="../assets/img/ubp-new/foot-envelope.webp"
+                                            class="img-fluid" alt="location" width="21" height="22"
+                                            loading="lazy"></span>
+                                    <span class="w-75">
+                                        <small>Email us on: </small>
+                                        <span class="foot-number d-block w-100">info@expertsselfpublishing.com</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="my-4 info-li">
+                                <a href="javascript:void(0);" class="d-flex gap-2">
+                                    <!-- <span class="info-icon"><i class="fa-solid fa-house"></i></span> -->
+                                    <span class="info-icon w-25"><img
+                                            src="../assets/img/ubp-new/location-icon.webp"
+                                            class="img-fluid" alt="location" width="21" height="28"
+                                            loading="lazy"></span>
+                                    <span class="w-75">
+                                        <!-- <small>Email us on: </small> -->
+                                        <span class="foot-number d-block w-100">3223 West 6th Street STE 101 Los
+                                            Angeles, <br> CA 90020 United States.</span>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="payment-box mt-3 p-2">
+                    <img src="../assets/img/ubp-new/pymnt-5.webp" class="img-fluid" alt="payment"
+                        width="316" height="68" loading="lazy">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container-fluid last-contain">
+        <div class="row">
+            <div class="col-lg-7 col-md-8">
+                <p class=" mb-0 para-color">Copyright © 2026 Experts Self Publishing - All Rights Reserved | Powered By
+                    Iota Digital, LLC</p>
+            </div>
+            <div class="col-lg-5 col-md-4">
+                <ul class="list-unstyled d-flex align-items-center gap-3 m-0 justify-content-end">
+                    <li><a href="../privacy-policy.html" class="">Privacy Policy</a></li>
+                    <li><a href="../terms-condition.html" class="">Terms And Conditions</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img src="../assets/img/pop-logo.png" class="img-fluid" alt="Experts Self Publishing logo" loading="lazy">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row align-items-center justify-content-around">
+                    <div class="col-lg-7">
+                        <div class="form-wrap">
+                            <div class="form-heading">
+                                <h3 class="color font-40 let-space fw-600">Start Building Your Author Success Story
+                                    Today!</h3>
+                                <p>Speak with our senior publishing consultant for a free tailored proposal</p>
+                            </div>
+                            <form action="/inquiry-submit" id="modal-form" method="POST">
+                                <input type="hidden" name="_token" value="awxIAFp3sLU9ALw6iz3WlIXSKpyn9f7ba0ryrYCz" autocomplete="off">                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <!-- <label for="full-name">Enter Your Full Name</label> -->
+                                        <div class="form-group">
+                                            <input type="text" id="full-name" name="full_name"
+                                                placeholder="Full Name" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <!-- <label for="email">Your email</label> -->
+                                        <div class="form-group">
+                                            <input type="text" id="email" name="email" placeholder="Email"
+                                                class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <!-- <label for="phone">Your phone</label> -->
+                                        <div class="form-group">
+                                            <input type="text" id="phone" name="phone"
+                                                placeholder="(999) 999 9999" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <!-- <label for="message">Type your message</label> -->
+                                        <div class="form-group">
+                                            <textarea rows="4" id="message" name="message" placeholder="Book Detail" class="form-control"></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="btn-container mt-4">
+                                        <button class="theme-btn1 text-upper border-0 btn-overlay">Book Now</button>
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="pop-img">
+                            <img src="../assets/img/badge-discount.png" class="discount-img img-fluid"
+                                alt="50% Discount">
+                            <img src="../assets/img/popup-image.png" class="img-fluid pop-std" alt="img"
+                                loading="lazy">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- <img src="assets/img/pop-circle.png" class="img-fluid pop-circle" alt="img"> -->
+        </div>
+    </div>
+</div>
+    <script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/slick.js"></script>
+<script>
+    // accordion
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panelfaq = this.nextElementSibling;
+            if (panelfaq.style.maxHeight) {
+                panelfaq.style.maxHeight = null;
+            } else {
+                panelfaq.style.maxHeight = panelfaq.scrollHeight + "px";
+            }
+        });
+    }
+    // accordion
+
+    $(document).ready(function() {
+        function initializeSlick(slider) {
+            if (!slider.hasClass('slick-initialized')) {
+                slider.slick({
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    autoplay: true
+                });
+            } else {
+                slider.slick('refresh');
+            }
+        }
+
+        // Pehla tab ka slider initialize karein
+        initializeSlick($('#tab1 .portfolio-slider'));
+
+        $('button[data-bs-toggle="tab"]').on('shown.bs.tab', function(e) {
+            let target = $(e.target).attr("data-bs-target");
+            let slider = $(target).find('.portfolio-slider');
+
+            // Ensure proper visibility and reinitialize
+            $(target).css({
+                'height': 'auto',
+                'visibility': 'visible'
+            });
+
+            setTimeout(function() {
+                initializeSlick(slider);
+            }, 100);
+        });
+    });
+</script>
+<script>
+    $(".portfolio-slider").slick({
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 0,
+        speed: 13000,
+        arrows: false,
+        dots: false,
+        pauseOnHover: false,
+        cssEase: "linear",
+        responsive: [{
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 5,
+                },
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 4,
+                },
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 3,
+                },
+            },
+            {
+                breakpoint: 400,
+                settings: {
+                    slidesToShow: 3,
+                },
+            },
+        ],
+    });
+
+    document.querySelectorAll('.flip-box').forEach(box => {
+  box.addEventListener('click', () => {
+    box.classList.toggle('active');
+  });
+});
+
+
+$(".blog-slider").slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  arrows: true,
+  dots: false,
+  autoplaySpeed: 2000,
+  responsive: [
+    {
+      breakpoint: 1025,   // 1024px se neeche
+      settings: {
+        slidesToShow: 2,
+      }
+    },
+    {
+      breakpoint: 992,   // 992px se neeche
+      settings: {
+        slidesToShow: 2,
+      }
+    },
+    {
+      breakpoint: 768,   // 768px se neeche
+      settings: {
+        slidesToShow: 1,
+        arrows: false,
+        dots: true,
+      }
+    },
+    {
+      breakpoint: 576,   // extra small devices
+      settings: {
+        slidesToShow: 1,
+        arrows: false,
+        dots: true,
+      }
+    }
+  ]
+});
+</script>
+<script src="../assets/js/aos.js" defer></script>
+<script src="../assets/js/custom.js" defer></script>
+<script src="../assets/js/nice-select.min.js" defer></script>
+<script src="../assets/js/bootstrap.min.js" defer></script>
+<script src="../assets/js/jquery.fancybox.min.js" defer></script>
+<!--<script src="../assets/js/fontowesome.js" crossorigin="anonymous" defer></script>-->
+
+<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>-->
+
+<script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    const tooltipList = [...tooltipTriggerList].map(el => new bootstrap.Tooltip(el));
+</script>
+
+
+<!-- Include SweetAlert -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2%4011" defer></script>
+<script src="../assets/js/custom-form.js" defer></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/select2%404.1.0-rc.0/dist/js/select2.min.js"></script>
+    
+    <script>
+        $('.book-slide').slick({
+            lazyLoad: 'ondemand',
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: false,
+            asNavFor: '.testimonial-slider'
+        });
+        $('.testimonial-slider').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            asNavFor: '.book-slide',
+            dots: false,
+            arrows: false,
+            autoplaySpeed: 2000,
+            speed: 1300,
+            autoplay: true,
+            //   centerMode: true,
+            focusOnSelect: true
+        });
+    </script>
+
+
+    
+
+
+</body>
+
+
+</html>

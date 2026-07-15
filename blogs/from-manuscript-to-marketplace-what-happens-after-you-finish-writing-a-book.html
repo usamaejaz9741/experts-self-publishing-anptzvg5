@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="YOUR_GOOGLE_SITE_VERIFICATION" />
+    <title>What to Do After Writing a Book: From Manuscript to Marketplace | Experts Self Publishing</title>
+    <meta name="description" content="Wondering what to do after writing a book? Learn the exact steps to move from finished manuscript to publishing and marketing.">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon/favicon-16x16.png">
+    <link rel="preload" as="image" href="../assets/img/ubp-new/banner-bg.webp">
+    <link rel="preload" href="../assets/font/montserrat/Montserrat-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../assets/css/style8e5e.css?v=21">
+
+<link rel="preload" href="../assets/css/fontawesome-all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="../assets/css/fontawesome-all.min.css">
+</noscript>
+
+
+
+
+<link rel="preload" href="../assets/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+</noscript>
+
+
+
+<link rel="preload" href="../assets/css/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="../assets/css/aos.css">
+</noscript>
+
+
+
+<link rel="stylesheet" href="../assets/css/responsivef500.css?v=16">
+
+
+
+
+<link rel="preload" href="../assets/css/nice-select.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="../assets/css/nice-select.css">
+</noscript>
+
+
+
+
+<link rel="preload" href="../assets/css/jquery-ui.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="../assets/css/jquery-ui.css">
+</noscript>
+
+
+<link rel="preload" href="../assets/css/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+<link rel="stylesheet" href="../assets/css/jquery.fancybox.min.css">
+</noscript>
+
+<link rel="preload" href="../assets/css/slick-theme.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+<link rel="stylesheet" href="../assets/css/slick-theme.css">
+</noscript>
+
+<link rel="preload" href="../assets/css/slick.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+<link rel="stylesheet" href="../assets/css/slick.css">
+</noscript>
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/select2%404.1.0-rc.0/dist/css/select2.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2%404.1.0-rc.0/dist/css/select2.min.css">
+    </noscript>
+    <script defer src="../assets/js/site-tracking.js"></script>
+
+    <script>
+        class SmartObserver {
+            constructor() {
+                this.init();
+            }
+
+            init() {
+                this.lazyImages = document.querySelectorAll("img[data-src]");
+                this.hiddenElements = document.querySelectorAll(".io-hidden");
+
+                this.createObserver();
+                this.observeElements();
+            }
+
+            createObserver() {
+                this.observer = new IntersectionObserver(
+                    (entries, observer) => {
+                        entries.forEach((entry) => {
+                            if (!entry.isIntersecting) return;
+
+                            const el = entry.target;
+
+                            // 🖼️ Lazy Image Load
+                            if (el.tagName === "IMG" && el.dataset.src) {
+                                this.loadImage(el);
+                            }
+
+                            // ✨ Reveal Animation (custom)
+                            if (el.classList.contains("io-hidden")) {
+                                el.classList.add("io-show");
+                                el.classList.remove("io-hidden");
+                            }
+
+                            observer.unobserve(el);
+
+                            // 🔁 AOS refresh (important)
+                            if (typeof AOS !== "undefined") {
+                                AOS.refreshHard(); // better than refresh()
+                            }
+                        });
+                    }, {
+                        root: null,
+                        rootMargin: "0px 0px -50px 0px",
+                        threshold: 0.1,
+                    }
+                );
+            }
+
+            observeElements() {
+                this.lazyImages.forEach((img) => this.observer.observe(img));
+                this.hiddenElements.forEach((el) => this.observer.observe(el));
+            }
+
+            loadImage(img) {
+                const temp = new Image();
+                temp.src = img.dataset.src;
+
+                temp.onload = () => {
+                    img.src = temp.src;
+                    img.classList.add("loaded");
+                    img.removeAttribute("data-src");
+                };
+            }
+        }
+
+        // 🚀 Init on DOM Ready
+        document.addEventListener("DOMContentLoaded", () => {
+            new SmartObserver();
+
+            // AOS init (safe)
+            if (typeof AOS !== "undefined") {
+                AOS.init({
+                    duration: 800,
+                    once: true,
+                    offset: 100,
+                });
+            }
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const elements = document.querySelectorAll(".reveal");
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("active");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.15
+            });
+
+            elements.forEach((el) => observer.observe(el));
+        });
+    </script>
+</head>
+
+<body>
+    <header class="header-above">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-6 col-6">
+                <div class="head-contact">
+                    <ul class="list-unstyled d-flex justify-content-start mb-0 gap-4">
+                        <li><a href="javascript:void(0);" class="text-white hvr-effect" data-open-zendesk>
+                                <img src="../assets/img/ubp-new/msg-icon.webp"
+                                    class="img-fluid head-ct-icon effect" alt="massege" width="25" height="30">
+                                <span>Chat With Us</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-6">
+                <div class="head-contact">
+                    <ul class="list-unstyled d-flex justify-content-end mb-0 gap-4">
+                        <li><a href="tel:+18556055210" class="text-white hvr-effect">
+                                <img src="../assets/img/ubp-new/call-icon.webp"
+                                    class="img-fluid head-ct-icon effect" alt="massege" width="25" height="30">
+                                <span>+1 (855) 605-5210</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+        <a class="navbar-brand" href="../index.html">
+            <img class="img-fluid" src="../assets/img/ubp-new/logo.webp" loading="lazy" alt="Experts Self Publishing logo" />
+        </a>
+        <button class="navbar-toggler" type="button" aria-controls="navbarNavDropdown" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link " aria-current="page"
+                        href="../index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown custom-dropdown">
+                    <a class="nav-link dropdown-toggle "
+                        href="javascript:void(0);" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Services <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="../author-website.html">Author Website</a></li>
+                        <li><a class="dropdown-item" href="../pr-and-publicity.html">PR & Publicity</a></li>
+                        <li><a class="dropdown-item" href="../book-editing-proofreading.html">Editing &
+                                Proofreading</a></li>
+                        <li><a class="dropdown-item" href="../book-cover-design.html">Book Cover Design</a></li>
+                        <li><a class="dropdown-item" href="../ghostwriting.html">Ghostwriting</a></li>
+                        <li><a class="dropdown-item" href="../book-illustration.html">Book Illustration</a></li>
+                        <li><a class="dropdown-item" href="../book-video-trailers.html">Book Video Trailers</a>
+                        </li>
+                        <li><a class="dropdown-item" href="../creative-writing.html">Creative Writing</a></li>
+                        <li><a class="dropdown-item" href="../children-book-illustration.html">Children Book
+                                illustration</a></li>
+                        <li><a class="dropdown-item" href="../screenplay-script-writing.html">Screenplay Script
+                                Writing</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link "
+                        href="../book-publishing.html">Book Publishing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link "
+                        href="../book-marketing.html">Book Marketing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link "
+                        href="../pricing.html">Pricing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="../about-us.html">Our Story</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link "
+                        href="../contact-us.html">Contact Us</a>
+                </li>
+                <li class="nav-item dropdown custom-dropdown">
+                    <a class="nav-link dropdown-toggle "
+                        href="javascript:void(0);" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">Resources <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+                    </a>
+                    <ul class="dropdown-menu w-auto menu-2" aria-labelledby="navbarDropdownMenuLink">
+                        <li class="w-100"><a class="dropdown-item" href="../published-books.html">Published
+                                Books</a></li>
+                        <li class="w-100"><a class="dropdown-item" href="../customer-reviews.html">Customer
+                                Reviews</a></li>
+                        
+                        <li class="w-100"><a class="dropdown-item" href="../faq.html">FAQs</a></li>
+                        <li class="w-100"><a class="dropdown-item" href="../blogs.html">Blogs</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="navbar-right">
+            <div class="head-btn">
+                <a href="#exampleModalToggle"
+                    class="theme-btn1 btn-overlay d-inline-flex align-items-center gap-2 text-upper"
+                    data-bs-toggle="modal" data-bs-target="#exampleModal"><img
+                        src="../assets/img/ubp-new/msg-icon.webp" alt="icon" width="30"
+                        height="23"><span>Get a Free Quote</span></a>
+            </div>
+        </div>
+
+    </div>
+</nav>
+
+    <section class="about-banner sec-pd">
+    <div class="container">
+        <div class="row align-items-center justify-content-center">
+            <div class="col-lg-8">
+                <div class="inner-heading text-white text-center">
+                    <h1 class="">FROM MANUSCRIPT TO MARKETPLACE: WHAT HAPPENS AFTER YOU FINISH WRITING A BOOK</h1>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="blog-detail-sec sec-pd">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-10">
+                <div class="blog-link">
+                    <h4 class="color-green mb-3">Content</h4>
+                    <h5 class="mb-3"><a href="#link-1">THE FIRST READ-THROUGH & SELF-EDIT</a></h5>
+                    <h5 class="mb-3"><a href="#link-2">THE NON-NEGOTIABLE: HIRING A PROFESSIONAL EDITOR</a></h5>
+                    <h5 class="mb-3"><a href="#link-3">THE TRADITIONAL PUBLISHING ROUTE</a></h5>
+                    <h5 class="mb-3"><a href="#link-4">DESIGNING YOUR AUTHOR PLATFORM</a></h5>
+                    <h5 class="mb-3"><a href="#link-5">COMMON PITFALLS AND HOW TO AVOID THEM</a></h5>
+                    <h5 class="mb-3"><a href="#link-6">FINAL CHECKLIST BEFORE YOU HIT PUBLISH OR SEND QUERIES</a></h5>
+
+
+                </div>
+
+            </div>
+            <div class="col-lg-9 col-md-12">
+                <div class="blog-detail">
+                    <p class="mb-3">You did it! You have finally completed your manuscript. But now what? Are you supposed to take the manuscript to an editor? Or a publishing house? Or a designer for illustrations?</p>
+                    <p class="mb-3">This is the part where you need to decide how your book will reach your target audience. You need to make smart decisions. You must have a clear guide on “what to do after writing a book” to help you out.
+                    </p>
+                    <p>This guide will walk you through clear, practical steps. Instead of wasting time and celebrating a short lived success, this guide will lead you towards real happiness. There will be no guess work, instead practical solutions and guide.</p>
+                    <p>We will cover everything from preparing the manuscript for professional eyes to launching a book that finds its readers!</p>
+
+
+                    <h4 class="color">THE FIRST CRUCIAL STEPS AFTER WRITING A BOOK (BEFORE ANYONE ELSE SEES IT)</h4>
+
+                    <p class="mb-3">Your manuscript is still hot off the press. Your number one job right now is to not send it to anyone.
+                         Not your mom, not your best friend, and certainly not a literary agent. What you need is distance and a new perspective. </p>
+
+                    <h4 class="color mt-2">THE MANDATORY COOLING-OFF PERIOD</h4>     
+
+                    <p class="mb-3">Keep your manuscript save in your laptop. If you have written in your notebook, then put it in your drawer, and forget about it. Take at least two weeks time off. Work on another project, read for fun, go for walks.</p>
+
+                    <p class="mb-3">This mental space is non-negotiable. When you return to your pages, you won’t see what you meant to write. The fresh eyes will see what you actually wrote. Errors, plot holes, and clumsy sentences will jump out at you.
+                    </p>
+
+                    <p>This cool-down is the cheapest and most effective revision tool you have.</p>
+
+                    <h4 class="color mt-2" id="link-1">THE FIRST READ-THROUGH & SELF-EDIT</h4>
+
+                    <p>Now is the time to open that document. But, don’t edit yet!</p>
+                    <p>Just read it, from start to finish. Read as a critic here! Like you are a reader picking it up for the first time. Take notes on a separate pad.</p>
+                    <p>Note down that “Chapter 7 feels slow.” Or jot down the flimsy character development of the supporting person. Or maybe the love and romance section is too boring.</p>
+                    <p>Focus on the big picture. The story flow, character consistency, and pacing. This focused review is the first of many steps after writing a book. This transforms your draft from good to professional.</p>
+
+
+                    <h3 class="color">UNDERSTANDING THE POWER OF FEEDBACK AND PROFESSIONAL EDITING</h3>
+
+                    <p class="mb-3">You’ve self-edited. Now it’s time to face the outside world. This is a vulnerable but vital phase. Writing is solitary, but publishing is collaborative.</p>
+
+                    <h4 class="color mt-2">FINDING AND USING BETA READERS</h4>
+                    <p class="mb-3">Beta readers are your trial audience. They are not your cheerleaders. Of course, they can praise the write-up but they will also criticize it. </p>
+                    <p>They are your first test group. Choose 3-5 people who are either avid readers in your genre or represent your target audience. Give them clear questions: “Where did you get bored?” Or ask, “Did the ending feel satisfying?” Don't forget to ask, “Which character did you connect with least?”</p>
+                    <p>Their feedback is gold dust for identifying issues you are too close to see. Remember, if multiple beta readers stumble on the same point, that point needs fixing.</p>
+
+
+                    <h4 class="color" id="link-2">THE NON-NEGOTIABLE: HIRING A PROFESSIONAL EDITOR</h4>
+
+                    <!-- <img src="assets/img/blog-img.png" class="img-fluid" alt="img"> -->
+                    <p class="mb-3">In author publishing process, you need to understand this! You cannot properly edit your own work. You will always remain close to it. A professional editor is the best investment you will make in your book’s future. There are different types:</p>
+                     <ul>
+                        <li class="mb-2">Developmental/Structural Edit: This is big-picture! They work on plot, structure, character arcs, and pacing. It’s the most intensive and important edit.</li>
+                        <li class="mb-2">Line Edit: This focuses on your language at the sentence level. Style, clarity, flow, and voice.</li>
+                        <li class="mb-2">Copy Edit: This is the grammar, spelling, punctuation, and consistency police. They will fix everything, from single comma to full stop or colon marks. </li>
+                        <li class="mb-2">Uniformity: This focuses on keeping everything uniform and same. For instance, making sure your character's hair color doesn't change mid-book.</li>
+                        <li class="mb-2">Proofread: The final polish, catching any typos or formatting issues after the book is designed.</li>
+                     </ul>
+                     <p>For most authors, starting with a developmental or copy edit is the core of smart publishing next steps. It enhances your work to a commercially viable level.</p>
+
+                     <h3 class="color">THE CROSSROADS: CHOOSING YOUR PUBLISHING PATH</h3>
+                     <p>With a polished, edited manuscript in hand, you now face the biggest strategic decision. This is where your book publishing next steps diverge onto two very different roads. Let’s be clear-eyed about each.</p>
+                     
+                     <h4 class="color" id="link-3">THE TRADITIONAL PUBLISHING ROUTE</h4>
+                     <p>This path requires patience and persistence. There is no overnight achievement. You need to find these people as follows.</p>
+                     <ul>
+                        <li class="mb-2">Literary Agents: You need to find people who can help you reach your goals. Look for agents who have experience in your specific genre. Research their track record.</li>
+                        <li class="mb-2">Design a Query Letter & Synopsis: This is a one-page pitch letter and a 1-2 page summary of your entire book. It’s a sales document for your story.</li>
+                        <li class="mb-2">Submit and Wait: The querying process involves months. Sometimes years of waiting, rejection, and requests for your full manuscript.</li>
+                    </ul>
+                    <p>If an agent offers representation, they will then work to sell your book to a traditional publishing house. The timeline from deal to bookstore shelf is typically 1.5-2 years.</p>
+                    <h3 class="color">THE SELF-PUBLISHING ROUTE</h3>
+                    <p>This path is an entrepreneurial sprint. You are the CEO. Your steps after writing a book now become about production.</p>
+                    <ul>
+                        <li class="mb-2">Secure Your Assets: You will need to commission a professional, genre-specific cover designer. A professional interior formatting expert will work on your print and eBook both.</li>
+                        <li class="mb-2">Choose Your Platforms: The major player is Amazon KDP (Kindle Direct Publishing). This is for eBooks and paperbacks. Whereas IngramSpark is for wider paperback distribution.</li>
+                        <li class="mb-2">Handle the Logistics: You will obtain your own ISBNs. Write your book description, set your price, and upload your final files. You control the timeline, often getting to market in a matter of months or even weeks.</li>
+                    </ul>
+                    <p>Understanding these book publishing next steps are critical.</p>
+                     <p>Do you want the validation, team, and bookstore distribution of traditional? Or the speed, control, and higher royalties of self-publishing?</p>
+                     <p><em>Your choice here defines everything that follows.</em></p>
+
+                     <h3 class="color">BUILDING THE BOOK: DESIGN, FORMATTING, AND PRODUCTION</h3>
+                     <p>Do you have traditional publishers? Or are you going for self-publishing route? Make sure your manuscript needs to become a physical object now, no matter what! This is the spot where you dream is going to become a reality.</p>
+
+                     <h4 class="color">THE MAKE-OR-BREAK COVER DESIGN</h4>
+                     <p>People do judge a book by its cover. This is no longer a myth!</p>
+                     <p>Your book cover is your biggest marketing tool. People decide in a split second, to either scroll away online or walk away in a bookstore. Your cover must scream your genre, look professional, and be legible as a thumbnail.</p>
+                     <p>For self-publishers, hiring a designer experienced in book covers is essential. In the traditional route, the author can share their idea. However, the final say is always of the publisher.</p>
+
+                     <h4 class="color">THE INTERIOR: MORE THAN JUST WORDS</h4>
+                     <p>A well-formatted interior is invisible in a good way. It just feels right.</p>
+                     <p>It involves choosing readable fonts and consistent chapter headings. Make sure there are proper margins. The handling elements like images, footnotes, or breakout quotes are professional. </p>
+                     <p>For eBooks, it also means ensuring the text “reflows” properly across different devices. Poor formatting screams “amateur” and can pull a reader right out of your story.</p>
+
+                     <h3 class="color">LAYING THE GROUNDWORK: PRE-LAUNCH AND MARKETING</h3>
+                     <p>Now you understand what to do after writing a book. But here are some pointers you need to understand, the foundational work.</p>
+                     <p>Remember, the book does not sell itself. The work you do before publication day is often more important than what you do after. This is where you build your launchpad.</p>
+
+                     <h4 class="color" id="link-4">DESIGNING YOUR AUTHOR PLATFORM</h4>
+                     <p>An author platform is simply where you connect with your future readers. It could be an email newsletter, a social media presence where you genuinely engage, a website, or a blog.</p>
+                     <p>The goal isn’t to scream “BUY MY BOOK!” from day one. The real plan is to provide value and share your journey. You need to build a community of readers, a base of fans. This helps in getting the right amount of attention. Especially from those who are genuinely interested in you and your work.</p>
+
+                     <h4 class="color">THE PRE-LAUNCH CAMPAIGN</h4>
+                     <p>About 2-3 months out from launch, start your campaign.</p>
+                     <ul>
+                        <li class="mb-2">Secure Advance Reviews: Use sites like NetGalley or Booksprout. These help in getting your book into the hands of reviewers and book bloggers. These early reviews are social proof on launch day.</li>
+                        <li class="mb-2">Build Your ARC Team: ARC stands for Advance Reader Copy. This team is a group of super-fans who love reading. Provide these with a free copy before launch. Make an exchange for an honest review on Amazon/Goodreads on launch week.</li>
+                        <li class="mb-2">Plan Your Launch Activities: This could include a virtual launch party, blog tours, podcast interviews, or local events. Write your press materials. This orchestrated effort is a core part of the modern author publishing process.</li>
+                     </ul>
+
+                     <h3 class="color">LAUNCH DAY AND BEYOND: IT’S A MARATHON, NOT A SPRINT</h3>
+                     <p>Launch day is chaotic! But with guidance, you can capitalize on this day! Remember, book launch is not just an event. It's a chance for a new beginning for your book.</p>
+
+                     <h4 class="color">LAUNCH WEEK MOMENTUM</h4>
+                     <p>Make a big splash! Activate your ARC team, run any planned promotions, blast your social media, and send that newsletter.</p>
+                     <p>Your goal is to drive enough sales in the first few days to “rank” well on retailer sites. This triggers their algorithms to show your book to more people. It’s a principled cycle.</p>
+
+                     <h4 class="color">THE LONG GAME: CONTINUOUS MARKETING</h4>
+                     <p>After the launch confetti settles, the real work continues. Marketing a book is ongoing. This means:</p>
+                     <ul>
+                        <li class="mb-2">Continuing to engage on your platform.</li>
+                        <li class="mb-2">Look for new opportunities to promote your book. This can be through newsletter feature or sales.</li>
+                        <li class="mb-2">Consider running advertisements on Amazon Ads and BookBub Ads.</li>
+                     </ul>
+                     <p>So, are you thinking about writing your next book? The most appropriate way is to sell your existing book first. And then start with the second one. Remember, readers who fell in love with your story will always come and buy, no matter what!</p>
+
+                     <h3 class="color" id="link-5">COMMON PITFALLS AND HOW TO AVOID THEM</h3>
+                     <p>Here is a short list of common mistakes authors make and how to avoid them.</p>
+                     <p><strong>Pitfall 1:</strong> Skipping professional editing.</p>
+                     <p><strong>Fix:</strong> Budget for at least a line editor and a proofreader. It’s the difference between amateur and professional.</p>
+                     <p><strong>Pitfall 2:</strong> Rushing the launch without an audience.</p>
+                     <p><strong>Fix:</strong> Build an audience first. Even 500 engaged readers beat 50,000 indifferent followers.</p>
+                     <p><strong>Pitfall 3:</strong> Treating publishing as a one-time event.</p>
+                     <p><strong>Fix:</strong> Plan a book career. Think three books ahead. Each book should promote the others.</p>
+                     <p><strong>Pitfall 4:</strong> Signing contracts without reading the rights clauses.</p>
+                     <p><strong>Fix:</strong> Learn the basics of rights or get a lawyer or experienced agent to review. Read before you sign.</p>
+
+                     <h3 class="color" id="link-6">FINAL CHECKLIST BEFORE YOU HIT PUBLISH OR SEND QUERIES</h3>
+                     <p>Manuscript polished by a professional editor.</p>
+                     <ul>
+                        <li class="mb-2">A market-ready cover design and interior file.</li>
+                        <li class="mb-2">ISBN and metadata completed correctly.</li>
+                        <li class="mb-2">Author platform and email list ready for launch.</li>
+                        <li class="mb-2">ARC copies sent to reviewers and influencers.</li>
+                        <li class="mb-2">A simple launch plan with clear goals and metrics.</li>
+                     </ul>
+                     <p>Resolves these issues and you successfully remove most common blockers. No more stalling the book launch day!</p>
+
+                     <h3 class="color">START SMALL AND BUILD MOMENTUM</h3>
+                     <p>So, what to do after writing a book? It’s a journey that moves from solitary creation to collaborative execution. It flows from the essential pause for revision, through the invaluable eye of editors. Even the beta readers! To the strategic choice of a publishing path.</p>
+                     <p>It demands attention for exceptional designing and marketing. The process needs equal parts of artistry and business knowledge.</p>
+                     <p>It can feel overwhelming, but you don’t have to figure it out alone. Experts Self Publishing aligns your vision with the traditional hunt for an agent. Or the entrepreneurial drive of the indie path. The key is to move forward with clarity and professional support at each stage.</p>
+                     <p>Every bestseller was once just a finished manuscript sitting on a hard drive, wondering “what’s next?” Your story deserves its chance to reach the readers who are waiting for it. Take that next step. The marketplace is ready.</p>          
+                </div>
+            </div>
+
+            <!-- <div class="col-lg-3">
+                <div class="profile-box">
+                    <img src="../assets/img/mark-img.png" class="img-fluid mb-3" alt="profile">
+                    <h4>Mark Wilson</h4>
+                    <p>Mark is a Senior Content Marketer with 7+ years of experience in growing B2B, B2C,
+                        e-commerce, SaaS, & Digital Design Brands. He’s a polished writer, SEO geek, optimist at
+                        heart & good at playing table tennis.</p>
+                    <div class="d-flex align-items-center gap-3">
+                        <h4 class="color mb-0 font-28">Follow Us:</h4>
+                        <div class="head-right d-flex align-items-center gap-3 justify-content-end">
+
+                            <ul class="list-unstyled d-flex align-items-center gap-2 mb-0">
+
+                                <li><a href="https://www.facebook.com/ExpertsSelfPublishingOfficial/" target="_blank"><i
+                                            class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+                                </li>
+                                <li><a href="https://www.instagram.com/expertsselfpublishingofficial/" target="_blank"><i
+                                            class="fa-brands fa-instagram" aria-hidden="true"></i></a></li>
+                                <li><a href="https://www.youtube.com/@ExpertsSelfPublishing" target="_blank"><i
+                                            class="fa-brands fa-linkedin" aria-hidden="true"></i></a></li>
+
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</div>
+
+    <footer class="">
+    <div class="container-fluid">
+        <div class="row align-items-start">
+
+            <div class="col-lg-4 col-md-12">
+                <div class="foot-box text-white">
+                    <a href="../index.html"><img src="../assets/img/ubp-new/footer-logo.webp"
+                            class="img-fluid foot-logo" alt="img" loading="lazy"></a>
+                    <p class="py-2 font">For 8+ years, we have been the quiet force behind unforgettable stories. We
+                        don't just publish books; we partner with visionaries, transforming bold ideas into legacies
+                        that endure. Let us build yours.</p>
+                    <div class="d-flex align-items-center gap-3">
+                        <h4 class="color mb-0 font-28">Follow Us:</h4>
+                        <div class="head-right d-flex align-items-center gap-3 justify-content-end">
+                            <ul class="list-unstyled d-flex align-items-center gap-2 mb-0">
+                                <li><a href="https://www.facebook.com/ExpertsSelfPublishingOfficial/" target="_blank"><i
+                                            class="fa-brands fa-facebook-f"></i></a></li>
+                                <li><a href="https://www.instagram.com/expertsselfpublishingofficial/" target="_blank"><i
+                                            class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href="https://www.youtube.com/@ExpertsSelfPublishing" target="_blank"><i
+                                            class="fa-brands fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-4 col-sm-4 ">
+                <div class="foot-box text-white">
+                    <h3 class="color">What We Offer</h3>
+                    <div class="foot-line"></div>
+                    <div class="foot-list d-flex mt-3">
+                        <ul class="list-unstyled">
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../book-publishing.html">Book Publishing</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../book-marketing.html">Book Marketing</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../author-website.html" class="">Author Website</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../creative-writing.html" class="">Creative Writing</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../book-illustration.html" class="">Book illustration</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../book-video-trailers.html" class="">Book Video Trailers</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../book-cover-design.html" class="">Book Cover Design</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../ghostwriting.html" class="">Ghostwriting</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../book-writing.html" class="">Book Writing</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../pr-and-publicity.html" class="">PR & Publicity</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-4 col-sm-4 ">
+                <div class="foot-box text-white">
+                    <h3 class="color">Others</h3>
+                    <div class="foot-line"></div>
+                    <div class="foot-list d-flex mt-3">
+                        <ul class="list-unstyled">
+
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../free-book-marketing-guide.html" class="">Free Book Marketing
+                                    Guide</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../free-book-publishing-guide.html" class="">Free Book Publishing
+                                    Guide</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../blogs.html" class="">Blogs</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../pricing.html" class="">Pricing</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../about-us.html" class="">Our Story</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../contact-us.html" class="">Contact Us</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-4 ">
+                <div class="foot-box text-white">
+                    <h3 class="color">Information</h3>
+                    <div class="foot-list info-detail">
+                        <ul class="list-unstyled">
+                            <li class="my-4 info-li">
+                                <a href="tel:+18556055210" class="d-flex gap-2">
+                                    <!-- <span class="info-icon"><i class="fa-solid fa-phone" aria-hidden="true"></i></span> -->
+                                    <span class="info-icon w-25"><img
+                                            src="../assets/img/ubp-new/theme-phone.webp"
+                                            class="img-fluid" alt="location" width="21" height="21"
+                                            loading="lazy"></span>
+                                    <span class="w-75">
+                                        <small>Call us now </small>
+                                        <span class="foot-number d-block w-100">+1 (855) 605-5210</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="my-4 info-li">
+                                <a href="mailto:info@expertsselfpublishing.com" class="d-flex gap-2">
+                                    <!-- <span class="info-icon"><i class="fa-solid fa-envelope" aria-hidden="true"></i></span> -->
+                                    <span class="info-icon w-25"><img
+                                            src="../assets/img/ubp-new/foot-envelope.webp"
+                                            class="img-fluid" alt="location" width="21" height="22"
+                                            loading="lazy"></span>
+                                    <span class="w-75">
+                                        <small>Email us on: </small>
+                                        <span class="foot-number d-block w-100">info@expertsselfpublishing.com</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="my-4 info-li">
+                                <a href="javascript:void(0);" class="d-flex gap-2">
+                                    <!-- <span class="info-icon"><i class="fa-solid fa-house"></i></span> -->
+                                    <span class="info-icon w-25"><img
+                                            src="../assets/img/ubp-new/location-icon.webp"
+                                            class="img-fluid" alt="location" width="21" height="28"
+                                            loading="lazy"></span>
+                                    <span class="w-75">
+                                        <!-- <small>Email us on: </small> -->
+                                        <span class="foot-number d-block w-100">3223 West 6th Street STE 101 Los
+                                            Angeles, <br> CA 90020 United States.</span>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="payment-box mt-3 p-2">
+                    <img src="../assets/img/ubp-new/pymnt-5.webp" class="img-fluid" alt="payment"
+                        width="316" height="68" loading="lazy">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container-fluid last-contain">
+        <div class="row">
+            <div class="col-lg-7 col-md-8">
+                <p class=" mb-0 para-color">Copyright © 2026 Experts Self Publishing - All Rights Reserved | Powered By
+                    Iota Digital, LLC</p>
+            </div>
+            <div class="col-lg-5 col-md-4">
+                <ul class="list-unstyled d-flex align-items-center gap-3 m-0 justify-content-end">
+                    <li><a href="../privacy-policy.html" class="">Privacy Policy</a></li>
+                    <li><a href="../terms-condition.html" class="">Terms And Conditions</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img src="../assets/img/pop-logo.png" class="img-fluid" alt="Experts Self Publishing logo" loading="lazy">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row align-items-center justify-content-around">
+                    <div class="col-lg-7">
+                        <div class="form-wrap">
+                            <div class="form-heading">
+                                <h3 class="color font-40 let-space fw-600">Start Building Your Author Success Story
+                                    Today!</h3>
+                                <p>Speak with our senior publishing consultant for a free tailored proposal</p>
+                            </div>
+                            <form action="/inquiry-submit" id="modal-form" method="POST">
+                                <input type="hidden" name="_token" value="awxIAFp3sLU9ALw6iz3WlIXSKpyn9f7ba0ryrYCz" autocomplete="off">                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <!-- <label for="full-name">Enter Your Full Name</label> -->
+                                        <div class="form-group">
+                                            <input type="text" id="full-name" name="full_name"
+                                                placeholder="Full Name" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <!-- <label for="email">Your email</label> -->
+                                        <div class="form-group">
+                                            <input type="text" id="email" name="email" placeholder="Email"
+                                                class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <!-- <label for="phone">Your phone</label> -->
+                                        <div class="form-group">
+                                            <input type="text" id="phone" name="phone"
+                                                placeholder="(999) 999 9999" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <!-- <label for="message">Type your message</label> -->
+                                        <div class="form-group">
+                                            <textarea rows="4" id="message" name="message" placeholder="Book Detail" class="form-control"></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="btn-container mt-4">
+                                        <button class="theme-btn1 text-upper border-0 btn-overlay">Book Now</button>
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="pop-img">
+                            <img src="../assets/img/badge-discount.png" class="discount-img img-fluid"
+                                alt="50% Discount">
+                            <img src="../assets/img/popup-image.png" class="img-fluid pop-std" alt="img"
+                                loading="lazy">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- <img src="assets/img/pop-circle.png" class="img-fluid pop-circle" alt="img"> -->
+        </div>
+    </div>
+</div>
+    <script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/slick.js"></script>
+<script>
+    // accordion
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panelfaq = this.nextElementSibling;
+            if (panelfaq.style.maxHeight) {
+                panelfaq.style.maxHeight = null;
+            } else {
+                panelfaq.style.maxHeight = panelfaq.scrollHeight + "px";
+            }
+        });
+    }
+    // accordion
+
+    $(document).ready(function() {
+        function initializeSlick(slider) {
+            if (!slider.hasClass('slick-initialized')) {
+                slider.slick({
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    autoplay: true
+                });
+            } else {
+                slider.slick('refresh');
+            }
+        }
+
+        // Pehla tab ka slider initialize karein
+        initializeSlick($('#tab1 .portfolio-slider'));
+
+        $('button[data-bs-toggle="tab"]').on('shown.bs.tab', function(e) {
+            let target = $(e.target).attr("data-bs-target");
+            let slider = $(target).find('.portfolio-slider');
+
+            // Ensure proper visibility and reinitialize
+            $(target).css({
+                'height': 'auto',
+                'visibility': 'visible'
+            });
+
+            setTimeout(function() {
+                initializeSlick(slider);
+            }, 100);
+        });
+    });
+</script>
+<script>
+    $(".portfolio-slider").slick({
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 0,
+        speed: 13000,
+        arrows: false,
+        dots: false,
+        pauseOnHover: false,
+        cssEase: "linear",
+        responsive: [{
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 5,
+                },
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 4,
+                },
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 3,
+                },
+            },
+            {
+                breakpoint: 400,
+                settings: {
+                    slidesToShow: 3,
+                },
+            },
+        ],
+    });
+
+    document.querySelectorAll('.flip-box').forEach(box => {
+  box.addEventListener('click', () => {
+    box.classList.toggle('active');
+  });
+});
+
+
+$(".blog-slider").slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  arrows: true,
+  dots: false,
+  autoplaySpeed: 2000,
+  responsive: [
+    {
+      breakpoint: 1025,   // 1024px se neeche
+      settings: {
+        slidesToShow: 2,
+      }
+    },
+    {
+      breakpoint: 992,   // 992px se neeche
+      settings: {
+        slidesToShow: 2,
+      }
+    },
+    {
+      breakpoint: 768,   // 768px se neeche
+      settings: {
+        slidesToShow: 1,
+        arrows: false,
+        dots: true,
+      }
+    },
+    {
+      breakpoint: 576,   // extra small devices
+      settings: {
+        slidesToShow: 1,
+        arrows: false,
+        dots: true,
+      }
+    }
+  ]
+});
+</script>
+<script src="../assets/js/aos.js" defer></script>
+<script src="../assets/js/custom.js" defer></script>
+<script src="../assets/js/nice-select.min.js" defer></script>
+<script src="../assets/js/bootstrap.min.js" defer></script>
+<script src="../assets/js/jquery.fancybox.min.js" defer></script>
+<!--<script src="../assets/js/fontowesome.js" crossorigin="anonymous" defer></script>-->
+
+<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>-->
+
+<script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    const tooltipList = [...tooltipTriggerList].map(el => new bootstrap.Tooltip(el));
+</script>
+
+
+<!-- Include SweetAlert -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2%4011" defer></script>
+<script src="../assets/js/custom-form.js" defer></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/select2%404.1.0-rc.0/dist/js/select2.min.js"></script>
+    
+    <script>
+        $('.book-slide').slick({
+            lazyLoad: 'ondemand',
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: false,
+            asNavFor: '.testimonial-slider'
+        });
+        $('.testimonial-slider').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            asNavFor: '.book-slide',
+            dots: false,
+            arrows: false,
+            autoplaySpeed: 2000,
+            speed: 1300,
+            autoplay: true,
+            //   centerMode: true,
+            focusOnSelect: true
+        });
+    </script>
+
+
+    
+
+
+</body>
+
+
+</html>

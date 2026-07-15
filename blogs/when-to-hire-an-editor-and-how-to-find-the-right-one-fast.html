@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="YOUR_GOOGLE_SITE_VERIFICATION" />
+    <title>Exactly when to hire an editor for your book</title>
+    <meta name="description" content="Learn exactly when to hire an editor and how to find the right one fast. Practical tips for authors who want better manuscripts.">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon/favicon-16x16.png">
+    <link rel="preload" as="image" href="../assets/img/ubp-new/banner-bg.webp">
+    <link rel="preload" href="../assets/font/montserrat/Montserrat-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../assets/css/style8e5e.css?v=21">
+
+<link rel="preload" href="../assets/css/fontawesome-all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="../assets/css/fontawesome-all.min.css">
+</noscript>
+
+
+
+
+<link rel="preload" href="../assets/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+</noscript>
+
+
+
+<link rel="preload" href="../assets/css/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="../assets/css/aos.css">
+</noscript>
+
+
+
+<link rel="stylesheet" href="../assets/css/responsivef500.css?v=16">
+
+
+
+
+<link rel="preload" href="../assets/css/nice-select.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="../assets/css/nice-select.css">
+</noscript>
+
+
+
+
+<link rel="preload" href="../assets/css/jquery-ui.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="../assets/css/jquery-ui.css">
+</noscript>
+
+
+<link rel="preload" href="../assets/css/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+<link rel="stylesheet" href="../assets/css/jquery.fancybox.min.css">
+</noscript>
+
+<link rel="preload" href="../assets/css/slick-theme.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+<link rel="stylesheet" href="../assets/css/slick-theme.css">
+</noscript>
+
+<link rel="preload" href="../assets/css/slick.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+<link rel="stylesheet" href="../assets/css/slick.css">
+</noscript>
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/select2%404.1.0-rc.0/dist/css/select2.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2%404.1.0-rc.0/dist/css/select2.min.css">
+    </noscript>
+    <script defer src="../assets/js/site-tracking.js"></script>
+
+    <script>
+        class SmartObserver {
+            constructor() {
+                this.init();
+            }
+
+            init() {
+                this.lazyImages = document.querySelectorAll("img[data-src]");
+                this.hiddenElements = document.querySelectorAll(".io-hidden");
+
+                this.createObserver();
+                this.observeElements();
+            }
+
+            createObserver() {
+                this.observer = new IntersectionObserver(
+                    (entries, observer) => {
+                        entries.forEach((entry) => {
+                            if (!entry.isIntersecting) return;
+
+                            const el = entry.target;
+
+                            // 🖼️ Lazy Image Load
+                            if (el.tagName === "IMG" && el.dataset.src) {
+                                this.loadImage(el);
+                            }
+
+                            // ✨ Reveal Animation (custom)
+                            if (el.classList.contains("io-hidden")) {
+                                el.classList.add("io-show");
+                                el.classList.remove("io-hidden");
+                            }
+
+                            observer.unobserve(el);
+
+                            // 🔁 AOS refresh (important)
+                            if (typeof AOS !== "undefined") {
+                                AOS.refreshHard(); // better than refresh()
+                            }
+                        });
+                    }, {
+                        root: null,
+                        rootMargin: "0px 0px -50px 0px",
+                        threshold: 0.1,
+                    }
+                );
+            }
+
+            observeElements() {
+                this.lazyImages.forEach((img) => this.observer.observe(img));
+                this.hiddenElements.forEach((el) => this.observer.observe(el));
+            }
+
+            loadImage(img) {
+                const temp = new Image();
+                temp.src = img.dataset.src;
+
+                temp.onload = () => {
+                    img.src = temp.src;
+                    img.classList.add("loaded");
+                    img.removeAttribute("data-src");
+                };
+            }
+        }
+
+        // 🚀 Init on DOM Ready
+        document.addEventListener("DOMContentLoaded", () => {
+            new SmartObserver();
+
+            // AOS init (safe)
+            if (typeof AOS !== "undefined") {
+                AOS.init({
+                    duration: 800,
+                    once: true,
+                    offset: 100,
+                });
+            }
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const elements = document.querySelectorAll(".reveal");
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("active");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.15
+            });
+
+            elements.forEach((el) => observer.observe(el));
+        });
+    </script>
+</head>
+
+<body>
+    <header class="header-above">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-6 col-6">
+                <div class="head-contact">
+                    <ul class="list-unstyled d-flex justify-content-start mb-0 gap-4">
+                        <li><a href="javascript:void(0);" class="text-white hvr-effect" data-open-zendesk>
+                                <img src="../assets/img/ubp-new/msg-icon.webp"
+                                    class="img-fluid head-ct-icon effect" alt="massege" width="25" height="30">
+                                <span>Chat With Us</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-6">
+                <div class="head-contact">
+                    <ul class="list-unstyled d-flex justify-content-end mb-0 gap-4">
+                        <li><a href="tel:+18556055210" class="text-white hvr-effect">
+                                <img src="../assets/img/ubp-new/call-icon.webp"
+                                    class="img-fluid head-ct-icon effect" alt="massege" width="25" height="30">
+                                <span>+1 (855) 605-5210</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+        <a class="navbar-brand" href="../index.html">
+            <img class="img-fluid" src="../assets/img/ubp-new/logo.webp" loading="lazy" alt="Experts Self Publishing logo" />
+        </a>
+        <button class="navbar-toggler" type="button" aria-controls="navbarNavDropdown" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link " aria-current="page"
+                        href="../index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown custom-dropdown">
+                    <a class="nav-link dropdown-toggle "
+                        href="javascript:void(0);" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Services <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="../author-website.html">Author Website</a></li>
+                        <li><a class="dropdown-item" href="../pr-and-publicity.html">PR & Publicity</a></li>
+                        <li><a class="dropdown-item" href="../book-editing-proofreading.html">Editing &
+                                Proofreading</a></li>
+                        <li><a class="dropdown-item" href="../book-cover-design.html">Book Cover Design</a></li>
+                        <li><a class="dropdown-item" href="../ghostwriting.html">Ghostwriting</a></li>
+                        <li><a class="dropdown-item" href="../book-illustration.html">Book Illustration</a></li>
+                        <li><a class="dropdown-item" href="../book-video-trailers.html">Book Video Trailers</a>
+                        </li>
+                        <li><a class="dropdown-item" href="../creative-writing.html">Creative Writing</a></li>
+                        <li><a class="dropdown-item" href="../children-book-illustration.html">Children Book
+                                illustration</a></li>
+                        <li><a class="dropdown-item" href="../screenplay-script-writing.html">Screenplay Script
+                                Writing</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link "
+                        href="../book-publishing.html">Book Publishing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link "
+                        href="../book-marketing.html">Book Marketing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link "
+                        href="../pricing.html">Pricing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="../about-us.html">Our Story</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link "
+                        href="../contact-us.html">Contact Us</a>
+                </li>
+                <li class="nav-item dropdown custom-dropdown">
+                    <a class="nav-link dropdown-toggle "
+                        href="javascript:void(0);" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">Resources <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+                    </a>
+                    <ul class="dropdown-menu w-auto menu-2" aria-labelledby="navbarDropdownMenuLink">
+                        <li class="w-100"><a class="dropdown-item" href="../published-books.html">Published
+                                Books</a></li>
+                        <li class="w-100"><a class="dropdown-item" href="../customer-reviews.html">Customer
+                                Reviews</a></li>
+                        
+                        <li class="w-100"><a class="dropdown-item" href="../faq.html">FAQs</a></li>
+                        <li class="w-100"><a class="dropdown-item" href="../blogs.html">Blogs</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="navbar-right">
+            <div class="head-btn">
+                <a href="#exampleModalToggle"
+                    class="theme-btn1 btn-overlay d-inline-flex align-items-center gap-2 text-upper"
+                    data-bs-toggle="modal" data-bs-target="#exampleModal"><img
+                        src="../assets/img/ubp-new/msg-icon.webp" alt="icon" width="30"
+                        height="23"><span>Get a Free Quote</span></a>
+            </div>
+        </div>
+
+    </div>
+</nav>
+
+        <section class="about-banner sec-pd">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-lg-9">
+                    <div class="inner-heading text-white text-center">
+                        <h1 class="">When To Hire An Editor (And How To Find The Right One Fast)</h1>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="blog-detail-sec sec-pd">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-10">
+                    <div class="blog-link">
+                        <h4 class="color-green mb-3">Content</h4>
+                        <h5 class="mb-3"><a href="#link-1">Why Editing Matters For Every Author</a></h5>
+                        <h5 class="mb-3"><a href="#link-2">Knowing When To Hire An Editor For Developmental Work</a></h5>
+                        <h5 class="mb-3"><a href="#link-3">Understanding Professional Book Editing Options</a></h5>
+                        <h5 class="mb-3"><a href="#link-4">Proofreading Vs Editing – Is There Any Difference?</a></h5>
+                        <h5 class="mb-3"><a href="#link-5">Questions You Must Ask Before Hiring Editor</a></h5>
+                        <h5 class="mb-3"><a href="#link-6">Working With Your Editor</a></h5>
+                        <h5 class="mb-3"><a href="#link-7">The Hidden Cost Of Skipping Editing</a></h5>
+                        <h5 class="mb-3"><a href="#link-8">Practical Steps For Finding The Right Editor</a></h5>
+                        <h5 class="mb-3"><a href="#link-9">When To Hire An Editor For Different Publishing Paths</a></h5>
+
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-9 col-md-12">
+                    <div class="blog-detail">
+                        <p class="mb-3">You typed the final words. You saved the document. You sat back and smiled. The book
+                            is finished. Now what?</p>
+                        <p class="mb-3">For many writers, the answer feels unclear. They know they need help. They know
+                            their manuscript needs work. But they do not know when to get that help. They do not know how to
+                            find the right person.</p>
+                        <p class="mb-3">Some rush too fast. They send messy drafts to editors. They waste money on work not
+                            ready. Others wait too long. They revise alone for months. They spin in circles without
+                            progress.</p>
+                        <p class="mb-3">Both approaches cause problems. Both waste time and money. Both delay your path to
+                            readers.</p>
+                        <p class="mb-3">The secret is timing. Knowing exactly when to bring in help changes everything.
+                            Knowing how to choose that help matters just as much.</p>
+                        <p class="mb-3">Today we will explore when to hire an editor. We will also cover finding the right
+                            one fast. Let us begin this essential conversation.</p>
+
+
+
+                        <h4 class="color" id="link-1">Why Editing Matters For Every Author</h4>
+                        <p class="mb-3">No book ships without editing. Not from traditional publishers. Not from successful
+                            self publishers. Everyone uses editors. Everyone needs them.</p>
+
+                        <p class="mb-3">Your manuscript has problems you cannot see. You are too close. You have read it too
+                            many times. Your brain fills in missing words. Your eyes skip over errors. Your love hides
+                            flaws.</p>
+
+                        <p class="mb-3">Editors bring fresh vision. They see what you miss. They feel what readers will
+                            feel. They catch what familiarity hides. They are not optional. They are essential.</p>
+
+
+                        <h4 class="color" id="link-7">The Hidden Cost Of Skipping Editing</h4>
+
+                        <!-- <img src="assets/img/blog-img.png" class="img-fluid" alt="img"> -->
+                        <p class="mb-3">Books without editing fail. Readers notice mistakes. They lose trust. They leave bad
+                            reviews. They tell friends to skip your work.</p>
+                        <p>Bad reviews follow you forever. They hurt your next book too. Readers check your history before
+                            buying. One poorly edited book damages your whole career.</p>
+                        <p>Professional book editing costs money. But not editing and publishing costs more!</p>
+
+
+                        <h4 class="color" id="link-1">Editing Services For Authors – When To Hire?</h4>
+
+                        <p class="mb-3">Timing creates confusion. Writers ask the same questions repeatedly. Should I edit
+                            before beta readers? After? Before submitting to agents? After? The answers matter.
+                            Understanding when to hire an editor saves time and money.</p>
+
+
+                        <h5 class="color">The Big Picture Timeline</h5>
+                        <p class="mb-3">Think of editing in layers. Each layer builds on previous. Each layer happens at
+                            specific times.</p>
+
+                        <p class="mb-3">Developmental editing comes first. This fixes big issues. Structure. Character.
+                            Plot. Pacing. Do this when your draft is complete but rough.</p>
+                        <p class="mb-3">Line editing comes next. This fixes sentences. Flow. Word choice. Voice. Do this
+                            after developmental fixes are done.</p>
+                        <p class="mb-3">Copyediting follows line work. This fixes grammar. Spelling. Punctuation.
+                            Consistency. Do this when sentences are final.</p>
+                        <p class="mb-3">Proofreading happens last. This catches remaining typos. Formatting issues. Final
+                            errors. Do this just before publishing.</p>
+
+                        <h5 class="color">Signs You Are Ready</h5>
+                        <p class="mb-2">How do you know it is time? Look for these signals. You have a complete draft. You
+                            have revised it yourself. You have let it rest for weeks. You have read it aloud once. You feel
+                            stuck on what to fix next.</p>
+                        <p class="mb-2">If these describe you, it is time. Time for professional help. Time for fresh eyes.
+                            Time to move forward.</p>
+
+                        <h4 class="color" id="link-2">Knowing When To Hire An Editor For Developmental Work</h4>
+                        <p>Developmental editing happens first. It shapes your story at the deepest level. Recognizing when
+                            to hire an editor for this stage matters most.</p>
+
+                        <h4 class="color" id="link-8">Practical Steps For Finding The Right Editor</h4>
+                        <p class="mb-2">Timing matters. Finding the right person matters more. A bad editor hurts your book.
+                            A good editor transforms it. Therefore, you must be aware of all book editor hiring tips to
+                            achieve what you dream of.</p>
+
+                        <h5 class="color">Knowing What You Need</h5>
+                        <p class="mb-2">Different editors do different work. Developmental editors fix story. Line editors
+                            polish sentences. Copyeditors catch errors. Proofreaders do final checks.</p>
+
+                        <p class="mb-2">Know which you need before searching. This prevents hiring mismatches. It saves time
+                            and money. It ensures you get appropriate help.</p>
+
+                        <h5 class="color">Where To Look</h5>
+                        <p class="mb-2">Start with referrals. Ask other authors who they use. Writing groups share
+                            recommendations. Trusted sources lead to good fits.</p>
+                        <p class="mb-2">Look on editorial directories. Sites like the Editorial Freelance Association list
+                            professionals. Reedsy offers vetted editors. These platforms verify credentials.</p>
+
+                        <p class="mb-2">Social media helps too. Twitter and Facebook have writing communities. Authors share
+                            experiences. They warn about bad experiences. They recommend great ones.</p>
+
+                        <h4 class="color" id="link-3">Understanding Professional Book Editing Options</h4>
+                        <p class="mb-2">The market offers many choices. Freelancers work independently. Companies offer
+                            packaged services. Agencies represent top editors. Knowing professional book editing options
+                            helps you choose wisely.</p>
+
+                        <h5 class="color">Freelancers Vs Companies</h5>
+
+                        <p class="mb-3">Freelancers often cost less. You build direct relationships. You communicate one on
+                            one. But you handle everything yourself. Scheduling. Payments. Follow up.</p>
+                        <p class="mb-3">Companies provide structure. They manage logistics. They guarantee work. They
+                            replace editors if needed. But they cost more. Communication goes through managers.</p>
+                        <p class="mb-3">Neither choice is wrong. Both work for different needs. Consider your budget and
+                            preferences. Choose what fits you.</p>
+
+                        <h5 class="color">Genre Specialization Matters</h5>
+                        <p class="mb-2">Editors specialize like doctors. Some focus on romance. Others love mystery. Some
+                            excel at memoir. Others master fantasy.</p>
+                        <p class="mb-2">Hiring a genre specialist helps tremendously. They know reader expectations. They
+                            understand tropes. They spot genre specific problems. Generalists may miss these things.</p>
+                        <p class="mb-2">Ask about genre experience before hiring. Read books they have edited if possible.
+                            Match their specialty to your work.</p>
+
+                        <h4 class="color" id="link-4">Proofreading Vs Editing – Is There Any Difference?</h4>
+                        <p class="mb-2">Many writers confuse these terms. They hire proofreaders expecting editing. They
+                            hire editors expecting proofreading. Both sides end up frustrated. Understanding proofreading vs
+                            editing prevents this mismatch.</p>
+
+                        <h5 class="color" >What Proofreading Covers</h5>
+                        <p class="mb-2">Proofreading happens at the end. It looks for small mistakes. Typos. Missing
+                            punctuation. Formatting errors. Spacing problems. It polishes the surface.</p>
+                        <p class="mb-2">Proofreaders do not fix story. They do not rewrite sentences. They do not suggest
+                            big changes. They catch what everyone else missed.</p>
+
+                        <h5 class="color">What Editing Covers</h5>
+
+
+                        <p class="mb-3">Editing covers bigger work. Developmental editing reshapes story. Line editing
+                            improves sentences. Copyediting fixes grammar and consistency. All happen before proofreading.
+                        </p>
+                        <p class="mb-3">Knowing the difference helps you hire correctly. You save money by getting right
+                            service at right time. You avoid disappointment from mismatched expectations.</p>
+
+                        <h4 class="color">Smart Book Editor Hiring Tips</h4>
+
+                        <p class="mb-3">Selection requires care. You cannot rush this process. Good book editor hiring tips
+                            help you choose someone who fits your work and personality.</p>
+
+
+
+                        <h4 class="color">Request Sample Edits</h4>
+
+                        <p class="mb-3">Never hire without a sample. Ask editors to edit a few pages. Pay them for this
+                            work. It is fair and professional.</p>
+                        <p>Samples reveal everything. You see their style. You see their approach. You see if they respect
+                            your voice. You see if their suggestions help.</p>
+
+                        <h5 class="color">Check References Thoroughly</h5>
+                        <p class="mb-3">Ask for client references. Contact those writers. Ask honest questions. Were they
+                            happy? Did the editor meet deadlines? Would they hire again?</p>
+                        <p class="mb-3">References reveal what websites hide. They tell you about reliability. They warn
+                            about problems. They confirm strengths.</p>
+
+                        <h5 class="color">Interviewing Potential Editors</h5>
+                        <p class="mb-3">The interview matters. You will work closely with this person. You need good
+                            chemistry. You need shared understanding.</p>
+
+
+                        <h4 class="color" id="link-5">Questions You Must Ask Before Hiring Editor</h4>
+                        <p class="mb-3">When to hire an editor is an important query. But there are certain questions you
+                            need to ask the editor as well before you finalize them for the job.</p>
+                        <ul>
+                            <li class="mb-2">Ask about their process. How do they work? What do they deliver? How long does it take?
+                                What do they need from you?</li>
+                            <li class="mb-2">Ask about their experience. How many books have they edited? What genres do they love? Who
+                                are their favorite authors? These answers reveal alignment.</li>
+                            <li class="mb-2">Ask about communication. How often will you talk? How do they give feedback? What if you
+                                disagree? Clear answers prevent later conflict.</li>
+                        </ul>
+
+                        <h4 class="color">Red Flags To Watch When Finalizing Editing Services For Author</h4>
+                        <p class="mb-3">Watch for editors who promise too much. No one guarantees publication. No one
+                            guarantees bestseller status. These promises signal trouble.</p>
+                        <p class="mb-3">Watch for editors who rush you. Good editors take time. They read carefully. They
+                            think deeply. Pressure to decide fast suggests problems.</p>
+                        <p class="mb-3">Watch for vague answers. If they cannot explain their process, they may not have
+                            one. Clear professionals give clear answers.</p>
+
+                        <h4 class="color">Preparing Your Manuscript Before Hiring</h4>
+                        <p class="mb-3">You want editors to do their best work. You can help them. Preparation makes their
+                            job easier. It also saves you money.</p>
+
+                        <h5 class="color">Self Edit First</h5>
+                        <p class="mb-3">Go through your manuscript yourself. Fix what you can see. Cut obvious problems.
+                            Strengthen weak sections. Make it as good as you can alone.</p>
+                        <p class="mb-3">Editors cost money. Do not pay them to fix things you could fix yourself. Use them
+                            for what you cannot do.</p>
+
+                        <h5 class="color">Create A Style Sheet</h5>
+                        <p>Note your choices. How do you spell certain words? Which characters have which traits? What
+                            places have which names? Write these down.</p>
+                        <p class="mb-3">Editors use this sheet. It helps them stay consistent. It prevents them from undoing
+                            your intentional choices. It saves time and confusion.</p>
+
+                        <h4 class="color" id="link-6">Working With Your Editor</h4>
+                        <p class="mb-3">You know book editor hiring tips, however, the relationship here also matters. How
+                            you work together affects results. Good communication makes everything better.</p>
+
+                        <h5 class="color">Receiving Feedback Gracefully</h5>
+
+                        <p class="mb-3">Editors will find problems. They will point out weaknesses. This stings every time.
+                            Even experienced writers feel the sting.</p>
+                        <p class="mb-3">Remember their intent. They want your book to succeed. They are not attacking you.
+                            They are helping you. Breathe before responding. Thank them for their honesty.</p>
+
+                        <h4 class="color">Asking Questions</h4>
+                        <p>If feedback confuses you, ask. If suggestions feel wrong, discuss. Good editors welcome
+                            conversation. They explain their thinking. They consider your perspective.</p>
+                        <p>You do not have to accept every change. You are the author. Final decisions belong to you. But
+                            understand their reasoning first. Then decide.</p>
+
+                        <h4 class="color">The Role Of Editing Before Beta Readers</h4>
+                        <p>Beta readers serve a purpose. They give reader reactions. They spot what feels off. But they work
+                            best after editing. Understanding editing before beta readers improves your feedback quality.
+                        </p>
+
+                        <h5 class="color">Why Order Matters</h5>
+                        <p>If you send unedited drafts to beta readers, they focus on surface problems. They mention typos.
+                            They note awkward sentences. They miss deeper issues.</p>
+                        <p>Edited drafts let beta readers focus on story. They respond to characters. They feel pacing. They
+                            connect emotionally. This feedback helps more.</p>
+
+                        <h4 class="color">Using Beta Readers After Developmental Work</h4>
+                        <p class="mb-2">Developmental editing fixes big problems. Then send to beta readers. They confirm
+                            fixes worked. They spot remaining issues. They provide fresh perspective.</p>
+                        <p class="mb-2">This order maximizes their value. It uses their time well. It gives you useful
+                            information instead of surface notes.</p>
+
+                        <h4 class="color">The Costs And Budgeting You Must Care</h4>
+                        <p class="mb-2">Editing costs money. Sometimes lots of money. Planning ahead prevents stress.</p>
+
+                        <h5 class="color">Typical Price Ranges</h5>
+                        <p class="mb-2">Developmental editing costs most. Rates vary by editor and project. Expect to pay
+                            accordingly. Line and copyediting cost less. Proofreading costs least.</p>
+                        <p class="mb-2">Get quotes from multiple editors. Compare what they offer. Cheapest is not always
+                            best. Most expensive is not always necessary. Find value, not just price.</p>
+                        <h5 class="color">Saving Without Sacrifice</h5>
+                        <p class="mb-2">You can save money without harming quality. Do more self editing first. Prepare
+                            clean drafts. Use style sheets. Communicate clearly.</p>
+                        <p class="mb-2">Some editors offer payment plans. Ask about this. Some discount for longer
+                            timelines. Ask about this too. Professionals want to help.</p>
+
+                        <h4 class="color" id="link-9">When To Hire An Editor For Different Publishing Paths</h4>
+                        <p>Your publishing route affects timing. Traditional and self publishing differ. Knowing these
+                            differences helps you plan.</p>
+
+                        <h5 class="color">Traditional Publishing Timeline</h5>
+                        <p>Traditional publishers edit after acquisition. They assign in house editors. They handle costs.
+                            But you still need preparation.</p>
+                        <p>Submit the best manuscript possible. Agents and editors reject unpolished work. Professional
+                            editing before submission helps. It shows you are serious.</p>
+                        <h5 class="color">Self Publishing Timeline</h5>
+                        <p>Self publishers bear all costs. They hire all editors. Timing rests entirely on them. This
+                            freedom requires discipline.</p>
+                        <p>Build editing into your schedule. Budget for it early. Start searching before you need someone.
+                            Rushing leads to bad choices.</p>
+                        <h4 class="color">Finding Authentic And Reliable Editing Services For Authors</h4>
+                        <p>Many options exist. You can find help anywhere. But finding quality requires care. Reliable
+                            editing services for authors share common traits.</p>
+                        <h5 class="color">What Good Services Provide</h5>
+                        <p>Good services offer clear information. They list prices. They explain process. They show sample
+                            work. They provide client testimonials.</p>
+                        <p>They communicate promptly. They answer questions fully. They make you feel confident. These signs
+                            indicate professionalism.</p>
+
+                        <h5 class="color">What To Avoid</h5>
+                        <p>Avoid services that guarantee publication. Avoid those with no samples. Avoid those with only
+                            positive testimonials (fake reviews). Avoid pressure to decide fast.</p>
+                        <p>Trust your gut. If something feels wrong, walk away. There are always other editors.</p>
+                        <h4 class="color">Knowing When To Hire An Editor Changes Everything </h4>
+                        <p>Your manuscript deserves professional help. You cannot do this alone. No one can. Every
+                            successful book passes through many hands.</p>
+                        <p>The key is timing. Bring help when you are ready. Bring help when the manuscript is complete.
+                            Bring help when you have done your own work first.</p>
+                        <p>Now you know. Now you can act. Start your search today. Prepare your manuscript. Reach out to
+                            candidates. Request sample edits. Choose someone who fits.</p>
+                        <p>Your book waits. Your readers wait. Give them the best version of your work. Hire the right
+                            editor at the right time. Then publish with confidence. You are ready.</p>
+
+
+
+
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="">
+    <div class="container-fluid">
+        <div class="row align-items-start">
+
+            <div class="col-lg-4 col-md-12">
+                <div class="foot-box text-white">
+                    <a href="../index.html"><img src="../assets/img/ubp-new/footer-logo.webp"
+                            class="img-fluid foot-logo" alt="img" loading="lazy"></a>
+                    <p class="py-2 font">For 8+ years, we have been the quiet force behind unforgettable stories. We
+                        don't just publish books; we partner with visionaries, transforming bold ideas into legacies
+                        that endure. Let us build yours.</p>
+                    <div class="d-flex align-items-center gap-3">
+                        <h4 class="color mb-0 font-28">Follow Us:</h4>
+                        <div class="head-right d-flex align-items-center gap-3 justify-content-end">
+                            <ul class="list-unstyled d-flex align-items-center gap-2 mb-0">
+                                <li><a href="https://www.facebook.com/ExpertsSelfPublishingOfficial/" target="_blank"><i
+                                            class="fa-brands fa-facebook-f"></i></a></li>
+                                <li><a href="https://www.instagram.com/expertsselfpublishingofficial/" target="_blank"><i
+                                            class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href="https://www.youtube.com/@ExpertsSelfPublishing" target="_blank"><i
+                                            class="fa-brands fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-4 col-sm-4 ">
+                <div class="foot-box text-white">
+                    <h3 class="color">What We Offer</h3>
+                    <div class="foot-line"></div>
+                    <div class="foot-list d-flex mt-3">
+                        <ul class="list-unstyled">
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../book-publishing.html">Book Publishing</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../book-marketing.html">Book Marketing</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../author-website.html" class="">Author Website</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../creative-writing.html" class="">Creative Writing</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../book-illustration.html" class="">Book illustration</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../book-video-trailers.html" class="">Book Video Trailers</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../book-cover-design.html" class="">Book Cover Design</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../ghostwriting.html" class="">Ghostwriting</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../book-writing.html" class="">Book Writing</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../pr-and-publicity.html" class="">PR & Publicity</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-4 col-sm-4 ">
+                <div class="foot-box text-white">
+                    <h3 class="color">Others</h3>
+                    <div class="foot-line"></div>
+                    <div class="foot-list d-flex mt-3">
+                        <ul class="list-unstyled">
+
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../free-book-marketing-guide.html" class="">Free Book Marketing
+                                    Guide</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../free-book-publishing-guide.html" class="">Free Book Publishing
+                                    Guide</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../blogs.html" class="">Blogs</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../pricing.html" class="">Pricing</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../about-us.html" class="">Our Story</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="../contact-us.html" class="">Contact Us</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-4 ">
+                <div class="foot-box text-white">
+                    <h3 class="color">Information</h3>
+                    <div class="foot-list info-detail">
+                        <ul class="list-unstyled">
+                            <li class="my-4 info-li">
+                                <a href="tel:+18556055210" class="d-flex gap-2">
+                                    <!-- <span class="info-icon"><i class="fa-solid fa-phone" aria-hidden="true"></i></span> -->
+                                    <span class="info-icon w-25"><img
+                                            src="../assets/img/ubp-new/theme-phone.webp"
+                                            class="img-fluid" alt="location" width="21" height="21"
+                                            loading="lazy"></span>
+                                    <span class="w-75">
+                                        <small>Call us now </small>
+                                        <span class="foot-number d-block w-100">+1 (855) 605-5210</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="my-4 info-li">
+                                <a href="mailto:info@expertsselfpublishing.com" class="d-flex gap-2">
+                                    <!-- <span class="info-icon"><i class="fa-solid fa-envelope" aria-hidden="true"></i></span> -->
+                                    <span class="info-icon w-25"><img
+                                            src="../assets/img/ubp-new/foot-envelope.webp"
+                                            class="img-fluid" alt="location" width="21" height="22"
+                                            loading="lazy"></span>
+                                    <span class="w-75">
+                                        <small>Email us on: </small>
+                                        <span class="foot-number d-block w-100">info@expertsselfpublishing.com</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="my-4 info-li">
+                                <a href="javascript:void(0);" class="d-flex gap-2">
+                                    <!-- <span class="info-icon"><i class="fa-solid fa-house"></i></span> -->
+                                    <span class="info-icon w-25"><img
+                                            src="../assets/img/ubp-new/location-icon.webp"
+                                            class="img-fluid" alt="location" width="21" height="28"
+                                            loading="lazy"></span>
+                                    <span class="w-75">
+                                        <!-- <small>Email us on: </small> -->
+                                        <span class="foot-number d-block w-100">3223 West 6th Street STE 101 Los
+                                            Angeles, <br> CA 90020 United States.</span>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="payment-box mt-3 p-2">
+                    <img src="../assets/img/ubp-new/pymnt-5.webp" class="img-fluid" alt="payment"
+                        width="316" height="68" loading="lazy">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container-fluid last-contain">
+        <div class="row">
+            <div class="col-lg-7 col-md-8">
+                <p class=" mb-0 para-color">Copyright © 2026 Experts Self Publishing - All Rights Reserved | Powered By
+                    Iota Digital, LLC</p>
+            </div>
+            <div class="col-lg-5 col-md-4">
+                <ul class="list-unstyled d-flex align-items-center gap-3 m-0 justify-content-end">
+                    <li><a href="../privacy-policy.html" class="">Privacy Policy</a></li>
+                    <li><a href="../terms-condition.html" class="">Terms And Conditions</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img src="../assets/img/pop-logo.png" class="img-fluid" alt="Experts Self Publishing logo" loading="lazy">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row align-items-center justify-content-around">
+                    <div class="col-lg-7">
+                        <div class="form-wrap">
+                            <div class="form-heading">
+                                <h3 class="color font-40 let-space fw-600">Start Building Your Author Success Story
+                                    Today!</h3>
+                                <p>Speak with our senior publishing consultant for a free tailored proposal</p>
+                            </div>
+                            <form action="/inquiry-submit" id="modal-form" method="POST">
+                                <input type="hidden" name="_token" value="awxIAFp3sLU9ALw6iz3WlIXSKpyn9f7ba0ryrYCz" autocomplete="off">                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <!-- <label for="full-name">Enter Your Full Name</label> -->
+                                        <div class="form-group">
+                                            <input type="text" id="full-name" name="full_name"
+                                                placeholder="Full Name" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <!-- <label for="email">Your email</label> -->
+                                        <div class="form-group">
+                                            <input type="text" id="email" name="email" placeholder="Email"
+                                                class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <!-- <label for="phone">Your phone</label> -->
+                                        <div class="form-group">
+                                            <input type="text" id="phone" name="phone"
+                                                placeholder="(999) 999 9999" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <!-- <label for="message">Type your message</label> -->
+                                        <div class="form-group">
+                                            <textarea rows="4" id="message" name="message" placeholder="Book Detail" class="form-control"></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="btn-container mt-4">
+                                        <button class="theme-btn1 text-upper border-0 btn-overlay">Book Now</button>
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="pop-img">
+                            <img src="../assets/img/badge-discount.png" class="discount-img img-fluid"
+                                alt="50% Discount">
+                            <img src="../assets/img/popup-image.png" class="img-fluid pop-std" alt="img"
+                                loading="lazy">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- <img src="assets/img/pop-circle.png" class="img-fluid pop-circle" alt="img"> -->
+        </div>
+    </div>
+</div>
+    <script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/slick.js"></script>
+<script>
+    // accordion
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panelfaq = this.nextElementSibling;
+            if (panelfaq.style.maxHeight) {
+                panelfaq.style.maxHeight = null;
+            } else {
+                panelfaq.style.maxHeight = panelfaq.scrollHeight + "px";
+            }
+        });
+    }
+    // accordion
+
+    $(document).ready(function() {
+        function initializeSlick(slider) {
+            if (!slider.hasClass('slick-initialized')) {
+                slider.slick({
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    autoplay: true
+                });
+            } else {
+                slider.slick('refresh');
+            }
+        }
+
+        // Pehla tab ka slider initialize karein
+        initializeSlick($('#tab1 .portfolio-slider'));
+
+        $('button[data-bs-toggle="tab"]').on('shown.bs.tab', function(e) {
+            let target = $(e.target).attr("data-bs-target");
+            let slider = $(target).find('.portfolio-slider');
+
+            // Ensure proper visibility and reinitialize
+            $(target).css({
+                'height': 'auto',
+                'visibility': 'visible'
+            });
+
+            setTimeout(function() {
+                initializeSlick(slider);
+            }, 100);
+        });
+    });
+</script>
+<script>
+    $(".portfolio-slider").slick({
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 0,
+        speed: 13000,
+        arrows: false,
+        dots: false,
+        pauseOnHover: false,
+        cssEase: "linear",
+        responsive: [{
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 5,
+                },
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 4,
+                },
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 3,
+                },
+            },
+            {
+                breakpoint: 400,
+                settings: {
+                    slidesToShow: 3,
+                },
+            },
+        ],
+    });
+
+    document.querySelectorAll('.flip-box').forEach(box => {
+  box.addEventListener('click', () => {
+    box.classList.toggle('active');
+  });
+});
+
+
+$(".blog-slider").slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  arrows: true,
+  dots: false,
+  autoplaySpeed: 2000,
+  responsive: [
+    {
+      breakpoint: 1025,   // 1024px se neeche
+      settings: {
+        slidesToShow: 2,
+      }
+    },
+    {
+      breakpoint: 992,   // 992px se neeche
+      settings: {
+        slidesToShow: 2,
+      }
+    },
+    {
+      breakpoint: 768,   // 768px se neeche
+      settings: {
+        slidesToShow: 1,
+        arrows: false,
+        dots: true,
+      }
+    },
+    {
+      breakpoint: 576,   // extra small devices
+      settings: {
+        slidesToShow: 1,
+        arrows: false,
+        dots: true,
+      }
+    }
+  ]
+});
+</script>
+<script src="../assets/js/aos.js" defer></script>
+<script src="../assets/js/custom.js" defer></script>
+<script src="../assets/js/nice-select.min.js" defer></script>
+<script src="../assets/js/bootstrap.min.js" defer></script>
+<script src="../assets/js/jquery.fancybox.min.js" defer></script>
+<!--<script src="../assets/js/fontowesome.js" crossorigin="anonymous" defer></script>-->
+
+<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>-->
+
+<script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    const tooltipList = [...tooltipTriggerList].map(el => new bootstrap.Tooltip(el));
+</script>
+
+
+<!-- Include SweetAlert -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2%4011" defer></script>
+<script src="../assets/js/custom-form.js" defer></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/select2%404.1.0-rc.0/dist/js/select2.min.js"></script>
+    
+    <script>
+        $('.book-slide').slick({
+            lazyLoad: 'ondemand',
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: false,
+            asNavFor: '.testimonial-slider'
+        });
+        $('.testimonial-slider').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            asNavFor: '.book-slide',
+            dots: false,
+            arrows: false,
+            autoplaySpeed: 2000,
+            speed: 1300,
+            autoplay: true,
+            //   centerMode: true,
+            focusOnSelect: true
+        });
+    </script>
+
+
+    
+
+
+</body>
+
+
+</html>
