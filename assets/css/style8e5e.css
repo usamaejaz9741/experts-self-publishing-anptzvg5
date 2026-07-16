@@ -236,12 +236,18 @@ a:hover {
   color: var(--theme-color) !important;
 }
 .theme-btn1:hover img {
-  filter: brightness(0) saturate(100%) invert(45%) sepia(24%) saturate(1520%)
-    hue-rotate(348deg) brightness(96%) contrast(80%);
+  /* filter: brightness(0) saturate(100%) invert(45%) sepia(24%) saturate(1520%) */
+    /* hue-rotate(348deg) brightness(96%) contrast(80%); */
+    filter: brightness(0) saturate(100%) invert(49%) sepia(50%)
+        saturate(6297%) hue-rotate(301deg) brightness(74%)
+        contrast(133%);
 }
 .theme-btn1.active img {
   filter: brightness(0) saturate(100%) invert(37%) sepia(99%) saturate(365%)
     hue-rotate(348deg) brightness(102%) contrast(90%);
+    filter: brightness(0) saturate(100%) invert(49%) sepia(50%)
+        saturate(6297%) hue-rotate(301deg) brightness(74%)
+        contrast(133%);
 }
 .bann-heading div.font-65,
 .contact-right p,
@@ -2489,7 +2495,8 @@ span.cut-price {
 .testimonial-box .name-circle .name-1 {
   border: 2px solid var(--green-color);
   border-radius: 100%;
-  background-color: #ffd5bd;
+  /* background-color: #ffd5bd; */
+  background-color: #d01281;
   color: #000;
   font-size: 20px;
   font-weight: 600;
