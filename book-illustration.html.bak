@@ -1,0 +1,2230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from unitedbookpublishing.com/book-illustration by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Jul 2026 23:56:15 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="o2V0OYx58Jys0E4002Lr1IwdRvb-3BBQYCxd7e43d0Q" />
+    <title>Book Design Illustration | United Book Publishing</title>
+    <meta name="description" content="Bring your stories to life with professional book illustration services that create
+    captivating visuals and memorable imagery for every reader.">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png">
+    <link rel="preload" as="image" href="assets/img/ubp-new/banner-bg.webp">
+    <link rel="preload" href="assets/font/oswald-f/Oswald-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="assets/css/style8e5e.css?v=15">
+
+<link rel="preload" href="assets/css/fontawesome-all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+</noscript>
+
+
+
+
+<link rel="preload" href="assets/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+</noscript>
+
+
+
+<link rel="preload" href="assets/css/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="assets/css/aos.css">
+</noscript>
+
+
+
+<link rel="stylesheet" href="assets/css/responsivef500.css?v=13">
+
+
+
+
+<link rel="preload" href="assets/css/nice-select.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+</noscript>
+
+
+
+
+<link rel="preload" href="assets/css/jquery-ui.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" href="assets/css/jquery-ui.css">
+</noscript>
+
+
+<link rel="preload" href="assets/css/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+<link rel="stylesheet" href="assets/css/jquery.fancybox.min.css">
+</noscript>
+
+<link rel="preload" href="assets/css/slick-theme.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+<link rel="stylesheet" href="assets/css/slick-theme.css">
+</noscript>
+
+<link rel="preload" href="assets/css/slick.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+<link rel="stylesheet" href="assets/css/slick.css">
+</noscript>
+    <link rel="preload" href="../cdn.jsdelivr.net/npm/select2%404.1.0-rc.0/dist/css/select2.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="../cdn.jsdelivr.net/npm/select2%404.1.0-rc.0/dist/css/select2.min.css">
+    </noscript>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SFDJC856S3"></script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-SFDJC856S3');
+    </script>
+
+    <!-- Meta Pixel Code -->
+    <script>
+        ! function(f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function() {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            '../connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '415910514324571');
+        fbq('track', 'PageView');
+    </script>
+
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=415910514324571&amp;ev=PageView&amp;noscript=1" /></noscript>
+
+
+    <!-- End Meta Pixel Code -->
+    <script>
+        (function(w, d, t, u, o) {
+            w[u] = w[u] || [], o.ts = (new Date).getTime();
+            var n = d.createElement(t);
+            n.src = "../bat.bing.net/bat6494.js?ti=" + o.ti + ("uetq" != u ? "&q=" + u : ""), n.async = 1, n.onload = n
+                .onreadystatechange = function() {
+                    var s = this.readyState;
+                    s && "loaded" !== s && "complete" !== s || (o.q = w[u], w[u] = new UET(o), w[u].push("pageLoad"), n
+                        .onload = n.onreadystatechange = null)
+                };
+            var i = d.getElementsByTagName(t)[0];
+            i.parentNode.insertBefore(n, i);
+        })(window, document, "script", "uetq", {
+            ti: "187117304",
+            enableAutoSpaTracking: true
+        });
+    </script>
+
+    <script>
+        window.onload = function() {
+            setTimeout(function() {
+                if (typeof zE !== "undefined") {
+                    zE('webWidget', 'open');
+                }
+            }, 5000); // 5 seconds delay
+        };
+    </script>
+
+    <script>
+        class SmartObserver {
+            constructor() {
+                this.init();
+            }
+
+            init() {
+                this.lazyImages = document.querySelectorAll("img[data-src]");
+                this.hiddenElements = document.querySelectorAll(".io-hidden");
+
+                this.createObserver();
+                this.observeElements();
+            }
+
+            createObserver() {
+                this.observer = new IntersectionObserver(
+                    (entries, observer) => {
+                        entries.forEach((entry) => {
+                            if (!entry.isIntersecting) return;
+
+                            const el = entry.target;
+
+                            // 🖼️ Lazy Image Load
+                            if (el.tagName === "IMG" && el.dataset.src) {
+                                this.loadImage(el);
+                            }
+
+                            // ✨ Reveal Animation (custom)
+                            if (el.classList.contains("io-hidden")) {
+                                el.classList.add("io-show");
+                                el.classList.remove("io-hidden");
+                            }
+
+                            observer.unobserve(el);
+
+                            // 🔁 AOS refresh (important)
+                            if (typeof AOS !== "undefined") {
+                                AOS.refreshHard(); // better than refresh()
+                            }
+                        });
+                    }, {
+                        root: null,
+                        rootMargin: "0px 0px -50px 0px",
+                        threshold: 0.1,
+                    }
+                );
+            }
+
+            observeElements() {
+                this.lazyImages.forEach((img) => this.observer.observe(img));
+                this.hiddenElements.forEach((el) => this.observer.observe(el));
+            }
+
+            loadImage(img) {
+                const temp = new Image();
+                temp.src = img.dataset.src;
+
+                temp.onload = () => {
+                    img.src = temp.src;
+                    img.classList.add("loaded");
+                    img.removeAttribute("data-src");
+                };
+            }
+        }
+
+        // 🚀 Init on DOM Ready
+        document.addEventListener("DOMContentLoaded", () => {
+            new SmartObserver();
+
+            // AOS init (safe)
+            if (typeof AOS !== "undefined") {
+                AOS.init({
+                    duration: 800,
+                    once: true,
+                    offset: 100,
+                });
+            }
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const elements = document.querySelectorAll(".reveal");
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("active");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.15
+            });
+
+            elements.forEach((el) => observer.observe(el));
+        });
+    </script>
+</head>
+
+<body>
+    <header class="header-above">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-6 col-6">
+                <div class="head-contact">
+                    <ul class="list-unstyled d-flex justify-content-start mb-0 gap-4">
+                        <li><a href="javascript:void(0);" class="text-white hvr-effect" data-open-zendesk>
+                                <img src="assets/img/ubp-new/msg-icon.webp"
+                                    class="img-fluid head-ct-icon effect" alt="massege" width="25" height="30">
+                                <span>Chat With Us</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-6">
+                <div class="head-contact">
+                    <ul class="list-unstyled d-flex justify-content-end mb-0 gap-4">
+                        <li><a href="tel:+18556055210" class="text-white hvr-effect">
+                                <img src="assets/img/ubp-new/call-icon.webp"
+                                    class="img-fluid head-ct-icon effect" alt="massege" width="25" height="30">
+                                <span>+1 (855) 605-5210</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img class="img-fluid" src="assets/img/ubp-new/logo.webp" loading="lazy" alt="logo" />
+        </a>
+        <button class="navbar-toggler" type="button" aria-controls="navbarNavDropdown" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link " aria-current="page"
+                        href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown custom-dropdown">
+                    <a class="nav-link dropdown-toggle active"
+                        href="javascript:void(0);" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Services <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="author-website.html">Author Website</a></li>
+                        <li><a class="dropdown-item" href="pr-and-publicity.html">PR & Publicity</a></li>
+                        <li><a class="dropdown-item" href="book-editing-proofreading.html">Editing &
+                                Proofreading</a></li>
+                        <li><a class="dropdown-item" href="book-cover-design.html">Book Cover Design</a></li>
+                        <li><a class="dropdown-item" href="ghostwriting.html">Ghostwriting</a></li>
+                        <li><a class="dropdown-item" href="book-illustration.html">Book Illustration</a></li>
+                        <li><a class="dropdown-item" href="book-video-trailers.html">Book Video Trailers</a>
+                        </li>
+                        <li><a class="dropdown-item" href="creative-writing.html">Creative Writing</a></li>
+                        <li><a class="dropdown-item" href="children-book-illustration.html">Children Book
+                                illustration</a></li>
+                        <li><a class="dropdown-item" href="screenplay-script-writing.html">Screenplay Script
+                                Writing</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link "
+                        href="book-publishing.html">Book Publishing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link "
+                        href="book-marketing.html">Book Marketing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link "
+                        href="pricing.html">Pricing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="about-us.html">Our
+                        Story</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link "
+                        href="contact-us.html">Contact Us</a>
+                </li>
+                <li class="nav-item dropdown custom-dropdown">
+                    <a class="nav-link dropdown-toggle "
+                        href="javascript:void(0);" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">Resources <i class="fa-solid fa-chevron-down dropdown-icon"></i>
+                    </a>
+                    <ul class="dropdown-menu w-auto menu-2" aria-labelledby="navbarDropdownMenuLink">
+                        <li class="w-100"><a class="dropdown-item" href="published-books.html">Published
+                                Books</a></li>
+                        <li class="w-100"><a class="dropdown-item" href="customer-reviews.html">Customer
+                                Reviews</a></li>
+                        
+                        <li class="w-100"><a class="dropdown-item" href="faq.html">FAQs</a></li>
+                        <li class="w-100"><a class="dropdown-item" href="blogs.html">Blogs</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="navbar-right">
+            <div class="head-btn">
+                <a href="#exampleModalToggle"
+                    class="theme-btn1 btn-overlay d-inline-flex align-items-center gap-2 text-upper"
+                    data-bs-toggle="modal" data-bs-target="#exampleModal"><img
+                        src="assets/img/ubp-new/msg-icon.webp" alt="icon" width="30"
+                        height="23"><span>Get a Free Quote</span></a>
+            </div>
+        </div>
+
+    </div>
+</nav>
+
+    
+    <section class="about-banner sec-pd bg-overlay"
+        style="background: url(../img.magnific.com/premium-photo/books-shelf-standing-vertically-neural-network-generated-art_636705-7193.jpg)no-repeat center center/cover;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="inner-heading text-white">
+                        <div class="font-35 theme-font" data-aos="zoom-out" data-aos-duration="900"
+                            data-aos-easing="ease-out-cubic" data-aos-delay="0">Visuals That Stop Readers Mid-Scroll</div>
+                        <h1 class="main-heading" data-aos="zoom-out" data-aos-duration="1000"
+                            data-aos-easing="ease-out-cubic" data-aos-delay="200">Book Illustration Services for Every Genre
+                        </h1>
+                        <p data-aos="zoom-out" data-aos-duration="1100" data-aos-easing="ease-out-cubic"
+                            data-aos-delay="400">We connect you with skilled artists who specialize in illustrative book
+                            covers that stop readers mid-scroll and invite them inside. </p>
+                        <div class="btn-container my-3 d-flex align-items-center gap-3" data-aos="zoom-out"
+                            data-aos-duration="1100" data-aos-easing="ease-out-cubic" data-aos-delay="500">
+                            <a href="tel:+18556055210"
+                                class="theme-btn1 btn-overlay d-inline-flex align-items-center gap-2 text-upper"><img
+                                    src="assets/img/call-icon.png" alt="icon"><span>+1 (855)
+                                    605-5210</span></a>
+                            <a href="#exampleModalToggle" class="grey-btn btn-overlay" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal"><img src="assets/img/green-mass.png"
+                                    class="img-fluid fa-bounce me-2" alt="img">Talk to a senior consultant</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="i-bann-img green-img text-center" data-aos="fade-right" data-aos-duration="1100"
+                        data-aos-easing="ease-out-cubic" data-aos-delay="500">
+                        <img src="assets/img/main-services/aesthetic-book-illustration.png" class="img-fluid" alt="book"
+                            style="width:65%;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-1 sec-pd">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+
+                <div class="col-lg-5">
+                    <div class="underlay-img text-center" data-aos="fade-left" data-aos-duration="900"
+                        data-aos-easing="ease-out-cubic" data-aos-delay="0">
+                        <img src="assets/img/illustr-img.webp" class="img-fluid p-3" alt="writing Machine">
+                    </div>
+                </div>
+
+                <div class="col-lg-7">
+                    <div class="content-box aos-init aos-animate" data-aos="fade-right" data-aos-duration="900"
+                        data-aos-easing="ease-out-cubic" data-aos-delay="0">
+                        <div class="font-35 color-green fw-600">Attractive Art for Every Page</div>
+                        <h2 class="sec-hd color">Custom Book Design Illustrations That Captivate</h2>
+                        <p class="para-color">A cover decides curiosity, trust, and clicks before any page turns, so
+                            your story needs visuals that stop scrolling and invite readers inside instantly and
+                            confidently.
+                        </p>
+
+                        <div class="btn-container d-flex align-items-center gap-3">
+                            <a href="#exampleModalToggle" class="theme-btn3 btn-overlay" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal"><img src="assets/img/theme-masge.png"
+                                    class="img-fluid fa-bounce me-2" alt="img">
+                                Get Advice!</a>
+                            <a href="tel:+18556055210" class="icon-btn d-flex gap-2 align-items-center">
+                                <span><i class="fa-solid fa-phone font-35 color" aria-hidden="true"></i></span>
+                                <span>
+                                    <p class="mb-0 d-none"><small>Call Us Now</small></p>
+                                    <div class="font-25 call-number">+1 (855) 605-5210</div>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="content aos-init aos-animate" data-aos="zoom-in" data-aos-duration="900"
+                        data-aos-easing="ease-out-cubic" data-aos-delay="0">
+                        <p class="para-color">An excellent illustration does more than just adorn a page. Before they ever
+                            read a word, it draws readers into your universe. We collaborate with artists who have a
+                            thorough understanding of narrative. We find the ideal fit for your tone, whether you are
+                            looking for an illustration book cover that suggests intrigue or coziness. Fantasy book cover
+                            illustrators that create imaginative worlds are part of our network.</p>
+                        <p class="para-color">We also collaborate with artists skilled in adobe illustrator book cover
+                            techniques for crisp, professional results. Every book illustration cover we create is
+                            personalized to your genre and audience. A strong illustration cover book sets expectations
+                            clearly. Readers should feel the mood before they open the book.</p>
+                        <p class="para-color">Book design illustration blends art with typography and layout seamlessly. We
+                            also offer book cover design illustrator services that bring together visuals and text in a
+                            unified package. The result is art that sells.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-sec">
+        <div class="container">
+            <div class="row ">
+                <div class="col-lg-8">
+                    <div class="cta-content">
+                        <h3 class="bg-rect" data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="800"
+                            data-aos-delay="0">Reach from Simple Draft to Published Success</h3>
+                        <h2 class="sec-hd letter-space" data-aos="fade-right" data-aos-easing="ease-out-cubic"
+                            data-aos-duration="1000" data-aos-delay="0">Let Your Words Find Their Readers</h2>
+                        <p class="w-75" data-aos="fade-right" data-aos-easing="ease-out-cubic"
+                            data-aos-duration="1000" data-aos-delay="0">Talk with our experts and get the guidance you
+                            need to convert your raw
+                            manuscript into a bestseller. Let’s bring your book to the world with prominence.</p>
+                        <div class="btn-container d-flex align-items-center gap-3" data-aos="fade-right"
+                            data-aos-easing="ease-out-cubic" data-aos-duration="1000" data-aos-delay="0">
+                            <a href="#exampleModalToggle" class="theme-btn2 btn-overlay" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">Book Free Consultation</a>
+                            <a href="tel:+18556055210"
+                                class="icon-btn hvr-effect d-flex gap-2 align-items-center text-white align-items-center">
+                                <span><img src="assets/img/call-icon.png" class="img-fluid effect" alt="call"></span>
+                                <span>
+                                    <!-- <p class="mb-0 d-none"><small>Call Us Now</small></p> -->
+                                    <div class="font-22 call-number">+1 (855) 605-5210</div>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <img class="lazy lazy-loaded-image img-fluid cta-img" data-aos="fade-up-left"
+                    data-aos-easing="ease-out-cubic" data-aos-duration="1000" data-aos-delay="0"
+                    src="assets/img/skeleton2.webp" data-src="assets/img/cta-book1.webp"
+                    alt="img" loading="lazy" />
+            </div>
+        </div>
+    </section>
+
+    <section class="make-unique sec-pd">
+        <div class="container">
+            <div class="row justify-content-center gap-3">
+                <div class="col-lg-6">
+                    <div class="make-content">
+                        <h2 class="font-40 color-green">Professional <span class="sec-hd color"> <br> Book
+                                Illustration</span> Transforms Your Story into Captivating Visual Experiences </h2>
+                        <p class="para-color mb-3">We start by understanding your characters, setting, and tone. What
+                            feeling should readers take away? That question guides every creative choice. Our artists
+                            specialize in design book cover illustrator work that captures emotion in a single image.</p>
+                        <p class="para-color mb-3">Strong book design illustration balances color, composition, and
+                            negative space with care. We also provide book cover design illustrator services that integrate
+                            text seamlessly with art. The title should never fight the image. Our network of book
+                            illustrators for hire includes specialists across genres.</p>
+                        <p class="para-color mb-3">For epic adventures, we bring in fantasy book cover illustrators who
+                            understand world-building. For quieter stories, we find artists who excel at subtle expressions
+                            and mood. Illustrative book covers stop readers from scrolling past. They create curiosity.</p>
+                        <p class="para-color mb-3"><strong><i>They promise something worthwhile inside. We handle the
+                                    coordination so you focus on writing while we bring your vision to life.</i></strong>
+                        </p>
+                        <div class="btn-container">
+                            <a href="#exampleModalToggle" class="theme-btn3 btn-overlay" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal"><img src="assets/img/theme-masge.png"
+                                    class="img-fluid fa-bounce me-2" alt="img">
+                                Get Started</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="make-img">
+                        <img src="assets/img/main-services/custom-book-design.png" class="img-fluid" alt="img">
+                        <!-- <img src="assets/img/make-1.webp" alt="award" class="award-1 img-fluid">
+                            <img src="assets/img/make-2.webp" alt="award" class="award-2 img-fluid">
+                            <img src="assets/img/make-3.webp" alt="award" class="award-3 img-fluid">
+                            <img src="assets/img/make-4.webp" alt="award" class="award-4 img-fluid"> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="website-portfolio book-cover-sec sec-pd slider-tab new-s">
+    <div class="container-fluid">
+        <div class="portfolio-heading text-center mb-4">
+            <div class="font-28 color reveal delay-2">Building Trust Via Real Results</div>
+            <h2 class="sec-hd mb-0  text-white reveal  delay-3">Some Of Our Successful Publication</h2>
+        </div>
+        <div class="nav nav-tabs mt-3 mb-5 border-0 justify-content-center" id="nav-tab" role="tablist">
+            <button
+                class="nav-link  "
+                id="nav-home-tab-publishing" data-bs-toggle="tab" data-bs-target="#nav-home-publishing" type="button"
+                role="tab" aria-controls="nav-home-publishing" aria-selected="true">Published Books</button>
+            <button class="nav-link "
+                id="nav-profile-tab-illustration" data-bs-toggle="tab" data-bs-target="#nav-profile-illustration"
+                type="button" role="tab" aria-controls="nav-profile-illustration" aria-selected="false">Author
+                Websites</button>
+            <button class="nav-link active" id="nav-contact-tab-cover"
+                data-bs-toggle="tab" data-bs-target="#nav-contact-cover" type="button" role="tab"
+                aria-controls="nav-contact-cover" aria-selected="false">Book
+                Illustrations</button>
+            <button class="nav-link "
+                id="nav-contact-tab-author" data-bs-toggle="tab" data-bs-target="#nav-contact-author" type="button"
+                role="tab" aria-controls="nav-contact-author" aria-selected="false">Video Trailers</button>
+            <button class="nav-link  last-link"
+                id="nav-contact-tab-smm" data-bs-toggle="tab" data-bs-target="#nav-contact-smm" type="button"
+                role="tab" aria-controls="nav-contact-smm" aria-selected="false">Book Marketing</button>
+        </div>
+
+        <div class="tab-content" id="nav-tabContent">
+
+            <div class="tab-pane fade  "
+                id="nav-home-publishing" role="tabpanel" aria-labelledby="nav-home-tab-publishing">
+
+
+
+
+                <div class="row justify-content-center">
+                    <!--<div class="col-lg-2 col-md-3 col-sm-4 col-4">-->
+                    <!--    <div class="flip-box">-->
+                    <!--        <div class="flip-inner">-->
+
+                    <!-- Front Side -->
+                    <!--            <div class="flip-front">-->
+                    <!--                <img src="assets/img/book-cover/book-port6.webp" alt="Front Image" width="266" height="399" loading="lazy">-->
+                    <!--            </div>-->
+
+                    <!-- Back Side -->
+                    <!--            <div class="flip-back" style="background-image: linear-gradient(to right, rgb(6 6 6 / 79%), rgb(0 0 0 / 70%)), url(assets/img/book-cover/book-port6.webp);">-->
+
+
+                    <!--                <ul class="list-unstyled">-->
+                    <!--                    <li>-->
+                    <!--                        <h4>CALLED UP BY KARI GRITZ</h4>-->
+                    <!--                        <p>Kari Gritz</p>-->
+                    <!--                    </li>-->
+                    <!--                </ul>-->
+
+                    <!--                <div class="btn-container d-flex flex-wrap justify-content-center mb-3">-->
+                    <!--                    <a href="called-up-by-kari-gritz"-->
+                    <!--                        class="theme-btn2 btn-overlay text-upper w-100 text-center">Explore More</a>-->
+                    <!--                </div>-->
+                    <!--            </div>-->
+
+                    <!--        </div>-->
+                    <!--    </div>-->
+
+
+                    <!--</div>-->
+
+                    <!--<div class="col-lg-2 col-md-3 col-sm-4 col-4">-->
+                    <!--    <div class="flip-box">-->
+                    <!--        <div class="flip-inner">-->
+
+
+                    <!--            <div class="flip-front">-->
+                    <!--                <img src="assets/img/book-cover/book-port2.webp" alt="Front Image" width="266" height="399">-->
+                    <!--            </div>-->
+
+
+                    <!--            <div class="flip-back" style="background-image: linear-gradient(to right, rgb(6 6 6 / 79%), rgb(0 0 0 / 70%)), url(assets/img/book-cover/book-port2.webp);">-->
+                    <!--                <ul class="list-unstyled">-->
+                    <!--                    <li>-->
+                    <!--                        <h4>Moving Beyond What I Left Behind</h4>-->
+                    <!--                        <p>Carl Mohler</p>-->
+                    <!--                    </li>-->
+                    <!--                </ul>-->
+
+                    <!--                <div class="btn-container d-flex flex-wrap justify-content-center mb-3">-->
+                    <!--                    <a href="moving-beyond-what-i-left-behind"-->
+                    <!--                        class="theme-btn2 btn-overlay text-upper w-100 text-center">Explore-->
+                    <!--                        More</a>-->
+                    <!--                </div>-->
+                    <!--            </div>-->
+
+                    <!--        </div>-->
+                    <!--    </div>-->
+
+
+                    <!--</div>-->
+
+                    <!-- <div class="col-lg-2 col-md-3 col-sm-4 col-4">
+                        <div class="flip-box">
+                            <div class="flip-inner">
+
+
+                                <div class="flip-front">
+                                    <img src="assets/img/ubp-new/pamela-front-book-cover.webp" alt="Front Image" width="266" height="399" loading="lazy">
+                                </div>
+
+
+                                <div class="flip-back" style="background-image: linear-gradient(to right, rgb(6 6 6 / 79%), rgb(0 0 0 / 70%)), url(assets/img/ubp-new/pamela-front-book-cover.webp);">
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <h4>THE TRUTH, LIE, SORROW, JOY BY </h4>
+                                            <p>Pamela Drake</p>
+                                        </li>
+                                    </ul>
+
+                                    <div class="btn-container d-flex flex-wrap justify-content-center mb-3">
+                                        <a href="the-truth-lie-sorrow-joy"
+                                            class="theme-btn2 btn-overlay text-upper w-100 text-center">Explore
+                                            More</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-4">
+                        <div class="flip-box">
+                            <div class="flip-inner">
+
+
+                                <div class="flip-front">
+                                    <img src="assets/img/book-cover/book-port4.webp" alt="Front Image" width="266" height="399" loading="lazy">
+                                </div>
+
+
+                                <div class="flip-back" style="background-image: linear-gradient(to right, rgb(6 6 6 / 79%), rgb(0 0 0 / 70%)), url(assets/img/book-cover/book-port4.webp);">
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <h4>Bilderberg Ultimate Control </h4>
+                                            <p>Nolan J. Reynolds</p>
+                                        </li>
+                                    </ul>
+
+                                    <div class="btn-container d-flex flex-wrap justify-content-center mb-3">
+                                        <a href="bilderberg-ultimate-control"
+                                            class="theme-btn2 btn-overlay text-upper w-100 text-center">Explore
+                                            More</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div> -->
+
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-4">
+                        <div class="flip-box reveal">
+                            <div class="flip-inner">
+
+
+                                <div class="flip-front">
+                                    <img class="lazy lazy-loaded-image img-fluid"
+                                        src="assets/img/skeleton2.webp" loading="lazy"
+                                        data-src="assets/img/book-cover/the-legend-of-denali.jpg"
+                                        alt="Unitedbookpublishing" width="266" height="399" />
+                                </div>
+
+
+                                <div class="flip-back "
+                                    style="background-image: linear-gradient(to right, rgb(6 6 6 / 79%), rgb(0 0 0 / 70%)), url(assets/img/book-cover/the-legend-of-denali.jpg);">
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <h4>The Legend Of Denali</h4>
+                                            <p>Gregory English</p>
+                                        </li>
+                                    </ul>
+
+                                    <div class="btn-container d-flex flex-wrap justify-content-center mb-3">
+                                        <a href="javascript:void(0);"
+                                            class="theme-btn2 btn-overlay text-upper w-100 text-center">Explore
+                                            More</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-4">
+                        <div class="flip-box reveal  delay-1">
+                            <div class="flip-inner">
+
+
+                                <div class="flip-front">
+                                    <img class="lazy lazy-loaded-image img-fluid"
+                                        src="assets/img/skeleton2.webp" loading="lazy"
+                                        data-src="assets/img/book-cover/allen-court-new.jpg"
+                                        alt="Unitedbookpublishing" width="266" height="399" />
+                                </div>
+
+
+                                <div class="flip-back"
+                                    style="background-image: linear-gradient(to right, rgb(6 6 6 / 79%), rgb(0 0 0 / 70%)), url(assets/img/book-cover/allen-court-new.jpg);">
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <h4>The Life And Times Of Allen Court</h4>
+                                            <p>Meshawn Deberry</p>
+                                        </li>
+                                    </ul>
+
+                                    <div class="btn-container d-flex flex-wrap justify-content-center mb-3">
+                                        <a href="the-life-and-times-of-allen-court.html"
+                                            class="theme-btn2 btn-overlay text-upper w-100 text-center">Explore
+                                            More</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-4">
+                        <div class="flip-box reveal  delay-2">
+                            <div class="flip-inner">
+
+
+                                <div class="flip-front">
+                                    <img class="lazy lazy-loaded-image img-fluid"
+                                        src="assets/img/skeleton2.webp" loading="lazy"
+                                        data-src="assets/img/book-cover/new-life-leaving.jpg"
+                                        alt="Unitedbookpublishing" width="266" height="399" />
+                                </div>
+
+
+                                <div class="flip-back"
+                                    style="background-image: linear-gradient(to right, rgb(6 6 6 / 79%), rgb(0 0 0 / 70%)), url(assets/img/book-cover/new-life-leaving.jpg);">
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <h4>My New Life Leaving</h4>
+                                            <p>Dr.Vera M.Stephens-Stevens</p>
+                                        </li>
+                                    </ul>
+
+                                    <div class="btn-container d-flex flex-wrap justify-content-center mb-3">
+                                        <a href="javascript:void(0);"
+                                            class="theme-btn2 btn-overlay text-upper w-100 text-center">Explore
+                                            More</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-4">
+                        <div class="flip-box reveal  delay-3">
+                            <div class="flip-inner">
+
+
+                                <div class="flip-front">
+                                    <img class="lazy lazy-loaded-image img-fluid"
+                                        src="assets/img/skeleton2.webp" loading="lazy"
+                                        data-src="assets/img/book-cover/the-hug.jpg"
+                                        alt="Unitedbookpublishing" width="266" height="399" />
+                                </div>
+
+
+                                <div class="flip-back"
+                                    style="background-image: linear-gradient(to right, rgb(6 6 6 / 79%), rgb(0 0 0 / 70%)), url(assets/img/book-cover/the-hug.jpg);">
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <h4>The Hug</h4>
+                                            <p>Britt j.Palmer</p>
+                                        </li>
+                                    </ul>
+
+                                    <div class="btn-container d-flex flex-wrap justify-content-center mb-3">
+                                        <a href="javascript:void(0);"
+                                            class="theme-btn2 btn-overlay text-upper w-100 text-center">Explore
+                                            More</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-4">
+                        <div class="flip-box reveal  delay-4">
+                            <div class="flip-inner">
+
+
+                                <div class="flip-front">
+                                    <img class="lazy lazy-loaded-image img-fluid"
+                                        src="assets/img/skeleton2.webp" loading="lazy"
+                                        data-src="assets/img/book-cover/barnaby-bunny.jpg"
+                                        alt="Unitedbookpublishing" width="266" height="399" />
+                                </div>
+
+
+                                <div class="flip-back"
+                                    style="background-image: linear-gradient(to right, rgb(6 6 6 / 79%), rgb(0 0 0 / 70%)), url(assets/img/book-cover/barnaby-bunny.jpg);">
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <h4>Barnaby The One-Eared...</h4>
+                                            <p>Colleen Severin </p>
+                                        </li>
+                                    </ul>
+
+                                    <div class="btn-container d-flex flex-wrap justify-content-center mb-3">
+                                        <a href="javascript:void(0);"
+                                            class="theme-btn2 btn-overlay text-upper w-100 text-center">Explore
+                                            More</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="tab-pane fade "
+                id="nav-profile-illustration" role="tabpanel" aria-labelledby="nav-profile-tab-illustration">
+                <div class="portfolio-slider">
+
+                    <div class="port-box">
+                        <a href="assets/img/web-portfolio/author-web1.webp" data-fancybox="gallery">
+                            <div class="portfolio-img cover-box">
+                                <div class="s4_overlay1"></div>
+                                <div class="s4_overlay2"></div>
+                                <img class="lazy lazy-loaded-image img-fluid"
+                                    src="assets/img/skeleton2.webp" loading="lazy"
+                                    data-src="assets/img/web-portfolio/author-web1.webp"
+                                    alt="author-website" width="273" height="575" />
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="port-box">
+                        <a href="assets/img/web-portfolio/author-web2.webp" data-fancybox="gallery">
+                            <div class="portfolio-img cover-box">
+                                <div class="s4_overlay1"></div>
+                                <div class="s4_overlay2"></div>
+                                <img class="lazy lazy-loaded-image img-fluid"
+                                    src="assets/img/skeleton2.webp" loading="lazy"
+                                    data-src="assets/img/web-portfolio/author-web2.webp"
+                                    alt="author-website" width="273" height="575" />
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="port-box">
+                        <a href="assets/img/web-portfolio/author-web3.webp" data-fancybox="gallery">
+                            <div class="portfolio-img cover-box">
+                                <div class="s4_overlay1"></div>
+                                <div class="s4_overlay2"></div>
+                                <img class="lazy lazy-loaded-image img-fluid"
+                                    src="assets/img/skeleton2.webp" loading="lazy"
+                                    data-src="assets/img/web-portfolio/author-web3.webp"
+                                    alt="author-website" width="273" height="575" />
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="port-box">
+                        <a href="assets/img/web-portfolio/author-web4.webp" data-fancybox="gallery">
+                            <div class="portfolio-img cover-box">
+                                <div class="s4_overlay1"></div>
+                                <div class="s4_overlay2"></div>
+                                <img class="lazy lazy-loaded-image img-fluid"
+                                    src="assets/img/skeleton2.webp" loading="lazy"
+                                    data-src="assets/img/web-portfolio/author-web4.webp"
+                                    alt="author-website" width="273" height="575" />
+                            </div>
+                        </a>
+                    </div>
+                    <div class="port-box">
+                        <a href="assets/img/web-portfolio/author-web1.webp" data-fancybox="gallery">
+                            <div class="portfolio-img cover-box">
+                                <div class="s4_overlay1"></div>
+                                <div class="s4_overlay2"></div>
+                                <img class="lazy lazy-loaded-image img-fluid"
+                                    src="assets/img/skeleton2.webp" loading="lazy"
+                                    data-src="assets/img/web-portfolio/author-web1.webp"
+                                    alt="author-website" width="273" height="575" />
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- <div class="port-box">
+                        <a href="assets/img/web-portfolio/author-web5.webp" data-fancybox="gallery">
+                            <div class="portfolio-img cover-box">
+                                <div class="s4_overlay1"></div>
+                                <div class="s4_overlay2"></div>
+                                <img src="assets/img/web-portfolio/author-web5.webp" class="img-fluid" alt="img">
+                            </div>
+                        </a>
+                    </div> -->
+
+                    <div class="port-box">
+                        <a href="assets/img/web-portfolio/author-web6.webp" data-fancybox="gallery">
+                            <div class="portfolio-img cover-box">
+                                <div class="s4_overlay1"></div>
+                                <div class="s4_overlay2"></div>
+                                <img class="lazy lazy-loaded-image img-fluid"
+                                    src="assets/img/skeleton2.webp" loading="lazy"
+                                    data-src="assets/img/web-portfolio/author-web6.webp"
+                                    alt="author-website" width="273" height="575" />
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="port-box">
+                        <a href="assets/img/web-portfolio/author-web2.webp" data-fancybox="gallery">
+                            <div class="portfolio-img cover-box">
+                                <div class="s4_overlay1"></div>
+                                <div class="s4_overlay2"></div>
+                                <img class="lazy lazy-loaded-image img-fluid"
+                                    src="assets/img/skeleton2.webp" loading="lazy"
+                                    data-src="assets/img/web-portfolio/author-web2.webp"
+                                    alt="author-website" width="273" height="575" />
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="port-box">
+                        <a href="assets/img/web-portfolio/author-web3.webp" data-fancybox="gallery">
+                            <div class="portfolio-img cover-box">
+                                <div class="s4_overlay1"></div>
+                                <div class="s4_overlay2"></div>
+                                <img class="lazy lazy-loaded-image img-fluid"
+                                    src="assets/img/skeleton2.webp" loading="lazy"
+                                    data-src="assets/img/web-portfolio/author-web3.webp"
+                                    alt="author-website" width="273" height="575" />
+                            </div>
+                        </a>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+            <div class="tab-pane fade active show"
+                id="nav-contact-cover" role="tabpanel" aria-labelledby="nav-contact-tab-cover">
+                <div class="row justify-content-center">
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-4">
+                        <div class="cover-box">
+                            <div class="s4_overlay2"></div>
+                            <div class="s4_overlay1"></div>
+                            <img class="lazy lazy-loaded-image img-fluid"
+                                src="assets/img/skeleton2.webp" loading="lazy"
+                                data-src="https://unitedbookpublishing.com/assets/img/illustrator/1.png" alt="cover" width="266"
+                                height="426" />
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-4">
+                        <div class="cover-box">
+                            <div class="s4_overlay2"></div>
+                            <div class="s4_overlay1"></div>
+                            <img class="lazy lazy-loaded-image img-fluid"
+                                src="assets/img/skeleton2.webp" loading="lazy"
+                                data-src="https://unitedbookpublishing.com/assets/img/illustrator/2.png" alt="cover" width="266"
+                                height="426" />
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-4">
+                        <div class="cover-box">
+                            <div class="s4_overlay2"></div>
+                            <div class="s4_overlay1"></div>
+                            <img class="lazy lazy-loaded-image img-fluid"
+                                src="assets/img/skeleton2.webp" loading="lazy"
+                                data-src="https://unitedbookpublishing.com/assets/img/illustrator/3.png" alt="cover" width="266"
+                                height="426" />
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-4">
+                        <div class="cover-box">
+                            <div class="s4_overlay2"></div>
+                            <div class="s4_overlay1"></div>
+                            <img class="lazy lazy-loaded-image img-fluid"
+                                src="assets/img/skeleton2.webp" loading="lazy"
+                                data-src="https://unitedbookpublishing.com/assets/img/illustrator/4.webp" alt="cover"
+                                width="266" height="426" />
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-4">
+                        <div class="cover-box">
+                            <div class="s4_overlay2"></div>
+                            <div class="s4_overlay1"></div>
+                            <img class="lazy lazy-loaded-image img-fluid"
+                                src="assets/img/skeleton2.webp" loading="lazy"
+                                data-src="https://unitedbookpublishing.com/assets/img/illustrator/5.webp" alt="cover"
+                                width="266" height="426" />
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-4">
+                        <div class="cover-box">
+                            <div class="s4_overlay2"></div>
+                            <div class="s4_overlay1"></div>
+                            <img class="lazy lazy-loaded-image img-fluid"
+                                src="assets/img/skeleton2.webp" loading="lazy"
+                                data-src="https://unitedbookpublishing.com/assets/img/illustrator/6.webp" alt="cover"
+                                width="266" height="426" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade "
+                id="nav-contact-author" role="tabpanel" aria-labelledby="nav-contact-tab-author">
+                <div class="portfolio-slider">
+
+                    <div class="portfolio-img video-box">
+                        <img class="lazy lazy-loaded-image img-fluid" src="assets/img/skeleton2.webp"
+                            loading="lazy"
+                            data-src="assets/img/video-book/alexander-deutsch-book-trailer.webp"
+                            alt="img" width="273" height="409" loading="lazy" />
+
+                        <div class="video-play">
+                            <a href="https://www.youtube.com/watch?v=k058aBU3H9I&amp;list=PLgBjLIP-QBrCmUvzLQJssUPZiRAFgVURy"
+                                class="play-btn" data-fancybox="gallery"><i class="fa-solid fa-play"
+                                    aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-img video-box">
+                        <img class="lazy lazy-loaded-image img-fluid" src="assets/img/skeleton2.webp"
+                            loading="lazy" data-src="assets/img/video-book/barbara-book-trailer.webp"
+                            alt="img" width="273" height="409" loading="lazy" />
+                        <div class="video-play">
+                            <a href="https://www.youtube.com/watch?v=xxohDBNlUhs" class="play-btn"
+                                data-fancybox="gallery"><i class="fa-solid fa-play" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-img video-box">
+                        <img class="lazy lazy-loaded-image img-fluid" src="assets/img/skeleton2.webp"
+                            loading="lazy" data-src="assets/img/video-book/debora-johnson.webp"
+                            alt="img" width="273" height="409" loading="lazy" />
+                        <div class="video-play">
+                            <a href="https://www.youtube.com/watch?v=5tCf9RJNQdU" class="play-btn"
+                                data-fancybox="gallery"><i class="fa-solid fa-play" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-img video-box">
+                        <img class="lazy lazy-loaded-image img-fluid" src="assets/img/skeleton2.webp"
+                            loading="lazy"
+                            data-src="assets/img/video-book/idres-hafiz-book-trailer.webp"
+                            alt="img" width="273" height="409" loading="lazy" />
+                        <div class="video-play">
+                            <a href="https://www.youtube.com/watch?v=OvSs3h_orzk" class="play-btn"
+                                data-fancybox="gallery"><i class="fa-solid fa-play" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-img video-box">
+                        <img class="lazy lazy-loaded-image img-fluid" src="assets/img/skeleton2.webp"
+                            loading="lazy"
+                            data-src="assets/img/video-book/in-the-search-of-north-star.webp"
+                            alt="img" width="273" height="409" loading="lazy" />
+                        <div class="video-play">
+                            <a href="https://www.youtube.com/watch?v=zP7Hfivpig4" class="play-btn"
+                                data-fancybox="gallery"><i class="fa-solid fa-play" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-img video-box">
+                        <img class="lazy lazy-loaded-image img-fluid" src="assets/img/skeleton2.webp"
+                            loading="lazy"
+                            data-src="assets/img/video-book/jerry-sofer-book-trailer.webp"
+                            alt="img" width="273" height="409" loading="lazy" />
+                        <div class="video-play">
+                            <a href="https://www.youtube.com/watch?v=Kqmq6dj7rP4" class="play-btn"
+                                data-fancybox="gallery"><i class="fa-solid fa-play" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-img video-box">
+                        <img class="lazy lazy-loaded-image img-fluid" src="assets/img/skeleton2.webp"
+                            loading="lazy" data-src="assets/img/video-book/makhaila-thorne.webp"
+                            alt="img" width="273" height="409" loading="lazy" />
+                        <div class="video-play">
+                            <a href="https://www.youtube.com/watch?v=8VJ9AsXGeck" class="play-btn"
+                                data-fancybox="gallery"><i class="fa-solid fa-play" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-img video-box">
+                        <img class="lazy lazy-loaded-image img-fluid" src="assets/img/skeleton2.webp"
+                            loading="lazy"
+                            data-src="assets/img/video-book/miracle-in-the-mess-mike-farias.webp"
+                            alt="img" width="273" height="409" loading="lazy" />
+                        <div class="video-play">
+                            <a href="https://www.youtube.com/watch?v=XdXfpCdym6s" class="play-btn"
+                                data-fancybox="gallery"><i class="fa-solid fa-play" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="tab-pane fade " id="nav-contact-smm"
+                role="tabpanel" aria-labelledby="nav-contact-tab-smm">
+                <div class="row justify-content-center">
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-4">
+                        <div class="cover-box">
+                            <div class="s4_overlay2"></div>
+                            <div class="s4_overlay1"></div>
+                            <img class="lazy lazy-loaded-image img-fluid"
+                                src="assets/img/skeleton2.webp" loading="lazy"
+                                data-src="https://unitedbookpublishing.com/assets/img/ubp-new/ubp-inner/1.webp" alt="img"
+                                width="266" height="266" loading="lazy" />
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-4">
+                        <div class="cover-box">
+                            <div class="s4_overlay2"></div>
+                            <div class="s4_overlay1"></div>
+                            <img class="lazy lazy-loaded-image img-fluid"
+                                src="assets/img/skeleton2.webp" loading="lazy"
+                                data-src="https://unitedbookpublishing.com/assets/img/ubp-new/ubp-inner/2.webp" alt="img"
+                                width="266" height="266" loading="lazy" />
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-4">
+                        <div class="cover-box">
+                            <div class="s4_overlay2"></div>
+                            <div class="s4_overlay1"></div>
+                            <img class="lazy lazy-loaded-image img-fluid"
+                                src="assets/img/skeleton2.webp" loading="lazy"
+                                data-src="https://unitedbookpublishing.com/assets/img/ubp-new/ubp-inner/3.webp" alt="img"
+                                width="266" height="266" loading="lazy" />
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-4">
+                        <div class="cover-box">
+                            <div class="s4_overlay2"></div>
+                            <div class="s4_overlay1"></div>
+                            <img class="lazy lazy-loaded-image img-fluid"
+                                src="assets/img/skeleton2.webp" loading="lazy"
+                                data-src="https://unitedbookpublishing.com/assets/img/ubp-new/ubp-inner/4.webp" alt="img"
+                                width="266" height="266" loading="lazy" />
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-4">
+                        <div class="cover-box">
+                            <div class="s4_overlay2"></div>
+                            <div class="s4_overlay1"></div>
+
+                            <img class="lazy lazy-loaded-image img-fluid"
+                                src="assets/img/skeleton2.webp" loading="lazy"
+                                data-src="https://unitedbookpublishing.com/assets/img/ubp-new/ubp-inner/5.webp" alt="img"
+                                width="266" height="266" loading="lazy" />
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-4">
+                        <div class="cover-box">
+                            <div class="s4_overlay2"></div>
+                            <div class="s4_overlay1"></div>
+                            <img class="lazy lazy-loaded-image img-fluid"
+                                src="assets/img/skeleton2.webp" loading="lazy"
+                                data-src="https://unitedbookpublishing.com/assets/img/ubp-new/ubp-inner/6.webp" alt="img"
+                                width="266" height="266" loading="lazy" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+    <section class="testimonial-sec sec-pd">
+    <div class="container">
+        <div class="row justify-content-center align-items-center" >
+            <div class="testi-heading text-center mb-5"  data-aos="zoom-out" data-aos-duration="600" data-aos-easing="ease-out">
+                <div class="font-35 let-space theme-font color-green fw-600">Trusted Publishers For Over 8 Years</div>
+                <h2 class="sec-hd color">Real Author Voices Experiencing Real Impact</h2>
+                <p class="w-80 mx-auto mb-0" >Writers want honesty, direction, and a team
+                    that treats their work with genuine care. As a top online book publishing house, you stay close to
+                    every step of the process, from early drafts to full book publishing. These reviews come from real
+                    authors who trusted us when their stories needed the right hands.</p>
+            </div>
+
+            <div class="col-lg-5">
+                <div class="book-slide">
+                    <div class="testi-pad">
+                        <img class="lazy lazy-loaded-image img-fluid "
+                            src="assets/img/skeleton2.webp" loading="lazy"
+                            data-lazy="https://unitedbookpublishing.com/assets/img/ubp-new/client-image-1.webp" alt="Unitedbookpublishing"
+                            width="526" height="528" />
+
+                        <!-- <img src="assets/img/bann-book-1.webp" class="img-fluid book-img" alt="book"
+                                data-aos="flip-right"
+                                data-aos-easing="ease-out-cubic"
+                                data-aos-duration="2000">
+    
+                            <div class="origin_box"
+                                data-aos="flip-left"
+                                data-aos-easing="ease-out-cubic"
+                                data-aos-duration="3000">
+                                <a href="assets/img/bann-web.png" data-fancybox="gallery"><img src="assets/img/bann-web.png"
+                                        class="img-fluid" alt="img"></a>
+                            </div> -->
+                    </div>
+
+                    <div class="testi-pad">
+                            <img class="lazy lazy-loaded-image img-fluid "
+                            src="assets/img/skeleton2.webp" loading="lazy"
+                            data-lazy="https://unitedbookpublishing.com/assets/img/ubp-new/client-image-2.webp" alt="Unitedbookpublishing"
+                            width="526" height="528" />
+                    </div>
+
+                    <div class="testi-pad">
+                            <img class="lazy lazy-loaded-image img-fluid "
+                            src="assets/img/skeleton2.webp" loading="lazy"
+                            data-lazy="https://unitedbookpublishing.com/assets/img/ubp-new/client-image-3.webp" alt="Unitedbookpublishing"
+                            width="526" height="528" />
+                    </div>
+
+                    <div class="testi-pad">
+                            <img class="lazy lazy-loaded-image img-fluid "
+                            src="assets/img/skeleton2.webp" loading="lazy"
+                            data-lazy="https://unitedbookpublishing.com/assets/img/ubp-new/client-image-4.webp" alt="Unitedbookpublishing"
+                            width="526" height="528" />
+                    </div>
+
+                    <div class="testi-pad">
+                            <img class="lazy lazy-loaded-image img-fluid "
+                            src="assets/img/skeleton2.webp" loading="lazy"
+                            data-lazy="https://unitedbookpublishing.com/assets/img/ubp-new/client-image-5.webp" alt="Unitedbookpublishing"
+                            width="526" height="528" />
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="testimonial">
+                    <div class="testimonial-slider">
+                        <div class="testimonial-box p-3">
+                            <div class="row testi-head justify-content-between">
+                                <div class="col-lg-6 col-6">
+                                    <div class="profile-d">
+                                        <h4 class="theme-font color-green mb-0">Julian Hutchinson</h4>
+                                        <p class="color fw-600 mb-0">US</p>
+                                        <!--<img src="assets/img/trust-pilot.png" alt="trustpilot" loading="lazy">-->
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 col-6">
+                                    <div class="name-circle profile-img">
+                                        <span class="name-1">JH</span>
+                                        <!-- <img src="assets/img/client-pro.png" class="img-fluid" alt="img"> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testi-para my-4">
+                                <strong>My experience is two-fold</strong>
+                                <p>My experience is two-fold, from bad to extremely good. Two United nitwits first
+                                    published my book without consulting me.
+                                    It was full of errors. It all changed when Jeffrey Collins, Author Success Manager,
+                                    took charge of my account.
+                                    He is a master of his trade, and United Book Publishing Company successfully
+                                    republished my book. I have self-published
+                                    eight other books with various companies, but United gets the gold.</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-box p-3">
+                            <div class="row testi-head justify-content-between">
+                                <div class="col-lg-6 col-6">
+                                    <div class="profile-d">
+                                        <h4 class="theme-font color-green mb-0">Yennifer</h4>
+                                        <p class="color fw-600 mb-0">US</p>
+                                        <!--<img src="assets/img/trust-pilot.png" alt="trustpilot" loading="lazy">-->
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 col-6">
+                                    <div class="name-circle profile-img">
+                                        <span class="name-1">Y</span>
+                                        <!-- <img src="assets/img/client-pro.png" class="img-fluid" alt="img"> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testi-para my-4">
+                                <strong>Outstanding Support and Expertise in Publishing</strong>
+                                <p>I couldn’t be any happier with my publishing experience with United Book Publishing!
+                                    From the moment I started working with them,
+                                    I felt like my story truly mattered. Their attention to detail and commitment to
+                                    perfection was evident in every step of the process,
+                                    from refining my content to expertly publishing on multiple platforms. Aron and his
+                                    team took the time to understand my vision,
+                                    and the results were beyond my expectations. Choosing them was the best decision I
+                                    could’ve made for my book!</p>
+                                <p>If you’re looking for a publishing partner that’s professional, reliable, and
+                                    genuinely invested in your success,
+                                    I wholeheartedly recommend United Book Publishing. You won’t be disappointed!</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-box p-3">
+                            <div class="row testi-head justify-content-between">
+                                <div class="col-lg-6 col-6">
+                                    <div class="profile-d">
+                                        <h4 class="theme-font color-green mb-0">Mikki Royce</h4>
+                                        <p class="color fw-600 mb-0">US</p>
+                                        <!--<img src="assets/img/trust-pilot.png" alt="trustpilot" loading="lazy">-->
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 col-6">
+                                    <div class="name-circle profile-img">
+                                        <span class="name-1">MR</span>
+                                        <!-- <img src="assets/img/client-pro.png" class="img-fluid" alt="img"> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testi-para my-4">
+                                <strong>First Class All the Way</strong>
+                                <p>First, United Book Publishing has the very best book cover design prices that I could
+                                    find.
+                                    2nd, they are very caring and attentive. My first conversation was with Aron Parker,
+                                    Chief
+                                    Publishing Officer, who was lovely. Later, I was dealing with Sr. Consultant, Jordan
+                                    Marshall,
+                                    who was just as nice as he could be, listening to me, making suggestions, and
+                                    faithfully reporting
+                                    what I wanted to the artist.The end result was a seriously beautiful book cover that
+                                    conveys the
+                                    spirit of the book and the meaning of the contents. Great experience!</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-box p-3">
+                            <div class="row testi-head justify-content-between">
+                                <div class="col-lg-6 col-6">
+                                    <div class="profile-d">
+                                        <h4 class="theme-font color-green mb-0">Yogi BELOVANANDA</h4>
+                                        <p class="color fw-600 mb-0">CA</p>
+                                        <!--<img src="assets/img/trust-pilot.png" loading="lazy" alt="trustpilot">-->
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 col-6">
+                                    <div class="profile-img">
+                                        <!-- <span class="name-1">YB</span> -->
+                                        <img src="assets/img/name.png" height="73" width="73" class="img-fluid" alt="img"
+                                            loading="lazy">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testi-para my-4">
+                                <strong>A 80 year old first time publisher!</strong>
+                                <p>I'm an 80 year old, first time publisher, Investigating all the claims of book
+                                    publishers, including self publishing led me
+                                    to United Book Publishing.</p>
+                                <p>When I mentioned that I was hosting my book through the Non-Profit foundation, Global
+                                    Prefab Systems Foundation, they were quick
+                                    to advise that there was an additional $100 discount for Non-Profit organizations.
+                                </p>
+                                <p>That individual was Mike Amiri. What started out as a professional business
+                                    relationship, has evolved into a personal friendship,
+                                    that I now feel deeply connected to Mike.</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-box p-3">
+                            <div class="row testi-head justify-content-between">
+                                <div class="col-lg-6 col-6">
+                                    <div class="profile-d">
+                                        <h4 class="theme-font color-green mb-0">Jared Allred</h4>
+                                        <p class="color fw-600 mb-0">US</p>
+                                        <!--<img src="assets/img/trust-pilot.png" alt="trustpilot" loading="lazy">-->
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 col-6">
+                                    <div class="name-circle profile-img">
+                                        <span class="name-1">JA</span>
+                                        <!-- <img src="assets/img/client-pro.png" class="img-fluid" alt="img"> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testi-para my-4">
+                                <strong>Editing and publishing the book "Hideaways--within and outside my polygamist
+                                    family"</strong>
+                                <p>I especially liked the UBP people I worked with. They have been helpful,
+                                    knowledgeable, patient, and resilient.
+                                    The book was very complex and challenging to edit and publish. Areas of suggested
+                                    improvement are professional
+                                    editing, communications (mutual understanding, timely, and consistent). I am well
+                                    pleased with the completed project.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="faq-sec accordion-sec sec-pd mb-5">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+
+
+                <div class="choose-heading text-center mb-5">
+                    <div class="font-35 let-space theme-font color-green fw-600" data-aos="zoom-out"
+                        data-aos-duration="900" data-aos-easing="ease-out-cubic" data-aos-delay="0">FREQUENTLY ASKED
+                        QUESTIONS</div>
+                    <h2 class="sec-hd color mb-0" data-aos="zoom-out" data-aos-duration="1000"
+                        data-aos-easing="ease-out-cubic" data-aos-delay="200">Common Questions About Book Illustration
+                    </h2>
+                    <p class="w-80 mx-auto mb-0" data-aos="zoom-out" data-aos-duration="1100"
+                        data-aos-easing="ease-out-cubic" data-aos-delay="400">The right illustration turns browsers into
+                        buyers. A skilled design book cover illustrator understands how to capture your story in a single
+                        frame. Let us find the artist who sees your vision as clearly as you do.</p>
+                </div>
+
+
+
+                <div class="col-lg-6">
+                    <div class="service-form">
+                        <div class="form-wrap" data-aos="fade-up" data-aos-duration="3000">
+                            <div class="form-heading">
+                                <div class="text-white font-30 fw-600 theme-font letter-space mb-3">Is Your Manuscript The
+                                    Next Bestseller?</div>
+                            </div>
+                            
+                            <form action="https://unitedbookpublishing.com/form-submit" method="post" id="service-form">
+    <input type="hidden" name="_token" value="MYEyZ4jxGwMXB9vqGbuDh7MYBius8uZb1tpGme6H" autocomplete="off">    <input type="hidden" name="page" value="book-illustration">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="form-group">
+                <select class="nice-select" name="manuscript_ready">
+                    <option value="">Do you have a manuscript ready?</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="col-lg-12">
+            <div class="form-group">
+                <select class="nice-select" name="published_before">
+                    <option value="">Have you published before?</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="col-lg-12">
+            <div class="form-group">
+                <select class="nice-select" name="book_type">
+                    <option value="">What Genre of book do you plan on publishing?</option>
+                    <option value="fiction">Fiction</option>
+                    <option value="non-fiction">Non-fiction</option>
+                    <option value="informative">Informative</option>
+                    <option value="biography">Biography</option>
+                    <option value="autobiography">Autobiography</option>
+                    <option value="memoir">Memoir</option>
+                    <option value="childrens-book">Childrens' Book</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="col-lg-12">
+            <div class="service-select text-white">
+                <p>What services are you looking for?</p>
+                
+                <ul class="list-unstyled d-flex flex-wrap">
+                    <li class="form-check d-flex align-items-center">
+                        <input type="checkbox" name="service[]" id="self-publishing" value="self-publishing">
+                        <label for="self-publishing">Self Publishing</label>
+                    </li>
+                    <li class="form-check d-flex align-items-center">
+                        <input type="checkbox" name="service[]" id="editing" value="book-editing">
+                        <label for="editing">Book Editing</label>
+                    </li>
+                    <li class="form-check d-flex align-items-center">
+                        <input type="checkbox" name="service[]" id="cover-design" value="book-cover-design">
+                        <label for="cover-design">Book Cover Design</label>
+                    </li>
+                    <li class="form-check d-flex align-items-center">
+                        <input type="checkbox" name="service[]" id="printing" value="book-printing">
+                        <label for="printing">Book Printing</label>
+                    </li>
+                    <li class="form-check d-flex align-items-center">
+                        <input type="checkbox" name="service[]" id="interior-formatting" value="book-marketing">
+                        <label for="interior-formatting">Book Marketing</label>
+                    </li>
+                    <li class="form-check d-flex align-items-center">
+                        <input type="checkbox" name="service[]" id="illustration" value="pr-publicity">
+                        <label for="illustration">PR & Publicity</label>
+                    </li>
+                    <li class="form-check d-flex align-items-center">
+                        <input type="checkbox" name="service[]" id="book-ill" value="book-illustration">
+                        <label for="book-ill">Book Illustration</label>
+                    </li>
+                    <li class="form-check d-flex align-items-center">
+                        <input type="checkbox" name="service[]" id="ghost" value="ghostwriting">
+                        <label for="ghost">Ghostwriting</label>
+                    </li>
+                    <li class="form-check d-flex align-items-center">
+                        <input type="checkbox" name="service[]" id="formatting" value="book-formatting">
+                        <label for="formatting">Book Formatting</label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-lg-12">
+            <div class="form-group mb-3">
+                <input type="text" name="name" id="name" placeholder="Your name here" class="form-control"
+                    required>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="form-group mb-3">
+                <input type="email" name="email" id="email" placeholder="info@example.com" class="form-control"
+                    required>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="form-group mb-3">
+                <input type="text" name="phone" id="phone" placeholder="(999) 999 9999"
+                    class="form-control" required>
+            </div>
+        </div>
+        <div class="col-lg-12">
+            <div class="form-group mb-3">
+                <textarea rows="4" name="message" id="message" placeholder="Your Message" class="form-control" required></textarea>
+            </div>
+        </div>
+        <div class="btn-container mt-3">
+            <button type="submit" class="theme-btn1 btn-overlay text-upper border-0">Submit Now</button>
+        </div>
+    </div>
+</form>                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-12 ">
+                    <div class="accordion" id="accordionExample" data-aos="fade-up" data-aos-duration="3000">
+                        <div class="accordion-item mb-3">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">What
+                                    is the typical timeline for a book illustration project?</button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>Most projects take four to six weeks. That covers initial concepts, sketch rounds,
+                                        final rendering, and revisions. Some illustrations move faster. Detailed fantasy
+                                        scenes sometimes take a bit longer. We give you a timeline upfront so you know what
+                                        to expect. No guessing. No waiting in the dark. Just steady progress toward a cover
+                                        you will love.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-3">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Do I
+                                    own the rights to the final illustration?</button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>Yes. You own the artwork outright once the project is complete. We make sure
+                                        contracts are clear so there is no confusion later. You can use the illustration for
+                                        your book cover, your website, your social media, and any marketing materials. The
+                                        art belongs to you. No licensing fees. No ongoing payments. Just your cover to do
+                                        with as you please.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-3">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false"
+                                    aria-controls="collapseThree">Can you match a specific artist style I have in
+                                    mind?</button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>Indeed. Give us some examples. book covers, screenshots, and even color schemes.
+                                        Anything that demonstrates your passion. We have collaborated with illustrators that
+                                        specialize in aggressive graphic styles as well as those who create delicate
+                                        watercolors. Finding the ideal fit for your distinct vision is the foundation of our
+                                        book illustration services. We can find someone to make it if you can explain it.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-3">
+                            <h2 class="accordion-header" id="headingThree1">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree1" aria-expanded="false"
+                                    aria-controls="collapseThree1">What if I need revisions to the artwork?</button>
+                            </h2>
+                            <div id="collapseThree1" class="accordion-collapse collapse" aria-labelledby="headingThree1"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>Revisions happen. That is part of making something great. We build time for feedback
+                                        into every project. You get to see the work at different stages. Small changes are
+                                        expected. Bigger changes can be discussed too. We work with book illustrators for
+                                        hire who understand that collaboration makes the final piece stronger. Your
+                                        satisfaction matters more than speed.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-3">
+                            <h2 class="accordion-header" id="headingThree2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree2" aria-expanded="false"
+                                    aria-controls="collapseThree2">How involved will I be in the illustration
+                                    process?</button>
+                            </h2>
+                            <div id="collapseThree2" class="accordion-collapse collapse" aria-labelledby="headingThree2"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>You are in charge the whole way. We start with a conversation about your characters,
+                                        setting, and mood. The artist sends sketches. You say what works and what does not.
+                                        We go back and forth until it feels right. A good book cover design illustrator
+                                        welcomes your input. This is your book. Your voice should guide every decision.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-3">
+                            <h2 class="accordion-header" id="headingThree3">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree3" aria-expanded="false"
+                                    aria-controls="collapseThree3">How do I choose the right illustration style for my
+                                    book?</button>
+                            </h2>
+                            <div id="collapseThree3" class="accordion-collapse collapse" aria-labelledby="headingThree3"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>Look at books in your genre. What catches your eye? Some authors love digital
+                                        painting. Others prefer watercolor or pencil textures. We talk through your taste
+                                        and show you portfolios that match. One author came to us wanting that crisp adobe
+                                        illustrator book cover look. We found an artist who delivered exactly that. The
+                                        right style makes readers stop scrolling.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="">
+    <div class="container-fluid">
+        <div class="row align-items-start">
+
+            <div class="col-lg-4 col-md-12">
+                <div class="foot-box text-white">
+                    <a href="index.html"><img src="assets/img/ubp-new/footer-logo.webp"
+                            class="img-fluid foot-logo" alt="img" width="285" height="150" loading="lazy"></a>
+                    <p class="py-2 font">For 8+ years, we have been the quiet force behind unforgettable stories. We
+                        don't just publish books; we partner with visionaries, transforming bold ideas into legacies
+                        that endure. Let us build yours.</p>
+                    <div class="d-flex align-items-center gap-3">
+                        <h4 class="color mb-0 font-28">Follow Us:</h4>
+                        <div class="head-right d-flex align-items-center gap-3 justify-content-end">
+                            <ul class="list-unstyled d-flex align-items-center gap-2 mb-0">
+                                <li><a href="https://www.facebook.com/UnitedBookPublishingOfficial/" target="_blank"><i
+                                            class="fa-brands fa-facebook-f"></i></a></li>
+                                <li><a href="https://www.instagram.com/unitedbookpublishingofficial/" target="_blank"><i
+                                            class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href="https://www.youtube.com/@UnitedBookPublishing-qt2pk" target="_blank"><i
+                                            class="fa-brands fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-4 col-sm-4 ">
+                <div class="foot-box text-white">
+                    <h3 class="color">What We Offer</h3>
+                    <div class="foot-line"></div>
+                    <div class="foot-list d-flex mt-3">
+                        <ul class="list-unstyled">
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="book-publishing.html">Book Publishing</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="book-marketing.html">Book Marketing</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="author-website.html" class="">Author Website</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="creative-writing.html" class="">Creative Writing</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="book-illustration.html" class="">Book illustration</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="book-video-trailers.html" class="">Book Video Trailers</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="book-cover-design.html" class="">Book Cover Design</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="ghostwriting.html" class="">Ghostwriting</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="book-writing.html" class="">Book Writing</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="pr-and-publicity.html" class="">PR & Publicity</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-4 col-sm-4 ">
+                <div class="foot-box text-white">
+                    <h3 class="color">Others</h3>
+                    <div class="foot-line"></div>
+                    <div class="foot-list d-flex mt-3">
+                        <ul class="list-unstyled">
+
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="free-book-marketing-guide.html" class="">Free Book Marketing
+                                    Guide</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="free-book-publishing-guide.html" class="">Free Book Publishing
+                                    Guide</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="blogs.html" class="">Blogs</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="pricing.html" class="">Pricing</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="about-us.html" class="">Our Story</a>
+                            </li>
+                            <li class="mb-2 d-flex gap-2">
+                                <span><i class="fa-solid fa-chevron-right"></i></span>
+                                <a href="contact-us.html" class="">Contact Us</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-4 ">
+                <div class="foot-box text-white">
+                    <h3 class="color">Information</h3>
+                    <div class="foot-list info-detail">
+                        <ul class="list-unstyled">
+                            <li class="my-4 info-li">
+                                <a href="tel:+18556055210" class="d-flex gap-2">
+                                    <!-- <span class="info-icon"><i class="fa-solid fa-phone" aria-hidden="true"></i></span> -->
+                                    <span class="info-icon w-25"><img
+                                            src="assets/img/ubp-new/theme-phone.webp"
+                                            class="img-fluid" alt="location" width="21" height="21"
+                                            loading="lazy"></span>
+                                    <span class="w-75">
+                                        <small>Call us now </small>
+                                        <span class="foot-number d-block w-100">+1 (855) 605-5210</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="my-4 info-li">
+                                <a href="mailto:info@unitedbookpublishing.com" class="d-flex gap-2">
+                                    <!-- <span class="info-icon"><i class="fa-solid fa-envelope" aria-hidden="true"></i></span> -->
+                                    <span class="info-icon w-25"><img
+                                            src="assets/img/ubp-new/foot-envelope.webp"
+                                            class="img-fluid" alt="location" width="21" height="22"
+                                            loading="lazy"></span>
+                                    <span class="w-75">
+                                        <small>Email us on: </small>
+                                        <span class="foot-number d-block w-100">info@unitedbookpublishing.com</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="my-4 info-li">
+                                <a href="javascript:void(0);" class="d-flex gap-2">
+                                    <!-- <span class="info-icon"><i class="fa-solid fa-house"></i></span> -->
+                                    <span class="info-icon w-25"><img
+                                            src="assets/img/ubp-new/location-icon.webp"
+                                            class="img-fluid" alt="location" width="21" height="28"
+                                            loading="lazy"></span>
+                                    <span class="w-75">
+                                        <!-- <small>Email us on: </small> -->
+                                        <span class="foot-number d-block w-100">3223 West 6th Street STE 101 Los
+                                            Angeles, <br> CA 90020 United States.</span>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="payment-box mt-3 p-2">
+                    <img src="assets/img/ubp-new/pymnt-5.webp" class="img-fluid" alt="payment"
+                        width="316" height="68" loading="lazy">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container-fluid last-contain">
+        <div class="row">
+            <div class="col-lg-7 col-md-8">
+                <p class=" mb-0 para-color">Copyright © 2026 United Book Publishing - All Rights Reserved | Powered By
+                    Iota Digital, LLC</p>
+            </div>
+            <div class="col-lg-5 col-md-4">
+                <ul class="list-unstyled d-flex align-items-center gap-3 m-0 justify-content-end">
+                    <li><a href="privacy-policy.html" class="">Privacy Policy</a></li>
+                    <li><a href="terms-condition.html" class="">Terms And Conditions</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img src="assets/img/pop-logo.png" class="img-fluid" alt="logo" loading="lazy">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row align-items-center justify-content-around">
+                    <div class="col-lg-7">
+                        <div class="form-wrap">
+                            <div class="form-heading">
+                                <h3 class="color font-40 let-space fw-600">Start Building Your Author Success Story
+                                    Today!</h3>
+                                <p>Speak with our senior publishing consultant for a free tailored proposal</p>
+                            </div>
+                            <form action="https://unitedbookpublishing.com/inquiry-submit" id="modal-form" method="POST">
+                                <input type="hidden" name="_token" value="MYEyZ4jxGwMXB9vqGbuDh7MYBius8uZb1tpGme6H" autocomplete="off">                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <!-- <label for="full-name">Enter Your Full Name</label> -->
+                                        <div class="form-group">
+                                            <input type="text" id="full-name" name="full_name"
+                                                placeholder="Full Name" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <!-- <label for="email">Your email</label> -->
+                                        <div class="form-group">
+                                            <input type="text" id="email" name="email" placeholder="Email"
+                                                class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <!-- <label for="phone">Your phone</label> -->
+                                        <div class="form-group">
+                                            <input type="text" id="phone" name="phone"
+                                                placeholder="(999) 999 9999" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <!-- <label for="message">Type your message</label> -->
+                                        <div class="form-group">
+                                            <textarea rows="4" id="message" name="message" placeholder="Book Detail" class="form-control"></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="btn-container mt-4">
+                                        <button class="theme-btn1 text-upper border-0 btn-overlay">Book Now</button>
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="pop-img">
+                            <img src="assets/img/badge-discount.png" class="discount-img img-fluid"
+                                alt="50% Discount">
+                            <img src="assets/img/popup-image.png" class="img-fluid pop-std" alt="img"
+                                loading="lazy">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- <img src="assets/img/pop-circle.png" class="img-fluid pop-circle" alt="img"> -->
+        </div>
+    </div>
+</div>
+    <script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/slick.js"></script>
+<script>
+    // accordion
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panelfaq = this.nextElementSibling;
+            if (panelfaq.style.maxHeight) {
+                panelfaq.style.maxHeight = null;
+            } else {
+                panelfaq.style.maxHeight = panelfaq.scrollHeight + "px";
+            }
+        });
+    }
+    // accordion
+
+    $(document).ready(function() {
+        function initializeSlick(slider) {
+            if (!slider.hasClass('slick-initialized')) {
+                slider.slick({
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    autoplay: true
+                });
+            } else {
+                slider.slick('refresh');
+            }
+        }
+
+        // Pehla tab ka slider initialize karein
+        initializeSlick($('#tab1 .portfolio-slider'));
+
+        $('button[data-bs-toggle="tab"]').on('shown.bs.tab', function(e) {
+            let target = $(e.target).attr("data-bs-target");
+            let slider = $(target).find('.portfolio-slider');
+
+            // Ensure proper visibility and reinitialize
+            $(target).css({
+                'height': 'auto',
+                'visibility': 'visible'
+            });
+
+            setTimeout(function() {
+                initializeSlick(slider);
+            }, 100);
+        });
+    });
+</script>
+<script>
+    $(".portfolio-slider").slick({
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 0,
+        speed: 13000,
+        arrows: false,
+        dots: false,
+        pauseOnHover: false,
+        cssEase: "linear",
+        responsive: [{
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 5,
+                },
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 4,
+                },
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 3,
+                },
+            },
+            {
+                breakpoint: 400,
+                settings: {
+                    slidesToShow: 3,
+                },
+            },
+        ],
+    });
+
+    document.querySelectorAll('.flip-box').forEach(box => {
+  box.addEventListener('click', () => {
+    box.classList.toggle('active');
+  });
+});
+
+
+$(".blog-slider").slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  arrows: true,
+  dots: false,
+  autoplaySpeed: 2000,
+  responsive: [
+    {
+      breakpoint: 1025,   // 1024px se neeche
+      settings: {
+        slidesToShow: 2,
+      }
+    },
+    {
+      breakpoint: 992,   // 992px se neeche
+      settings: {
+        slidesToShow: 2,
+      }
+    },
+    {
+      breakpoint: 768,   // 768px se neeche
+      settings: {
+        slidesToShow: 1,
+        arrows: false,
+        dots: true,
+      }
+    },
+    {
+      breakpoint: 576,   // extra small devices
+      settings: {
+        slidesToShow: 1,
+        arrows: false,
+        dots: true,
+      }
+    }
+  ]
+});
+</script>
+<script src="assets/js/aos.js" defer></script>
+<script src="assets/js/custom.js" defer></script>
+<script src="assets/js/nice-select.min.js" defer></script>
+<script src="assets/js/bootstrap.min.js" defer></script>
+<script src="assets/js/jquery.fancybox.min.js" defer></script>
+<!--<script src="https://unitedbookpublishing.com/assets/js/fontowesome.js" crossorigin="anonymous" defer></script>-->
+
+<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>-->
+
+<script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    const tooltipList = [...tooltipTriggerList].map(el => new bootstrap.Tooltip(el));
+</script>
+
+
+<!-- Include SweetAlert -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+<script src="assets/js/custom-form.js" defer></script>
+    <script defer src="../cdn.jsdelivr.net/npm/select2%404.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script defer id="ze-snippet" src="../static.zdassets.com/ekr/snippetb14a.js?key=601b2aa6-ec14-4739-8d27-dfa20404f2ba">
+    </script>
+        <script>
+        $(document).ready(function() {
+            $('.book-slider').slick({
+                dots: true,
+                arrows: true,
+                infinite: false,
+                speed: 400,
+                slidesToShow: 5,
+                slidesToScroll: 1,
+                responsive: [{
+                        breakpoint: 1200,
+                        settings: {
+                            slidesToShow: 4
+                        }
+                    },
+                    {
+                        breakpoint: 992,
+                        settings: {
+                            slidesToShow: 3
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 2
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+
+    <script>
+        $('.book-slide').slick({
+            lazyLoad: 'ondemand',
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: false,
+            asNavFor: '.testimonial-slider'
+        });
+        $('.testimonial-slider').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            asNavFor: '.book-slide',
+            dots: false,
+            arrows: false,
+            autoplaySpeed: 2000,
+            speed: 1300,
+            autoplay: true,
+            //   centerMode: true,
+            focusOnSelect: true
+        });
+    </script>
+
+
+    
+
+
+</body>
+
+
+<!-- Mirrored from unitedbookpublishing.com/book-illustration by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Jul 2026 23:56:17 GMT -->
+</html>

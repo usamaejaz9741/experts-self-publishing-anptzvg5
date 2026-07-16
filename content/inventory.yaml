@@ -1,0 +1,178 @@
+sections:
+  home:
+    page: index.html
+    paragraph_count: 41
+    status: applied
+    slots:
+      - meta
+      - hero
+      - services
+      - testimonials
+      - footer
+  author-website:
+    page: author-website.html
+    paragraph_count: 34
+    status: applied
+    slots:
+      - meta
+      - hero
+      - body
+      - faq
+      - footer
+  pr-publicity:
+    page: pr-and-publicity.html
+    paragraph_count: 36
+    status: applied
+    slots:
+      - meta
+      - hero
+      - body
+      - faq
+      - footer
+  editing:
+    page: book-editing-proofreading.html
+    paragraph_count: 35
+    status: applied
+    slots:
+      - meta
+      - hero
+      - body
+      - faq
+      - footer
+  cover-design:
+    page: book-cover-design.html
+    paragraph_count: 41
+    status: applied
+    slots:
+      - meta
+      - hero
+      - body
+      - faq
+      - footer
+  ghostwriting:
+    page: ghostwriting.html
+    paragraph_count: 38
+    status: applied
+    slots:
+      - meta
+      - hero
+      - body
+      - faq
+      - footer
+  illustration:
+    page: book-illustration.html
+    paragraph_count: 41
+    status: applied
+    slots:
+      - meta
+      - hero
+      - body
+      - faq
+      - footer
+  video-trailer:
+    page: book-video-trailers.html
+    paragraph_count: 38
+    status: applied
+    slots:
+      - meta
+      - hero
+      - body
+      - faq
+      - footer
+  creative-writing:
+    page: creative-writing.html
+    paragraph_count: 40
+    status: applied
+    slots:
+      - meta
+      - hero
+      - body
+      - faq
+      - footer
+  children-illustration:
+    page: children-book-illustration.html
+    paragraph_count: 29
+    status: applied
+    slots:
+      - meta
+      - hero
+      - body
+      - faq
+      - footer
+  screenplay:
+    page: screenplay-script-writing.html
+    paragraph_count: 25
+    status: applied
+    slots:
+      - meta
+      - hero
+      - body
+      - faq
+      - footer
+  book-publishing:
+    page: book-publishing.html
+    paragraph_count: 79
+    status: applied
+    slots:
+      - meta
+      - hero
+      - body
+      - faq
+      - footer
+  book-marketing:
+    page: book-marketing.html
+    paragraph_count: 67
+    status: applied
+    slots:
+      - meta
+      - hero
+      - body
+      - faq
+      - footer
+  pricing:
+    page: pricing.html
+    paragraph_count: 6
+    status: applied
+    slots:
+      - meta
+      - hero
+      - needs_copy:package_cards
+    notes: Doc has 5 lines; HTML package cards need_copy
+  about:
+    page: about-us.html
+    paragraph_count: 26
+    status: applied
+    slots:
+      - meta
+      - hero
+      - body
+      - faq
+      - footer
+  published-books:
+    page: published-books.html
+    paragraph_count: 16
+    status: applied
+    slots:
+      - meta
+      - hero
+      - body
+      - faq
+      - footer
+  customer-reviews:
+    page: customer-reviews.html
+    paragraph_count: 49
+    status: applied
+    slots:
+      - meta
+      - hero
+      - testimonials
+      - cta
+  faq:
+    page: faq.html
+    paragraph_count: 39
+    status: applied
+    slots:
+      - meta
+      - accordion
+testimonials:
+  - name: "Author of The Fated Heir Chronicles"
