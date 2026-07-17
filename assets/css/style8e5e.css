@@ -323,7 +323,7 @@ section {
   transition: 0.5s ease-in-out;
 }
 .grey-btn {
-  background-color: #949494;
+  background-color: #ffffff00;
 }
 .head-right ul li i,
 .header-above {
@@ -364,7 +364,7 @@ section {
   position: absolute;
   width: 100%;
   left: 0;
-  background: linear-gradient(180deg, rgba(40, 55, 27, 0.62) 0, #28371b 89%);
+  background: linear-gradient(180deg, #d0128100 0, #290116 89%);
 }
 .header-above {
   padding: 10px 0 4px;
@@ -583,7 +583,7 @@ section {
   position: absolute;
   height: 100%;
   width: 150px;
-  background: url(../img/white-leaf.png) center center/cover no-repeat;
+  background: url(../img/white-leaf.png) center left/cover no-repeat;
   right: -70px;
   top: 0;
 }
@@ -861,7 +861,7 @@ section {
   position: absolute;
   height: 90%;
   width: 90px;
-  background: url(../img/ubp-new/white-leaf.webp) center center/contain
+  background: url(../img/ubp-new/white-leaf.webp) center left/contain
     no-repeat;
   right: -50px;
   top: 10px;
@@ -1045,9 +1045,9 @@ section {
   z-index: -6;
 }
 .bann-box {
-  border: 3px solid #e89f00;
+  border: 3px solid #d01281;
   padding: 20px 15px;
-  background-color: #29361a9f;
+  background-color: #67053f9f;
   border-radius: 10px;
   z-index: 555;
   height: 100%;
@@ -1183,7 +1183,7 @@ section {
   position: absolute;
   height: 80%;
   width: 90px;
-  background: url(../img/white-leaf.png) center center/contain no-repeat;
+  background: url(../img/white-leaf.png) center left/contain no-repeat;
   right: -30px;
   bottom: 0;
   z-index: -4;
@@ -1559,7 +1559,7 @@ span.cut-price {
   position: absolute;
   height: 40%;
   width: 150px;
-  background: url(../img/white-leaf.png) center center/contain no-repeat;
+  background: url(../img/white-leaf.png) center left/contain no-repeat;
   bottom: 0;
   right: -40px;
   opacity: 0.5;
@@ -1858,7 +1858,7 @@ span.cut-price {
   align-items: center;
   justify-content: center;
   flex-direction: column !important;
-  background: linear-gradient(180deg, rgba(40, 55, 27, 0.12) 0, #28371b 100%);
+  background: linear-gradient(180deg, #d0128100 0, #290116 89%);
   color: #fff;
   transition: 0.4s ease-in-out;
   border-radius: 10px;
@@ -1870,7 +1870,7 @@ span.cut-price {
 }
 .publish-box:hover .publish-content {
   bottom: 0;
-  background: linear-gradient(180deg, rgba(40, 55, 27, 0.47) 0, #28371b 89%);
+  background: linear-gradient(180deg, #d0128100 0, #290116 89%);
 }
 .contact-list li::before,
 .platform-sec .row::before {
