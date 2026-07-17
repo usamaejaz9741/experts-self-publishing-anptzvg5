@@ -1,0 +1,892 @@
+{
+  "index.html": {
+    "type": "index",
+    "hero": [
+      0,
+      1,
+      2
+    ],
+    "publish_sec": {
+      "heading": 4,
+      "body": [
+        5,
+        6
+      ]
+    },
+    "services_intro": [
+      7,
+      8,
+      9
+    ],
+    "testi_intro": [
+      10,
+      11,
+      12
+    ],
+    "connect": {
+      "fixed_h3": "Your Trusted",
+      "fixed_h2": "Self-Publishing Experts",
+      "body": [
+        15,
+        16
+      ]
+    },
+    "why_choose": {
+      "heading": [
+        17,
+        18
+      ],
+      "intro": [
+        19
+      ],
+      "boxes": [
+        [
+          20,
+          21
+        ],
+        [
+          22,
+          23
+        ],
+        [
+          24,
+          25
+        ],
+        [
+          26,
+          27
+        ]
+      ]
+    },
+    "form": {
+      "steps": [
+        [
+          28,
+          29
+        ],
+        [
+          30,
+          31
+        ],
+        [
+          32,
+          33
+        ],
+        [
+          34,
+          35
+        ],
+        [
+          36,
+          37
+        ]
+      ]
+    }
+  },
+  "author-website.html": {
+    "hero": [
+      0,
+      1,
+      2
+    ],
+    "content_heading": 3,
+    "content_intro": 4,
+    "content_rows": [
+      "overflow",
+      5,
+      6
+    ],
+    "cta": [
+      7,
+      8,
+      9
+    ],
+    "make_title": 10,
+    "make_body": [
+      11,
+      12,
+      13,
+      14
+    ],
+    "our_service": {
+      "title": 15,
+      "subtitle": 16,
+      "body": 17
+    }
+  },
+  "pr-and-publicity.html": {
+    "hero": [
+      0,
+      1,
+      2
+    ],
+    "content_heading_split": [
+      3,
+      4
+    ],
+    "content_intro": 5,
+    "content_rows": [
+      6,
+      7,
+      8
+    ],
+    "cta": [
+      9,
+      10,
+      11
+    ],
+    "make_title": 12,
+    "make_body": [
+      13,
+      14,
+      15,
+      16
+    ],
+    "our_service": {
+      "title": 17,
+      "subtitle": 18,
+      "body": 19
+    }
+  },
+  "book-editing-proofreading.html": {
+    "hero": [
+      0,
+      1,
+      2
+    ],
+    "content_heading_split": [
+      3,
+      4
+    ],
+    "content_intro": 5,
+    "content_rows": [
+      6,
+      7,
+      8,
+      9
+    ],
+    "cta": [
+      10,
+      11,
+      12
+    ],
+    "make_title": 13,
+    "make_body": [
+      14,
+      15,
+      16
+    ],
+    "our_service": {
+      "title": 17,
+      "subtitle": 18,
+      "body": 19
+    }
+  },
+  "book-cover-design.html": {
+    "hero": [
+      0,
+      1,
+      2
+    ],
+    "content_heading_split": [
+      3,
+      4
+    ],
+    "content_intro": 5,
+    "content_rows": [
+      6,
+      7,
+      8,
+      9
+    ],
+    "cta": [
+      10,
+      11,
+      12
+    ],
+    "make_title": 13,
+    "make_body": [
+      14,
+      15,
+      16,
+      17
+    ],
+    "our_service": {
+      "title": 18,
+      "subtitle": 19,
+      "body": 20
+    }
+  },
+  "ghostwriting.html": {
+    "hero_prefix_fixed": "Tell Your Story With",
+    "hero": [
+      0,
+      1,
+      2
+    ],
+    "content_heading_split": [
+      3,
+      4
+    ],
+    "content_intro": 5,
+    "content_rows": [
+      6,
+      7,
+      8
+    ],
+    "cta": [
+      9,
+      10,
+      11
+    ],
+    "make_title": 12,
+    "make_body": [
+      13,
+      14,
+      15
+    ],
+    "our_service": {
+      "title": 16,
+      "subtitle": 17,
+      "body": 18
+    }
+  },
+  "book-illustration.html": {
+    "hero": [
+      0,
+      1,
+      2
+    ],
+    "content_heading_split": [
+      3,
+      4
+    ],
+    "content_intro": 5,
+    "content_rows": [
+      6,
+      7,
+      8
+    ],
+    "cta": [
+      9,
+      10,
+      11
+    ],
+    "make_title": 12,
+    "make_body": [
+      13,
+      14,
+      15
+    ],
+    "our_service": {
+      "title": 16,
+      "subtitle": 17,
+      "body": 18
+    }
+  },
+  "book-video-trailers.html": {
+    "hero_prefix_fixed": "Promote Your Book With",
+    "hero": [
+      0,
+      1,
+      2
+    ],
+    "content_heading_split": [
+      3,
+      4
+    ],
+    "content_intro": 5,
+    "content_rows": [
+      6,
+      7,
+      8
+    ],
+    "cta": [
+      14,
+      15,
+      16
+    ],
+    "make_title": 9,
+    "make_body": [
+      10,
+      11,
+      12,
+      13
+    ],
+    "our_service": {
+      "title": 17,
+      "subtitle": 18,
+      "body": 19
+    }
+  },
+  "creative-writing.html": {
+    "hero": [
+      0,
+      1,
+      2
+    ],
+    "content_heading_split": [
+      3,
+      4
+    ],
+    "content_intro": 5,
+    "content_rows": [
+      6,
+      7,
+      8
+    ],
+    "cta": [
+      9,
+      10,
+      11
+    ],
+    "make_title": 12,
+    "make_body": [
+      13,
+      14,
+      15,
+      16
+    ],
+    "our_service": {
+      "title": 17,
+      "subtitle": 18,
+      "body": 19
+    }
+  },
+  "children-book-illustration.html": {
+    "hero": [
+      0,
+      1,
+      2
+    ],
+    "content_heading": 3,
+    "content_intro": 4,
+    "content_rows": [
+      5,
+      6,
+      7
+    ],
+    "cta": [
+      8,
+      9,
+      10
+    ],
+    "make_title": 11,
+    "make_body": [
+      12,
+      13
+    ],
+    "our_service": {
+      "title": 14,
+      "subtitle": 15,
+      "body": 16
+    }
+  },
+  "screenplay-script-writing.html": {
+    "hero": [
+      0,
+      1,
+      2
+    ],
+    "content_heading_split": [
+      3,
+      4
+    ],
+    "content_intro": 5,
+    "content_rows": [
+      6,
+      7
+    ],
+    "cta": [
+      8,
+      9,
+      10
+    ],
+    "make_title": 11,
+    "make_body": [
+      12,
+      13
+    ],
+    "our_service": {
+      "title": 14,
+      "subtitle": 15,
+      "body": 16
+    }
+  },
+  "book-publishing.html": {
+    "type": "book_publishing",
+    "cta_h3_fixed": "Your Next Chapter Starts Here",
+    "banner": [
+      0,
+      1
+    ],
+    "s1_heading": 2,
+    "s1_body": [
+      3,
+      4,
+      5
+    ],
+    "cta": [
+      6,
+      7
+    ],
+    "kdp": {
+      "heading": 8,
+      "intro": [
+        9,
+        10
+      ],
+      "bullets": [
+        11,
+        12,
+        13,
+        14
+      ],
+      "closing": [
+        15,
+        16
+      ]
+    },
+    "self_kdp": {
+      "heading": 17,
+      "intro": 18,
+      "benefits": [
+        [
+          19,
+          20
+        ],
+        [
+          21,
+          22
+        ],
+        [
+          23,
+          24
+        ],
+        [
+          25,
+          26
+        ],
+        [
+          27,
+          28
+        ]
+      ],
+      "closing": [
+        29,
+        30
+      ]
+    },
+    "publish_1": {
+      "heading": 31,
+      "body": [
+        32,
+        33
+      ]
+    },
+    "testi": [
+      34,
+      35,
+      36
+    ],
+    "process": {
+      "heading": 37,
+      "intro": 38,
+      "steps": [
+        [
+          39,
+          40
+        ]
+      ]
+    },
+    "connect": {
+      "heading": 41,
+      "body": [
+        42,
+        43
+      ]
+    },
+    "why_choose": {
+      "heading": [
+        44,
+        45
+      ],
+      "intro": [
+        46
+      ],
+      "boxes": [
+        [
+          47,
+          48
+        ],
+        [
+          49,
+          50
+        ],
+        [
+          51,
+          52
+        ],
+        [
+          53,
+          54
+        ]
+      ]
+    },
+    "publish_2": {
+      "heading": 55,
+      "intro": 56,
+      "paths": [
+        [
+          57,
+          58
+        ],
+        [
+          59,
+          60
+        ],
+        [
+          61,
+          62
+        ]
+      ]
+    }
+  },
+  "book-marketing.html": {
+    "type": "book_marketing",
+    "banner": {
+      "h1": 0,
+      "subtitle": 1,
+      "boxes": [
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "tagline": 8
+    },
+    "s1": {
+      "heading": [
+        9,
+        10
+      ],
+      "tagline": 8
+    },
+    "cta": {
+      "h3": 11,
+      "h2": 12,
+      "body": [
+        13,
+        14
+      ]
+    },
+    "inner_service": {
+      "heading": 15,
+      "intro": 16
+    },
+    "market_boxes": [
+      [
+        17,
+        18
+      ],
+      [
+        19,
+        20
+      ],
+      [
+        21,
+        22
+      ],
+      [
+        23,
+        24
+      ],
+      [
+        25,
+        26
+      ],
+      [
+        27,
+        28
+      ]
+    ],
+    "process": {
+      "heading": 29,
+      "intro": 30
+    },
+    "testi": [
+      31,
+      32,
+      33
+    ],
+    "why_choose": {
+      "heading": [
+        34,
+        35
+      ],
+      "intro": [
+        36
+      ],
+      "boxes": [
+        [
+          37,
+          38
+        ],
+        [
+          39,
+          40
+        ],
+        [
+          41,
+          42
+        ],
+        [
+          43,
+          44
+        ]
+      ]
+    }
+  },
+  "pricing.html": {
+    "type": "pricing",
+    "banner": [
+      0,
+      1,
+      2
+    ],
+    "cta_no_doc": true
+  },
+  "about-us.html": {
+    "banner_fixed_label": "Our Journey",
+    "banner": [
+      1,
+      2
+    ],
+    "about_heading": 3,
+    "about_intro": 4,
+    "about_rows": [
+      5
+    ],
+    "cta": [
+      6,
+      7,
+      8
+    ],
+    "our_service": {
+      "title": 9,
+      "subtitle": 10,
+      "body": 11
+    },
+    "connect": {
+      "heading": 12,
+      "body": [
+        13,
+        14
+      ]
+    },
+    "form": {
+      "heading": 15,
+      "intro": 16,
+      "steps": [
+        [
+          15,
+          16
+        ],
+        [
+          17,
+          18
+        ],
+        [
+          19,
+          20
+        ],
+        [
+          21,
+          22
+        ],
+        [
+          23,
+          24
+        ]
+      ]
+    }
+  },
+  "published-books.html": {
+    "banner": [
+      0,
+      1,
+      2
+    ],
+    "publish_sec": {
+      "heading": 3,
+      "intro": 4
+    },
+    "form": {
+      "heading": 5,
+      "intro": 6,
+      "steps": [
+        [
+          5,
+          6
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          11,
+          12
+        ],
+        [
+          13,
+          14
+        ]
+      ]
+    }
+  },
+  "customer-reviews.html": {
+    "banner": [
+      0,
+      1,
+      2
+    ],
+    "testi_heading": 3,
+    "testi_intro": 4,
+    "form": {
+      "heading": 38,
+      "intro": 39,
+      "steps": [
+        [
+          38,
+          39
+        ],
+        [
+          40,
+          41
+        ],
+        [
+          42,
+          43
+        ],
+        [
+          44,
+          45
+        ],
+        [
+          46,
+          47
+        ]
+      ]
+    },
+    "connect": {
+      "heading": 24,
+      "body": [
+        25,
+        26
+      ]
+    },
+    "why_choose": {
+      "heading": [
+        27,
+        28
+      ],
+      "intro": [
+        29
+      ],
+      "boxes": [
+        [
+          30,
+          31
+        ],
+        [
+          32,
+          33
+        ],
+        [
+          34,
+          35
+        ],
+        [
+          36,
+          37
+        ]
+      ]
+    }
+  },
+  "faq.html": {
+    "type": "faq",
+    "banner_fixed_label": "Our Journey",
+    "connect": {
+      "heading": 14,
+      "body": [
+        15,
+        16
+      ]
+    },
+    "why_choose": {
+      "heading": [
+        17,
+        18
+      ],
+      "intro": [
+        19
+      ],
+      "boxes": [
+        [
+          20,
+          21
+        ],
+        [
+          22,
+          23
+        ],
+        [
+          24,
+          25
+        ],
+        [
+          26,
+          27
+        ]
+      ]
+    },
+    "form": {
+      "heading": 28,
+      "intro": 29,
+      "steps": [
+        [
+          29,
+          30
+        ],
+        [
+          32,
+          33
+        ],
+        [
+          35,
+          36
+        ],
+        [
+          38,
+          39
+        ],
+        [
+          41,
+          42
+        ]
+      ]
+    }
+  }
+}

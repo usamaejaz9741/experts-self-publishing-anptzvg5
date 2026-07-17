@@ -11,7 +11,7 @@ from bs4 import BeautifulSoup
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 
-from apply_content import CORE_PAGES, split_sentences  # noqa: E402
+from apply_content import CORE_PAGES, cta_text_parts, hero_title_for_slots, hero_title_from_paragraph, split_sentences  # noqa: E402
 from page_slots import CTA_NO_DOC_PAGES, OLD_PHRASES, PAGE_SLOTS  # noqa: E402
 
 INVENTORY = ROOT / "content" / "inventory.json"
@@ -44,20 +44,40 @@ def expected_overflow(paragraphs: list[str], intro_idx: int) -> str:
     return " ".join(sents[1:]) if len(sents) > 1 else ""
 
 
+def slots_for_page(page: str, inventory: dict) -> dict:
+    for info in inventory["sections"].values():
+        if info["page"] == page and info.get("slots"):
+            return info["slots"]
+    return PAGE_SLOTS.get(page, {})
+
+
 def check_standard_slots(page: str, soup: BeautifulSoup, paragraphs: list[str], slots: dict) -> tuple[list[str], list[str]]:
     failures: list[str] = []
     warnings: list[str] = []
 
     hero = slots.get("hero", [])
-    hero_sels = (
-        ".inner-heading .font-35, .about-banner .font-35",
-        ".main-heading, .bann-heading h1",
-        ".inner-heading > p, .inner-heading p.reveal, .about-banner p.reveal",
-    )
-    for sel, idx in zip(hero_sels, hero):
-        el = soup.select_one(sel)
-        if el and not matches(paragraphs[idx], el.get_text()):
-            failures.append(f"{page} hero[{idx}]: expected {preview(paragraphs[idx])}")
+    if prefix := slots.get("hero_prefix_fixed"):
+        el35 = soup.select_one(".about-banner .font-35, .inner-heading .font-35")
+        h1 = soup.select_one(".main-heading, .bann-heading h1")
+        intro_idx = hero[2] if len(hero) > 2 else hero[1]
+        intro_el = soup.select_one(".inner-heading > p, .about-banner p.reveal")
+        if el35 and prefix not in el35.get_text():
+            failures.append(f"{page} hero prefix: expected {prefix!r}")
+        expected_title = hero_title_for_slots(paragraphs, hero, prefix)
+        if h1 and not matches(expected_title, h1.get_text()):
+            failures.append(f"{page} hero title: expected {preview(expected_title)}")
+        if intro_el and not matches(paragraphs[intro_idx], intro_el.get_text()):
+            failures.append(f"{page} hero intro: expected {preview(paragraphs[intro_idx])}")
+    else:
+        hero_sels = (
+            ".inner-heading .font-35, .about-banner .font-35",
+            ".main-heading, .bann-heading h1",
+            ".inner-heading > p, .inner-heading p.reveal, .about-banner p.reveal",
+        )
+        for sel, idx in zip(hero_sels, hero):
+            el = soup.select_one(sel)
+            if el and idx < len(paragraphs) and not matches(paragraphs[idx], el.get_text()):
+                failures.append(f"{page} hero[{idx}]: expected {preview(paragraphs[idx])}")
 
     if not slots.get("cta_no_doc") and (cta := slots.get("cta")):
         cta_el = soup.select_one("section.cta-sec .cta-content")
@@ -68,15 +88,19 @@ def check_standard_slots(page: str, soup: BeautifulSoup, paragraphs: list[str], 
                 norm(cta_el.select_one("p").get_text()) if cta_el.select_one("p") else "",
             ]
             start = 1 if slots.get("cta_h3_fixed") else 0
-            for j, idx in enumerate(cta):
+            expected_parts = cta_text_parts(paragraphs, cta)
+            for j, exp in enumerate(expected_parts):
                 sel_i = start + j
-                if sel_i < len(texts) and not matches(paragraphs[idx], texts[sel_i]):
+                if sel_i < len(texts) and not matches(exp, texts[sel_i]):
                     failures.append(
-                        f"{page} CTA slot {sel_i}: expected {preview(paragraphs[idx])} got {preview(texts[sel_i])}"
+                        f"{page} CTA slot {sel_i}: expected {preview(exp)} got {preview(texts[sel_i])}"
                     )
-                about = soup.select_one("section.about-1")
-                if about and paragraphs[idx][:30] in norm(about.get_text()):
-                    failures.append(f"{page} CTA line {idx} appears in about-1 instead of cta-sec")
+            about = soup.select_one("section.about-1")
+            if about:
+                for idx in cta:
+                    if isinstance(idx, int) and idx < len(paragraphs) and paragraphs[idx][:30] in norm(about.get_text()):
+                        failures.append(f"{page} CTA line {idx} appears in about-1 instead of cta-sec")
+                        break
 
     if slots.get("cta_no_doc") and page in CTA_NO_DOC_PAGES:
         warnings.append(f"{page}: CTA has no doc source (known gap)")
@@ -162,7 +186,7 @@ def main() -> int:
         html = path.read_text(encoding="utf-8")
         soup = BeautifulSoup(html, "html.parser")
         paragraphs = paragraphs_for(page, inventory)
-        slots = PAGE_SLOTS.get(page, {})
+        slots = slots_for_page(page, inventory)
 
         if slots.get("type") == "book_publishing":
             f, w = check_book_publishing(page, soup, paragraphs, slots)

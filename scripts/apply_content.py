@@ -10,6 +10,13 @@ from bs4 import BeautifulSoup, NavigableString
 
 from page_slots import PAGE_SLOTS
 
+
+def slots_for_page(page: str, inventory: dict) -> dict:
+    for info in inventory["sections"].values():
+        if info["page"] == page and info.get("slots"):
+            return info["slots"]
+    return PAGE_SLOTS.get(page, {})
+
 ROOT = Path(__file__).resolve().parent.parent
 INVENTORY = ROOT / "content" / "inventory.json"
 
@@ -185,7 +192,11 @@ def split_heading_two_line(text: str) -> tuple[str, str]:
 
 def faq_start(paragraphs: list[str]) -> int:
     for i, p in enumerate(paragraphs):
-        if p.startswith("FREQUENTLY ASKED") or p == "FAQ":
+        if (
+            p.startswith("FREQUENTLY ASKED")
+            or p == "FAQ"
+            or p.startswith("Frequently Asked Questions")
+        ):
             return i
     return len(paragraphs)
 
@@ -335,6 +346,37 @@ def is_faq_header(p: str) -> bool:
     )
 
 
+def hero_title_from_paragraph(text: str, prefix: str = "") -> str:
+    if prefix and prefix in text:
+        return text.split(prefix, 1)[1].strip()
+    if "\n" in text:
+        parts = [p.strip() for p in text.split("\n") if p.strip()]
+        return parts[-1] if parts else text
+    if "Professional" in text:
+        return text[text.find("Professional") :].strip()
+    return text.strip()
+
+
+def hero_title_for_slots(paragraphs: list[str], hero: list[int], prefix: str = "") -> str:
+    if len(hero) > 2:
+        return para_at(paragraphs, hero[1])
+    return hero_title_from_paragraph(para_at(paragraphs, hero[0]), prefix)
+
+
+def cta_text_parts(paragraphs: list[str], indices: list[int]) -> list[str]:
+    parts: list[str] = []
+    for idx in indices:
+        text = para_at(paragraphs, idx)
+        if not text:
+            continue
+        if "\n" in text and len(parts) < 2:
+            split = [p.strip() for p in text.split("\n") if p.strip()]
+            parts.extend(split)
+        elif not parts or parts[-1] != text:
+            parts.append(text)
+    return parts
+
+
 def para_at(paragraphs: list[str], idx: int | str) -> str:
     if idx == "overflow":
         return ""
@@ -346,15 +388,25 @@ def para_at(paragraphs: list[str], idx: int | str) -> str:
 def apply_from_slots(soup: BeautifulSoup, paragraphs: list[str], slots: dict) -> None:
     """Map inventory paragraph indices to named HTML slots."""
     hero = slots.get("hero", [])
-    hero_sels = (
-        ".inner-heading .font-35, .about-banner .font-35",
-        ".main-heading, .bann-heading h1",
-        ".inner-heading > p, .inner-heading p.reveal, .about-banner p.reveal",
-    )
-    for sel, idx in zip(hero_sels, hero):
-        el = soup.select_one(sel)
-        if el:
-            set_text(el, para_at(paragraphs, idx))
+    if prefix := slots.get("hero_prefix_fixed"):
+        intro_idx = hero[2] if len(hero) > 2 else (hero[1] if len(hero) > 1 else hero[0])
+        title = hero_title_for_slots(paragraphs, hero, prefix)
+        set_text(soup.select_one(".about-banner .font-35, .inner-heading .font-35"), prefix)
+        set_text(soup.select_one(".main-heading, .bann-heading h1"), title)
+        set_text(
+            soup.select_one(".inner-heading > p, .inner-heading p.reveal, .about-banner p.reveal"),
+            para_at(paragraphs, intro_idx),
+        )
+    elif hero:
+        hero_sels = (
+            ".inner-heading .font-35, .about-banner .font-35",
+            ".main-heading, .bann-heading h1",
+            ".inner-heading > p, .inner-heading p.reveal, .about-banner p.reveal",
+        )
+        for sel, idx in zip(hero_sels, hero):
+            el = soup.select_one(sel)
+            if el:
+                set_text(el, para_at(paragraphs, idx))
 
     box = soup.select_one("section.about-1 .content-box")
     overflow = ""
@@ -375,12 +427,16 @@ def apply_from_slots(soup: BeautifulSoup, paragraphs: list[str], slots: dict) ->
         intro_idx = slots.get("content_intro")
         if intro_idx is not None:
             text = para_at(paragraphs, intro_idx)
-            sents = split_sentences(text)
             intro = box.select_one("p.para-color")
+            rows = slots.get("content_rows", [])
             if intro:
-                set_text(intro, sents[0] if sents else text)
-            if len(sents) > 1:
-                overflow = " ".join(sents[1:])
+                if "overflow" in rows:
+                    sents = split_sentences(text)
+                    set_text(intro, sents[0] if sents else text)
+                    if len(sents) > 1:
+                        overflow = " ".join(sents[1:])
+                else:
+                    set_text(intro, text)
 
     content_els = soup.select("section.about-1 .content p.para-color")
     for el in content_els:
@@ -403,12 +459,13 @@ def apply_from_slots(soup: BeautifulSoup, paragraphs: list[str], slots: dict) ->
             cta_slots = slots.get("cta", [])
             cta_sels = ("h3.bg-rect", "h2.sec-hd", "p")
             start = 1 if slots.get("cta_h3_fixed") else 0
+            texts = cta_text_parts(paragraphs, cta_slots)
             for j, sel in enumerate(cta_sels[start:]):
-                if j >= len(cta_slots):
+                if j >= len(texts):
                     break
                 el = cta.select_one(sel)
                 if el:
-                    set_text(el, para_at(paragraphs, cta_slots[j]))
+                    set_text(el, texts[j])
 
     make = soup.select_one("section.make-unique .make-content")
     if make and "make_title" in slots:
@@ -424,9 +481,127 @@ def apply_from_slots(soup: BeautifulSoup, paragraphs: list[str], slots: dict) ->
     apply_faq_section(soup, paragraphs)
 
 
-def apply_standard_service_page(soup: BeautifulSoup, paragraphs: list[str], page: str) -> None:
-    """Fill the shared service-page template from PAGE_SLOTS manifest."""
-    slots = PAGE_SLOTS.get(page, {})
+def apply_page_our_service(soup: BeautifulSoup, paragraphs: list[str], slots: dict) -> None:
+    """Fill page-specific our-service header from image chunk (not home copy)."""
+    os = slots.get("our_service")
+    if not os:
+        return
+    svc = soup.select_one("section.our-service .our-service-hd, .our-service-hd")
+    if not svc:
+        return
+    title = para_at(paragraphs, os["title"])
+    subtitle = para_at(paragraphs, os.get("subtitle", os["title"]))
+    body = para_at(paragraphs, os.get("body", os["title"]))
+    top, sub = split_heading_two_line(title)
+    if sub:
+        set_text(svc.select_one(".font-35"), top)
+        set_text(svc.select_one("h2.sec-hd"), sub)
+    else:
+        set_text(svc.select_one(".font-35"), title)
+        set_text(svc.select_one("h2.sec-hd"), subtitle)
+    intro = svc.select_one("p.para-color")
+    if intro and body and body != subtitle:
+        set_text(intro, body)
+
+
+def apply_connect_slots(soup: BeautifulSoup, paragraphs: list[str], conn: dict) -> None:
+    cta = soup.select_one(".connect-sec .cta-left")
+    if not cta or not conn:
+        return
+    heading = para_at(paragraphs, conn["heading"])
+    top, sub = split_heading_two_line(heading)
+    if not sub and " Into " in heading:
+        top, sub = heading.split(" Into ", 1)
+        sub = f"Into {sub.strip()}"
+    if not sub and " Journey " in heading:
+        top, sub = heading.split(" Journey ", 1)
+        sub = f"Journey {sub.strip()}"
+    if not sub and " That " in heading:
+        top, sub = heading.split(" That ", 1)
+        sub = f"That {sub.strip()}"
+    label = cta.select_one(".font-45, .font-40")
+    if label:
+        set_text(label, top)
+    set_text(cta.select_one("h2.sec-hd"), sub or top)
+    for el, idx in zip(cta.select("p"), conn.get("body", [])):
+        set_text(el, para_at(paragraphs, idx))
+
+
+def apply_why_choose_slots(soup: BeautifulSoup, paragraphs: list[str], wc: dict) -> None:
+    choose = soup.select_one(".why-choose-sec .choose-heading")
+    if not choose or not wc:
+        return
+    set_text(choose.select_one(".font-35"), para_at(paragraphs, wc["heading"][0]))
+    set_text(choose.select_one("h2.sec-hd"), para_at(paragraphs, wc["heading"][1]))
+    intro = choose.select_one("p.w-80")
+    if intro:
+        intro_parts = [para_at(paragraphs, i) for i in wc.get("intro", [])]
+        set_text(intro, " ".join(p for p in intro_parts if p))
+    for box, (ti, bi) in zip(soup.select(".why-choose-sec .choose-box"), wc.get("boxes", [])):
+        set_text(box.select_one("h3"), para_at(paragraphs, ti))
+        set_text(box.select_one("p"), para_at(paragraphs, bi))
+
+
+def apply_process_slots(soup: BeautifulSoup, paragraphs: list[str], process: dict) -> None:
+    sec = soup.select_one("section.process-tab-sec")
+    if not sec or not process:
+        return
+    head = sec.select_one(".process-heading")
+    if head:
+        heading = para_at(paragraphs, process["heading"])
+        top, sub = split_heading_two_line(heading)
+        label = head.select_one(".font-35")
+        if sub and label:
+            set_text(label, top)
+            set_text(head.select_one("h2.sec-hd"), sub)
+        else:
+            set_text(head.select_one("h2.sec-hd"), heading)
+        intro = head.select_one("p")
+        if intro:
+            set_text(intro, para_at(paragraphs, process["intro"]))
+    for box, (ti, bi) in zip(sec.select(".process-content-box"), process.get("steps", [])):
+        content = box.select_one(".process-content")
+        if content:
+            set_text(content.select_one("h2"), para_at(paragraphs, ti))
+            set_text(content.select_one("p"), para_at(paragraphs, bi))
+
+
+def apply_publish_2_slots(soup: BeautifulSoup, paragraphs: list[str], p2: dict) -> None:
+    sec = soup.select_one("section.publish-2")
+    if not sec or not p2:
+        return
+    head = sec.select_one(".publish-heading")
+    if head:
+        set_text(head.select_one("h2.sec-hd"), para_at(paragraphs, p2["heading"]))
+        intro = head.select_one("p")
+        if intro:
+            set_text(intro, para_at(paragraphs, p2["intro"]))
+    for box, (ti, bi) in zip(sec.select(".path-box"), p2.get("paths", [])):
+        h3 = box.select_one("h3")
+        if h3:
+            title = para_at(paragraphs, ti)
+            if " " in title and "<br" not in str(h3):
+                parts = title.split(" ", 1)
+                set_text(h3, title)
+            else:
+                set_text(h3, title)
+        p_el = box.select_one(".path-content p")
+        if p_el:
+            set_text(p_el, para_at(paragraphs, bi))
+
+
+def apply_form_steps(soup: BeautifulSoup, paragraphs: list[str], form: dict) -> None:
+    if not form:
+        return
+    for step_el, (ti, bi) in zip(soup.select(".process-step li"), form.get("steps", [])):
+        title = re.sub(r"^\d+\.\s*", "", para_at(paragraphs, ti)).strip()
+        set_text(step_el.select_one("h4"), title)
+        set_text(step_el.select_one("p"), para_at(paragraphs, bi))
+
+
+def apply_standard_service_page(soup: BeautifulSoup, paragraphs: list[str], page: str, inventory: dict) -> None:
+    """Fill the shared service-page template from slot manifest."""
+    slots = slots_for_page(page, inventory)
     if slots and not slots.get("type"):
         apply_from_slots(soup, paragraphs, slots)
 
@@ -442,8 +617,8 @@ def set_li_text(el, text: str) -> None:
         set_text(el, text)
 
 
-def apply_book_publishing(soup: BeautifulSoup, paragraphs: list[str]) -> None:
-    slots = PAGE_SLOTS["book-publishing.html"]
+def apply_book_publishing(soup: BeautifulSoup, paragraphs: list[str], slots: dict | None = None) -> None:
+    slots = slots or PAGE_SLOTS.get("book-publishing.html", {})
 
     for sel, idx in (
         (".bann-heading h1", slots["banner"][0]),
@@ -490,20 +665,33 @@ def apply_book_publishing(soup: BeautifulSoup, paragraphs: list[str]) -> None:
         for bt, (ti, bi) in zip(self_sec.select(".benefit-text"), sk["benefits"]):
             set_text(bt.select_one("strong"), para_at(paragraphs, ti))
             set_text(bt.select_one("span"), para_at(paragraphs, bi))
+        closing = sk.get("closing", [])
+        if closing:
+            p_el = self_sec.select_one(".col-lg-6 p.text-white")
+            if p_el:
+                set_text(p_el, para_at(paragraphs, closing[0]))
+            if len(closing) > 1:
+                h5 = self_sec.select_one(".col-lg-6 h5.color")
+                if h5:
+                    set_text(h5, para_at(paragraphs, closing[1]))
 
-    p1 = slots["publish_1"]
+    p1 = slots.get("publish_1")
     pub = soup.select_one("section.publish-1 .publish-heading")
-    if pub:
+    if pub and p1:
         set_text(pub.select_one("h2.sec-hd"), para_at(paragraphs, p1["heading"]))
         for el, idx in zip(pub.select("p")[:2], p1["body"]):
             set_text(el, para_at(paragraphs, idx))
 
     testi = soup.select_one(".testi-heading")
-    if testi:
-        ti = slots["testi"]
+    if testi and (ti := slots.get("testi")):
         set_text(testi.select_one(".font-35"), para_at(paragraphs, ti[0]))
         set_text(testi.select_one(".sec-hd"), para_at(paragraphs, ti[1]))
         set_text(testi.select_one("p"), para_at(paragraphs, ti[2]))
+
+    apply_process_slots(soup, paragraphs, slots.get("process", {}))
+    apply_connect_slots(soup, paragraphs, slots.get("connect", {}))
+    apply_why_choose_slots(soup, paragraphs, slots.get("why_choose", {}))
+    apply_publish_2_slots(soup, paragraphs, slots.get("publish_2", {}))
 
     fi = faq_start(paragraphs)
     faq_sec = soup.select_one("section.faq-sec, section.accordion-sec")
@@ -528,157 +716,154 @@ def apply_shared_services_section(soup: BeautifulSoup, home_paragraphs: list[str
     set_text(svc.select_one("p.para-color"), f"{usable[9]} {usable[10]}")
 
 
-def apply_index_updates(soup: BeautifulSoup, paragraphs: list[str]) -> None:
-    slots = PAGE_SLOTS["index.html"]
-    usable = [p for p in paragraphs if p not in SKIP_LABELS and p != "Experts Self Publishing Content"]
-
+def apply_index_updates(soup: BeautifulSoup, paragraphs: list[str], slots: dict) -> None:
     for sel, idx in zip(
         (".bann-heading h1.first-content", ".bann-heading h2.bann-hd", ".bann-heading .main-para"),
-        slots["hero"],
+        slots.get("hero", [0, 1, 2]),
     ):
-        set_text(soup.select_one(sel), para_at(usable, idx - 1))
+        set_text(soup.select_one(sel), para_at(paragraphs, idx))
 
     pub = soup.select_one(".publish-sec .s1-left")
-    ps = slots["publish_sec"]
-    if pub:
-        partner = para_at(usable, ps["heading"] - 1)
-        if "Self-Publishing Partner" in partner:
-            set_text(pub.select_one(".font-35"), partner.split("Self-Publishing")[0].strip())
+    ps = slots.get("publish_sec", {})
+    if pub and ps:
+        heading = para_at(paragraphs, ps.get("heading", 3))
+        if "Self-Publishing Partner" in heading:
+            set_text(pub.select_one(".font-35"), heading.split("Self-Publishing")[0].strip())
             set_text(pub.select_one("h2.sec-hd"), "Self-Publishing Partner?")
-        for el, idx in zip(pub.select("p.reveal"), ps["body"]):
-            set_text(el, para_at(usable, idx - 1))
+        else:
+            top, sub = split_heading_two_line(heading)
+            set_text(pub.select_one(".font-35"), top)
+            set_text(pub.select_one("h2.sec-hd"), sub or heading)
+        for el, idx in zip(pub.select("p.reveal"), ps.get("body", [4, 5])):
+            set_text(el, para_at(paragraphs, idx))
 
-    apply_shared_services_section(soup, paragraphs)
+    svc = soup.select_one(".our-service-hd")
+    si = slots.get("services_intro", [8, 9, 10])
+    if svc and isinstance(si, list) and len(si) >= 3:
+        set_text(svc.select_one(".font-35"), para_at(paragraphs, si[0]))
+        set_text(svc.select_one("h2.sec-hd"), para_at(paragraphs, si[1]))
+        set_text(svc.select_one("p.para-color"), para_at(paragraphs, si[2]))
+
+    ti = slots.get("testi_intro", [11, 12, 13])
+    if isinstance(ti, list) and len(ti) >= 3:
+        set_text(soup.select_one(".testi-heading .font-35"), para_at(paragraphs, ti[0]))
+        sub_text = para_at(paragraphs, ti[1])
+        body_text = para_at(paragraphs, ti[2])
+        if ". At Experts" in sub_text:
+            h2, tail = sub_text.split(". At Experts", 1)
+            sub_text = h2.strip() + "."
+            body_text = f"At Experts{tail} {body_text}".strip()
+        set_text(soup.select_one(".testi-heading .sec-hd"), sub_text)
+        intro = soup.select_one(".testi-heading p.w-80")
+        if intro:
+            set_text(intro, body_text)
 
     cta = soup.select_one(".connect-sec .cta-left")
-    conn = slots["connect"]
-    if cta:
-        set_text(cta.select_one(".font-45"), conn["fixed_h3"])
-        set_text(cta.select_one("h2.sec-hd"), conn["fixed_h2"])
-        for el, idx in zip(cta.select("p"), conn["body"]):
-            set_text(el, para_at(usable, idx - 1))
+    conn = slots.get("connect", {})
+    if cta and conn:
+        set_text(cta.select_one(".font-45"), conn.get("fixed_h3", "Your Trusted"))
+        set_text(cta.select_one("h2.sec-hd"), conn.get("fixed_h2", "Self-Publishing Experts"))
+        for el, idx in zip(cta.select("p"), conn.get("body", [15, 16])):
+            set_text(el, para_at(paragraphs, idx))
 
     choose = soup.select_one(".why-choose-sec .choose-heading")
-    wc = slots["why_choose"]
-    if choose:
-        set_text(choose.select_one(".font-35"), para_at(usable, wc["heading"][0] - 1))
-        set_text(choose.select_one("h2.sec-hd"), para_at(usable, wc["heading"][1] - 1))
-        set_text(choose.select_one("p.w-80"), f"{para_at(usable, wc['intro'][0] - 1)} {para_at(usable, wc['intro'][1] - 1)}")
+    wc = slots.get("why_choose", {})
+    if choose and wc:
+        set_text(choose.select_one(".font-35"), para_at(paragraphs, wc["heading"][0]))
+        set_text(choose.select_one("h2.sec-hd"), para_at(paragraphs, wc["heading"][1]))
+        intro = choose.select_one("p.w-80")
+        if intro:
+            intro_parts = wc.get("intro", [])
+            if isinstance(intro_parts, list):
+                text = " ".join(para_at(paragraphs, i) for i in intro_parts if isinstance(i, int))
+            else:
+                text = para_at(paragraphs, intro_parts)
+            set_text(intro, text)
+    for box, (ti, bi) in zip(soup.select(".why-choose-sec .choose-box"), wc.get("boxes", [])):
+        set_text(box.select_one("h3"), para_at(paragraphs, ti))
+        set_text(box.select_one("p"), para_at(paragraphs, bi))
 
-    for box, (ti, bi) in zip(soup.select(".why-choose-sec .choose-box"), wc["boxes"]):
-        set_text(box.select_one("h3"), para_at(usable, ti - 1))
-        set_text(box.select_one("p"), para_at(usable, bi - 1))
-
-    set_text(soup.select_one(".testi-heading .font-35"), "Trusted by Authors for Over 8 Years")
-    set_text(soup.select_one(".testi-heading .sec-hd"), "Real Stories. Real Success.")
-    intro = soup.select_one(".testi-heading p.w-80")
-    if intro:
-        set_text(intro, para_at(usable, slots["testi_intro"] - 1))
+    apply_form_steps(soup, paragraphs, slots.get("form", {}))
 
 
-def apply_book_marketing(soup: BeautifulSoup, paragraphs: list[str]) -> None:
-    seq = sequential_body_paragraphs(paragraphs)
-    idx = 0
+def apply_book_marketing(soup: BeautifulSoup, paragraphs: list[str], slots: dict | None = None) -> None:
+    slots = slots or {}
 
-    def take() -> str:
-        nonlocal idx
-        if idx >= len(seq):
-            return ""
-        text = seq[idx]
-        idx += 1
-        return text
-
+    banner = slots.get("banner", {})
     h1 = soup.select_one(".inner-banner .bann-heading h1")
     sub = soup.select_one(".inner-banner .bann-heading > p.text-white")
-    if h1:
-        set_text(h1, take())
-    if sub:
-        set_text(sub, take())
-
-    for box in soup.select(".inner-banner .bann-box"):
-        title, body = take(), take()
+    if h1 and "h1" in banner:
+        set_text(h1, para_at(paragraphs, banner["h1"]))
+    if sub and "subtitle" in banner:
+        set_text(sub, para_at(paragraphs, banner["subtitle"]))
+    for box, (body_i, title_i) in zip(soup.select(".inner-banner .bann-box"), banner.get("boxes", [])):
         h4 = box.select_one("h4")
         p = box.select_one(".box-content p")
-        if h4 and title:
-            set_text(h4, title)
-        if p and body:
-            set_text(p, body)
+        if h4:
+            set_text(h4, para_at(paragraphs, body_i))
+        if p:
+            set_text(p, para_at(paragraphs, title_i))
 
-    deliver_idx = next(
-        (i for i, p in enumerate(seq) if "for Self Published Authors Deliver Results" in p),
-        idx,
-    )
-    idx = deliver_idx
-    s1 = soup.select_one(".s1-left")
-    if s1 and idx < len(seq):
-        set_text(s1.select_one(".font-35"), "")
-        set_text(s1.select_one("h2.sec-hd"), take())
-        for el in s1.select("p"):
-            text = take()
-            if text:
-                set_text(el, text)
+    s1 = soup.select_one(".marketing-sec .s1-left")
+    if s1 and slots.get("s1"):
+        s1s = slots["s1"]
+        set_text(s1.select_one(".font-35"), para_at(paragraphs, s1s["heading"][0]))
+        set_text(s1.select_one("h2.sec-hd"), para_at(paragraphs, s1s["heading"][1]))
+        tagline = para_at(paragraphs, s1s["tagline"])
+        for j, el in enumerate(s1.select("p")):
+            set_text(el, tagline if j == 0 else "")
 
-    cta = soup.select_one("section.cta-sec .cta-content")
-    if cta:
-        for sel in ("h3.bg-rect", "h2.sec-hd", "p"):
-            el = cta.select_one(sel)
-            if not el:
-                continue
-            text = take()
-            if text:
-                set_text(el, text)
+    cta_sec = soup.select_one("section.cta-sec .cta-content")
+    if cta_sec and slots.get("cta"):
+        cta = slots["cta"]
+        set_text(cta_sec.select_one("h3.bg-rect"), para_at(paragraphs, cta["h3"]))
+        set_text(cta_sec.select_one("h2.sec-hd"), para_at(paragraphs, cta["h2"]))
+        body_parts = [para_at(paragraphs, i) for i in cta.get("body", [])]
+        intro = cta_sec.select_one("p")
+        if intro and body_parts:
+            set_text(intro, " ".join(p for p in body_parts if p))
 
     service = soup.select_one("section.inner-service .service-heading")
-    if service:
-        set_text(service.select_one("h2.sec-hd"), take())
+    if service and slots.get("inner_service"):
+        ins = slots["inner_service"]
+        set_text(service.select_one("h2.sec-hd"), para_at(paragraphs, ins["heading"]))
         intro = service.select_one("p")
         if intro:
-            set_text(intro, take())
-    for box in soup.select("section.inner-service .market-box"):
-        title, body = take(), take()
+            set_text(intro, para_at(paragraphs, ins["intro"]))
+
+    for box, (title_i, body_i) in zip(soup.select("section.inner-service .market-box"), slots.get("market_boxes", [])):
         h3 = box.select_one("h3")
         p = box.select_one(".market-content p")
-        if h3 and title:
-            set_text(h3, title)
-        if p and body:
-            set_text(p, body)
+        if h3:
+            set_text(h3, para_at(paragraphs, body_i))
+        if p:
+            set_text(p, para_at(paragraphs, title_i))
 
     process = soup.select_one("section.process-tab-sec .process-heading")
-    if process:
-        set_text(process.select_one(".font-35"), "")
-        set_text(process.select_one("h2.sec-hd"), take())
+    if process and slots.get("process"):
+        proc = slots["process"]
+        heading = para_at(paragraphs, proc["heading"])
+        top, sub = split_heading_two_line(heading)
+        if sub:
+            set_text(process.select_one(".font-35"), top)
+            set_text(process.select_one("h2.sec-hd"), sub)
+        else:
+            set_text(process.select_one(".font-35"), "")
+            set_text(process.select_one("h2.sec-hd"), heading)
         intro = process.select_one("p")
         if intro:
-            set_text(intro, take())
+            set_text(intro, para_at(paragraphs, proc["intro"]))
 
     testi = soup.select_one(".testi-heading")
-    if testi and idx < len(seq):
-        top, sub, new_idx = consume_heading_pair(seq, idx)
-        set_text(testi.select_one(".font-35"), top)
-        set_text(testi.select_one(".sec-hd"), sub)
-        idx = new_idx if new_idx > idx else idx + 1
-        intro = testi.select_one("p.w-80, p")
-        if intro and idx < len(seq):
-            set_text(intro, take())
+    if testi and slots.get("testi"):
+        ti = slots["testi"]
+        set_text(testi.select_one(".font-35"), para_at(paragraphs, ti[0]))
+        set_text(testi.select_one(".sec-hd"), para_at(paragraphs, ti[1]))
+        intro = testi.select_one("p")
+        if intro and len(ti) > 2:
+            set_text(intro, para_at(paragraphs, ti[2]))
 
-    why = soup.select_one("section.why-choose-sec .choose-heading")
-    if why and idx < len(seq):
-        top, sub, new_idx = consume_heading_pair(seq, idx)
-        set_text(why.select_one(".font-35"), top)
-        set_text(why.select_one("h2.sec-hd"), sub)
-        idx = new_idx if new_idx > idx else idx + 1
-        intro = why.select_one("p.w-80")
-        if intro:
-            set_text(intro, take())
-    for box in soup.select("section.why-choose-sec .choose-box"):
-        h3 = box.select_one("h3")
-        p = box.select_one("p")
-        title, body = take(), take()
-        if h3 and title:
-            set_text(h3, title)
-        if p and body:
-            set_text(p, body)
-
+    apply_why_choose_slots(soup, paragraphs, slots.get("why_choose", {}))
     apply_faq_section(soup, paragraphs)
 
 
@@ -704,8 +889,8 @@ def apply_pricing(soup: BeautifulSoup, paragraphs: list[str]) -> None:
         set_text(banner.select_one("p"), usable[body_idx])
 
 
-def apply_about(soup: BeautifulSoup, paragraphs: list[str]) -> None:
-    slots = PAGE_SLOTS["about-us.html"]
+def apply_about(soup: BeautifulSoup, paragraphs: list[str], slots: dict | None = None) -> None:
+    slots = slots or PAGE_SLOTS.get("about-us.html", {})
     banner = soup.select_one(".about-banner .inner-heading")
     if banner:
         set_text(banner.select_one(".font-35"), slots.get("banner_fixed_label", "Our Journey"))
@@ -732,13 +917,25 @@ def apply_about(soup: BeautifulSoup, paragraphs: list[str]) -> None:
         for sel, idx in zip(("h3.bg-rect", "h2.sec-hd", "p"), slots["cta"]):
             set_text(cta.select_one(sel), para_at(paragraphs, idx))
 
+    apply_connect_slots(soup, paragraphs, slots.get("connect", {}))
+    apply_form_steps(soup, paragraphs, slots.get("form", {}))
 
-def apply_published_books(soup: BeautifulSoup, paragraphs: list[str]) -> None:
-    slots = PAGE_SLOTS["published-books.html"]
+
+def apply_published_books(soup: BeautifulSoup, paragraphs: list[str], slots: dict | None = None) -> None:
+    slots = slots or PAGE_SLOTS.get("published-books.html", {})
     for sel, idx in zip((".font-35", ".main-heading", "p.reveal, p"), slots["banner"]):
         el = soup.select_one(f".inner-heading {sel}, .about-banner {sel}")
         if el:
             set_text(el, para_at(paragraphs, idx))
+    pub = slots.get("publish_sec")
+    if pub:
+        head = soup.select_one(".publish-book .publish-heading")
+        if head:
+            set_text(head.select_one("h2.sec-hd"), para_at(paragraphs, pub["heading"]))
+            intro = head.select_one("p.para-color")
+            if intro:
+                set_text(intro, para_at(paragraphs, pub["intro"]))
+    apply_form_steps(soup, paragraphs, slots.get("form", {}))
 
 
 def parse_customer_review_testimonials(paragraphs: list[str]) -> list[dict]:
@@ -804,20 +1001,25 @@ def apply_customer_reviews_blocks(soup: BeautifulSoup, testimonials: list[dict])
                     break
 
 
-def apply_customer_reviews(soup: BeautifulSoup, paragraphs: list[str]) -> None:
-    slots = PAGE_SLOTS["customer-reviews.html"]
+def apply_customer_reviews(soup: BeautifulSoup, paragraphs: list[str], slots: dict | None = None) -> None:
+    slots = slots or PAGE_SLOTS.get("customer-reviews.html", {})
     for sel, idx in zip((".font-35", ".main-heading", "p"), slots["banner"]):
         el = soup.select_one(f".inner-heading {sel}")
         if el:
             set_text(el, para_at(paragraphs, idx))
-    set_text(soup.select_one(".our-book-sec .sec-hd"), para_at(paragraphs, slots["books_heading"]))
-    intro = soup.select_one(".our-book-sec > .container > .row > .col-lg-12 p")
-    if intro:
-        set_text(intro, para_at(paragraphs, slots["books_intro"]))
+    if "testi_heading" in slots:
+        set_text(soup.select_one(".our-book-sec .sec-hd"), para_at(paragraphs, slots["testi_heading"]))
+        intro = soup.select_one(".our-book-sec > .container > .row > .col-lg-12 p")
+        if intro:
+            set_text(intro, para_at(paragraphs, slots["testi_intro"]))
     apply_customer_reviews_blocks(soup, parse_customer_review_testimonials(paragraphs))
+    apply_connect_slots(soup, paragraphs, slots.get("connect", {}))
+    apply_why_choose_slots(soup, paragraphs, slots.get("why_choose", {}))
+    apply_form_steps(soup, paragraphs, slots.get("form", {}))
 
 
-def apply_faq_page(soup: BeautifulSoup, paragraphs: list[str]) -> None:
+def apply_faq_page(soup: BeautifulSoup, paragraphs: list[str], slots: dict | None = None) -> None:
+    slots = slots or {}
     fi = faq_start(paragraphs)
     banner_lines: list[str] = []
     i = fi + 1
@@ -826,7 +1028,7 @@ def apply_faq_page(soup: BeautifulSoup, paragraphs: list[str]) -> None:
         i += 1
     banner = soup.select_one(".about-banner .inner-heading")
     if banner and banner_lines:
-        set_text(banner.select_one(".font-35"), "Our Journey")
+        set_text(banner.select_one(".font-35"), slots.get("banner_fixed_label", "Our Journey"))
         title = banner_lines[0]
         if title.startswith("Our Journey "):
             title = title[len("Our Journey ") :]
@@ -834,6 +1036,9 @@ def apply_faq_page(soup: BeautifulSoup, paragraphs: list[str]) -> None:
         if len(banner_lines) > 1:
             set_text(banner.select_one("p"), banner_lines[1])
     apply_faq_section(soup, paragraphs)
+    apply_connect_slots(soup, paragraphs, slots.get("connect", {}))
+    apply_why_choose_slots(soup, paragraphs, slots.get("why_choose", {}))
+    apply_form_steps(soup, paragraphs, slots.get("form", {}))
 
 
 def replace_ubp_in_body(soup: BeautifulSoup) -> None:
@@ -861,15 +1066,17 @@ def process_page(page: str, inventory: dict, restore: bool = False) -> None:
     if paragraphs:
         apply_meta(soup, meta_title(paragraphs), first_long_para(paragraphs))
 
+    page_slots = slots_for_page(page, inventory)
+
     if page == "index.html":
-        apply_index_updates(soup, paragraphs)
+        apply_index_updates(soup, paragraphs, page_slots)
         apply_testimonial_boxes(soup, TESTIMONIALS)
     elif page == "book-publishing.html":
-        apply_book_publishing(soup, paragraphs)
+        apply_book_publishing(soup, paragraphs, page_slots)
         if soup.select(".testimonial-slider"):
             apply_testimonial_boxes(soup, TESTIMONIALS)
     elif page == "book-marketing.html":
-        apply_book_marketing(soup, paragraphs)
+        apply_book_marketing(soup, paragraphs, page_slots)
         if soup.select(".testimonial-slider"):
             apply_testimonial_boxes(soup, TESTIMONIALS)
     elif page in {
@@ -884,22 +1091,25 @@ def process_page(page: str, inventory: dict, restore: bool = False) -> None:
         "children-book-illustration.html",
         "screenplay-script-writing.html",
     }:
-        apply_standard_service_page(soup, paragraphs, page)
+        apply_standard_service_page(soup, paragraphs, page, inventory)
         if soup.select(".testimonial-slider"):
             apply_testimonial_boxes(soup, TESTIMONIALS)
     elif page == "pricing.html":
         apply_pricing(soup, paragraphs)
     elif page == "about-us.html":
-        apply_about(soup, paragraphs)
+        apply_about(soup, paragraphs, page_slots)
     elif page == "published-books.html":
-        apply_published_books(soup, paragraphs)
+        apply_published_books(soup, paragraphs, page_slots)
     elif page == "customer-reviews.html":
-        apply_customer_reviews(soup, paragraphs)
+        apply_customer_reviews(soup, paragraphs, page_slots)
     elif page == "faq.html":
-        apply_faq_page(soup, paragraphs)
+        apply_faq_page(soup, paragraphs, page_slots)
 
-    home_paragraphs = inventory["sections"]["home"]["paragraphs"]
-    apply_shared_services_section(soup, home_paragraphs)
+    if page_slots.get("our_service"):
+        apply_page_our_service(soup, paragraphs, page_slots)
+    elif page != "index.html":
+        home_paragraphs = inventory["sections"]["home"]["paragraphs"]
+        apply_shared_services_section(soup, home_paragraphs)
 
     replace_ubp_in_body(soup)
     path.write_text(str(soup), encoding="utf-8")

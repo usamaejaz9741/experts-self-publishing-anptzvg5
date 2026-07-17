@@ -1,178 +1,109 @@
 sections:
   home:
     page: index.html
-    paragraph_count: 41
-    status: applied
-    slots:
-      - meta
-      - hero
-      - services
-      - testimonials
-      - footer
+    paragraph_count: 38
+    image_count: 7
+    chunk_count: 7
+    status: image-slotted
   author-website:
     page: author-website.html
-    paragraph_count: 34
-    status: applied
-    slots:
-      - meta
-      - hero
-      - body
-      - faq
-      - footer
+    paragraph_count: 33
+    image_count: 7
+    chunk_count: 7
+    status: image-slotted
   pr-publicity:
     page: pr-and-publicity.html
-    paragraph_count: 36
-    status: applied
-    slots:
-      - meta
-      - hero
-      - body
-      - faq
-      - footer
+    paragraph_count: 35
+    image_count: 7
+    chunk_count: 7
+    status: image-slotted
   editing:
     page: book-editing-proofreading.html
     paragraph_count: 35
-    status: applied
-    slots:
-      - meta
-      - hero
-      - body
-      - faq
-      - footer
+    image_count: 7
+    chunk_count: 7
+    status: image-slotted
   cover-design:
     page: book-cover-design.html
-    paragraph_count: 41
-    status: applied
-    slots:
-      - meta
-      - hero
-      - body
-      - faq
-      - footer
+    paragraph_count: 37
+    image_count: 7
+    chunk_count: 7
+    status: image-slotted
   ghostwriting:
     page: ghostwriting.html
-    paragraph_count: 38
-    status: applied
-    slots:
-      - meta
-      - hero
-      - body
-      - faq
-      - footer
+    paragraph_count: 40
+    image_count: 7
+    chunk_count: 7
+    status: image-slotted
   illustration:
     page: book-illustration.html
-    paragraph_count: 41
-    status: applied
-    slots:
-      - meta
-      - hero
-      - body
-      - faq
-      - footer
+    paragraph_count: 40
+    image_count: 7
+    chunk_count: 7
+    status: image-slotted
   video-trailer:
     page: book-video-trailers.html
-    paragraph_count: 38
-    status: applied
-    slots:
-      - meta
-      - hero
-      - body
-      - faq
-      - footer
+    paragraph_count: 40
+    image_count: 7
+    chunk_count: 7
+    status: image-slotted
   creative-writing:
     page: creative-writing.html
     paragraph_count: 40
-    status: applied
-    slots:
-      - meta
-      - hero
-      - body
-      - faq
-      - footer
+    image_count: 7
+    chunk_count: 7
+    status: image-slotted
   children-illustration:
     page: children-book-illustration.html
-    paragraph_count: 29
-    status: applied
-    slots:
-      - meta
-      - hero
-      - body
-      - faq
-      - footer
+    paragraph_count: 32
+    image_count: 7
+    chunk_count: 7
+    status: image-slotted
   screenplay:
     page: screenplay-script-writing.html
-    paragraph_count: 25
-    status: applied
-    slots:
-      - meta
-      - hero
-      - body
-      - faq
-      - footer
+    paragraph_count: 33
+    image_count: 6
+    chunk_count: 6
+    status: image-slotted
   book-publishing:
     page: book-publishing.html
-    paragraph_count: 79
-    status: applied
-    slots:
-      - meta
-      - hero
-      - body
-      - faq
-      - footer
+    paragraph_count: 78
+    image_count: 12
+    chunk_count: 12
+    status: image-slotted
   book-marketing:
     page: book-marketing.html
-    paragraph_count: 67
-    status: applied
-    slots:
-      - meta
-      - hero
-      - body
-      - faq
-      - footer
+    paragraph_count: 60
+    image_count: 10
+    chunk_count: 9
+    status: image-slotted
   pricing:
     page: pricing.html
-    paragraph_count: 6
-    status: applied
-    slots:
-      - meta
-      - hero
-      - needs_copy:package_cards
-    notes: Doc has 5 lines; HTML package cards need_copy
+    paragraph_count: 3
+    image_count: 2
+    chunk_count: 1
+    status: image-slotted
   about:
     page: about-us.html
-    paragraph_count: 26
-    status: applied
-    slots:
-      - meta
-      - hero
-      - body
-      - faq
-      - footer
+    paragraph_count: 25
+    image_count: 5
+    chunk_count: 6
+    status: image-slotted
   published-books:
     page: published-books.html
-    paragraph_count: 16
-    status: applied
-    slots:
-      - meta
-      - hero
-      - body
-      - faq
-      - footer
+    paragraph_count: 15
+    image_count: 3
+    chunk_count: 3
+    status: image-slotted
   customer-reviews:
     page: customer-reviews.html
-    paragraph_count: 49
-    status: applied
-    slots:
-      - meta
-      - hero
-      - testimonials
-      - cta
+    paragraph_count: 48
+    image_count: 6
+    chunk_count: 6
+    status: image-slotted
   faq:
     page: faq.html
-    paragraph_count: 39
-    status: applied
-    slots:
-      - meta
-      - accordion
-testimonials:
-  - name: "Author of The Fated Heir Chronicles"
+    paragraph_count: 43
+    image_count: 5
+    chunk_count: 5
+    status: image-slotted
