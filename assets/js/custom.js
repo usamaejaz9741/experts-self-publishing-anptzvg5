@@ -292,12 +292,6 @@ $(".process-nav").slick({
   ],
 });
 
-
-
-
-
-
-
 // const observer = new IntersectionObserver(
 //     (e, o) => {
 //         e.forEach((e) => {
@@ -308,8 +302,6 @@ $(".process-nav").slick({
 // );
 
 // [...document.querySelectorAll(".lazy-loaded-image.lazy"), ...document.querySelectorAll(".hidden")].forEach((e) => observer.observe(e));
-
-
 
 // document.querySelectorAll('.custom-acc-btn').forEach(btn => {
 //     btn.addEventListener('click', function () {

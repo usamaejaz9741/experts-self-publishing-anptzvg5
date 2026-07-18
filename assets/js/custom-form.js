@@ -65,10 +65,6 @@
 //                     }
 //                     // window.location.href = response.url;
 
-
-
-
-
 //                     $(formSelector)[0].reset();
 //                     $(formSelector).find('.nice-select').each(function () {
 //                         var $this = $(this);
@@ -111,11 +107,6 @@
 //         });
 //     });
 // }
-
-
-
-
-
 
 const FormHandler = (() => {
     const alert = (icon, title, text) =>
@@ -214,17 +205,7 @@ $(function () {
     FormHandler.init('#contact-form');
     FormHandler.init('#order-form');
 
-
 });
-
-
-
-
-
-
-
-
-
 
 // function validateForm(formSelector) {
 //     var isValid = true;
@@ -277,7 +258,6 @@ $(function () {
 //     });
 //     return isValid;
 // }
-
 
 function validateForm(formSelector) {
     var isValid = true;
@@ -334,10 +314,6 @@ function validateForm(formSelector) {
     });
     return isValid;
 }
-
-
-
-
 
 // $(function () {
 //     handleFormSubmission("#service-form");

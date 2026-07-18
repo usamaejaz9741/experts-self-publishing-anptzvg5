@@ -792,26 +792,29 @@ def apply_book_marketing(soup: BeautifulSoup, paragraphs: list[str], slots: dict
     banner = slots.get("banner", {})
     h1 = soup.select_one(".inner-banner .bann-heading h1")
     sub = soup.select_one(".inner-banner .bann-heading > p.text-white")
-    if h1 and "h1" in banner:
-        set_text(h1, para_at(paragraphs, banner["h1"]))
-    if sub and "subtitle" in banner:
-        set_text(sub, para_at(paragraphs, banner["subtitle"]))
-    for box, (body_i, title_i) in zip(soup.select(".inner-banner .bann-box"), banner.get("boxes", [])):
+    if h1 and banner.get("h1"):
+        h1_parts = banner["h1"]
+        if isinstance(h1_parts, list):
+            set_text(h1, " ".join(para_at(paragraphs, i) for i in h1_parts))
+        else:
+            set_text(h1, para_at(paragraphs, h1_parts))
+    if sub and "intro" in banner:
+        set_text(sub, para_at(paragraphs, banner["intro"]))
+    for box, (title_i, body_i) in zip(soup.select(".inner-banner .bann-box"), banner.get("boxes", [])):
         h4 = box.select_one("h4")
         p = box.select_one(".box-content p")
         if h4:
-            set_text(h4, para_at(paragraphs, body_i))
+            set_text(h4, para_at(paragraphs, title_i))
         if p:
-            set_text(p, para_at(paragraphs, title_i))
+            set_text(p, para_at(paragraphs, body_i))
 
     s1 = soup.select_one(".marketing-sec .s1-left")
     if s1 and slots.get("s1"):
         s1s = slots["s1"]
         set_text(s1.select_one(".font-35"), para_at(paragraphs, s1s["heading"][0]))
         set_text(s1.select_one("h2.sec-hd"), para_at(paragraphs, s1s["heading"][1]))
-        tagline = para_at(paragraphs, s1s["tagline"])
-        for j, el in enumerate(s1.select("p")):
-            set_text(el, tagline if j == 0 else "")
+        for el in s1.select("p"):
+            set_text(el, "")
 
     cta_sec = soup.select_one("section.cta-sec .cta-content")
     if cta_sec and slots.get("cta"):
@@ -835,9 +838,9 @@ def apply_book_marketing(soup: BeautifulSoup, paragraphs: list[str], slots: dict
         h3 = box.select_one("h3")
         p = box.select_one(".market-content p")
         if h3:
-            set_text(h3, para_at(paragraphs, body_i))
+            set_text(h3, para_at(paragraphs, title_i))
         if p:
-            set_text(p, para_at(paragraphs, title_i))
+            set_text(p, para_at(paragraphs, body_i))
 
     process = soup.select_one("section.process-tab-sec .process-heading")
     if process and slots.get("process"):
@@ -1042,10 +1045,10 @@ def apply_faq_page(soup: BeautifulSoup, paragraphs: list[str], slots: dict | Non
 
 
 def replace_ubp_in_body(soup: BeautifulSoup) -> None:
-    for node in soup.find_all(string=re.compile(r"United Book Publishing")):
+    for node in soup.find_all(string=re.compile(r"Experts Self Publishing")):
         if node.parent and node.parent.name in {"script", "style"}:
             continue
-        node.replace_with(str(node).replace("United Book Publishing", "Experts Self Publishing"))
+        node.replace_with(str(node).replace("Experts Self Publishing", "Experts Self Publishing"))
 
 
 def process_page(page: str, inventory: dict, restore: bool = False) -> None:

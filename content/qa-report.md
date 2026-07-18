@@ -47,8 +47,9 @@ Source doc: `Experts Self Publishing Content (New).docx`
 | `creative-writing.html` | Doc text still contains author-website paragraphs (lines 289–302 in source doc) |
 
 ### Branding
-- No visible "United Book Publishing" in body copy on core pages
-- `unitedbookpublishing.com` URLs remain in forms/CDN per original plan
+- Sitewide rebrand to **Experts Self Publishing** (titles, body copy, footers, forms, email, social links)
+- Domain and form endpoints use `expertsselfpublishing.com`
+- Asset folder `assets/img/ubp-new/` unchanged (internal path only)
 
 ## Deliverables
 

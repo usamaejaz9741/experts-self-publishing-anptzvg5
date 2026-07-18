@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
-<!-- Mirrored from unitedbookpublishing.com/published-books by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Jul 2026 23:56:59 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="o2V0OYx58Jys0E4002Lr1IwdRvb-3BBQYCxd7e43d0Q" />
-    <title>Published Books | United Book Publishing</title>
-    <meta name="description" content="See published books from United Book Publishing. Top fiction, non-fiction, and kids&#039;
+    <title>Published Books | Experts Self Publishing</title>
+    <meta name="description" content="See published books from Experts Self Publishing. Top fiction, non-fiction, and kids&#039;
     stories await. Browse now and grab your favorite read today.">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
@@ -23,41 +20,27 @@
     <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
 </noscript>
 
-
-
-
 <link rel="preload" href="assets/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 </noscript>
-
-
 
 <link rel="preload" href="assets/css/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript>
     <link rel="stylesheet" href="assets/css/aos.css">
 </noscript>
 
-
-
 <link rel="stylesheet" href="assets/css/responsivef500.css?v=13">
-
-
-
 
 <link rel="preload" href="assets/css/nice-select.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript>
     <link rel="stylesheet" href="assets/css/nice-select.css">
 </noscript>
 
-
-
-
 <link rel="preload" href="assets/css/jquery-ui.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript>
     <link rel="stylesheet" href="assets/css/jquery-ui.css">
 </noscript>
-
 
 <link rel="preload" href="assets/css/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript>
@@ -73,10 +56,10 @@
 <noscript>
 <link rel="stylesheet" href="assets/css/slick.css">
 </noscript>
-    <link rel="preload" href="../cdn.jsdelivr.net/npm/select2%404.1.0-rc.0/dist/css/select2.min.css" as="style"
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/select2%404.1.0-rc.0/dist/css/select2.min.css" as="style"
         onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
-        <link rel="stylesheet" href="../cdn.jsdelivr.net/npm/select2%404.1.0-rc.0/dist/css/select2.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2%404.1.0-rc.0/dist/css/select2.min.css">
     </noscript>
 
     <!-- Google tag (gtag.js) -->
@@ -113,14 +96,13 @@
             s = b.getElementsByTagName(e)[0];
             s.parentNode.insertBefore(t, s)
         }(window, document, 'script',
-            '../connect.facebook.net/en_US/fbevents.js');
+            'https://connect.facebook.net/en_US/fbevents.js');
         fbq('init', '415910514324571');
         fbq('track', 'PageView');
     </script>
 
     <noscript><img height="1" width="1" style="display:none"
             src="https://www.facebook.com/tr?id=415910514324571&amp;ev=PageView&amp;noscript=1" /></noscript>
-
 
     <!-- End Meta Pixel Code -->
     <script>
@@ -414,11 +396,10 @@
             <div class="row">
                 <div class="publish-heading text-center w-80 mx-auto mb-4">
                     <h2 class="sec-hd">Each Manuscript We Handle Becomes a Book That is Ready for the World</h2>
-                    <p class="para-color">With UBP’s book publishing expertise, you can turn your manuscript into a standout
+                    <p class="para-color">With Experts Self Publishing's book publishing expertise, you can turn your manuscript into a standout
                         book that reaches readers confidently, with professional editing, design, and publishing support
                         every step of the way.</p>
                 </div>
-
 
                 <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                     <!-- <a href="assets/img/book-cover/book-port1.webp" class="publish-card" data-fancybox="gallery">
@@ -433,11 +414,9 @@
                     <div class="flip-box">
                         <div class="flip-inner">
 
-
                             <div class="flip-front">
                                 <img src="assets/img/book-cover/book-port1.webp" alt="Front Image">
                             </div>
-
 
                             <div class="flip-back"
                                 style="background-image: linear-gradient(to right, rgb(6 6 6 / 79%), rgb(0 0 0 / 70%)), url(assets/img/book-cover/book-port1.webp);">
@@ -471,11 +450,9 @@
                     <div class="flip-box">
                         <div class="flip-inner">
 
-
                             <div class="flip-front">
                                 <img src="assets/img/book-cover/cigar-wars.jpg" alt="Front Image">
                             </div>
-
 
                             <div class="flip-back"
                                 style="background-image: linear-gradient(to right, rgb(6 6 6 / 79%), rgb(0 0 0 / 70%)), url(assets/img/book-cover/cigar-wars.jpg);">
@@ -502,11 +479,9 @@
                     <div class="flip-box">
                         <div class="flip-inner">
 
-
                             <div class="flip-front">
                                 <img src="assets/img/book-cover/book-port3.webp" alt="Front Image">
                             </div>
-
 
                             <div class="flip-back"
                                 style="background-image: linear-gradient(to right, rgb(6 6 6 / 79%), rgb(0 0 0 / 70%)), url(assets/img/book-cover/book-port3.webp);">
@@ -571,11 +546,9 @@
                     <div class="flip-box">
                         <div class="flip-inner">
 
-
                             <div class="flip-front">
                                 <img src="assets/img/book-cover/allen-court-new.jpg" alt="Front Image">
                             </div>
-
 
                             <div class="flip-back"
                                 style="background-image: linear-gradient(to right, rgb(6 6 6 / 79%), rgb(0 0 0 / 70%)), url(assets/img/book-cover/allen-court-new.jpg);">
@@ -602,11 +575,9 @@
                     <div class="flip-box">
                         <div class="flip-inner">
 
-
                             <div class="flip-front">
                                 <img src="assets/img/book-cover/teaching-of-france.jpg" alt="Front Image">
                             </div>
-
 
                             <div class="flip-back"
                                 style="background-image: linear-gradient(to right, rgb(6 6 6 / 79%), rgb(0 0 0 / 70%)), url(assets/img/book-cover/teaching-of-france.jpg);">
@@ -633,11 +604,9 @@
                     <div class="flip-box">
                         <div class="flip-inner">
 
-
                             <div class="flip-front">
                                 <img src="assets/img/book-cover/siya-and-the-coral.jpg" alt="Front Image">
                             </div>
-
 
                             <div class="flip-back"
                                 style="background-image: linear-gradient(to right, rgb(6 6 6 / 79%), rgb(0 0 0 / 70%)), url(assets/img/book-cover/siya-and-the-coral.jpg);">
@@ -670,7 +639,6 @@
 
                                     <div class="flip-back" style="background-image: linear-gradient(to right, rgb(6 6 6 / 79%), rgb(0 0 0 / 70%)), url(assets/img/book-cover/book-port6.webp);">
 
-
                                         <ul class="list-unstyled">
                                             <li>
                                                 <h4>CALLED UP BY KARI GRITZ</h4>
@@ -700,11 +668,9 @@
                     <div class="flip-box">
                         <div class="flip-inner">
 
-
                             <div class="flip-front">
                                 <img src="assets/img/client-cover/alina-dubrova.jpg" alt="Front Image">
                             </div>
-
 
                             <div class="flip-back"
                                 style="background-image: linear-gradient(to right, rgb(6 6 6 / 79%), rgb(0 0 0 / 70%)), url(assets/img/client-cover/alina-dubrova.jpg);">
@@ -738,12 +704,10 @@
                     <div class="flip-box">
                         <div class="flip-inner">
 
-
                             <div class="flip-front">
                                 <img src="assets/img/client-cover/julian-hutchinson-front-book-cover.jpg"
                                     alt="Front Image">
                             </div>
-
 
                             <div class="flip-back"
                                 style="background-image: linear-gradient(to right, rgb(6 6 6 / 79%), rgb(0 0 0 / 70%)), url(assets/img/client-cover/julian-hutchinson-front-book-cover.jpg);">
@@ -765,7 +729,6 @@
                     </div>
                 </div>
 
-
                 <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                     <!-- <a href="assets/img/client-cover/tanya-d-front-cover.jpg" class="publish-card" data-fancybox="gallery">
                             <div class="publish-img">
@@ -779,11 +742,9 @@
                     <div class="flip-box">
                         <div class="flip-inner">
 
-
                             <div class="flip-front">
                                 <img src="assets/img/client-cover/tanya-d-front-cover.jpg" alt="Front Image">
                             </div>
-
 
                             <div class="flip-back"
                                 style="background-image: linear-gradient(to right, rgb(6 6 6 / 79%), rgb(0 0 0 / 70%)), url(assets/img/client-cover/tanya-d-front-cover.jpg);">
@@ -855,11 +816,9 @@
                     <div class="flip-box">
                         <div class="flip-inner">
 
-
                             <div class="flip-front">
                                 <img src="assets/img/client-cover/the-bounty-hunter.jpg" alt="Front Image">
                             </div>
-
 
                             <div class="flip-back"
                                 style="background-image: linear-gradient(to right, rgb(6 6 6 / 79%), rgb(0 0 0 / 70%)), url(assets/img/client-cover/the-bounty-hunter.jpg);">
@@ -886,11 +845,9 @@
                     <div class="flip-box">
                         <div class="flip-inner">
 
-
                             <div class="flip-front">
                                 <img src="assets/img/book-cover/embracing-love.jpg" alt="Front Image">
                             </div>
-
 
                             <div class="flip-back"
                                 style="background-image: linear-gradient(to right, rgb(6 6 6 / 79%), rgb(0 0 0 / 70%)), url(assets/img/book-cover/embracing-love.jpg);">
@@ -917,11 +874,9 @@
                     <div class="flip-box">
                         <div class="flip-inner">
 
-
                             <div class="flip-front">
                                 <img src="assets/img/book-cover/through-a-child.jpg" alt="Front Image">
                             </div>
-
 
                             <div class="flip-back"
                                 style="background-image: linear-gradient(to right, rgb(6 6 6 / 79%), rgb(0 0 0 / 70%)), url(assets/img/book-cover/through-a-child.jpg);">
@@ -943,7 +898,6 @@
                     </div>
                 </div>
 
-
             </div>
         </div>
     </section>
@@ -960,7 +914,7 @@
                                 <h3 class="text-white font-50 let-space fw-600 text-upper mb-3">Are You Ready !</h3>
                             </div>
                             
-                            <form action="https://unitedbookpublishing.com/form-submit" method="post" id="service-form">
+                            <form action="https://expertsselfpublishing.com/form-submit" method="post" id="service-form">
     <input type="hidden" name="_token" value="MYEyZ4jxGwMXB9vqGbuDh7MYBius8uZb1tpGme6H" autocomplete="off">    <input type="hidden" name="page" value="published-books">
     <div class="row">
         <div class="col-lg-12">
@@ -1170,11 +1124,11 @@
                         <h4 class="color mb-0 font-28">Follow Us:</h4>
                         <div class="head-right d-flex align-items-center gap-3 justify-content-end">
                             <ul class="list-unstyled d-flex align-items-center gap-2 mb-0">
-                                <li><a href="https://www.facebook.com/UnitedBookPublishingOfficial/" target="_blank"><i
+                                <li><a href="https://www.facebook.com/ExpertsSelfPublishingOfficial/" target="_blank"><i
                                             class="fa-brands fa-facebook-f"></i></a></li>
-                                <li><a href="https://www.instagram.com/unitedbookpublishingofficial/" target="_blank"><i
+                                <li><a href="https://www.instagram.com/expertsselfpublishingofficial/" target="_blank"><i
                                             class="fa-brands fa-instagram"></i></a></li>
-                                <li><a href="https://www.youtube.com/@UnitedBookPublishing-qt2pk" target="_blank"><i
+                                <li><a href="https://www.youtube.com/@ExpertsSelfPublishing-qt2pk" target="_blank"><i
                                             class="fa-brands fa-youtube"></i></a></li>
                             </ul>
                         </div>
@@ -1294,7 +1248,7 @@
                                 </a>
                             </li>
                             <li class="my-4 info-li">
-                                <a href="mailto:info@unitedbookpublishing.com" class="d-flex gap-2">
+                                <a href="mailto:info@expertsselfpublishing.com" class="d-flex gap-2">
                                     <!-- <span class="info-icon"><i class="fa-solid fa-envelope" aria-hidden="true"></i></span> -->
                                     <span class="info-icon w-25"><img
                                             src="assets/img/ubp-new/foot-envelope.webp"
@@ -1302,7 +1256,7 @@
                                             loading="lazy"></span>
                                     <span class="w-75">
                                         <small>Email us on: </small>
-                                        <span class="foot-number d-block w-100">info@unitedbookpublishing.com</span>
+                                        <span class="foot-number d-block w-100">info@expertsselfpublishing.com</span>
                                     </span>
                                 </a>
                             </li>
@@ -1334,8 +1288,7 @@
     <div class="container-fluid last-contain">
         <div class="row">
             <div class="col-lg-7 col-md-8">
-                <p class=" mb-0 para-color">Copyright © 2026 United Book Publishing - All Rights Reserved | Powered By
-                    Iota Digital, LLC</p>
+                <p class=" mb-0 para-color">Copyright © 2026 Experts Self Publishing. All rights reserved.</p>
             </div>
             <div class="col-lg-5 col-md-4">
                 <ul class="list-unstyled d-flex align-items-center gap-3 m-0 justify-content-end">
@@ -1346,7 +1299,6 @@
         </div>
     </div>
 </footer>
-
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -1365,7 +1317,7 @@
                                     Today!</h3>
                                 <p>Speak with our senior publishing consultant for a free tailored proposal</p>
                             </div>
-                            <form action="https://unitedbookpublishing.com/inquiry-submit" id="modal-form" method="POST">
+                            <form action="https://expertsselfpublishing.com/inquiry-submit" id="modal-form" method="POST">
                                 <input type="hidden" name="_token" value="MYEyZ4jxGwMXB9vqGbuDh7MYBius8uZb1tpGme6H" autocomplete="off">                                <div class="row">
                                     <div class="col-lg-12">
                                         <!-- <label for="full-name">Enter Your Full Name</label> -->
@@ -1515,7 +1467,6 @@
   });
 });
 
-
 $(".blog-slider").slick({
   slidesToShow: 3,
   slidesToScroll: 1,
@@ -1560,7 +1511,7 @@ $(".blog-slider").slick({
 <script src="assets/js/nice-select.min.js" defer></script>
 <script src="assets/js/bootstrap.min.js" defer></script>
 <script src="assets/js/jquery.fancybox.min.js" defer></script>
-<!--<script src="https://unitedbookpublishing.com/assets/js/fontowesome.js" crossorigin="anonymous" defer></script>-->
+<!--<script src="assets/js/fontowesome.js" crossorigin="anonymous" defer></script>-->
 
 <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>-->
 
@@ -1569,11 +1520,10 @@ $(".blog-slider").slick({
     const tooltipList = [...tooltipTriggerList].map(el => new bootstrap.Tooltip(el));
 </script>
 
-
 <!-- Include SweetAlert -->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
 <script src="assets/js/custom-form.js" defer></script>
-    <script defer src="../cdn.jsdelivr.net/npm/select2%404.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/select2%404.1.0-rc.0/dist/js/select2.min.js"></script>
     <script defer id="ze-snippet" src="../static.zdassets.com/ekr/snippetb14a.js?key=601b2aa6-ec14-4739-8d27-dfa20404f2ba">
     </script>
     
@@ -1600,12 +1550,8 @@ $(".blog-slider").slick({
         });
     </script>
 
-
     
-
 
 </body>
 
-
-<!-- Mirrored from unitedbookpublishing.com/published-books by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Jul 2026 23:57:06 GMT -->
 </html>

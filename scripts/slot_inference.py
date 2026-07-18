@@ -524,7 +524,7 @@ def infer_about_slots(chunks: list[list[str]]) -> dict:
 
 
 def infer_market_boxes(flat: list[str], s0: int, s1: int) -> list[tuple[int, int]]:
-    """Short title + long body pairs (HTML shows body in h3, title in p)."""
+    """Short title + long body pairs (title in h3, body in p)."""
     boxes: list[tuple[int, int]] = []
     i = s0
     while i + 1 < s1:
@@ -546,10 +546,9 @@ def infer_book_marketing_slots(chunks: list[list[str]]) -> dict:
     slots: dict = {
         "type": "book_marketing",
         "banner": {
-            "h1": c0,
-            "subtitle": c0 + 1,
-            "boxes": [(c0 + 2, c0 + 3), (c0 + 4, c0 + 5), (c0 + 6, c0 + 7)],
-            "tagline": c0 + 8,
+            "h1": [c0, c0 + 1],
+            "intro": c0 + 2,
+            "boxes": [(c0 + 3, c0 + 4), (c0 + 5, c0 + 6), (c0 + 7, c0 + 8)],
         },
     }
     if len(starts) > 1:
@@ -558,7 +557,7 @@ def infer_book_marketing_slots(chunks: list[list[str]]) -> dict:
         body = [s + 4]
         if s + 5 < e1:
             body.append(s + 5)
-        slots["s1"] = {"heading": [s, s + 1], "tagline": c0 + 8}
+        slots["s1"] = {"heading": [s, s + 1]}
         slots["cta"] = {"h3": s + 2, "h2": s + 3, "body": body}
     if len(starts) > 2:
         s = starts[2]

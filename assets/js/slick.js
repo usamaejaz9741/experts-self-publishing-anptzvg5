@@ -178,7 +178,6 @@
             // Extracted from jQuery v1.11 source
             _.htmlExpr = /^(?:\s*(<[\w\W]+>)[^>]*)$/;
 
-
             _.registerBreakpoints();
             _.init(true);
 
@@ -543,7 +542,6 @@
 
         _.updateDots();
 
-
         _.setSlideClasses(typeof _.currentSlide === 'number' ? _.currentSlide : 0);
 
         if (_.options.draggable === true) {
@@ -880,7 +878,6 @@
                 _.$nextArrow.remove();
             }
         }
-
 
         if (_.$slides) {
 
@@ -2046,7 +2043,6 @@
         _.listWidth = _.$list.width();
         _.listHeight = _.$list.height();
 
-
         if (_.options.vertical === false && _.options.variableWidth === false) {
             _.slideWidth = Math.ceil(_.listWidth / _.options.slidesToShow);
             _.$slideTrack.width(Math.ceil((_.slideWidth * _.$slideTrack.children('.slick-slide').length)));
@@ -2153,7 +2149,6 @@
 
             _.options[option] = value;
 
-
         } else if ( type === 'multiple' ) {
 
             $.each( option , function( opt, val ) {
@@ -2161,7 +2156,6 @@
                 _.options[opt] = val;
 
             });
-
 
         } else if ( type === 'responsive' ) {
 
@@ -2285,7 +2279,6 @@
         }
         _.transformsEnabled = _.options.useTransform && (_.animType !== null && _.animType !== false);
     };
-
 
     Slick.prototype.setSlideClasses = function(index) {
 
@@ -2701,7 +2694,6 @@
 
                 default:
 
-
             }
 
             if( direction != 'vertical' ) {
@@ -2807,7 +2799,6 @@
         if (_.options.verticalSwiping === true) {
             positionOffset = _.touchObject.curY > _.touchObject.startY ? 1 : -1;
         }
-
 
         swipeLength = _.touchObject.swipeLength;
 

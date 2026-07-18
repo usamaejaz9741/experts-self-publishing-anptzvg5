@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
-<!-- Mirrored from unitedbookpublishing.com/book-publishing by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Jul 2026 23:56:27 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="o2V0OYx58Jys0E4002Lr1IwdRvb-3BBQYCxd7e43d0Q" />
-    <title>Book Publishing Services | United Book Publishing</title>
+    <title>Book Publishing Services | Experts Self Publishing</title>
     <meta name="description" content="Work with trusted publishers for new authors to bring your book to life with clear
     guidance, professional support, and global reach.">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png">
@@ -23,41 +20,27 @@
     <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
 </noscript>
 
-
-
-
 <link rel="preload" href="assets/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 </noscript>
-
-
 
 <link rel="preload" href="assets/css/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript>
     <link rel="stylesheet" href="assets/css/aos.css">
 </noscript>
 
-
-
 <link rel="stylesheet" href="assets/css/responsivef500.css?v=13">
-
-
-
 
 <link rel="preload" href="assets/css/nice-select.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript>
     <link rel="stylesheet" href="assets/css/nice-select.css">
 </noscript>
 
-
-
-
 <link rel="preload" href="assets/css/jquery-ui.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript>
     <link rel="stylesheet" href="assets/css/jquery-ui.css">
 </noscript>
-
 
 <link rel="preload" href="assets/css/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript>
@@ -73,10 +56,10 @@
 <noscript>
 <link rel="stylesheet" href="assets/css/slick.css">
 </noscript>
-    <link rel="preload" href="../cdn.jsdelivr.net/npm/select2%404.1.0-rc.0/dist/css/select2.min.css" as="style"
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/select2%404.1.0-rc.0/dist/css/select2.min.css" as="style"
         onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
-        <link rel="stylesheet" href="../cdn.jsdelivr.net/npm/select2%404.1.0-rc.0/dist/css/select2.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2%404.1.0-rc.0/dist/css/select2.min.css">
     </noscript>
 
     <!-- Google tag (gtag.js) -->
@@ -113,14 +96,13 @@
             s = b.getElementsByTagName(e)[0];
             s.parentNode.insertBefore(t, s)
         }(window, document, 'script',
-            '../connect.facebook.net/en_US/fbevents.js');
+            'https://connect.facebook.net/en_US/fbevents.js');
         fbq('init', '415910514324571');
         fbq('track', 'PageView');
     </script>
 
     <noscript><img height="1" width="1" style="display:none"
             src="https://www.facebook.com/tr?id=415910514324571&amp;ev=PageView&amp;noscript=1" /></noscript>
-
 
     <!-- End Meta Pixel Code -->
     <script>
@@ -432,7 +414,6 @@
                                 data-bs-toggle="modal" data-bs-target="#exampleModal"><img src="assets/img/msg-icon.png"
                                     class="fa-bounce" alt="icon"><span>TALK TO A SENIOR CONSULTANT</span></a>
 
-
                             <a href="tel:+18556055210" class="theme-btn1  active text-upper btn-overlay"> <img
                                     src="assets/img/call-new.png" class="img-fluid me-2" alt="img"> Get a Call</a>
                         </div>
@@ -446,7 +427,7 @@
                                 <h3 class="font-40 text-upper let-space text-white fw-600">Expert Publishing <br> Blueprint
                                 </h3>
                             </div>
-                            <form action="https://unitedbookpublishing.com/inquiry-submit" id="banner-form" method="POST">
+                            <form action="https://expertsselfpublishing.com/inquiry-submit" id="banner-form" method="POST">
      <input type="hidden" name="_token" value="MYEyZ4jxGwMXB9vqGbuDh7MYBius8uZb1tpGme6H" autocomplete="off">     <div class="row">
          <input type="hidden" name="page" value="book-publishing">
          <div class="col-lg-12">
@@ -654,7 +635,7 @@
                 </div>
             </div>
             <img class="lazy lazy-loaded-image img-fluid cta-img" data-aos="fade-up-left" data-aos-easing="ease-out-cubic" data-aos-duration="1000" data-aos-delay="0"
-                src="assets/img/skeleton2.webp"  data-src="https://unitedbookpublishing.com/assets/img/cta-book1.webp" alt="img" loading="lazy" />
+                src="assets/img/skeleton2.webp"  data-src="assets/img/cta-book1.webp" alt="img" loading="lazy" />
         </div>
     </div>
 </section>
@@ -706,7 +687,7 @@
         </div>
     </section>
     <section class="self-kdp sec-pd">
-        <img src="assets/img/hand-write.png" class="img-fluid hand-write" alt="unitedbookpublishing">
+        <img src="assets/img/hand-write.png" class="img-fluid hand-write" alt="expertsselfpublishing">
         <div class="container">
 
             <div class="row align-items-center justify-content-end">
@@ -851,7 +832,7 @@
 
                                     <img class="lazy lazy-loaded-image img-fluid"
                                 src="assets/img/skeleton2.webp" loading="lazy"
-                                data-src="https://unitedbookpublishing.com/assets/img/manu-script.jpg" alt="writing Machine" width="308" height="465" loading="lazy" />
+                                data-src="assets/img/manu-script.jpg" alt="writing Machine" width="308" height="465" loading="lazy" />
 
                                 </div>
                                 <div class="publish-content">
@@ -900,7 +881,7 @@
                                 <div class="publish-img">
                                     <img class="lazy lazy-loaded-image img-fluid"
                                         src="assets/img/skeleton2.webp" loading="lazy"
-                                        data-src="https://unitedbookpublishing.com/assets/img/shopping-cart.webp" alt="writing Machine"
+                                        data-src="assets/img/shopping-cart.webp" alt="writing Machine"
                                         width="308" height="465" loading="lazy" />
 
                                 </div>
@@ -916,7 +897,7 @@
                                 <div class="publish-img">
                                     <img class="lazy lazy-loaded-image img-fluid"
                                         src="assets/img/skeleton2.webp" loading="lazy"
-                                        data-src="https://unitedbookpublishing.com/assets/img/dreams-rocket.webp" alt="img"
+                                        data-src="assets/img/dreams-rocket.webp" alt="img"
                                         width="308" height="465" loading="lazy" />
                                 </div>
                                 <div class="publish-content">
@@ -932,8 +913,6 @@
             </div>
         </div>
     </section>
-
-
 
     <section class="platform-sec sec-pd d-none">
         <div class="container">
@@ -1040,9 +1019,6 @@
             <div class="tab-pane fade active show active show"
                 id="nav-home-publishing" role="tabpanel" aria-labelledby="nav-home-tab-publishing">
 
-
-
-
                 <div class="row justify-content-center">
                     <!--<div class="col-lg-2 col-md-3 col-sm-4 col-4">-->
                     <!--    <div class="flip-box">-->
@@ -1055,7 +1031,6 @@
 
                     <!-- Back Side -->
                     <!--            <div class="flip-back" style="background-image: linear-gradient(to right, rgb(6 6 6 / 79%), rgb(0 0 0 / 70%)), url(assets/img/book-cover/book-port6.webp);">-->
-
 
                     <!--                <ul class="list-unstyled">-->
                     <!--                    <li>-->
@@ -1073,18 +1048,15 @@
                     <!--        </div>-->
                     <!--    </div>-->
 
-
                     <!--</div>-->
 
                     <!--<div class="col-lg-2 col-md-3 col-sm-4 col-4">-->
                     <!--    <div class="flip-box">-->
                     <!--        <div class="flip-inner">-->
 
-
                     <!--            <div class="flip-front">-->
                     <!--                <img src="assets/img/book-cover/book-port2.webp" alt="Front Image" width="266" height="399">-->
                     <!--            </div>-->
-
 
                     <!--            <div class="flip-back" style="background-image: linear-gradient(to right, rgb(6 6 6 / 79%), rgb(0 0 0 / 70%)), url(assets/img/book-cover/book-port2.webp);">-->
                     <!--                <ul class="list-unstyled">-->
@@ -1104,18 +1076,15 @@
                     <!--        </div>-->
                     <!--    </div>-->
 
-
                     <!--</div>-->
 
                     <!-- <div class="col-lg-2 col-md-3 col-sm-4 col-4">
                         <div class="flip-box">
                             <div class="flip-inner">
 
-
                                 <div class="flip-front">
                                     <img src="assets/img/ubp-new/pamela-front-book-cover.webp" alt="Front Image" width="266" height="399" loading="lazy">
                                 </div>
-
 
                                 <div class="flip-back" style="background-image: linear-gradient(to right, rgb(6 6 6 / 79%), rgb(0 0 0 / 70%)), url(assets/img/ubp-new/pamela-front-book-cover.webp);">
                                     <ul class="list-unstyled">
@@ -1135,18 +1104,15 @@
                             </div>
                         </div>
 
-
                     </div>
 
                     <div class="col-lg-2 col-md-3 col-sm-4 col-4">
                         <div class="flip-box">
                             <div class="flip-inner">
 
-
                                 <div class="flip-front">
                                     <img src="assets/img/book-cover/book-port4.webp" alt="Front Image" width="266" height="399" loading="lazy">
                                 </div>
-
 
                                 <div class="flip-back" style="background-image: linear-gradient(to right, rgb(6 6 6 / 79%), rgb(0 0 0 / 70%)), url(assets/img/book-cover/book-port4.webp);">
                                     <ul class="list-unstyled">
@@ -1166,13 +1132,11 @@
                             </div>
                         </div>
 
-
                     </div> -->
 
                     <div class="col-lg-2 col-md-3 col-sm-4 col-4">
                         <div class="flip-box reveal">
                             <div class="flip-inner">
-
 
                                 <div class="flip-front">
                                     <img class="lazy lazy-loaded-image img-fluid"
@@ -1180,7 +1144,6 @@
                                         data-src="assets/img/book-cover/the-legend-of-denali.jpg"
                                         alt="Unitedbookpublishing" width="266" height="399" />
                                 </div>
-
 
                                 <div class="flip-back "
                                     style="background-image: linear-gradient(to right, rgb(6 6 6 / 79%), rgb(0 0 0 / 70%)), url(assets/img/book-cover/the-legend-of-denali.jpg);">
@@ -1201,13 +1164,11 @@
                             </div>
                         </div>
 
-
                     </div>
 
                     <div class="col-lg-2 col-md-3 col-sm-4 col-4">
                         <div class="flip-box reveal  delay-1">
                             <div class="flip-inner">
-
 
                                 <div class="flip-front">
                                     <img class="lazy lazy-loaded-image img-fluid"
@@ -1215,7 +1176,6 @@
                                         data-src="assets/img/book-cover/allen-court-new.jpg"
                                         alt="Unitedbookpublishing" width="266" height="399" />
                                 </div>
-
 
                                 <div class="flip-back"
                                     style="background-image: linear-gradient(to right, rgb(6 6 6 / 79%), rgb(0 0 0 / 70%)), url(assets/img/book-cover/allen-court-new.jpg);">
@@ -1236,13 +1196,11 @@
                             </div>
                         </div>
 
-
                     </div>
 
                     <div class="col-lg-2 col-md-3 col-sm-4 col-4">
                         <div class="flip-box reveal  delay-2">
                             <div class="flip-inner">
-
 
                                 <div class="flip-front">
                                     <img class="lazy lazy-loaded-image img-fluid"
@@ -1250,7 +1208,6 @@
                                         data-src="assets/img/book-cover/new-life-leaving.jpg"
                                         alt="Unitedbookpublishing" width="266" height="399" />
                                 </div>
-
 
                                 <div class="flip-back"
                                     style="background-image: linear-gradient(to right, rgb(6 6 6 / 79%), rgb(0 0 0 / 70%)), url(assets/img/book-cover/new-life-leaving.jpg);">
@@ -1271,13 +1228,11 @@
                             </div>
                         </div>
 
-
                     </div>
 
                     <div class="col-lg-2 col-md-3 col-sm-4 col-4">
                         <div class="flip-box reveal  delay-3">
                             <div class="flip-inner">
-
 
                                 <div class="flip-front">
                                     <img class="lazy lazy-loaded-image img-fluid"
@@ -1285,7 +1240,6 @@
                                         data-src="assets/img/book-cover/the-hug.jpg"
                                         alt="Unitedbookpublishing" width="266" height="399" />
                                 </div>
-
 
                                 <div class="flip-back"
                                     style="background-image: linear-gradient(to right, rgb(6 6 6 / 79%), rgb(0 0 0 / 70%)), url(assets/img/book-cover/the-hug.jpg);">
@@ -1306,13 +1260,11 @@
                             </div>
                         </div>
 
-
                     </div>
 
                     <div class="col-lg-2 col-md-3 col-sm-4 col-4">
                         <div class="flip-box reveal  delay-4">
                             <div class="flip-inner">
-
 
                                 <div class="flip-front">
                                     <img class="lazy lazy-loaded-image img-fluid"
@@ -1320,7 +1272,6 @@
                                         data-src="assets/img/book-cover/barnaby-bunny.jpg"
                                         alt="Unitedbookpublishing" width="266" height="399" />
                                 </div>
-
 
                                 <div class="flip-back"
                                     style="background-image: linear-gradient(to right, rgb(6 6 6 / 79%), rgb(0 0 0 / 70%)), url(assets/img/book-cover/barnaby-bunny.jpg);">
@@ -1341,9 +1292,7 @@
                             </div>
                         </div>
 
-
                     </div>
-
 
                 </div>
             </div>
@@ -1465,8 +1414,6 @@
                         </a>
                     </div>
 
-
-
                 </div>
             </div>
 
@@ -1479,7 +1426,7 @@
                             <div class="s4_overlay1"></div>
                             <img class="lazy lazy-loaded-image img-fluid"
                                 src="assets/img/skeleton2.webp" loading="lazy"
-                                data-src="https://unitedbookpublishing.com/assets/img/illustrator/1.png" alt="cover" width="266"
+                                data-src="assets/img/illustrator/1.png" alt="cover" width="266"
                                 height="426" />
                         </div>
                     </div>
@@ -1490,7 +1437,7 @@
                             <div class="s4_overlay1"></div>
                             <img class="lazy lazy-loaded-image img-fluid"
                                 src="assets/img/skeleton2.webp" loading="lazy"
-                                data-src="https://unitedbookpublishing.com/assets/img/illustrator/2.png" alt="cover" width="266"
+                                data-src="assets/img/illustrator/2.png" alt="cover" width="266"
                                 height="426" />
                         </div>
                     </div>
@@ -1501,7 +1448,7 @@
                             <div class="s4_overlay1"></div>
                             <img class="lazy lazy-loaded-image img-fluid"
                                 src="assets/img/skeleton2.webp" loading="lazy"
-                                data-src="https://unitedbookpublishing.com/assets/img/illustrator/3.png" alt="cover" width="266"
+                                data-src="assets/img/illustrator/3.png" alt="cover" width="266"
                                 height="426" />
                         </div>
                     </div>
@@ -1512,7 +1459,7 @@
                             <div class="s4_overlay1"></div>
                             <img class="lazy lazy-loaded-image img-fluid"
                                 src="assets/img/skeleton2.webp" loading="lazy"
-                                data-src="https://unitedbookpublishing.com/assets/img/illustrator/4.webp" alt="cover"
+                                data-src="assets/img/illustrator/4.webp" alt="cover"
                                 width="266" height="426" />
                         </div>
                     </div>
@@ -1523,7 +1470,7 @@
                             <div class="s4_overlay1"></div>
                             <img class="lazy lazy-loaded-image img-fluid"
                                 src="assets/img/skeleton2.webp" loading="lazy"
-                                data-src="https://unitedbookpublishing.com/assets/img/illustrator/5.webp" alt="cover"
+                                data-src="assets/img/illustrator/5.webp" alt="cover"
                                 width="266" height="426" />
 
                         </div>
@@ -1535,7 +1482,7 @@
                             <div class="s4_overlay1"></div>
                             <img class="lazy lazy-loaded-image img-fluid"
                                 src="assets/img/skeleton2.webp" loading="lazy"
-                                data-src="https://unitedbookpublishing.com/assets/img/illustrator/6.webp" alt="cover"
+                                data-src="assets/img/illustrator/6.webp" alt="cover"
                                 width="266" height="426" />
                         </div>
                     </div>
@@ -1645,7 +1592,7 @@
                             <div class="s4_overlay1"></div>
                             <img class="lazy lazy-loaded-image img-fluid"
                                 src="assets/img/skeleton2.webp" loading="lazy"
-                                data-src="https://unitedbookpublishing.com/assets/img/ubp-new/ubp-inner/1.webp" alt="img"
+                                data-src="assets/img/ubp-new/ubp-inner/1.webp" alt="img"
                                 width="266" height="266" loading="lazy" />
                         </div>
                     </div>
@@ -1656,7 +1603,7 @@
                             <div class="s4_overlay1"></div>
                             <img class="lazy lazy-loaded-image img-fluid"
                                 src="assets/img/skeleton2.webp" loading="lazy"
-                                data-src="https://unitedbookpublishing.com/assets/img/ubp-new/ubp-inner/2.webp" alt="img"
+                                data-src="assets/img/ubp-new/ubp-inner/2.webp" alt="img"
                                 width="266" height="266" loading="lazy" />
                         </div>
                     </div>
@@ -1667,7 +1614,7 @@
                             <div class="s4_overlay1"></div>
                             <img class="lazy lazy-loaded-image img-fluid"
                                 src="assets/img/skeleton2.webp" loading="lazy"
-                                data-src="https://unitedbookpublishing.com/assets/img/ubp-new/ubp-inner/3.webp" alt="img"
+                                data-src="assets/img/ubp-new/ubp-inner/3.webp" alt="img"
                                 width="266" height="266" loading="lazy" />
                         </div>
                     </div>
@@ -1678,7 +1625,7 @@
                             <div class="s4_overlay1"></div>
                             <img class="lazy lazy-loaded-image img-fluid"
                                 src="assets/img/skeleton2.webp" loading="lazy"
-                                data-src="https://unitedbookpublishing.com/assets/img/ubp-new/ubp-inner/4.webp" alt="img"
+                                data-src="assets/img/ubp-new/ubp-inner/4.webp" alt="img"
                                 width="266" height="266" loading="lazy" />
                         </div>
                     </div>
@@ -1690,7 +1637,7 @@
 
                             <img class="lazy lazy-loaded-image img-fluid"
                                 src="assets/img/skeleton2.webp" loading="lazy"
-                                data-src="https://unitedbookpublishing.com/assets/img/ubp-new/ubp-inner/5.webp" alt="img"
+                                data-src="assets/img/ubp-new/ubp-inner/5.webp" alt="img"
                                 width="266" height="266" loading="lazy" />
                         </div>
                     </div>
@@ -1701,7 +1648,7 @@
                             <div class="s4_overlay1"></div>
                             <img class="lazy lazy-loaded-image img-fluid"
                                 src="assets/img/skeleton2.webp" loading="lazy"
-                                data-src="https://unitedbookpublishing.com/assets/img/ubp-new/ubp-inner/6.webp" alt="img"
+                                data-src="assets/img/ubp-new/ubp-inner/6.webp" alt="img"
                                 width="266" height="266" loading="lazy" />
                         </div>
                     </div>
@@ -1711,9 +1658,6 @@
         </div>
     </div>
 </div>
-
-
-
 
     <!-- <section class="process-sec sec-pd">
                                                                     <div class="container">
@@ -1763,8 +1707,6 @@
 
                                                                             <div class="col-lg-2 col-md-4 col-sm-4 col-4">
 
-
-
                                                                                 <div class="process-box" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="only-this-tooltip"
                                                                                     data-bs-title="A clear plan is created, including timelines, marketing, and distribution strategies.">
                                                                                     <div class="step-number" data-aos="fade-zoom-in" data-aos-easing="ease-in-back"
@@ -1780,8 +1722,6 @@
 
                                                                             <div class="col-lg-2 col-md-4 col-sm-4 col-4">
 
-
-
                                                                                 <div class="process-box" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="only-this-tooltip"
                                                                                     data-bs-title="We prepare publishing platforms, formatting, and ensure your book is ready for launch.">
                                                                                     <h3 class="font-25" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="400">
@@ -1793,15 +1733,9 @@
                                                                                         data-aos-duration="1000" data-aos-delay="0">04</div>
                                                                                 </div>
 
-
-
-
                                                                             </div>
 
                                                                             <div class="col-lg-2 col-md-4 col-sm-4 col-4">
-
-
-
 
                                                                                 <div class="process-box" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="only-this-tooltip"
                                                                                     data-bs-title="We track performance and adjust marketing, distribution, and engagement strategies for maximum impact.">
@@ -1814,13 +1748,9 @@
                                                                                         Monitoring &<br>Optimization</h3>
                                                                                 </div>
 
-
-
                                                                             </div>
 
                                                                             <div class="col-lg-2 col-md-4 col-sm-4 col-4">
-
-
 
                                                                                 <div class="process-box" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="only-this-tooltip"
                                                                                     data-bs-title="We review everything before release, ensuring quality, consistency, and readiness for readers worldwide.">
@@ -1832,7 +1762,6 @@
                                                                                     <div class="step-number bott-number" data-aos="fade-zoom-in" data-aos-easing="ease-in-back"
                                                                                         data-aos-duration="1000" data-aos-delay="0">06</div>
                                                                                 </div>
-
 
                                                                             </div>
 
@@ -1857,7 +1786,7 @@
                     <div class="testi-pad">
                         <img class="lazy lazy-loaded-image img-fluid "
                             src="assets/img/skeleton2.webp" loading="lazy"
-                            data-lazy="https://unitedbookpublishing.com/assets/img/ubp-new/client-image-1.webp" alt="Unitedbookpublishing"
+                            data-lazy="assets/img/ubp-new/client-image-1.webp" alt="Unitedbookpublishing"
                             width="526" height="528" />
 
                         <!-- <img src="assets/img/bann-book-1.webp" class="img-fluid book-img" alt="book"
@@ -1877,28 +1806,28 @@
                     <div class="testi-pad">
                             <img class="lazy lazy-loaded-image img-fluid "
                             src="assets/img/skeleton2.webp" loading="lazy"
-                            data-lazy="https://unitedbookpublishing.com/assets/img/ubp-new/client-image-2.webp" alt="Unitedbookpublishing"
+                            data-lazy="assets/img/ubp-new/client-image-2.webp" alt="Unitedbookpublishing"
                             width="526" height="528" />
                     </div>
 
                     <div class="testi-pad">
                             <img class="lazy lazy-loaded-image img-fluid "
                             src="assets/img/skeleton2.webp" loading="lazy"
-                            data-lazy="https://unitedbookpublishing.com/assets/img/ubp-new/client-image-3.webp" alt="Unitedbookpublishing"
+                            data-lazy="assets/img/ubp-new/client-image-3.webp" alt="Unitedbookpublishing"
                             width="526" height="528" />
                     </div>
 
                     <div class="testi-pad">
                             <img class="lazy lazy-loaded-image img-fluid "
                             src="assets/img/skeleton2.webp" loading="lazy"
-                            data-lazy="https://unitedbookpublishing.com/assets/img/ubp-new/client-image-4.webp" alt="Unitedbookpublishing"
+                            data-lazy="assets/img/ubp-new/client-image-4.webp" alt="Unitedbookpublishing"
                             width="526" height="528" />
                     </div>
 
                     <div class="testi-pad">
                             <img class="lazy lazy-loaded-image img-fluid "
                             src="assets/img/skeleton2.webp" loading="lazy"
-                            data-lazy="https://unitedbookpublishing.com/assets/img/ubp-new/client-image-5.webp" alt="Unitedbookpublishing"
+                            data-lazy="assets/img/ubp-new/client-image-5.webp" alt="Unitedbookpublishing"
                             width="526" height="528" />
                     </div>
 
@@ -1926,13 +1855,7 @@
                             </div>
                             <div class="testi-para my-4">
                                 <strong>My experience is two-fold</strong>
-                                <p>My experience is two-fold, from bad to extremely good. Two United nitwits first
-                                    published my book without consulting me.
-                                    It was full of errors. It all changed when Jeffrey Collins, Author Success Manager,
-                                    took charge of my account.
-                                    He is a master of his trade, and United Book Publishing Company successfully
-                                    republished my book. I have self-published
-                                    eight other books with various companies, but United gets the gold.</p>
+                                <p>My publishing journey had a difficult beginning, but everything improved once my account was assigned to a dedicated manager. The team quickly resolved the issues, republished my book with great care, and delivered results that exceeded my expectations. After publishing several books over the years, I can confidently say this has been one of my best experiences.</p>
                             </div>
                         </div>
                         <div class="testimonial-box p-3">
@@ -1953,7 +1876,7 @@
                             </div>
                             <div class="testi-para my-4">
                                 <strong>Outstanding Support and Expertise in Publishing</strong>
-                                <p>I couldn’t be any happier with my publishing experience with United Book Publishing!
+                                <p>I couldn’t be any happier with my publishing experience with Experts Self Publishing!
                                     From the moment I started working with them,
                                     I felt like my story truly mattered. Their attention to detail and commitment to
                                     perfection was evident in every step of the process,
@@ -1963,7 +1886,7 @@
                                     could’ve made for my book!</p>
                                 <p>If you’re looking for a publishing partner that’s professional, reliable, and
                                     genuinely invested in your success,
-                                    I wholeheartedly recommend United Book Publishing. You won’t be disappointed!</p>
+                                    I wholeheartedly recommend Experts Self Publishing. You won’t be disappointed!</p>
                             </div>
                         </div>
                         <div class="testimonial-box p-3">
@@ -1984,7 +1907,7 @@
                             </div>
                             <div class="testi-para my-4">
                                 <strong>First Class All the Way</strong>
-                                <p>First, United Book Publishing has the very best book cover design prices that I could
+                                <p>First, Experts Self Publishing has the very best book cover design prices that I could
                                     find.
                                     2nd, they are very caring and attentive. My first conversation was with Aron Parker,
                                     Chief
@@ -2018,7 +1941,7 @@
                                 <strong>A 80 year old first time publisher!</strong>
                                 <p>I'm an 80 year old, first time publisher, Investigating all the claims of book
                                     publishers, including self publishing led me
-                                    to United Book Publishing.</p>
+                                    to Experts Self Publishing.</p>
                                 <p>When I mentioned that I was hosting my book through the Non-Profit foundation, Global
                                     Prefab Systems Foundation, they were quick
                                     to advise that there was an additional $100 discount for Non-Profit organizations.
@@ -2047,7 +1970,7 @@
                             <div class="testi-para my-4">
                                 <strong>Editing and publishing the book "Hideaways--within and outside my polygamist
                                     family"</strong>
-                                <p>I especially liked the UBP people I worked with. They have been helpful,
+                                <p>I especially liked the Experts Self Publishing team I worked with. They have been helpful,
                                     knowledgeable, patient, and resilient.
                                     The book was very complex and challenging to edit and publish. Areas of suggested
                                     improvement are professional
@@ -2066,7 +1989,7 @@
         <div class="row">
 
             <div class="pricing-heading text-center mb-4">
-                <div class="font-35 let-space theme-font color fw-bold">United Book Publishing</div>
+                <div class="font-35 let-space theme-font color fw-bold">Experts Self Publishing</div>
                 <h2 class="sec-hd color-green">Breaking Creative Boundaries</h2>
                 <p class="w-80 mx-auto mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
                     consectetur ut quibusdam est vero pariatur temporibus itaque quod nam ipsa? Odio quasi amet
@@ -2125,6 +2048,60 @@
                                 class="fa-solid fa-arrow-right ms-2"></i></a>
                     </div>
 
+                </div>
+            </div>
+            <div class="col-lg-4 ">
+                <div class="pricing-box">
+                    <div class="pricing-head">
+                        <div class="font-35 theme-font fw-600">Silver Marketing</div>
+                        <div class="price  color">$1,499</div>
+                        <div class="delete-price para-color font-18 fw-bold"> <del>$2,999 Only</del>
+                        </div>
+                    </div>
+
+                    <div class="pricing-content">
+                        <ul class="list-unstyled">
+                            <li>Amazon Publication</li>
+                            <li>Digital EBook Version</li>
+                            <li>Paperback & Hardcover</li>
+                            <li>Amazon Publication</li>
+                            <li>Digital EBook Version</li>
+                            <li>Paperback & Hardcover</li>
+                            <li>Amazon Publication</li>
+                            <li>Digital EBook Version</li>
+                            <li>Paperback & Hardcover</li>
+                            <li>Amazon Publication</li>
+                            <li>Digital EBook Version</li>
+                            <li>Paperback & Hardcover</li>
+                            <li>Amazon Publication</li>
+                            <li>Digital EBook Version</li>
+                            <li>Paperback & Hardcover</li>
+                        </ul>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="btn-container my-3">
+                                <p class="color-green fw-bold mb-0">Want To Discuss?</p>
+                                <a href="#"
+                                    class="d-inline-flex fw-bold align-items-center gap-2 color-green"><img
+                                        src="assets/img/green-mass.png" alt="icon"><span>Let's Chat Now</span></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="btn-container my-3">
+                                <p class="color-green fw-bold mb-0">Call Us Now</p>
+                                <a href="#"
+                                    class="d-inline-flex fw-bold align-items-center gap-2 color-green"><img
+                                        src="assets/img/green-call.png" alt="icon"><span>(885) 459-9882</span></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="btn-container text-center">
+                        <a href="javascript:void(0);" class="theme-btn3">Grab It Now <i
+                                class="fa-solid fa-arrow-right ms-2"></i></a>
+                    </div>
 
                 </div>
             </div>
@@ -2181,72 +2158,12 @@
                                 class="fa-solid fa-arrow-right ms-2"></i></a>
                     </div>
 
-
                 </div>
             </div>
-            <div class="col-lg-4 ">
-                <div class="pricing-box">
-                    <div class="pricing-head">
-                        <div class="font-35 theme-font fw-600">Silver Marketing</div>
-                        <div class="price  color">$1,499</div>
-                        <div class="delete-price para-color font-18 fw-bold"> <del>$2,999 Only</del>
-                        </div>
-                    </div>
-
-                    <div class="pricing-content">
-                        <ul class="list-unstyled">
-                            <li>Amazon Publication</li>
-                            <li>Digital EBook Version</li>
-                            <li>Paperback & Hardcover</li>
-                            <li>Amazon Publication</li>
-                            <li>Digital EBook Version</li>
-                            <li>Paperback & Hardcover</li>
-                            <li>Amazon Publication</li>
-                            <li>Digital EBook Version</li>
-                            <li>Paperback & Hardcover</li>
-                            <li>Amazon Publication</li>
-                            <li>Digital EBook Version</li>
-                            <li>Paperback & Hardcover</li>
-                            <li>Amazon Publication</li>
-                            <li>Digital EBook Version</li>
-                            <li>Paperback & Hardcover</li>
-                        </ul>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="btn-container my-3">
-                                <p class="color-green fw-bold mb-0">Want To Discuss?</p>
-                                <a href="#"
-                                    class="d-inline-flex fw-bold align-items-center gap-2 color-green"><img
-                                        src="assets/img/green-mass.png" alt="icon"><span>Let's Chat Now</span></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="btn-container my-3">
-                                <p class="color-green fw-bold mb-0">Call Us Now</p>
-                                <a href="#"
-                                    class="d-inline-flex fw-bold align-items-center gap-2 color-green"><img
-                                        src="assets/img/green-call.png" alt="icon"><span>(885) 459-9882</span></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="btn-container text-center">
-                        <a href="javascript:void(0);" class="theme-btn3">Grab It Now <i
-                                class="fa-solid fa-arrow-right ms-2"></i></a>
-                    </div>
-
-
-                </div>
-            </div>
-
 
         </div>
     </div>
 </section>
-
-
 
 <section class="pricing-sec pricing-tab-sec sec-pd">
     <div class="container">
@@ -2258,8 +2175,6 @@
                     you’re just starting out or ready to launch professionally, our plans provide the tools,
                     guidance, and support to publish your book successfully.</P>
             </div>
-
-
 
             <div class="pricing-tabs mb-5 d-none">
                 <div class="nav nav-tabs border-0 justify-content-center" id="nav-tab" role="tablist">
@@ -2338,6 +2253,62 @@
                                                 class="fa-solid fa-arrow-right ms-2"></i></a>
                                     </div>
 
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="pricing-box">
+                                    <div class="pricing-head">
+                                        <div class="font-35 theme-font fw-600">Silver Marketing</div>
+                                        <div class="price  color">$1,499</div>
+                                        <div class="delete-price para-color font-18 fw-bold"> <del>$2,999 Only</del>
+                                        </div>
+                                    </div>
+
+                                    <div class="pricing-content">
+                                        <ul class="list-unstyled">
+                                            <li>Amazon Publication</li>
+                                            <li>Digital EBook Version</li>
+                                            <li>Paperback & Hardcover</li>
+                                            <li>Amazon Publication</li>
+                                            <li>Digital EBook Version</li>
+                                            <li>Paperback & Hardcover</li>
+                                            <li>Amazon Publication</li>
+                                            <li>Digital EBook Version</li>
+                                            <li>Paperback & Hardcover</li>
+                                            <li>Amazon Publication</li>
+                                            <li>Digital EBook Version</li>
+                                            <li>Paperback & Hardcover</li>
+                                            <li>Amazon Publication</li>
+                                            <li>Digital EBook Version</li>
+                                            <li>Paperback & Hardcover</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="btn-container my-3">
+                                                <p class="color-green fw-bold mb-0">Want To Discuss?</p>
+                                                <a href="#"
+                                                    class="d-inline-flex fw-bold align-items-center gap-2 color-green"><img
+                                                        src="assets/img/green-mass.png" alt="icon"><span>Let's
+                                                        Chat Now</span></a>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="btn-container my-3">
+                                                <p class="color-green fw-bold mb-0">Call Us Now</p>
+                                                <a href="#"
+                                                    class="d-inline-flex fw-bold align-items-center gap-2 color-green"><img
+                                                        src="assets/img/green-call.png" alt="icon"><span>(885)
+                                                        459-9882</span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="btn-container text-center">
+                                        <a href="javascript:void(0);" class="theme-btn3">Grab It Now <i
+                                                class="fa-solid fa-arrow-right ms-2"></i></a>
+                                    </div>
 
                                 </div>
                             </div>
@@ -2396,68 +2367,8 @@
                                                 class="fa-solid fa-arrow-right ms-2"></i></a>
                                     </div>
 
-
                                 </div>
                             </div>
-                            <div class="col-lg-4 col-md-6">
-                                <div class="pricing-box">
-                                    <div class="pricing-head">
-                                        <div class="font-35 theme-font fw-600">Silver Marketing</div>
-                                        <div class="price  color">$1,499</div>
-                                        <div class="delete-price para-color font-18 fw-bold"> <del>$2,999 Only</del>
-                                        </div>
-                                    </div>
-
-                                    <div class="pricing-content">
-                                        <ul class="list-unstyled">
-                                            <li>Amazon Publication</li>
-                                            <li>Digital EBook Version</li>
-                                            <li>Paperback & Hardcover</li>
-                                            <li>Amazon Publication</li>
-                                            <li>Digital EBook Version</li>
-                                            <li>Paperback & Hardcover</li>
-                                            <li>Amazon Publication</li>
-                                            <li>Digital EBook Version</li>
-                                            <li>Paperback & Hardcover</li>
-                                            <li>Amazon Publication</li>
-                                            <li>Digital EBook Version</li>
-                                            <li>Paperback & Hardcover</li>
-                                            <li>Amazon Publication</li>
-                                            <li>Digital EBook Version</li>
-                                            <li>Paperback & Hardcover</li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col">
-                                            <div class="btn-container my-3">
-                                                <p class="color-green fw-bold mb-0">Want To Discuss?</p>
-                                                <a href="#"
-                                                    class="d-inline-flex fw-bold align-items-center gap-2 color-green"><img
-                                                        src="assets/img/green-mass.png" alt="icon"><span>Let's
-                                                        Chat Now</span></a>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="btn-container my-3">
-                                                <p class="color-green fw-bold mb-0">Call Us Now</p>
-                                                <a href="#"
-                                                    class="d-inline-flex fw-bold align-items-center gap-2 color-green"><img
-                                                        src="assets/img/green-call.png" alt="icon"><span>(885)
-                                                        459-9882</span></a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="btn-container text-center">
-                                        <a href="javascript:void(0);" class="theme-btn3">Grab It Now <i
-                                                class="fa-solid fa-arrow-right ms-2"></i></a>
-                                    </div>
-
-
-                                </div>
-                            </div>
-
 
                         </div>
                     </div>
@@ -2519,6 +2430,62 @@
                                                 class="fa-solid fa-arrow-right ms-2"></i></a>
                                     </div>
 
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="pricing-box">
+                                    <div class="pricing-head">
+                                        <div class="font-35 theme-font fw-600">Silver Marketing</div>
+                                        <div class="price  color">$1,499</div>
+                                        <div class="delete-price para-color font-18 fw-bold"> <del>$2,999 Only</del>
+                                        </div>
+                                    </div>
+
+                                    <div class="pricing-content">
+                                        <ul class="list-unstyled">
+                                            <li>Amazon Publication</li>
+                                            <li>Digital EBook Version</li>
+                                            <li>Paperback & Hardcover</li>
+                                            <li>Amazon Publication</li>
+                                            <li>Digital EBook Version</li>
+                                            <li>Paperback & Hardcover</li>
+                                            <li>Amazon Publication</li>
+                                            <li>Digital EBook Version</li>
+                                            <li>Paperback & Hardcover</li>
+                                            <li>Amazon Publication</li>
+                                            <li>Digital EBook Version</li>
+                                            <li>Paperback & Hardcover</li>
+                                            <li>Amazon Publication</li>
+                                            <li>Digital EBook Version</li>
+                                            <li>Paperback & Hardcover</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="btn-container my-3">
+                                                <p class="color-green fw-bold mb-0">Want To Discuss?</p>
+                                                <a href="#"
+                                                    class="d-inline-flex fw-bold align-items-center gap-2 color-green"><img
+                                                        src="assets/img/green-mass.png" alt="icon"><span>Let's
+                                                        Chat Now</span></a>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="btn-container my-3">
+                                                <p class="color-green fw-bold mb-0">Call Us Now</p>
+                                                <a href="#"
+                                                    class="d-inline-flex fw-bold align-items-center gap-2 color-green"><img
+                                                        src="assets/img/green-call.png" alt="icon"><span>(885)
+                                                        459-9882</span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="btn-container text-center">
+                                        <a href="javascript:void(0);" class="theme-btn3">Grab It Now <i
+                                                class="fa-solid fa-arrow-right ms-2"></i></a>
+                                    </div>
 
                                 </div>
                             </div>
@@ -2577,71 +2544,10 @@
                                                 class="fa-solid fa-arrow-right ms-2"></i></a>
                                     </div>
 
-
                                 </div>
                             </div>
-                            <div class="col-lg-4">
-                                <div class="pricing-box">
-                                    <div class="pricing-head">
-                                        <div class="font-35 theme-font fw-600">Silver Marketing</div>
-                                        <div class="price  color">$1,499</div>
-                                        <div class="delete-price para-color font-18 fw-bold"> <del>$2,999 Only</del>
-                                        </div>
-                                    </div>
-
-                                    <div class="pricing-content">
-                                        <ul class="list-unstyled">
-                                            <li>Amazon Publication</li>
-                                            <li>Digital EBook Version</li>
-                                            <li>Paperback & Hardcover</li>
-                                            <li>Amazon Publication</li>
-                                            <li>Digital EBook Version</li>
-                                            <li>Paperback & Hardcover</li>
-                                            <li>Amazon Publication</li>
-                                            <li>Digital EBook Version</li>
-                                            <li>Paperback & Hardcover</li>
-                                            <li>Amazon Publication</li>
-                                            <li>Digital EBook Version</li>
-                                            <li>Paperback & Hardcover</li>
-                                            <li>Amazon Publication</li>
-                                            <li>Digital EBook Version</li>
-                                            <li>Paperback & Hardcover</li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col">
-                                            <div class="btn-container my-3">
-                                                <p class="color-green fw-bold mb-0">Want To Discuss?</p>
-                                                <a href="#"
-                                                    class="d-inline-flex fw-bold align-items-center gap-2 color-green"><img
-                                                        src="assets/img/green-mass.png" alt="icon"><span>Let's
-                                                        Chat Now</span></a>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="btn-container my-3">
-                                                <p class="color-green fw-bold mb-0">Call Us Now</p>
-                                                <a href="#"
-                                                    class="d-inline-flex fw-bold align-items-center gap-2 color-green"><img
-                                                        src="assets/img/green-call.png" alt="icon"><span>(885)
-                                                        459-9882</span></a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="btn-container text-center">
-                                        <a href="javascript:void(0);" class="theme-btn3">Grab It Now <i
-                                                class="fa-solid fa-arrow-right ms-2"></i></a>
-                                    </div>
-
-
-                                </div>
-                            </div>
-
 
                         </div>
-
 
                     </div>
                     <div class="tab-pane fade " id="nav-profile-illustration" role="tabpanel"
@@ -2702,6 +2608,62 @@
                                                 class="fa-solid fa-arrow-right ms-2"></i></a>
                                     </div>
 
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="pricing-box">
+                                    <div class="pricing-head">
+                                        <div class="font-35 theme-font fw-600">Silver Marketing</div>
+                                        <div class="price  color">$1,499</div>
+                                        <div class="delete-price para-color font-18 fw-bold"> <del>$2,999 Only</del>
+                                        </div>
+                                    </div>
+
+                                    <div class="pricing-content">
+                                        <ul class="list-unstyled">
+                                            <li>Amazon Publication</li>
+                                            <li>Digital EBook Version</li>
+                                            <li>Paperback & Hardcover</li>
+                                            <li>Amazon Publication</li>
+                                            <li>Digital EBook Version</li>
+                                            <li>Paperback & Hardcover</li>
+                                            <li>Amazon Publication</li>
+                                            <li>Digital EBook Version</li>
+                                            <li>Paperback & Hardcover</li>
+                                            <li>Amazon Publication</li>
+                                            <li>Digital EBook Version</li>
+                                            <li>Paperback & Hardcover</li>
+                                            <li>Amazon Publication</li>
+                                            <li>Digital EBook Version</li>
+                                            <li>Paperback & Hardcover</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="btn-container my-3">
+                                                <p class="color-green fw-bold mb-0">Want To Discuss?</p>
+                                                <a href="#"
+                                                    class="d-inline-flex fw-bold align-items-center gap-2 color-green"><img
+                                                        src="assets/img/green-mass.png" alt="icon"><span>Let's
+                                                        Chat Now</span></a>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="btn-container my-3">
+                                                <p class="color-green fw-bold mb-0">Call Us Now</p>
+                                                <a href="#"
+                                                    class="d-inline-flex fw-bold align-items-center gap-2 color-green"><img
+                                                        src="assets/img/green-call.png" alt="icon"><span>(885)
+                                                        459-9882</span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="btn-container text-center">
+                                        <a href="javascript:void(0);" class="theme-btn3">Grab It Now <i
+                                                class="fa-solid fa-arrow-right ms-2"></i></a>
+                                    </div>
 
                                 </div>
                             </div>
@@ -2760,71 +2722,10 @@
                                                 class="fa-solid fa-arrow-right ms-2"></i></a>
                                     </div>
 
-
                                 </div>
                             </div>
-                            <div class="col-lg-4">
-                                <div class="pricing-box">
-                                    <div class="pricing-head">
-                                        <div class="font-35 theme-font fw-600">Silver Marketing</div>
-                                        <div class="price  color">$1,499</div>
-                                        <div class="delete-price para-color font-18 fw-bold"> <del>$2,999 Only</del>
-                                        </div>
-                                    </div>
-
-                                    <div class="pricing-content">
-                                        <ul class="list-unstyled">
-                                            <li>Amazon Publication</li>
-                                            <li>Digital EBook Version</li>
-                                            <li>Paperback & Hardcover</li>
-                                            <li>Amazon Publication</li>
-                                            <li>Digital EBook Version</li>
-                                            <li>Paperback & Hardcover</li>
-                                            <li>Amazon Publication</li>
-                                            <li>Digital EBook Version</li>
-                                            <li>Paperback & Hardcover</li>
-                                            <li>Amazon Publication</li>
-                                            <li>Digital EBook Version</li>
-                                            <li>Paperback & Hardcover</li>
-                                            <li>Amazon Publication</li>
-                                            <li>Digital EBook Version</li>
-                                            <li>Paperback & Hardcover</li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col">
-                                            <div class="btn-container my-3">
-                                                <p class="color-green fw-bold mb-0">Want To Discuss?</p>
-                                                <a href="#"
-                                                    class="d-inline-flex fw-bold align-items-center gap-2 color-green"><img
-                                                        src="assets/img/green-mass.png" alt="icon"><span>Let's
-                                                        Chat Now</span></a>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="btn-container my-3">
-                                                <p class="color-green fw-bold mb-0">Call Us Now</p>
-                                                <a href="#"
-                                                    class="d-inline-flex fw-bold align-items-center gap-2 color-green"><img
-                                                        src="assets/img/green-call.png" alt="icon"><span>(885)
-                                                        459-9882</span></a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="btn-container text-center">
-                                        <a href="javascript:void(0);" class="theme-btn3">Grab It Now <i
-                                                class="fa-solid fa-arrow-right ms-2"></i></a>
-                                    </div>
-
-
-                                </div>
-                            </div>
-
 
                         </div>
-
 
                     </div>
                     <div class="tab-pane fade " id="nav-contact-cover" role="tabpanel"
@@ -2885,6 +2786,62 @@
                                                 class="fa-solid fa-arrow-right ms-2"></i></a>
                                     </div>
 
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="pricing-box">
+                                    <div class="pricing-head">
+                                        <div class="font-35 theme-font fw-600">Silver Marketing</div>
+                                        <div class="price  color">$1,499</div>
+                                        <div class="delete-price para-color font-18 fw-bold"> <del>$2,999 Only</del>
+                                        </div>
+                                    </div>
+
+                                    <div class="pricing-content">
+                                        <ul class="list-unstyled">
+                                            <li>Amazon Publication</li>
+                                            <li>Digital EBook Version</li>
+                                            <li>Paperback & Hardcover</li>
+                                            <li>Amazon Publication</li>
+                                            <li>Digital EBook Version</li>
+                                            <li>Paperback & Hardcover</li>
+                                            <li>Amazon Publication</li>
+                                            <li>Digital EBook Version</li>
+                                            <li>Paperback & Hardcover</li>
+                                            <li>Amazon Publication</li>
+                                            <li>Digital EBook Version</li>
+                                            <li>Paperback & Hardcover</li>
+                                            <li>Amazon Publication</li>
+                                            <li>Digital EBook Version</li>
+                                            <li>Paperback & Hardcover</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="btn-container my-3">
+                                                <p class="color-green fw-bold mb-0">Want To Discuss?</p>
+                                                <a href="#"
+                                                    class="d-inline-flex fw-bold align-items-center gap-2 color-green"><img
+                                                        src="assets/img/green-mass.png" alt="icon"><span>Let's
+                                                        Chat Now</span></a>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="btn-container my-3">
+                                                <p class="color-green fw-bold mb-0">Call Us Now</p>
+                                                <a href="#"
+                                                    class="d-inline-flex fw-bold align-items-center gap-2 color-green"><img
+                                                        src="assets/img/green-call.png" alt="icon"><span>(885)
+                                                        459-9882</span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="btn-container text-center">
+                                        <a href="javascript:void(0);" class="theme-btn3">Grab It Now <i
+                                                class="fa-solid fa-arrow-right ms-2"></i></a>
+                                    </div>
 
                                 </div>
                             </div>
@@ -2943,72 +2900,10 @@
                                                 class="fa-solid fa-arrow-right ms-2"></i></a>
                                     </div>
 
-
                                 </div>
                             </div>
-                            <div class="col-lg-4">
-                                <div class="pricing-box">
-                                    <div class="pricing-head">
-                                        <div class="font-35 theme-font fw-600">Silver Marketing</div>
-                                        <div class="price  color">$1,499</div>
-                                        <div class="delete-price para-color font-18 fw-bold"> <del>$2,999 Only</del>
-                                        </div>
-                                    </div>
-
-                                    <div class="pricing-content">
-                                        <ul class="list-unstyled">
-                                            <li>Amazon Publication</li>
-                                            <li>Digital EBook Version</li>
-                                            <li>Paperback & Hardcover</li>
-                                            <li>Amazon Publication</li>
-                                            <li>Digital EBook Version</li>
-                                            <li>Paperback & Hardcover</li>
-                                            <li>Amazon Publication</li>
-                                            <li>Digital EBook Version</li>
-                                            <li>Paperback & Hardcover</li>
-                                            <li>Amazon Publication</li>
-                                            <li>Digital EBook Version</li>
-                                            <li>Paperback & Hardcover</li>
-                                            <li>Amazon Publication</li>
-                                            <li>Digital EBook Version</li>
-                                            <li>Paperback & Hardcover</li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col">
-                                            <div class="btn-container my-3">
-                                                <p class="color-green fw-bold mb-0">Want To Discuss?</p>
-                                                <a href="#"
-                                                    class="d-inline-flex fw-bold align-items-center gap-2 color-green"><img
-                                                        src="assets/img/green-mass.png" alt="icon"><span>Let's
-                                                        Chat Now</span></a>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="btn-container my-3">
-                                                <p class="color-green fw-bold mb-0">Call Us Now</p>
-                                                <a href="#"
-                                                    class="d-inline-flex fw-bold align-items-center gap-2 color-green"><img
-                                                        src="assets/img/green-call.png" alt="icon"><span>(885)
-                                                        459-9882</span></a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="btn-container text-center">
-                                        <a href="javascript:void(0);" class="theme-btn3">Grab It Now <i
-                                                class="fa-solid fa-arrow-right ms-2"></i></a>
-                                    </div>
-
-
-                                </div>
-                            </div>
-
 
                         </div>
-
-
 
                     </div>
                     <div class="tab-pane fade " id="nav-contact-author" role="tabpanel"
@@ -3069,6 +2964,62 @@
                                                 class="fa-solid fa-arrow-right ms-2"></i></a>
                                     </div>
 
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="pricing-box">
+                                    <div class="pricing-head">
+                                        <div class="font-35 theme-font fw-600">Silver Marketing</div>
+                                        <div class="price  color">$1,499</div>
+                                        <div class="delete-price para-color font-18 fw-bold"> <del>$2,999 Only</del>
+                                        </div>
+                                    </div>
+
+                                    <div class="pricing-content">
+                                        <ul class="list-unstyled">
+                                            <li>Amazon Publication</li>
+                                            <li>Digital EBook Version</li>
+                                            <li>Paperback & Hardcover</li>
+                                            <li>Amazon Publication</li>
+                                            <li>Digital EBook Version</li>
+                                            <li>Paperback & Hardcover</li>
+                                            <li>Amazon Publication</li>
+                                            <li>Digital EBook Version</li>
+                                            <li>Paperback & Hardcover</li>
+                                            <li>Amazon Publication</li>
+                                            <li>Digital EBook Version</li>
+                                            <li>Paperback & Hardcover</li>
+                                            <li>Amazon Publication</li>
+                                            <li>Digital EBook Version</li>
+                                            <li>Paperback & Hardcover</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="btn-container my-3">
+                                                <p class="color-green fw-bold mb-0">Want To Discuss?</p>
+                                                <a href="#"
+                                                    class="d-inline-flex fw-bold align-items-center gap-2 color-green"><img
+                                                        src="assets/img/green-mass.png" alt="icon"><span>Let's
+                                                        Chat Now</span></a>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="btn-container my-3">
+                                                <p class="color-green fw-bold mb-0">Call Us Now</p>
+                                                <a href="#"
+                                                    class="d-inline-flex fw-bold align-items-center gap-2 color-green"><img
+                                                        src="assets/img/green-call.png" alt="icon"><span>(885)
+                                                        459-9882</span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="btn-container text-center">
+                                        <a href="javascript:void(0);" class="theme-btn3">Grab It Now <i
+                                                class="fa-solid fa-arrow-right ms-2"></i></a>
+                                    </div>
 
                                 </div>
                             </div>
@@ -3127,68 +3078,8 @@
                                                 class="fa-solid fa-arrow-right ms-2"></i></a>
                                     </div>
 
-
                                 </div>
                             </div>
-                            <div class="col-lg-4">
-                                <div class="pricing-box">
-                                    <div class="pricing-head">
-                                        <div class="font-35 theme-font fw-600">Silver Marketing</div>
-                                        <div class="price  color">$1,499</div>
-                                        <div class="delete-price para-color font-18 fw-bold"> <del>$2,999 Only</del>
-                                        </div>
-                                    </div>
-
-                                    <div class="pricing-content">
-                                        <ul class="list-unstyled">
-                                            <li>Amazon Publication</li>
-                                            <li>Digital EBook Version</li>
-                                            <li>Paperback & Hardcover</li>
-                                            <li>Amazon Publication</li>
-                                            <li>Digital EBook Version</li>
-                                            <li>Paperback & Hardcover</li>
-                                            <li>Amazon Publication</li>
-                                            <li>Digital EBook Version</li>
-                                            <li>Paperback & Hardcover</li>
-                                            <li>Amazon Publication</li>
-                                            <li>Digital EBook Version</li>
-                                            <li>Paperback & Hardcover</li>
-                                            <li>Amazon Publication</li>
-                                            <li>Digital EBook Version</li>
-                                            <li>Paperback & Hardcover</li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col">
-                                            <div class="btn-container my-3">
-                                                <p class="color-green fw-bold mb-0">Want To Discuss?</p>
-                                                <a href="#"
-                                                    class="d-inline-flex fw-bold align-items-center gap-2 color-green"><img
-                                                        src="assets/img/green-mass.png" alt="icon"><span>Let's
-                                                        Chat Now</span></a>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="btn-container my-3">
-                                                <p class="color-green fw-bold mb-0">Call Us Now</p>
-                                                <a href="#"
-                                                    class="d-inline-flex fw-bold align-items-center gap-2 color-green"><img
-                                                        src="assets/img/green-call.png" alt="icon"><span>(885)
-                                                        459-9882</span></a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="btn-container text-center">
-                                        <a href="javascript:void(0);" class="theme-btn3">Grab It Now <i
-                                                class="fa-solid fa-arrow-right ms-2"></i></a>
-                                    </div>
-
-
-                                </div>
-                            </div>
-
 
                         </div>
 
@@ -3201,7 +3092,6 @@
         
 
         
-
 
                     <div class="tab-pane fade show active"
                 id="service-4" role="tabpanel">
@@ -3459,8 +3349,6 @@
             </div>
         
 
-
-
     </div>
 </section>
 
@@ -3650,9 +3538,6 @@
         </div>
     </section>
 
-
-
-
     <section class="connect-sec sec-pd">
         <div class="container">
             <div class="row">
@@ -3832,7 +3717,6 @@
         <div class="container">
             <div class="row align-items-center justify-content-between">
 
-
                 <div class="choose-heading text-center mb-5">
                     <div class="font-35 let-space theme-font color-green fw-600" data-aos="zoom-out"
                         data-aos-duration="900" data-aos-easing="ease-out-cubic" data-aos-delay="0">FREQUENTLY ASKED
@@ -3845,8 +3729,6 @@
                         and care.</p>
                 </div>
 
-
-
                 <div class="col-lg-6">
                     <div class="service-form">
                         <div class="form-wrap" data-aos="fade-up" data-aos-duration="3000">
@@ -3855,7 +3737,7 @@
                                     Next Bestseller?</div>
                             </div>
                             
-                            <form action="https://unitedbookpublishing.com/form-submit" method="post" id="service-form">
+                            <form action="https://expertsselfpublishing.com/form-submit" method="post" id="service-form">
     <input type="hidden" name="_token" value="MYEyZ4jxGwMXB9vqGbuDh7MYBius8uZb1tpGme6H" autocomplete="off">    <input type="hidden" name="page" value="book-publishing">
     <div class="row">
         <div class="col-lg-12">
@@ -4157,7 +4039,7 @@
                                                                                                 data-bs-parent="#accordionExample">
                                                                                                 <div class="accordion-body">
                                                                                                     <p>Yes. We partner with trusted professionals to produce high-quality hardcover
-                                                                                                        editions. With UBP, your printed book will reflect your vision, offering
+                                                                                                        editions. With Experts Self Publishing, your printed book will reflect your vision, offering
                                                                                                         durability, aesthetics, and a strong impression for readers</p>
                                                                                                 </div>
                                                                                             </div>
@@ -4168,7 +4050,6 @@
             </div>
         </div>
     </section>
-
 
     <footer class="">
     <div class="container-fluid">
@@ -4185,11 +4066,11 @@
                         <h4 class="color mb-0 font-28">Follow Us:</h4>
                         <div class="head-right d-flex align-items-center gap-3 justify-content-end">
                             <ul class="list-unstyled d-flex align-items-center gap-2 mb-0">
-                                <li><a href="https://www.facebook.com/UnitedBookPublishingOfficial/" target="_blank"><i
+                                <li><a href="https://www.facebook.com/ExpertsSelfPublishingOfficial/" target="_blank"><i
                                             class="fa-brands fa-facebook-f"></i></a></li>
-                                <li><a href="https://www.instagram.com/unitedbookpublishingofficial/" target="_blank"><i
+                                <li><a href="https://www.instagram.com/expertsselfpublishingofficial/" target="_blank"><i
                                             class="fa-brands fa-instagram"></i></a></li>
-                                <li><a href="https://www.youtube.com/@UnitedBookPublishing-qt2pk" target="_blank"><i
+                                <li><a href="https://www.youtube.com/@ExpertsSelfPublishing-qt2pk" target="_blank"><i
                                             class="fa-brands fa-youtube"></i></a></li>
                             </ul>
                         </div>
@@ -4309,7 +4190,7 @@
                                 </a>
                             </li>
                             <li class="my-4 info-li">
-                                <a href="mailto:info@unitedbookpublishing.com" class="d-flex gap-2">
+                                <a href="mailto:info@expertsselfpublishing.com" class="d-flex gap-2">
                                     <!-- <span class="info-icon"><i class="fa-solid fa-envelope" aria-hidden="true"></i></span> -->
                                     <span class="info-icon w-25"><img
                                             src="assets/img/ubp-new/foot-envelope.webp"
@@ -4317,7 +4198,7 @@
                                             loading="lazy"></span>
                                     <span class="w-75">
                                         <small>Email us on: </small>
-                                        <span class="foot-number d-block w-100">info@unitedbookpublishing.com</span>
+                                        <span class="foot-number d-block w-100">info@expertsselfpublishing.com</span>
                                     </span>
                                 </a>
                             </li>
@@ -4349,8 +4230,7 @@
     <div class="container-fluid last-contain">
         <div class="row">
             <div class="col-lg-7 col-md-8">
-                <p class=" mb-0 para-color">Copyright © 2026 United Book Publishing - All Rights Reserved | Powered By
-                    Iota Digital, LLC</p>
+                <p class=" mb-0 para-color">Copyright © 2026 Experts Self Publishing. All rights reserved.</p>
             </div>
             <div class="col-lg-5 col-md-4">
                 <ul class="list-unstyled d-flex align-items-center gap-3 m-0 justify-content-end">
@@ -4361,7 +4241,6 @@
         </div>
     </div>
 </footer>
-
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -4380,7 +4259,7 @@
                                     Today!</h3>
                                 <p>Speak with our senior publishing consultant for a free tailored proposal</p>
                             </div>
-                            <form action="https://unitedbookpublishing.com/inquiry-submit" id="modal-form" method="POST">
+                            <form action="https://expertsselfpublishing.com/inquiry-submit" id="modal-form" method="POST">
                                 <input type="hidden" name="_token" value="MYEyZ4jxGwMXB9vqGbuDh7MYBius8uZb1tpGme6H" autocomplete="off">                                <div class="row">
                                     <div class="col-lg-12">
                                         <!-- <label for="full-name">Enter Your Full Name</label> -->
@@ -4530,7 +4409,6 @@
   });
 });
 
-
 $(".blog-slider").slick({
   slidesToShow: 3,
   slidesToScroll: 1,
@@ -4575,7 +4453,7 @@ $(".blog-slider").slick({
 <script src="assets/js/nice-select.min.js" defer></script>
 <script src="assets/js/bootstrap.min.js" defer></script>
 <script src="assets/js/jquery.fancybox.min.js" defer></script>
-<!--<script src="https://unitedbookpublishing.com/assets/js/fontowesome.js" crossorigin="anonymous" defer></script>-->
+<!--<script src="assets/js/fontowesome.js" crossorigin="anonymous" defer></script>-->
 
 <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>-->
 
@@ -4584,11 +4462,10 @@ $(".blog-slider").slick({
     const tooltipList = [...tooltipTriggerList].map(el => new bootstrap.Tooltip(el));
 </script>
 
-
 <!-- Include SweetAlert -->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
 <script src="assets/js/custom-form.js" defer></script>
-    <script defer src="../cdn.jsdelivr.net/npm/select2%404.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/select2%404.1.0-rc.0/dist/js/select2.min.js"></script>
     <script defer id="ze-snippet" src="../static.zdassets.com/ekr/snippetb14a.js?key=601b2aa6-ec14-4739-8d27-dfa20404f2ba">
     </script>
         <script>
@@ -4652,12 +4529,8 @@ $(".blog-slider").slick({
         });
     </script>
 
-
     
-
 
 </body>
 
-
-<!-- Mirrored from unitedbookpublishing.com/book-publishing by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Jul 2026 23:56:38 GMT -->
 </html>
